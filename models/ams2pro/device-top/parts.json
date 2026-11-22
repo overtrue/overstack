@@ -1,7 +1,7 @@
 [
   {
     "name": "top_1",
-    "file": "models/no-ht/device-top/top_1.stl",
+    "file": "models/ams2pro/device-top/top_1.stl",
     "offset_mm": [
       0,
       0,
@@ -10,7 +10,7 @@
   },
   {
     "name": "top_2",
-    "file": "models/no-ht/device-top/top_2.stl",
+    "file": "models/ams2pro/device-top/top_2.stl",
     "offset_mm": [
       0,
       0,

@@ -19,10 +19,10 @@ def save(key,parts,angle=(-55,25),size=(1600,1200)):
                  'up':[0,0,1],'orthographicHalfHeight':float(half)}})
 
 
-report=json.loads((ROOT/'models/no-ht/validation.json').read_text());plain={};peg={}
+report=json.loads((ROOT/'models/ams2pro/validation.json').read_text());plain={};peg={}
 for layer in report['layers']:
     slug=layer['name'];parts={};exploded={}
-    for r in json.loads((ROOT/'models/no-ht'/slug/'parts.json').read_text()):
+    for r in json.loads((ROOT/'models/ams2pro'/slug/'parts.json').read_text()):
         m=move(trimesh.load_mesh(ROOT/r['file']),r['offset_mm']);name=r['name'];parts[name]=m
         plain[slug+'__'+name]=move(m,[0,0,layer['z_mm']])
         pg=move(trimesh.load_mesh(ROOT/r['file'].replace('_plain.stl','_pegboard.stl')),r['offset_mm']) if name.startswith('end_') else m
@@ -45,15 +45,15 @@ for i,H in enumerate([30,60]):
         name=f'end_left_{H}_{style}';m=trimesh.load_mesh(ROOT/'models/common'/(name+'.stl'))
         common[name]=move(m,[j*115,0,i*110])
 save('common-ends',common,angle=(-140,22))
-rows=json.loads((ROOT/'models/parts.json').read_text());wide={}
+rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text());wide={}
 heights=[0,30,90,150,210,270]
 for r in rows:
-    name=r['name'];m=trimesh.load_mesh(ROOT/'models'/r['packaged_file'])
+    name=r['name'];m=trimesh.load_mesh(ROOT/'models/ams2pro+ht'/r['packaged_file'])
     if 'end_left' in name or 'end_right' in name:
         side='left' if 'end_left' in name else 'right';H=30 if r['layer']==0 else 60
         m=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')
     wide[name]=move(m,[0,0,heights[r['layer']]])
 save('wide-pegboard',wide)
-scene(wide).export(ROOT/'models/common/stacknest-wide-pegboard.glb')
+scene(wide).export(ROOT/'models/ams2pro+ht/stacknest-pegboard.glb')
 (OUT/'render-jobs.json').write_text(json.dumps(jobs,indent=2))
 print('Prepared',len(jobs),'real-geometry scenes')

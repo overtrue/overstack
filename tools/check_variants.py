@@ -25,15 +25,15 @@ def check(row):
 
 
 if __name__=='__main__':
-    report=json.loads((ROOT/'models/no-ht/validation.json').read_text())
+    report=json.loads((ROOT/'models/ams2pro/validation.json').read_text())
     rows=[r for r in report['parts'] if not r['name'].endswith('_plain') and not r['name'].startswith('lock_')]
-    previous=ROOT/'models/no-ht/printing.json'
+    previous=ROOT/'models/ams2pro/printing.json'
     cached={r['sha256']:r for r in json.loads(previous.read_text())['parts']} if previous.exists() else {}
     changed=[r for r in rows if r['sha256'] not in cached or cached[r['sha256']]['status']!='ok']
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:updated=list(pool.map(check,changed))
     cached.update({r['sha256']:r for r in updated})
     results=[{**cached[r['sha256']],**r} for r in rows]
-    (ROOT/'models/no-ht/printing.json').write_text(json.dumps({'material':'PETG','process':'FDM','nozzle_mm':.4,
+    (ROOT/'models/ams2pro/printing.json').write_text(json.dumps({'material':'PETG','process':'FDM','nozzle_mm':.4,
         'layer_mm':.2,'parts':results,'sliced':False,'physical_fit':'not_verified'},indent=2)+'\n')
     failed=[r for r in results if r['status']!='ok']
     print(len(results),'exported parts;',len(failed),'failed')

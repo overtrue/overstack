@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 
 DOC=ROOT/'docs';PDF=DOC/'pdf';PDF.mkdir(exist_ok=True)
-PACK=ROOT/'dist/stacknest'
+PACK=ROOT/'models/ams2pro+ht'
 PARTS=json.loads((PACK/'parts.json').read_text())
 JOBS={j['key']:j for j in json.loads((ROOT/'output/illustrations/jobs.json').read_text())}
 W,H=landscape(A4);INK=colors.HexColor('#20343C');TEAL=colors.HexColor('#257A78');MUTED=colors.HexColor('#607079');PALE=colors.HexColor('#F3F6F5');ORANGE=colors.HexColor('#BF743D')

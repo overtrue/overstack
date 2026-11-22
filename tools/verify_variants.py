@@ -7,12 +7,12 @@ from layer_locks import layer_lock
 from pegboard import slot_centers,yz_extrude
 from shapely.geometry import LineString
 
-report=json.loads((ROOT/'models/no-ht/validation.json').read_text());layers={}
+report=json.loads((ROOT/'models/ams2pro/validation.json').read_text());layers={}
 for row in report['parts']:
     p=ROOT/row['file'];assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256'],p
 for layer in report['layers']:
     parts={r['name']:move(trimesh.load_mesh(ROOT/r['file']),r['offset_mm'])
-           for r in json.loads((ROOT/'models/no-ht'/layer['name']/'parts.json').read_text())}
+           for r in json.loads((ROOT/'models/ams2pro'/layer['name']/'parts.json').read_text())}
     layers[layer['name']]=(layer['height_mm'],parts)
 pairs=0
 for lower,(H,lp) in layers.items():
@@ -56,5 +56,5 @@ for H in [30,60]:
                 assert abs(cut(land,peg).volume)<.01
             assert overlap(peg,box(5.1,y-3,z-8,20,6,16))<.01
 print('PASS:',pairs,'exported stack pairs, lowering paths, rear keys, slot dimensions and unchanged interfaces')
-(ROOT/'models/no-ht/assembly-checks.json').write_text(json.dumps({'stack_pair_checks':pairs,'layer_pairings':20,
+(ROOT/'models/ams2pro/assembly-checks.json').write_text(json.dumps({'stack_pair_checks':pairs,'layer_pairings':20,
     'common_interfaces':'unchanged','slot_dimensions_mm':[5,15],'panel_thickness_mm':5,'physical_fit':'not_verified'},indent=2)+'\n')

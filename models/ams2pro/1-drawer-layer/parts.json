@@ -1,6 +1,6 @@
 [
   {
-    "name": "end_left",
+    "name": "end_left_1",
     "file": "models/common/end_left_60_plain.stl",
     "offset_mm": [
       0,
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "name": "end_right",
+    "name": "end_right_1",
     "file": "models/common/end_right_60_plain.stl",
     "offset_mm": [
       -96,
@@ -18,8 +18,8 @@
     ]
   },
   {
-    "name": "plate_carrier_left",
-    "file": "models/no-ht/8-slot-plate-layer/plate_carrier_left.stl",
+    "name": "side_left",
+    "file": "models/ams2pro/1-drawer-layer/side_left.stl",
     "offset_mm": [
       0,
       0,
@@ -27,8 +27,8 @@
     ]
   },
   {
-    "name": "plate_carrier_right",
-    "file": "models/no-ht/8-slot-plate-layer/plate_carrier_right.stl",
+    "name": "side_right",
+    "file": "models/ams2pro/1-drawer-layer/side_right.stl",
     "offset_mm": [
       0,
       0,
@@ -37,7 +37,7 @@
   },
   {
     "name": "front_beam_1",
-    "file": "models/no-ht/8-slot-plate-layer/front_beam_1.stl",
+    "file": "models/ams2pro/1-drawer-layer/front_beam_1.stl",
     "offset_mm": [
       0,
       0,
@@ -46,7 +46,7 @@
   },
   {
     "name": "front_beam_2",
-    "file": "models/no-ht/8-slot-plate-layer/front_beam_2.stl",
+    "file": "models/ams2pro/1-drawer-layer/front_beam_2.stl",
     "offset_mm": [
       0,
       0,
@@ -55,7 +55,7 @@
   },
   {
     "name": "rear_beam_1",
-    "file": "models/no-ht/8-slot-plate-layer/rear_beam_1.stl",
+    "file": "models/ams2pro/1-drawer-layer/rear_beam_1.stl",
     "offset_mm": [
       0,
       0,
@@ -64,7 +64,25 @@
   },
   {
     "name": "rear_beam_2",
-    "file": "models/no-ht/8-slot-plate-layer/rear_beam_2.stl",
+    "file": "models/ams2pro/1-drawer-layer/rear_beam_2.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "drawer_half_1",
+    "file": "models/ams2pro/1-drawer-layer/drawer_half_1.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "drawer_half_2",
+    "file": "models/ams2pro/1-drawer-layer/drawer_half_2.stl",
     "offset_mm": [
       0,
       0,

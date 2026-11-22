@@ -1,22 +1,10 @@
-# StackNest models
+# StackNest models / 模型下载
 
-[无 HT / AMS-only set](no-ht/) · [两端通用件 / Common ends](common/)
+| 目录 / Directory | 用途 / Contents |
+| --- | --- |
+| [ams2pro+ht](ams2pro+ht/) | AMS 2 Pro + HT，495 × 287 mm；含单／双／三抽屉 / includes single, double and triple drawers |
+| [ams2pro](ams2pro/) | 仅 AMS 2 Pro，399 × 287 mm；只含单／双抽屉 / single and double drawers only |
+| [common](common/) | 两种规格共用的普通／洞洞板端框、锁片和试配板 / shared plain and pegboard ends, keys and fit coupon |
 
-## AMS 2 Pro + HT
-
-[Complete assembly GLB](stacknest-assembly.glb) · [Part manifest](parts.json)
-
-| Layer | Parts |
-| --- | ---: |
-| [01-three-slot-plate-layer](01-three-slot-plate-layer/) | 6 |
-| [02-eight-slot-plate-layer](02-eight-slot-plate-layer/) | 10 |
-| [03-single-drawer-layer](03-single-drawer-layer/) | 10 |
-| [04-double-drawer-layer](04-double-drawer-layer/) | 13 |
-| [05-triple-drawer-layer](05-triple-drawer-layer/) | 15 |
-| [06-device-top](06-device-top/) | 4 |
-
-58 STL parts, six layer GLBs, six geometry-only 3MF assemblies and one complete GLB. Filenames match the assembly-guide part IDs.
-
-This is an unprinted digital prototype. Models are in assembly positions; orient and support parts before slicing. See [validation](validation.json) for known limits.
-
-All eight drawers have 2 mm solid floors; joining and slide interfaces are retained.
+先选设备组合，再选层数与中段。相同高度端框通用，整层和顶件不能跨宽度混搭。
+Choose the device set first, then the layers. Same-height ends are shared; whole layers and tops must match width.

@@ -3,16 +3,19 @@ from pathlib import Path
 import hashlib,json,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 DIST=ROOT/'dist';DIST.mkdir(exist_ok=True)
-for name,folders in [('stacknest-no-ht',['models/no-ht','models/common']),('stacknest-common',['models/common'])]:
+for device in ['ams2pro+ht','ams2pro','common']:
+    name='stacknest-'+device
+    folders=['models/'+device]+(['models/common'] if device!='common' else [])
     files=[ROOT/'LICENSE']
     for folder in folders:files.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
-    files.extend(p for p in (ROOT/'docs/images').glob('*.png') if p.name.startswith(('no-ht-','common-ends','wide-pegboard')))
+    files.extend(p for p in (ROOT/'docs/images').glob('*.png') if device=='ams2pro+ht' or p.name.startswith(('no-ht-','common-ends','wide-pegboard')))
+    if device=='ams2pro+ht':files.extend(p for p in (ROOT/'docs/pdf').iterdir() if p.is_file())
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     archive=DIST/(name+'.zip')
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         for p in sorted(files):z.write(p,name+'/'+str(p.relative_to(ROOT)))
         z.writestr(name+'/sha256.json',json.dumps(hashes,indent=2)+'\n')
-        z.writestr(name+'/README.md','# StackNest\n\nStart with models/'+('no-ht' if name.endswith('no-ht') else 'common')+'/README.md.\n\n先阅读对应 models 目录中的 README。模型未切片，尚未实物验收。\n')
+        z.writestr(name+'/README.md','# StackNest\n\nStart with models/'+device+'/README.md.\n\n先阅读对应 models 目录中的 README。模型未切片，尚未实物验收。\n')
     with zipfile.ZipFile(archive) as z:
         assert z.testzip() is None
         for path,digest in hashes.items():assert hashlib.sha256(z.read(name+'/'+path)).hexdigest()==digest

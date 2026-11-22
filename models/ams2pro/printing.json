@@ -267,7 +267,7 @@
     },
     {
       "name": "3-slot-plate-layer/plate_carrier_left",
-      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_left.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_left.stl",
       "sha256": "83bd06a5faab5b53e9c1078178348130849e452776da0567b0fbbdf4c24d6f8d",
       "placement": {
         "assembly_to_print": [
@@ -318,7 +318,7 @@
     },
     {
       "name": "3-slot-plate-layer/plate_carrier_right",
-      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_right.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_right.stl",
       "sha256": "5fd06152639725f2eaf1074ed83dd4c6906c8f1f6d4f442a1b1e1a918c746573",
       "placement": {
         "assembly_to_print": [
@@ -369,7 +369,7 @@
     },
     {
       "name": "3-slot-plate-layer/front_beam_1",
-      "file": "models/no-ht/3-slot-plate-layer/front_beam_1.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/front_beam_1.stl",
       "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
       "placement": {
         "assembly_to_print": [
@@ -418,7 +418,7 @@
     },
     {
       "name": "3-slot-plate-layer/front_beam_2",
-      "file": "models/no-ht/3-slot-plate-layer/front_beam_2.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/front_beam_2.stl",
       "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
       "placement": {
         "assembly_to_print": [
@@ -467,7 +467,7 @@
     },
     {
       "name": "3-slot-plate-layer/rear_beam_1",
-      "file": "models/no-ht/3-slot-plate-layer/rear_beam_1.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_1.stl",
       "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
       "placement": {
         "assembly_to_print": [
@@ -516,7 +516,7 @@
     },
     {
       "name": "3-slot-plate-layer/rear_beam_2",
-      "file": "models/no-ht/3-slot-plate-layer/rear_beam_2.stl",
+      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_2.stl",
       "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
       "placement": {
         "assembly_to_print": [
@@ -565,7 +565,7 @@
     },
     {
       "name": "8-slot-plate-layer/plate_carrier_left",
-      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_left.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/plate_carrier_left.stl",
       "sha256": "50f6129d97a2532b7dadd09c6f4312086fc37a92eabb16348794be93c97125c7",
       "placement": {
         "assembly_to_print": [
@@ -616,7 +616,7 @@
     },
     {
       "name": "8-slot-plate-layer/plate_carrier_right",
-      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_right.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/plate_carrier_right.stl",
       "sha256": "5a7a21eafdee36e393c55a52a1e41b7dadff52d83d283a978d68f819e88a6b2a",
       "placement": {
         "assembly_to_print": [
@@ -667,7 +667,7 @@
     },
     {
       "name": "8-slot-plate-layer/front_beam_1",
-      "file": "models/no-ht/8-slot-plate-layer/front_beam_1.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/front_beam_1.stl",
       "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
       "placement": {
         "assembly_to_print": [
@@ -716,7 +716,7 @@
     },
     {
       "name": "8-slot-plate-layer/front_beam_2",
-      "file": "models/no-ht/8-slot-plate-layer/front_beam_2.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/front_beam_2.stl",
       "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
       "placement": {
         "assembly_to_print": [
@@ -765,7 +765,7 @@
     },
     {
       "name": "8-slot-plate-layer/rear_beam_1",
-      "file": "models/no-ht/8-slot-plate-layer/rear_beam_1.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/rear_beam_1.stl",
       "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
       "placement": {
         "assembly_to_print": [
@@ -814,7 +814,7 @@
     },
     {
       "name": "8-slot-plate-layer/rear_beam_2",
-      "file": "models/no-ht/8-slot-plate-layer/rear_beam_2.stl",
+      "file": "models/ams2pro/8-slot-plate-layer/rear_beam_2.stl",
       "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
       "placement": {
         "assembly_to_print": [
@@ -863,7 +863,7 @@
     },
     {
       "name": "1-drawer-layer/side_left",
-      "file": "models/no-ht/1-drawer-layer/side_left.stl",
+      "file": "models/ams2pro/1-drawer-layer/side_left.stl",
       "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
       "placement": {
         "assembly_to_print": [
@@ -914,7 +914,7 @@
     },
     {
       "name": "1-drawer-layer/side_right",
-      "file": "models/no-ht/1-drawer-layer/side_right.stl",
+      "file": "models/ams2pro/1-drawer-layer/side_right.stl",
       "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de",
       "placement": {
         "assembly_to_print": [
@@ -965,7 +965,7 @@
     },
     {
       "name": "1-drawer-layer/front_beam_1",
-      "file": "models/no-ht/1-drawer-layer/front_beam_1.stl",
+      "file": "models/ams2pro/1-drawer-layer/front_beam_1.stl",
       "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
       "placement": {
         "assembly_to_print": [
@@ -1014,7 +1014,7 @@
     },
     {
       "name": "1-drawer-layer/front_beam_2",
-      "file": "models/no-ht/1-drawer-layer/front_beam_2.stl",
+      "file": "models/ams2pro/1-drawer-layer/front_beam_2.stl",
       "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
       "placement": {
         "assembly_to_print": [
@@ -1063,7 +1063,7 @@
     },
     {
       "name": "1-drawer-layer/rear_beam_1",
-      "file": "models/no-ht/1-drawer-layer/rear_beam_1.stl",
+      "file": "models/ams2pro/1-drawer-layer/rear_beam_1.stl",
       "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
       "placement": {
         "assembly_to_print": [
@@ -1112,7 +1112,7 @@
     },
     {
       "name": "1-drawer-layer/rear_beam_2",
-      "file": "models/no-ht/1-drawer-layer/rear_beam_2.stl",
+      "file": "models/ams2pro/1-drawer-layer/rear_beam_2.stl",
       "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
       "placement": {
         "assembly_to_print": [
@@ -1161,7 +1161,7 @@
     },
     {
       "name": "1-drawer-layer/drawer_half_1",
-      "file": "models/no-ht/1-drawer-layer/drawer_half_1.stl",
+      "file": "models/ams2pro/1-drawer-layer/drawer_half_1.stl",
       "sha256": "85cce5feb25497609ccb85a70d30c1391cce8e34199ff937eabb27c3231cbf97",
       "placement": {
         "assembly_to_print": [
@@ -1210,7 +1210,7 @@
     },
     {
       "name": "1-drawer-layer/drawer_half_2",
-      "file": "models/no-ht/1-drawer-layer/drawer_half_2.stl",
+      "file": "models/ams2pro/1-drawer-layer/drawer_half_2.stl",
       "sha256": "5338c7c3b4e01c3545dbe8d218bcb57b0e2e790e2d8352abd7fb8514209b72fc",
       "placement": {
         "assembly_to_print": [
@@ -1261,7 +1261,7 @@
     },
     {
       "name": "2-drawer-layer/side_left",
-      "file": "models/no-ht/2-drawer-layer/side_left.stl",
+      "file": "models/ams2pro/2-drawer-layer/side_left.stl",
       "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
       "placement": {
         "assembly_to_print": [
@@ -1312,7 +1312,7 @@
     },
     {
       "name": "2-drawer-layer/side_right",
-      "file": "models/no-ht/2-drawer-layer/side_right.stl",
+      "file": "models/ams2pro/2-drawer-layer/side_right.stl",
       "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de",
       "placement": {
         "assembly_to_print": [
@@ -1363,7 +1363,7 @@
     },
     {
       "name": "2-drawer-layer/divider_1",
-      "file": "models/no-ht/2-drawer-layer/divider_1.stl",
+      "file": "models/ams2pro/2-drawer-layer/divider_1.stl",
       "sha256": "6218488d0e4f2607ac97ae1558866f2e4d0ca10de579647f53048ab2376e587d",
       "placement": {
         "assembly_to_print": [
@@ -1414,7 +1414,7 @@
     },
     {
       "name": "2-drawer-layer/front_beam_1",
-      "file": "models/no-ht/2-drawer-layer/front_beam_1.stl",
+      "file": "models/ams2pro/2-drawer-layer/front_beam_1.stl",
       "sha256": "688000a8ac32c6c4cbf1797027afb709c050e62e4cd5830c4082f4ad1ee93631",
       "placement": {
         "assembly_to_print": [
@@ -1466,7 +1466,7 @@
     },
     {
       "name": "2-drawer-layer/front_beam_2",
-      "file": "models/no-ht/2-drawer-layer/front_beam_2.stl",
+      "file": "models/ams2pro/2-drawer-layer/front_beam_2.stl",
       "sha256": "00af2d3c1dad795b761e4ba9cc04df6272b63f7dd96f42418bf3df1a55110126",
       "placement": {
         "assembly_to_print": [
@@ -1517,7 +1517,7 @@
     },
     {
       "name": "2-drawer-layer/rear_beam_1",
-      "file": "models/no-ht/2-drawer-layer/rear_beam_1.stl",
+      "file": "models/ams2pro/2-drawer-layer/rear_beam_1.stl",
       "sha256": "7292a3c43137cce6ec3590145fbca69784385aa537d9e657c68d7e26e26c4753",
       "placement": {
         "assembly_to_print": [
@@ -1569,7 +1569,7 @@
     },
     {
       "name": "2-drawer-layer/rear_beam_2",
-      "file": "models/no-ht/2-drawer-layer/rear_beam_2.stl",
+      "file": "models/ams2pro/2-drawer-layer/rear_beam_2.stl",
       "sha256": "d79070810a46642dcaf778d7ef2deb6dde0c819becf4836b66e230fee69e6893",
       "placement": {
         "assembly_to_print": [
@@ -1620,7 +1620,7 @@
     },
     {
       "name": "2-drawer-layer/drawer_1",
-      "file": "models/no-ht/2-drawer-layer/drawer_1.stl",
+      "file": "models/ams2pro/2-drawer-layer/drawer_1.stl",
       "sha256": "e59ccce935457c45042c0e2c0c3f9b462990ad9ddd50fc01c0f1864a7440b575",
       "placement": {
         "assembly_to_print": [
@@ -1671,7 +1671,7 @@
     },
     {
       "name": "2-drawer-layer/drawer_2",
-      "file": "models/no-ht/2-drawer-layer/drawer_2.stl",
+      "file": "models/ams2pro/2-drawer-layer/drawer_2.stl",
       "sha256": "669105c754bf9a6d4c57dba97d6d4ff1621aa9bdc0e00a76deef62e43671307b",
       "placement": {
         "assembly_to_print": [
@@ -1722,7 +1722,7 @@
     },
     {
       "name": "device-top/top_1",
-      "file": "models/no-ht/device-top/top_1.stl",
+      "file": "models/ams2pro/device-top/top_1.stl",
       "sha256": "2614faab65e87500509d1c630a38a54162cc96e1a092005f9efe8abbece9e641",
       "placement": {
         "assembly_to_print": [
@@ -1773,7 +1773,7 @@
     },
     {
       "name": "device-top/top_2",
-      "file": "models/no-ht/device-top/top_2.stl",
+      "file": "models/ams2pro/device-top/top_2.stl",
       "sha256": "2d854c3dd50a259b2188b1a9017dcebcd5bf99152decd9f1b3884a2c918f3a9b",
       "placement": {
         "assembly_to_print": [

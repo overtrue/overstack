@@ -4,7 +4,7 @@ import sys,json,subprocess,concurrent.futures,shutil
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import *
 from package import LAYERS
-D=ROOT/'dist/stacknest';OUT=ROOT/'output/illustrations';OUT.mkdir(parents=True,exist_ok=True)
+D=ROOT/'models/ams2pro+ht';OUT=ROOT/'output/illustrations';OUT.mkdir(parents=True,exist_ok=True)
 IMAGES=ROOT/'docs/images';IMAGES.mkdir(parents=True,exist_ok=True)
 rows=json.loads((D/'parts.json').read_text())
 meshes={r['id']:trimesh.load_mesh(D/r['packaged_file']) for r in rows}

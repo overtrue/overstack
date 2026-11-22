@@ -13,7 +13,7 @@ Two heights, shared by both widths. Left and right parts differ; choose the matc
 | 60 mm | left | [STL](end_left_60_plain.stl) | [STL](end_left_60_pegboard.stl) |
 | 60 mm | right | [STL](end_right_60_plain.stl) | [STL](end_right_60_pegboard.stl) |
 
-[Left rear key](lock_left.stl) · [Right rear key](lock_right.stl) · [Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb) · [HT pegboard assembly GLB](stacknest-wide-pegboard.glb)
+[Left rear key](lock_left.stl) · [Right rear key](lock_right.stl) · [Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb)
 
 ## SKÅDIS-style hole layout
 

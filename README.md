@@ -11,7 +11,7 @@ Images show the actual base geometry. Equipment renders are pending the correct 
 
 ## Model files
 
-The [HT set](models/) has 58 assembly parts. The [AMS-only set](models/no-ht/) has 47. Both share the [common ends and keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
+The [HT set](models/ams2pro+ht/) has 58 assembly parts. The [AMS-only set](models/ams2pro/) has 47. Both share the [common ends and keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
 
 ## Two widths, shared ends
 
@@ -27,7 +27,7 @@ The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1
 
 ![AMS-only set with pegboard ends](docs/images/no-ht-pegboard.png)
 
-[AMS-only files and layer assembly](models/no-ht/) · [Plain ends](docs/images/no-ht-plain.png)
+[AMS-only files and layer assembly](models/ams2pro/) · [Plain ends](docs/images/no-ht-plain.png)
 
 ### Common ends: plain or pegboard
 
@@ -79,7 +79,7 @@ A low-profile starting point for three frequently used plates. Continuous side l
 
 ![A: three-slot plate layer, exploded](docs/images/layer-a-exploded.png)
 
-[Models and parts](models/01-three-slot-plate-layer/) · [Assembly guide](docs/pdf/01-three-slot-plate-layer-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/01-three-slot-plate-layer/) · [Assembly guide](docs/pdf/01-three-slot-plate-layer-assembly-en.pdf)
 
 ### B · 60 mm eight-slot plate layer
 
@@ -87,7 +87,7 @@ Eight plate positions in the same footprint, plus two small side bins for tools 
 
 ![B: eight-slot plate layer, exploded](docs/images/layer-b-exploded.png)
 
-[Models and parts](models/02-eight-slot-plate-layer/) · [Assembly guide](docs/pdf/02-eight-slot-plate-layer-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/02-eight-slot-plate-layer/) · [Assembly guide](docs/pdf/02-eight-slot-plate-layer-assembly-en.pdf)
 
 ### C · 60 mm single-drawer layer
 
@@ -95,7 +95,7 @@ One wide drawer for longer tools or items that do not fit narrow compartments. I
 
 ![C: single-drawer layer, exploded](docs/images/layer-c-exploded.png)
 
-[Models and parts](models/03-single-drawer-layer/) · [Assembly guide](docs/pdf/03-single-drawer-layer-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/03-single-drawer-layer/) · [Assembly guide](docs/pdf/03-single-drawer-layer-assembly-en.pdf)
 
 ### D · 60 mm double-drawer layer
 
@@ -103,7 +103,7 @@ Two independent drawers and one divider separate tools from spare parts. Each fr
 
 ![D: double-drawer layer, exploded](docs/images/layer-d-exploded.png)
 
-[Models and parts](models/04-double-drawer-layer/) · [Assembly guide](docs/pdf/04-double-drawer-layer-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/04-double-drawer-layer/) · [Assembly guide](docs/pdf/04-double-drawer-layer-assembly-en.pdf)
 
 ### E · 60 mm triple-drawer layer
 
@@ -111,7 +111,7 @@ Three narrow drawers and two dividers provide separate homes for nozzles, small 
 
 ![E: triple-drawer layer, exploded](docs/images/layer-e-exploded.png)
 
-[Models and parts](models/05-triple-drawer-layer/) · [Assembly guide](docs/pdf/05-triple-drawer-layer-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/05-triple-drawer-layer/) · [Assembly guide](docs/pdf/05-triple-drawer-layer-assembly-en.pdf)
 
 ### F · AMS 2 Pro + AMS HT device top
 
@@ -119,7 +119,7 @@ Four parts: two top halves and two rear locking keys. Slide the front and rear d
 
 ![F: device top, exploded](docs/images/layer-f-exploded.png)
 
-[Models and parts](models/06-device-top/) · [Assembly guide](docs/pdf/06-device-top-assembly-en.pdf)
+[Models and parts](models/ams2pro+ht/06-device-top/) · [Assembly guide](docs/pdf/06-device-top-assembly-en.pdf)
 
 Check actual device feet, underside, air inlets, tubing and lid-opening clearance before use. The top and its rendering do not establish physical compatibility.
 
@@ -139,7 +139,7 @@ uv run python tools/check_variants.py
 
 The model is constructed from analytic primitives. Building it does not read STL, GLB, PLY, 3MF, vendor meshes or earlier project revisions. Generated STL units are millimetres. Generated 3MF files contain assembly geometry only, with no printer or support settings.
 
-Source: `src/stacknest/`. Outputs: `output/model/` and `dist/stacknest/`.
+Source: `src/stacknest/`. Outputs: `output/model/` and `models/ams2pro+ht/`.
 
 ## Assembly guides
 

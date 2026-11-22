@@ -45,5 +45,5 @@ def package(source,dest):
     return records
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,default=ROOT/'output/model');p.add_argument('--dest',type=Path,default=ROOT/'dist/stacknest')
+    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,default=ROOT/'output/model');p.add_argument('--dest',type=Path,default=ROOT/'models/ams2pro+ht')
     a=p.parse_args();package(a.source,a.dest)

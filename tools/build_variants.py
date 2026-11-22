@@ -11,7 +11,7 @@ from multi_drawers import variant
 import compact,pegboard
 from trimesh.exchange.threemf import export_3MF
 
-OUT=ROOT/'models/no-ht';COMMON=ROOT/'models/common';CHECKS=ROOT/'output/variants'
+OUT=ROOT/'models/ams2pro';COMMON=ROOT/'models/common';CHECKS=ROOT/'output/variants'
 
 
 def scene(parts):

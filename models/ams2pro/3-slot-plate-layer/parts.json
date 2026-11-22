@@ -19,7 +19,7 @@
   },
   {
     "name": "plate_carrier_left",
-    "file": "models/no-ht/3-slot-plate-layer/plate_carrier_left.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_left.stl",
     "offset_mm": [
       0,
       0,
@@ -28,7 +28,7 @@
   },
   {
     "name": "plate_carrier_right",
-    "file": "models/no-ht/3-slot-plate-layer/plate_carrier_right.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_right.stl",
     "offset_mm": [
       0,
       0,
@@ -37,7 +37,7 @@
   },
   {
     "name": "front_beam_1",
-    "file": "models/no-ht/3-slot-plate-layer/front_beam_1.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/front_beam_1.stl",
     "offset_mm": [
       0,
       0,
@@ -46,7 +46,7 @@
   },
   {
     "name": "front_beam_2",
-    "file": "models/no-ht/3-slot-plate-layer/front_beam_2.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/front_beam_2.stl",
     "offset_mm": [
       0,
       0,
@@ -55,7 +55,7 @@
   },
   {
     "name": "rear_beam_1",
-    "file": "models/no-ht/3-slot-plate-layer/rear_beam_1.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/rear_beam_1.stl",
     "offset_mm": [
       0,
       0,
@@ -64,7 +64,7 @@
   },
   {
     "name": "rear_beam_2",
-    "file": "models/no-ht/3-slot-plate-layer/rear_beam_2.stl",
+    "file": "models/ams2pro/3-slot-plate-layer/rear_beam_2.stl",
     "offset_mm": [
       0,
       0,

@@ -12,7 +12,7 @@
 
 ## 模型文件
 
-[HT 组合](models/)包含 58 个零件；[无 HT 组合](models/no-ht/)包含 47 个装配零件。STL、几何 3MF、各层 GLB 和完整装配 GLB 均可直接下载。两端和锁片单独放在[通用组件](models/common/)。
+[HT 组合](models/ams2pro+ht/)包含 58 个零件；[无 HT 组合](models/ams2pro/)包含 47 个装配零件。STL、几何 3MF、各层 GLB 和完整装配 GLB 均可直接下载。两端和锁片单独放在[通用组件](models/common/)。
 
 ## 两种宽度，同一套两端
 
@@ -28,7 +28,7 @@
 
 ![无 HT 洞洞板版](docs/images/no-ht-pegboard.png)
 
-[无 HT 模型与分层组装](models/no-ht/) · [普通端框效果](docs/images/no-ht-plain.png)
+[无 HT 模型与分层组装](models/ams2pro/) · [普通端框效果](docs/images/no-ht-plain.png)
 
 ### 通用端框：普通版 / 洞洞板版
 
@@ -79,7 +79,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![A 三槽打印板层爆炸图](docs/images/layer-a-exploded.png)
 
-[模型与零件](models/01-three-slot-plate-layer/) · [组装教程](docs/pdf/01-three-slot-plate-layer-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/01-three-slot-plate-layer/) · [组装教程](docs/pdf/01-three-slot-plate-layer-assembly-zh.pdf)
 
 ### B · 60 mm 八槽打印板层
 
@@ -87,7 +87,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![B 八槽打印板层爆炸图](docs/images/layer-b-exploded.png)
 
-[模型与零件](models/02-eight-slot-plate-layer/) · [组装教程](docs/pdf/02-eight-slot-plate-layer-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/02-eight-slot-plate-layer/) · [组装教程](docs/pdf/02-eight-slot-plate-layer-assembly-zh.pdf)
 
 ### C · 60 mm 单抽屉层
 
@@ -95,7 +95,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![C 单抽屉层爆炸图](docs/images/layer-c-exploded.png)
 
-[模型与零件](models/03-single-drawer-layer/) · [组装教程](docs/pdf/03-single-drawer-layer-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/03-single-drawer-layer/) · [组装教程](docs/pdf/03-single-drawer-layer-assembly-zh.pdf)
 
 ### D · 60 mm 双抽屉层
 
@@ -103,7 +103,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![D 双抽屉层爆炸图](docs/images/layer-d-exploded.png)
 
-[模型与零件](models/04-double-drawer-layer/) · [组装教程](docs/pdf/04-double-drawer-layer-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/04-double-drawer-layer/) · [组装教程](docs/pdf/04-double-drawer-layer-assembly-zh.pdf)
 
 ### E · 60 mm 三抽屉层
 
@@ -111,7 +111,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![E 三抽屉层爆炸图](docs/images/layer-e-exploded.png)
 
-[模型与零件](models/05-triple-drawer-layer/) · [组装教程](docs/pdf/05-triple-drawer-layer-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/05-triple-drawer-layer/) · [组装教程](docs/pdf/05-triple-drawer-layer-assembly-zh.pdf)
 
 ### F · AMS 2 Pro + AMS HT 设备顶件
 
@@ -119,7 +119,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 ![F 设备顶件爆炸图](docs/images/layer-f-exploded.png)
 
-[模型与零件](models/06-device-top/) · [组装教程](docs/pdf/06-device-top-assembly-zh.pdf)
+[模型与零件](models/ams2pro+ht/06-device-top/) · [组装教程](docs/pdf/06-device-top-assembly-zh.pdf)
 
 设备上架前仍须核对实际脚位、底壳、进气口、管线与开盖空间。顶件外观与效果图不能代替实物适配检查。
 
