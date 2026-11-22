@@ -75,7 +75,7 @@ The 30 mm and 60 mm figures are layer increments. With the top fitted, overall b
 
 The full HT stack separated into layers:
 
-<img src="docs/images/stack-exploded.png" alt="Full stack exploded by layer" width="640">
+<img src="docs/images/stack-exploded-en.png" alt="Labeled layers: device top, triple drawer, double drawer, single drawer, eight-slot rack, three-slot rack" width="960">
 
 From top to bottom in the image (click a layer name for its models):
 

@@ -74,7 +74,7 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 下面是 HT 组合的层间关系。
 
-<img src="docs/images/stack-exploded.png" alt="完整组合的分层爆炸图" width="640">
+<img src="docs/images/stack-exploded-zh.png" alt="分层标注：从上到下为设备顶件、三抽屉、双抽屉、单抽屉、八槽板架、三槽板架" width="960">
 
 图中从上到下依次为（点击层名下载模型）：
 
