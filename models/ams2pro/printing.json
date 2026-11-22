@@ -7,7 +7,7 @@
     {
       "name": "end_left_40_pegboard",
       "file": "models/common/end_left_40_pegboard.stl",
-      "sha256": "480b2bf05abed9ceee2a4fa66f2b400bf3913248084b6fd20e3e6df475bd5b04",
+      "sha256": "1cb84e6a005515b38e54212b2055e02ac78f536d093ee7d01bfdf71c7628d896",
       "placement": {
         "assembly_to_print": [
           [
@@ -41,7 +41,7 @@
           60.0
         ],
         "downward_area_mm2": 4607.979728463482,
-        "bed_contact_area_mm2": 10097.975458778646,
+        "bed_contact_area_mm2": 9680.35490607001,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -60,7 +60,7 @@
     {
       "name": "end_right_40_pegboard",
       "file": "models/common/end_right_40_pegboard.stl",
-      "sha256": "95d11bf3e477b8ee651da28242c742c099c5b1e7949c7b8a11e60f7645764cd8",
+      "sha256": "a804547c71cfd554d85b30fb895f34878ca6630e47b23e831ee2944290e83f7e",
       "placement": {
         "assembly_to_print": [
           [
@@ -94,7 +94,7 @@
           60.0
         ],
         "downward_area_mm2": 4607.980818869474,
-        "bed_contact_area_mm2": 10097.975262818694,
+        "bed_contact_area_mm2": 9680.354710110052,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -113,7 +113,7 @@
     {
       "name": "end_left_60_pegboard",
       "file": "models/common/end_left_60_pegboard.stl",
-      "sha256": "40dbc9c3f6b262d9877b0d95dccdbdd0e86bb1b875b21d942fc64170999de457",
+      "sha256": "d7c59592a8d873982b1b0ec1aecd7b6a8bde685feeb9b4b79743e3ec9d31acbc",
       "placement": {
         "assembly_to_print": [
           [
@@ -147,7 +147,7 @@
           60.00000000000001
         ],
         "downward_area_mm2": 6815.55360660198,
-        "bed_contact_area_mm2": 14590.135791709628,
+        "bed_contact_area_mm2": 14520.53236405272,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -166,7 +166,7 @@
     {
       "name": "end_right_60_pegboard",
       "file": "models/common/end_right_60_pegboard.stl",
-      "sha256": "9f278d9b5d4cb6f70af3337ac07e68b5050af4cf4605da0cc2d375062ccfffbe",
+      "sha256": "56efd37e3fe0f16855a3b2591ae1556f252918b263055fa523cffc91f3fc7c4a",
       "placement": {
         "assembly_to_print": [
           [
@@ -200,7 +200,7 @@
           60.0
         ],
         "downward_area_mm2": 6815.555251205209,
-        "bed_contact_area_mm2": 14590.135497769697,
+        "bed_contact_area_mm2": 14520.53207011279,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -219,20 +219,20 @@
     {
       "name": "pegboard_fit_coupon",
       "file": "models/common/pegboard_fit_coupon.stl",
-      "sha256": "2452ff8eb90ceb9c048cfe47e517d3f163ba261c17639adcaf0854c73b1b0095",
+      "sha256": "bae3ef56ad5b3275c48ca6788503cf9b0ff0ff4598da6636e39ba5182fb5399e",
       "placement": {
         "assembly_to_print": [
           [
-            0.7071067811865476,
-            -0.7071067811865475,
+            1.0,
             0.0,
-            55.32590344233564
+            0.0,
+            0.0
           ],
           [
-            0.7071067811865475,
-            0.7071067811865476,
             0.0,
-            -1.2426406541684012
+            1.0,
+            0.0,
+            0.0
           ],
           [
             0.0,
@@ -248,12 +248,12 @@
           ]
         ],
         "bounds_mm": [
-          110.65180688467129,
-          110.65180688467129,
+          80.0,
+          80.0,
           5.0
         ],
         "downward_area_mm2": 0.0,
-        "bed_contact_area_mm2": 6044.176508870141,
+        "bed_contact_area_mm2": 5974.573080227672,
         "supports_required": false,
         "brim_mm": 3,
         "required_extruder_area_mm": [

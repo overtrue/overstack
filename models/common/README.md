@@ -13,28 +13,30 @@ Two heights, shared by both widths. Left and right parts differ; choose the matc
 | 60 mm | left | [STL](end_left_60_plain.stl) | [STL](end_left_60_pegboard.stl) |
 | 60 mm | right | [STL](end_right_60_plain.stl) | [STL](end_right_60_pegboard.stl) |
 
-[Left rear key](lock_left.stl) · [Right rear key](lock_right.stl) · [Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb)
+[Left rear key](lock_left.stl) · [Right rear key](lock_right.stl) · [Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb) · [Mixed-height stack GLB](straight-grid-stack.glb)
 
-## SKÅDIS-style hole layout
+## 直列孔阵 / Straight-grid hole layout
 
 | Feature | Nominal size |
 | --- | --- |
 | Vertical slot | 5 × 15 mm, R2.5 |
 | Panel thickness | 5 mm |
-| Same-row / same-column repeat | 40 mm |
-| Alternating row offset | 20 mm horizontally and vertically |
+| Horizontal / vertical pitch | 40 / 20 mm |
+| Row offset | 0 mm; all columns aligned |
 | Clear space behind each slot | At least 20 mm |
-| 40 mm end | 6 slots, one row; 12.5 mm top/bottom slot margins |
-| 60 mm end | 17 slots, three rows; 2.5 mm top/bottom slot margins |
-| Fit coupon | 80 × 80 × 5 mm |
+| 40 mm end | 12 slots, two rows; 2.5 mm top/bottom slot margins |
+| 60 mm end | 18 slots, three rows; 2.5 mm top/bottom slot margins |
+| Fit coupon | 80 × 80 × 5 mm; 2 columns × 3 aligned rows |
 
-孔阵只适用于各层内部。60 mm 端框可放同列 40 mm 双点配件；40 mm 端框不支持上下双孔挂钩。不要跨层缝安装依赖连续孔距的配件。面板两端保留宽实心边框，洞孔不触及弧形底脚、定位槽、燕尾及后锁片。
+![连续直列孔阵 / Continuous straight grid](../../docs/images/common-grid-alignment.png)
 
-Each layer is a separate mounting zone. The tall end includes a 40 mm vertical pair; the low end does not. Do not bridge seams with accessories that require a continuous hole grid. Wide solid end borders retain the corner feet, sockets, dovetails and rear key pockets.
+图中从下到上为 40 + 60 + 40 mm。两种层高均为 20 mm 的整数倍，首末排孔中心距层边均为 10 mm，因此任意换序或重复堆叠都能保持同列对齐、跨缝孔距 20 mm。四角、底脚、燕尾和后锁片连接区保持不变。
 
-孔位规格依据 [Just Hanging 的配件尺寸说明](https://www.justhangingpegboards.com/pages/pegboard-system)及 [SKÅDIS 风格孔阵生成器的尺寸说明](https://github.com/soloh4cker/skadis_pegboard_studio)。这是按公开名义尺寸独立建模的兼容候选，不是宜家认证。先打印试配板，用实际挂钩检查插入、下挂、卸出和板厚配合；不要直接承诺通配或承重。
+Bottom to top: 40 + 60 + 40 mm. Both heights are multiples of 20 mm, with the first and last row centres 10 mm from each edge. Any ordering or repetition keeps columns aligned and row spacing at 20 mm across seams. Corner feet, dovetails and rear-key interfaces are unchanged.
 
-Dimensions follow the linked accessory supplier and independent SKÅDIS-style pattern description. Geometry is independently constructed from these dimensions. This is a compatibility candidate, not IKEA certification. Print the coupon and test your hooks for insertion, seating and removal before printing complete ends. No payload rating is established.
+这是自定义直列孔阵，保留 5 × 15 mm 长圆孔，但不承诺完整兼容 SKÅDIS。先打印新版试配板，检查实际挂钩的插入、下挂、卸出和板厚配合。孔阵连续不代表跨缝挂载或承重已验证；挂件仍应固定在单个端框内。
+
+This is a custom straight grid with 5 × 15 mm obround holes, not a claim of full SKÅDIS compatibility. Print the updated coupon and test insertion, seating, removal and panel fit. Grid continuity does not validate cross-seam mounting or payload; keep attachments within one end frame.
 
 ## Fitting / 安装
 

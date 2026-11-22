@@ -1,6 +1,6 @@
-"""SKADIS-style common ends: 5 x 15 mm slots, R2.5, 5 mm panel.
+"""Straight-grid common ends: 5 x 15 mm slots, R2.5, 5 mm panel.
 
-40 mm repeat with 20 mm stagger; each layer is an independent accessory zone.
+40 mm horizontal / 20 mm vertical pitch; rows align across stacked layers.
 PETG/FDM 0.4 mm nozzle, 0.2 mm layer. Hook fit and load need a printed coupon.
 """
 from geometry import *
@@ -14,9 +14,8 @@ def yz_extrude(profile,x,depth):
 
 
 def slot_centers(H):
-    if H==40:return [(y,20) for y in np.arange(43.5,244,40)]
-    if H==60:return [(y,z) for y0,z in [(43.5,10),(63.5,30),(43.5,50)] for y in np.arange(y0,244,40)]
-    raise ValueError('Common ends have 40 or 60 mm height')
+    if H not in (40,60):raise ValueError('Common ends have 40 or 60 mm height')
+    return [(y,z) for z in range(10,H,20) for y in np.arange(43.5,244,40)]
 
 
 def end(module,right=False):
@@ -40,7 +39,7 @@ def end(module,right=False):
 def coupon():
     profile=rectangle(3,3,77,77).buffer(3,quad_segs=12)
     panel=extrude(profile,0,5)
-    for x,y in [(20,20),(60,20),(40,40),(20,60),(60,60)]:
+    for x,y in [(x,y) for x in (20,60) for y in (20,40,60)]:
         hole=LineString([(x,y-5),(x,y+5)]).buffer(2.5,quad_segs=16)
         panel=cut(panel,extrude(hole,-.1,5.2))
     return panel

@@ -47,11 +47,15 @@ The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1
 
 Pegboard ends retain the original rounded outline, locating feet, sockets, dovetails and rear key pockets. Only the outer panel changes. Either side can be replaced independently.
 
-- SKÅDIS-style vertical slots: **5 × 15 mm, R2.5, 5 mm panel**.
-- **40 mm** repeat along each row/column; alternate rows offset **20 × 20 mm**.
-- The 40 mm end has six slots in one row. The 60 mm end has 17 slots across three rows, including a 40 mm vertical pair for two-point accessories.
-- At least **20 mm rear clearance** behind each slot. Each layer is a separate mounting zone; the pattern is not continuous across seams.
-- Print the [80 × 80 mm fit coupon](models/common/pegboard_fit_coupon.stl) before a full end. Hook fit and payload have not been physically tested.
+- Straight-grid vertical slots: **5 × 15 mm, R2.5, 5 mm panel**.
+- **40 mm horizontal / 20 mm vertical** pitch, with every row in the same columns.
+- The 40 mm end has **12 slots in two rows**; the 60 mm end has **18 slots in three rows**. First and last row centres sit 10 mm from each layer edge.
+- Any order or repetition of 40/60 mm layers preserves **20 mm centre spacing across seams**. Rear clearance is at least **20 mm**. Aligned holes do not establish cross-seam load capacity.
+- Print the [80 × 80 mm fit coupon](models/common/pegboard_fit_coupon.stl) before a full end. Full SKÅDIS compatibility is not claimed; hook fit and payload need physical testing.
+
+![Continuous straight grid across 40, 60 and 40 mm layers](docs/images/common-grid-alignment.png)
+
+Bottom to top: 40 + 60 + 40 mm, with the same row spacing across both seams.
 
 [Common parts, dimensions and fitting notes](models/common/) · [HT set with pegboard ends](docs/images/wide-pegboard.png)
 

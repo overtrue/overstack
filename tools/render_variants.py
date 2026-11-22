@@ -45,6 +45,13 @@ for i,H in enumerate([40,60]):
         name=f'end_left_{H}_{style}';m=trimesh.load_mesh(ROOT/'models/common'/(name+'.stl'))
         common[name]=move(m,[j*115,0,i*110])
 save('common-ends',common,angle=(-140,22))
+aligned={}
+z=0
+for i,H in enumerate([40,60,40]):
+    m=trimesh.load_mesh(ROOT/'models/common'/f'end_left_{H}_pegboard.stl')
+    aligned[f'end_left_{H}_{i}']=move(m,[0,0,z]);z+=H
+save('common-grid-alignment',aligned,angle=(180,0),size=(1600,900))
+scene(aligned).export(ROOT/'models/common/straight-grid-stack.glb')
 rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text());wide={}
 heights=[0,40,100,160,220,280]
 for r in rows:

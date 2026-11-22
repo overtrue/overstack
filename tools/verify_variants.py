@@ -37,12 +37,24 @@ for lower,(H,lp) in layers.items():
                     if not an.startswith('lock_'):assert overlap(k,a)<.03,('rear key lower',lower,travel,an)
                 for bn,b in up.items():
                     if not bn.startswith('lock_'):assert overlap(k,move(b,[0,0,H]))<.03,('rear key upper',upper,travel,bn)
+measured={}
 for H in [40,60]:
     for side in ['left','right']:
         plain=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_plain.stl')
         peg=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')
         assert abs(cut(peg,plain).volume)<.01
         if side=='right':plain=mirror_x(plain);peg=mirror_x(peg)
+        # Read actual hole loops from the exported panel, independently of slot_centers.
+        section=peg.section(plane_origin=[2.5,0,0],plane_normal=[1,0,0])
+        centers=[]
+        for loop in section.discrete:
+            yz=loop[:,1:]
+            if np.allclose(np.ptp(yz,axis=0),[5,15],atol=.001):
+                c=Polygon(yz).centroid
+                centers.append((round(c.x,4),round(c.y,4)))
+        expected=[(43.5+40*i,10+20*j) for i in range(6) for j in range(H//20)]
+        assert sorted(centers)==sorted(expected),('exported hole grid',H,side,centers)
+        measured[H,side]=centers
         protected=union([box(35,-1,-4,26,289,H+5),box(-1,-1,-4,62,25,H+5),box(-1,263,-4,62,25,H+5)])
         a=intersection(plain,protected);b=intersection(peg,protected)
         assert abs(cut(a,b).volume)+abs(cut(b,a).volume)<.01,('interface changed',H,side)
@@ -55,6 +67,25 @@ for H in [40,60]:
                 land=box(0,y+dy-.2,z-.2,5,.4,.4)
                 assert abs(cut(land,peg).volume)<.01
             assert overlap(peg,box(5.1,y-3,z-8,20,6,16))<.01
-print('PASS:',pairs,'exported stack pairs, lowering paths, rear keys, slot dimensions and unchanged interfaces')
+alignment_pairs=0
+for side in ['left','right']:
+    for lower in [40,60]:
+        for upper in [40,60]:
+            centers=measured[lower,side]+[(y,z+lower) for y,z in measured[upper,side]]
+            for y in [43.5+40*i for i in range(6)]:
+                zs=sorted(z for yy,z in centers if yy==y)
+                assert np.allclose(zs,np.arange(10,lower+upper,20)),('seam row alignment',side,lower,upper,y)
+            alignment_pairs+=1
+# Both heights are multiples of 20 mm; these four seam types cover any ordering.
+assert alignment_pairs==8
+coupon=trimesh.load_mesh(ROOT/'models/common/pegboard_fit_coupon.stl')
+assert coupon.is_volume and np.allclose(coupon.extents,[80,80,5])
+centers=[]
+for loop in coupon.section(plane_origin=[0,0,2.5],plane_normal=[0,0,1]).discrete:
+    xy=loop[:,:2]
+    if np.allclose(np.ptp(xy,axis=0),[5,15],atol=.001):
+        c=Polygon(xy).centroid;centers.append((round(c.x,4),round(c.y,4)))
+assert sorted(centers)==[(x,y) for x in [20,60] for y in [20,40,60]],('coupon grid',centers)
+print('PASS:',pairs,'exported stack pairs; 8 aligned seam pairs; 12/18 holes; straight-grid coupon; unchanged interfaces')
 (ROOT/'models/ams2pro/assembly-checks.json').write_text(json.dumps({'stack_pair_checks':pairs,'layer_pairings':20,
-    'common_interfaces':'unchanged','slot_dimensions_mm':[5,15],'panel_thickness_mm':5,'physical_fit':'not_verified'},indent=2)+'\n')
+    'common_interfaces':'unchanged','slot_dimensions_mm':[5,15],'panel_thickness_mm':5,'horizontal_pitch_mm':40,'vertical_pitch_mm':20,'aligned_seam_pairs':alignment_pairs,'physical_fit':'not_verified'},indent=2)+'\n')

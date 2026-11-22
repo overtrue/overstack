@@ -45,9 +45,11 @@
       15
     ],
     "panel_mm": 5,
-    "repeat_mm": 40,
-    "stagger_mm": 20,
+    "horizontal_pitch_mm": 40,
+    "vertical_pitch_mm": 20,
+    "stagger_mm": 0,
     "rear_clearance_mm": 20,
+    "rows_align_across_seams": true,
     "cross_layer_accessories": false,
     "physical_fit": "not_verified"
   },
@@ -65,12 +67,12 @@
     {
       "name": "end_left_40_pegboard",
       "file": "models/common/end_left_40_pegboard.stl",
-      "sha256": "480b2bf05abed9ceee2a4fa66f2b400bf3913248084b6fd20e3e6df475bd5b04"
+      "sha256": "1cb84e6a005515b38e54212b2055e02ac78f536d093ee7d01bfdf71c7628d896"
     },
     {
       "name": "end_right_40_pegboard",
       "file": "models/common/end_right_40_pegboard.stl",
-      "sha256": "95d11bf3e477b8ee651da28242c742c099c5b1e7949c7b8a11e60f7645764cd8"
+      "sha256": "a804547c71cfd554d85b30fb895f34878ca6630e47b23e831ee2944290e83f7e"
     },
     {
       "name": "end_left_60_plain",
@@ -85,12 +87,12 @@
     {
       "name": "end_left_60_pegboard",
       "file": "models/common/end_left_60_pegboard.stl",
-      "sha256": "40dbc9c3f6b262d9877b0d95dccdbdd0e86bb1b875b21d942fc64170999de457"
+      "sha256": "d7c59592a8d873982b1b0ec1aecd7b6a8bde685feeb9b4b79743e3ec9d31acbc"
     },
     {
       "name": "end_right_60_pegboard",
       "file": "models/common/end_right_60_pegboard.stl",
-      "sha256": "9f278d9b5d4cb6f70af3337ac07e68b5050af4cf4605da0cc2d375062ccfffbe"
+      "sha256": "56efd37e3fe0f16855a3b2591ae1556f252918b263055fa523cffc91f3fc7c4a"
     },
     {
       "name": "lock_left",
@@ -105,7 +107,7 @@
     {
       "name": "pegboard_fit_coupon",
       "file": "models/common/pegboard_fit_coupon.stl",
-      "sha256": "2452ff8eb90ceb9c048cfe47e517d3f163ba261c17639adcaf0854c73b1b0095"
+      "sha256": "bae3ef56ad5b3275c48ca6788503cf9b0ff0ff4598da6636e39ba5182fb5399e"
     },
     {
       "name": "5-slot-plate-layer/plate_carrier_left",

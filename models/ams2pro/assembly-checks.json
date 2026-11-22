@@ -7,5 +7,8 @@
     15
   ],
   "panel_thickness_mm": 5,
+  "horizontal_pitch_mm": 40,
+  "vertical_pitch_mm": 20,
+  "aligned_seam_pairs": 8,
   "physical_fit": "not_verified"
 }

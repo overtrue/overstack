@@ -8,7 +8,7 @@ for device in ['ams2pro+ht','ams2pro','common']:
     folders=['models/'+device]+(['models/common'] if device!='common' else [])
     files=[ROOT/'LICENSE']
     for folder in folders:files.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
-    files.extend(p for p in (ROOT/'docs/images').glob('*.png') if device=='ams2pro+ht' or (device=='ams2pro' and p.name=='lip-r3-detail.png') or p.name.startswith(('no-ht-','common-ends','wide-pegboard')))
+    files.extend(p for p in (ROOT/'docs/images').glob('*.png') if device=='ams2pro+ht' or (device=='ams2pro' and p.name=='lip-r3-detail.png') or p.name.startswith(('no-ht-','common-ends','common-grid-alignment','wide-pegboard')))
     if device=='ams2pro+ht':files.extend(p for p in (ROOT/'docs/pdf').iterdir() if p.is_file())
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     archive=DIST/(name+'.zip')

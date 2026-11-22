@@ -1,4 +1,4 @@
-"""Build AMS-only layers and shared plain/SKADIS-style ends from analytic source."""
+"""Build AMS-only layers and shared plain/straight-grid ends from analytic source."""
 from pathlib import Path
 import sys,json,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
@@ -43,8 +43,8 @@ def build():
     print('Building common 40 / 60 mm modules',flush=True)
     modules={h:build_module(h,n) for h,n in [(40,5),(60,8)]}
     common={};report={'width_mm':399,'depth_mm':287,'three_drawer_available':False,'layers':[],
-        'pegboard':{'slot_mm':[5,15],'panel_mm':5,'repeat_mm':40,'stagger_mm':20,'rear_clearance_mm':20,
-                    'cross_layer_accessories':False,'physical_fit':'not_verified'},'parts':[]}
+        'pegboard':{'slot_mm':[5,15],'panel_mm':5,'horizontal_pitch_mm':40,'vertical_pitch_mm':20,'stagger_mm':0,'rear_clearance_mm':20,
+                    'rows_align_across_seams':True,'cross_layer_accessories':False,'physical_fit':'not_verified'},'parts':[]}
     for H,module in modules.items():
         for style in ['plain','pegboard']:
             for right,side in [(False,'left'),(True,'right')]:
