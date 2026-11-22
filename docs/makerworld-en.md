@@ -10,4 +10,4 @@ This is a digital prototype. All images are CAD renders. Assembly interference, 
 
 Suggested tags: AMS, AMS HT, storage, drawer, build plate, modular.
 
-All drawers use 2 mm solid floors, with existing joinery and slide interfaces retained. The design is based on practical experience with existing community models.
+All drawers use 2 mm solid floors, with a reinforced left/right joint on the wide single drawer and unchanged slide interfaces. The design is based on practical experience with existing community models.

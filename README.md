@@ -17,9 +17,11 @@ Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 Images show the actual base geometry. Equipment scenes use the measured STEP models supplied by Engineered Reality; see [render asset credits](docs/render-assets.md).
 
-**This is an unprinted digital prototype.** Geometry checks have passed; the original HT set still has local thin-wall / thin-skin failures; the new AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
+**This is an unprinted digital prototype.** Geometry checks have passed; all 41 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
 [Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. See the index for sliced and blocked entries. Not physically tested.
+
+[Drawer repair and verification](docs/drawer-repair.md)
 
 ## AMS 2 Pro only
 
@@ -143,7 +145,7 @@ Eight plate positions in the same footprint, plus two small side bins for tools 
 
 ### C · 60 mm single-drawer layer
 
-One wide drawer for longer tools or items that do not fit narrow compartments. Its front and rear halves join with a transverse sliding dovetail. The floor is 2 mm solid, with local reinforcement retained around the seam. Join the drawer first, assemble the frame, then insert it along the guides. Travel is about 180 mm; lift 7 mm at the stop for removal. Ten parts, including two seam keys.
+One wide drawer for longer tools or items that do not fit narrow compartments. Its left and right halves join with a longitudinal sliding dovetail: start the left half behind the right and slide it forward. The floor is 2 mm solid, with a locally reinforced seam rising 0.8 mm into the drawer. Replace both old front/rear halves together; they are not compatible with the new halves. Join the drawer first, assemble the frame, then insert it along the guides. Travel is about 180 mm; lift 7 mm at the stop for removal. Ten parts, including two seam keys.
 
 ![C: single-drawer layer, exploded](docs/images/layer-c-exploded.png)
 
@@ -183,6 +185,8 @@ Install Python 3.12+ and [uv](https://docs.astral.sh/uv/).
 uv sync --frozen
 uv run python tools/build.py
 uv run python tools/verify.py
+uv run python tools/verify_drawer_repair.py
+cad run tools/check_printing.py
 uv run python tools/package.py
 cad run tools/build_variants.py
 uv run python tools/verify_variants.py
@@ -205,6 +209,7 @@ Each HT layer has its own Chinese and English PDF in [docs/pdf](docs/pdf). Match
 uv sync --frozen --group docs
 uv run python tools/render.py
 cad run tools/render_blender.py
+cad run tools/label_stack.py
 uv run python tools/render_variants.py
 uv run python tools/model_previews.py
 uv run python tools/number_compact_parts.py
@@ -219,7 +224,7 @@ uv run --group docs python tools/layer_manuals.py
 
 ## Validation and limits
 
-The build checks all 1,653 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. Optional `tools/check_printing.py` uses text-to-cad for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. Generic checks report thin-wall errors on the single-drawer rear half and thin-skin errors on the three small main drawers, plus overhang, bridge and thin-edge warnings. The two single-drawer halves have no planar bed contact in the current candidate poses; the rear half also exceeds the 260 mm build height. Those poses must be revised before slicing. These checks are not a tested print profile or load rating.
+The build checks all 1,653 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 41 distinct HT geometries pass. The single-drawer joint now has a reinforced channel; its left/right halves and the triple drawers print side-down at 40 degrees, within a 256 mm build height. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks joint stock, sliding capture, solid floors and planar bed contact. These checks are not a tested print profile or load rating.
 
 Rear beams and seam keys are removable and are not captive. Remove devices and the upper layer before servicing drawers. Verify actual device feet, underside clearance, ventilation, cables and stability before placing equipment on the stack.
 

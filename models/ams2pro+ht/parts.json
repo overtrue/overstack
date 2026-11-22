@@ -465,7 +465,7 @@
     "name": "standard_2_drawer_1",
     "layer": 2,
     "file": "parts/standard_2_drawer_1.stl",
-    "sha256": "9ab50ed53c619768ff064d27b588a2ac84610730d7ddee81dc81ffeb1e35e750",
+    "sha256": "b89f3d33492d3ab23719857530ae15628f43f9bc1e65cffe9e67fb834f2ea2db",
     "bounds_mm": [
       [
         92.5,
@@ -473,24 +473,24 @@
         6.300000190734863
       ],
       [
-        402.5,
-        137.5,
+        249.5,
+        271.0,
         59.5
       ]
     ],
     "id": "C07",
-    "label": "抽屉前半",
+    "label": "抽屉左半",
     "packaged_file": "03-single-drawer-layer/parts/C07-standard_2_drawer_1.stl"
   },
   {
     "name": "standard_2_drawer_2",
     "layer": 2,
     "file": "parts/standard_2_drawer_2.stl",
-    "sha256": "d4faad7816139018ef886c936e910af175a8a986beefed7466762d64b13abfe5",
+    "sha256": "95e39a63ca3379617b74b6b10297d5ab4d6f1fda9ad101dbb982bd968c3b728a",
     "bounds_mm": [
       [
-        92.5,
-        135.8000030517578,
+        247.8000030517578,
+        0.0,
         6.300000190734863
       ],
       [
@@ -500,7 +500,7 @@
       ]
     ],
     "id": "C08",
-    "label": "抽屉后半",
+    "label": "抽屉右半",
     "packaged_file": "03-single-drawer-layer/parts/C08-standard_2_drawer_2.stl"
   },
   {

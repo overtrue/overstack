@@ -4,7 +4,7 @@
 
 Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-series beds. Each printer uses its own official Bambu Studio 02.09.01.70 preset, a 0.4 mm nozzle, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
 
-[配置索引 / Profile index](INDEX.md)
+[配置索引 / Profile index](INDEX.md) · [抽屉修复说明 / Drawer repair](../docs/drawer-repair.md)
 
 两版下载包 / Two download packages:
 
@@ -32,9 +32,9 @@ H2C 保留官方 330 × 320 mm 板配置，但摆盘限制在两喷嘴范围交�
 
 H2C retains its official 330 × 320 mm bed preset, while layouts stay in the intersection of both nozzle regions (300 × 320 mm, starting at X=25) and the smaller 320 mm height limit. H2S uses its own 340 × 320 mm preset. Limits come from Studio's official machine presets.
 
-小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。已有薄壁／薄层问题不会因换用大板而自动解除。
+小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。单抽屉采用新版左右拼接，三抽屉采用侧放40°方向；旧阻塞状态已由重新检查和切片替代。
 
-Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. Existing thin-wall/skin findings remain blockers on larger printers too.
+Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. The single drawer uses revised left/right halves; triple drawers print side-down at 40 degrees. Fresh checks and slicing replace the former blocked status.
 
 ## 组织 / Organization
 
@@ -67,7 +67,7 @@ All profiles remain `makerworld_ready=false` until print, support-removal, assem
 
 - `<printer>-04-petg.3mf`（`x2d`、`p2s`、`h2s`、`h2c`、`h3c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
 - `manifest.json`：来源文件及 SHA-256、数量、摆放变换、打印条件和验证状态。
-- `slice-validation.json`：新增机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for the additional printers.
+- `slice-validation.json`：各机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for every printer.
 - `plate_*.png`、`slice-info.xml`：实际切片产生的预览与耗材/时间估算；不是实拍或实测。
 
 The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in `models/`. Manifests track source hashes, quantities, transforms and checks. Slice previews and estimates come from Studio, not physical measurements.

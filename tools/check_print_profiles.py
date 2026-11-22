@@ -72,13 +72,12 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
         assert sorted(assigned)==sorted(o.get('id') for o in objects),(path,'plate coverage')
     if report['status']=='sliced_not_printed':
         assert report['slice_exit_code']==0 and len(report['gcode_files'])==len(report['plates'])
-        if printer_key!='x2d':
-            evidence=json.loads((folder/'slice-validation.json').read_text())
-            assert evidence['project_sha256']==report['project_sha256']
-            assert evidence['printer']==target['printer'] and len(evidence['plates'])==len(report['plates'])
-            for plate in evidence['plates']:
-                bounds=plate['bbox_xy_mm'];x0,y0,x1,y1=target['area']
-                assert bounds[0]>=x0 and bounds[1]>=y0 and bounds[2]<=x1 and bounds[3]<=y1,(path,'slice outside target nozzle area')
+        evidence=json.loads((folder/'slice-validation.json').read_text())
+        assert evidence['project_sha256']==report['project_sha256']
+        assert evidence['printer']==target['printer'] and len(evidence['plates'])==len(report['plates'])
+        for plate in evidence['plates']:
+            bounds=plate['bbox_xy_mm'];x0,y0,x1,y1=target['area']
+            assert bounds[0]>=x0 and bounds[1]>=y0 and bounds[2]<=x1 and bounds[3]<=y1,(path,'slice outside target nozzle area')
         info=ET.parse(folder/'slice-info.xml');plates=info.findall('plate');assert len(plates)==len(report['plates'])
         assert len(info.findall('.//object'))==len(report['parts'])
         for p in plates:

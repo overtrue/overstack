@@ -12,7 +12,7 @@ def label(n):
     for key,zh in [('end_left','左端框'),('end_right','右端框'),('side_bin_left','左小抽屉'),('side_bin_right','右小抽屉'),('side_cover_left','左封板'),('side_cover_right','右封板'),('side_left','左侧承架'),('side_right','右侧承架'),('rear_beam','后横梁'),('front_beam','前横梁'),('divider','隔墙')]:
         if key in n:return zh
     if 'cassette_' in n:return {'1':'左侧承架','2':'右侧承架','3':'前横梁','4':'后横梁'}[n.rsplit('_',1)[1]]
-    if n.startswith('standard_2_drawer_'):return '抽屉前半' if n.endswith('_1') else '抽屉后半'
+    if n.startswith('standard_2_drawer_'):return '抽屉左半' if n.endswith('_1') else '抽屉右半'
     if 'drawer' in n:return '抽屉'+n.rsplit('_',1)[1]
     raise ValueError(n)
 
@@ -22,6 +22,8 @@ def write_layer_readme(path,records):
     text=f'# {slug}\n\n![装配预览 / Assembly preview](preview.png)\n\n'
     if slug in ('01-five-slot-plate-layer','02-eight-slot-plate-layer'):
         text+='**打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。\n\n**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.\n\n'
+    if slug=='03-single-drawer-layer':
+        text+='新版为左右两半，左半从后方向前滑合；旧前后两半需成对替换，不能混用。接缝加强筋在内侧凸起0.8 mm。 / The new left/right halves slide together from the rear. Replace both old front/rear halves; do not mix revisions. The seam has a local 0.8 mm interior ridge. [修复与验证 / Repair checks](../../../docs/drawer-repair.md).\n\n'
     if slug=='06-device-top':
         text+='两端挡边的四个外露上角已做 R3 mm 圆角，承托面和连接接口不变；打印后仍需检查毛刺。 / The four exposed upper lip ends have R3 mm rounds; bearing faces and joints are unchanged. Check printed parts for burrs.\n\n![R3 挡边端头 / Rounded lip tip](../../../docs/images/lip-r3-detail.png)\n\n'
     if slug=='01-five-slot-plate-layer':
@@ -61,6 +63,24 @@ def package(source,dest):
     for prefix,folder,z in LAYERS:
         loaded=trimesh.load(dest/folder/'layer-assembly-geometry.3mf')
         assert len(loaded.graph.nodes_geometry)==sum(r['packaged_file'].startswith(folder+'/') for r in records)
+    printing=json.loads((ROOT/'output/printing/checks.json').read_text())
+    source_hashes={r['name']:r['sha256'] for r in data['parts']}
+    assert {r['source_sha256'] for r in printing['unique_parts']}==set(source_hashes.values()),'incomplete manufacturing checks'
+    for row in printing['unique_parts']:
+        assert source_hashes[row['name']]==row['source_sha256'],('stale manufacturing check',row['name'])
+    failures=[{'part':r['name'],'status':r['status'],'errors':r['errors']}
+              for r in printing['unique_parts'] if r['status']!='ok']
+    summary={'parts':len(records),'assembly_pairs':data['assembly_pairs_checked'],
+             'distinct_geometries':len(printing['unique_parts']),
+             'printing_statuses':sorted({r['status'] for r in printing['unique_parts']}),
+             'warnings':sorted({w for r in printing['unique_parts'] for w in r['warnings']}),
+             'printing_passed':sum(r['status']=='ok' for r in printing['unique_parts']),
+             'printing_failures':failures,'physical_fit':'not_verified','load_rating':None,'sliced':False}
+    (dest/'validation.json').write_text(json.dumps(summary,indent=2)+'\n')
+    repair=json.loads((source/'drawer-repair-checks.json').read_text())
+    for name,pose in repair['poses'].items():
+        assert pose['source_sha256']==source_hashes[name],('stale drawer check',name)
+    (dest/'drawer-repair-checks.json').write_text(json.dumps(repair,indent=2)+'\n')
     print('PASS: six layers, 58 numbered STL parts, six geometry-only 3MF assemblies')
     return records
 

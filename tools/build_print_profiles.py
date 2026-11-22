@@ -4,7 +4,7 @@ import argparse,hashlib,json,subprocess,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import trimesh,np
-from fabrication import orient
+from fabrication import orient,drawer_print_pose
 from multi_drawers import orient_candidate
 from print_profile_targets import TARGETS
 TARGET=TARGETS['x2d'];PRINTER_KEY='x2d'
@@ -73,7 +73,10 @@ def build(key,rows,slice_project):
     inputs=[];blockers=[]
     for r in rows:
         source=ROOT/r['file'];mesh=trimesh.load_mesh(source)
-        try:printed,pose=orient_for_target(mesh)
+        try:
+            if any(n in source.stem for n in ['standard_2_drawer_','3drawers_drawer_']):
+                printed,pose=drawer_print_pose(mesh)
+            else:printed,pose=orient_for_target(mesh)
         except AssertionError:
             blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
             report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue

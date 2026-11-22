@@ -1,16 +1,15 @@
-"""Check actual G-code metadata for the additional bed-size profiles."""
+"""Check actual G-code metadata for every printer profile."""
 from pathlib import Path
 import hashlib,json,zipfile
 from print_profile_targets import TARGETS
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 for key,target in TARGETS.items():
-    if key=='x2d':continue
     base=ROOT/'print-profiles'/target['folder']
     for p in sorted(base.glob('*/*/manifest.json')):
         report=json.loads(p.read_text())
         if report['status']!='sliced_not_printed':continue
-        project=p.parent/report['project_file'];assert sha(project)==report['project_sha256']
+        project=p.parent/report.get('project_file',key+'-04-petg.3mf');assert sha(project)==report['project_sha256']
         sliced=ROOT/'output/print-profiles'/target['folder']/report['profile']/'sliced.3mf'
         result={'printer':target['printer'],'project_sha256':sha(project),'sliced_archive_sha256':sha(sliced),'plates':[]}
         with zipfile.ZipFile(project) as z:settings=json.loads(z.read('Metadata/project_settings.config'))

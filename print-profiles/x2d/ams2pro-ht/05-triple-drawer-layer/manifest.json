@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "0379846baa1a604083752f0d13d665eaf55dab38",
+  "source_commit": "79b38c512e7b1c2e14e9cb65b57514fb8289d143",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -109,16 +109,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          233.69879118215394
+          4.6906693763513654e-17,
+          -0.6427876096865393,
+          -0.766044443118978,
+          219.77508659063133
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          42.07285348059957
+          3.9359389436709925e-17,
+          0.766044443118978,
+          -0.6427876096865393,
+          38.245862776349085
         ],
         [
           1.0,
@@ -134,12 +134,12 @@
         ]
       ],
       "bounds_mm": [
-        229.1025971044414,
-        227.68838354206832,
+        214.795797710358,
+        240.38021217925655,
         113.0
       ],
-      "downward_area_mm2": 13713.709737838442,
-      "bed_contact_area_mm2": 12802.474990844723,
+      "downward_area_mm2": 13713.709737838433,
+      "bed_contact_area_mm2": 12802.474990844727,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -154,16 +154,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          233.69879118215394
+          4.6906693763513654e-17,
+          -0.6427876096865393,
+          -0.766044443118978,
+          219.77508659063133
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          42.07285348059956
+          3.9359389436709925e-17,
+          0.766044443118978,
+          -0.6427876096865393,
+          38.24586277634908
         ],
         [
           1.0,
@@ -179,12 +179,12 @@
         ]
       ],
       "bounds_mm": [
-        229.1025971044414,
-        227.68838354206832,
+        214.795797710358,
+        240.38021217925652,
         113.0
       ],
-      "downward_area_mm2": 13713.709695330812,
-      "bed_contact_area_mm2": 12802.474990844721,
+      "downward_area_mm2": 13713.709695330805,
+      "bed_contact_area_mm2": 12802.474990844727,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -199,22 +199,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          185.6155300614687
+          4.6906693763513654e-17,
+          -0.6427876096865393,
+          -0.766044443118978,
+          219.77508659063133
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -4.596194077712572
+          3.9359389436709925e-17,
+          0.766044443118978,
+          -0.6427876096865393,
+          38.24586277634907
         ],
         [
-          -1.0,
+          1.0,
           0.0,
           6.123233995736766e-17,
-          426.0
+          -313.0
         ],
         [
           0.0,
@@ -224,12 +224,12 @@
         ]
       ],
       "bounds_mm": [
-        227.6883835420683,
-        229.1025971044414,
+        214.795797710358,
+        240.38021217925655,
         113.0
       ],
-      "downward_area_mm2": 13713.709695330808,
-      "bed_contact_area_mm2": 12802.47499084473,
+      "downward_area_mm2": 13713.709695330806,
+      "bed_contact_area_mm2": 12802.474990844728,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -688,17 +688,28 @@
       ]
     }
   ],
-  "status": "blocked",
+  "status": "sliced_not_printed",
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
   "model_source_hashes": {
     "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
     "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
     "src/stacknest/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/stacknest/fabrication.py": "e7c2a3d7d2f6c8dcb95bf074bc42e1f92f85f66a5ed9b82b8c21ea99600753a6",
+    "src/stacknest/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
     "src/stacknest/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
     "src/stacknest/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
     "src/stacknest/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
     "src/stacknest/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/stacknest/storage.py": "53862a6df80d90e17903d85e32b9b7d9edd96da5c208583a8b5e0f8e3183a661",
+    "src/stacknest/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
     "src/stacknest/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
     "src/stacknest/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
     "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
@@ -707,12 +718,133 @@
   },
   "validation_source": {
     "file": "models/ams2pro+ht/validation.json",
-    "sha256": "13ea8dd34c2d523408d725350c075d05c8fe81e17053e1a531d5d10a24bf9b56"
+    "sha256": "8919f491f6487b20930fe7203fc162c8c5b0227a26666673ea333144a14f68cb"
   },
-  "blockers": [
-    "3drawers_drawer_1: printing.skin_layer",
-    "3drawers_drawer_2: printing.skin_layer",
-    "3drawers_drawer_3: printing.skin_layer"
+  "preset_hashes": {
+    "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
+    "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
+  },
+  "process_overrides": {
+    "curr_bed_type": "Textured PEI Plate",
+    "wall_loops": "4",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "1",
+    "support_type": "tree(auto)",
+    "brim_type": "outer_only",
+    "brim_width": "3"
+  },
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 E01",
+      "objects": [
+        "E01-E01-3drawers_divider_1"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "02 E02",
+      "objects": [
+        "E02-E02-3drawers_divider_2"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "03 E03",
+      "objects": [
+        "E03-E03-3drawers_drawer_1"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "04 E04",
+      "objects": [
+        "E04-E04-3drawers_drawer_2"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "05 E05",
+      "objects": [
+        "E05-E05-3drawers_drawer_3"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "06 E06",
+      "objects": [
+        "E06-E06-3drawers_end_left_1"
+      ]
+    },
+    {
+      "number": 7,
+      "name": "07 E07",
+      "objects": [
+        "E07-E07-3drawers_end_right_1"
+      ]
+    },
+    {
+      "number": 8,
+      "name": "08 E08",
+      "objects": [
+        "E08-E08-3drawers_front_beam_1"
+      ]
+    },
+    {
+      "number": 9,
+      "name": "09 E09",
+      "objects": [
+        "E09-E09-3drawers_front_beam_2"
+      ]
+    },
+    {
+      "number": 10,
+      "name": "10 E10",
+      "objects": [
+        "E10-E10-3drawers_rear_beam_1"
+      ]
+    },
+    {
+      "number": 11,
+      "name": "11 E11, E12, E13",
+      "objects": [
+        "E11-E11-3drawers_rear_beam_2",
+        "E12-E12-3drawers_seam_2_False_layer_lock",
+        "E13-E13-3drawers_seam_2_True_layer_lock"
+      ]
+    },
+    {
+      "number": 12,
+      "name": "12 E14",
+      "objects": [
+        "E14-E14-3drawers_side_left"
+      ]
+    },
+    {
+      "number": 13,
+      "name": "13 E15",
+      "objects": [
+        "E15-E15-3drawers_side_right"
+      ]
+    }
   ],
-  "preset_directory": "print-profiles/x2d/presets"
+  "project_sha256": "a2d3bd8247e65ee213806e17ff50fb801bb085a97019c62d574e48da3c42d50f",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_10.gcode",
+    "Metadata/plate_11.gcode",
+    "Metadata/plate_8.gcode",
+    "Metadata/plate_9.gcode",
+    "Metadata/plate_12.gcode",
+    "Metadata/plate_13.gcode",
+    "Metadata/plate_2.gcode",
+    "Metadata/plate_1.gcode",
+    "Metadata/plate_6.gcode",
+    "Metadata/plate_7.gcode",
+    "Metadata/plate_3.gcode",
+    "Metadata/plate_4.gcode",
+    "Metadata/plate_5.gcode"
+  ]
 }

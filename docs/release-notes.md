@@ -1,4 +1,6 @@
-Added X2D 0.4 mm / PETG Bambu Studio projects, organized as complete functional layers with named plates, source hashes and slice previews. Small interface specimens cover dovetails, plate ledges, rear keys and stacking feet, alongside the pegboard coupon. Only fully sliced projects enter `stacknest-print-profiles-preview.zip`; physical fit and MakerWorld publication remain pending. HT single- and triple-drawer profiles remain blocked by the documented geometry findings.
+修复 HT 单抽屉拼接槽薄壁：改为左右两半，槽周围加厚，内侧加强筋凸起 0.8 mm；旧前后两半需成对替换。三抽屉模型不变，侧放40°后通过制造检查。41种不同几何均通过 PETG/FDM 检查，装配和运动检查通过；两层按五种机型重新切片，教程和下载包同步更新，尚未实物验证。 / Fixed the HT single-drawer joint with reinforced left/right halves and a local 0.8 mm interior ridge; replace both old front/rear halves. Triple-drawer geometry is unchanged and passes manufacturing checks side-down at 40 degrees. All 41 distinct geometries pass PETG/FDM checks, with assembly and motion checks passed. Both layers are resliced for all five printers, with updated guides and downloads. Physical validation is pending.
+
+Added X2D 0.4 mm / PETG Bambu Studio projects, organized as complete functional layers with named plates, source hashes and slice previews. Small interface specimens cover dovetails, plate ledges, rear keys and stacking feet, alongside the pegboard coupon. Only fully sliced projects enter `stacknest-print-profiles-preview.zip`; physical fit and MakerWorld publication remain pending. The former HT single- and triple-drawer blockers are resolved in the latest update above.
 
 Checked both widths and common parts against rebuilt source geometry. Download bundles now check internal documentation links as well as file hashes. Corrected an outdated HT geometry statement in the bilingual documentation.
 
@@ -20,12 +22,12 @@ StackNest packages the parametric AMS storage base with 58 numbered parts, six l
 
 All illustrations were rerendered with corrected face normals and soft area lighting. All eight drawers now have 2 mm solid floors. Existing joinery, slide grooves and stops are retained. The model builds without external mesh inputs.
 
-This is a digital prototype, not a print-tested release. Physical fit, device clearance and load capacity remain unverified. Geometry-only 3MF files are not slicer projects. Generic PETG/FDM checks passed for 36 of 40 distinct geometries; four drawer parts report thin-wall or thin-skin errors. Candidate print poses still require orientation/support work.
+This is a digital prototype, not a print-tested release. Physical fit, device clearance and load capacity remain unverified. Geometry-only 3MF files are not slicer projects. Generic PETG/FDM checks now pass for all 41 distinct geometries; overhang and bridge warnings remain.
 
 Equipment previews / 设备效果图：新增当前紧凑组合和完整组合摆放 AMS 2 Pro、AMS HT 的高清渲染，使用 Engineered Reality 的原尺寸 STEP，并附素材说明。设备源文件不包含在下载包中。 / Added compact and full-stack renders using Engineered Reality’s unscaled STEP assemblies, with asset credits. Device source files are not redistributed.
 
 AMS-only preview / 无 HT 效果图：补充 399 mm 宽紧凑组合摆放 AMS 2 Pro 的高清渲染，并同步中英文 README、素材说明和模型下载包。 / Added an AMS 2 Pro render on the 399 mm compact stack, with bilingual README, asset credits and model download packages updated.
 
-切片方案按两档打包：X2D 256 mm 标准板与 H 系列大板（H2S、H2C 独立工程）。小于 256 × 256 mm 不支持。保留原有 HT 单抽屉、三抽屉几何阻塞，不包含可打印工程；尚未实物验证。 / Print profiles are packaged in two editions: X2D 256 mm and H-series, with separate H2S and H2C projects. Smaller beds are unsupported. Existing HT single- and triple-drawer geometry blockers remain excluded from printable projects; physical validation is pending.
+切片方案按两档打包：X2D 256 mm 标准板与 H 系列大板（H2S、H2C 独立工程）。小于 256 × 256 mm 不支持。HT 单抽屉、三抽屉已在本次更新中解除阻塞；尚未实物验证。 / Print profiles are packaged in two editions: X2D 256 mm and H-series, with separate H2S and H2C projects. Smaller beds are unsupported. The latest update resolves the HT single- and triple-drawer blockers; physical validation is pending.
 
 切片目录统一按机型命名，新增 P2S 与 H3C 独立配置。标准板包包含 X2D、P2S，大板包包含 H2S、H2C、H3C。 / Print-profile directories now use printer names. Added separate P2S and H3C profiles: the standard-bed package covers X2D and P2S; the large-bed package covers H2S, H2C and H3C.

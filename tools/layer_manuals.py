@@ -26,7 +26,7 @@ for lang in ['zh','en']:
   steps=[use,('连接相邻层','弧形底脚对准槽后竖直落座。每条层缝装左右两枚锁片，从后向前推入；锁片可向后退出。') if z else ('Connect neighbouring layers','Align the curved feet and lower vertically. Insert the two seam keys from behind. Keys can slide out rearward.'),('验收本层','确认四角落座、连接到位、抽拉无卡滞。后横梁与锁片没有防丢锁止；实物配合、设备净空和承重仍需验证。') if z else ('Check this layer','Check seating, joints and free movement. Rear beams and keys are not captive. Physical fit, device clearance and load capacity still need testing.')]
   b.steps(steps,x=550,top=481,width=250)
   if i in [1,2,3,4]:
-   b.para('抽屉底板为2 mm实心板，拼接与滑轨接口保留。' if z else 'Drawers use 2 mm solid floors; joining and slide interfaces are retained.',42,83,755,10)
+   b.para('抽屉底板为2 mm实心板，单抽屉接缝另有局部加厚筋。' if z else 'Drawers use 2 mm solid floors; the single-drawer seam has local reinforcement.',42,118,755,10)
   if i==2:
-   b.para('两半抽屉的候选打印方向没有平面着床，后半高度也超过260 mm；这不是可用摆盘，需要重新安排方向与支撑。' if z else 'The candidate drawer poses lack planar bed contact; the rear half also exceeds 260 mm in height. Rework orientation and supports before slicing.',42,130,755,10,color=ORANGE)
-  b.note('PETG/FDM检查发现单抽屉后半件薄壁及三抽屉薄层错误，另有悬垂、桥接等提示。尚无实物验证。' if z else 'PETG/FDM checks found thin-wall / thin-skin errors on four drawer parts, plus overhang and bridge warnings. Physical fit is untested.');b.end();b.save();print(b.path.name)
+   b.para('使用新版左右两半，不能混用旧前后两半；侧放40°打印，按机型工程设置支撑。' if z else 'Use the new left/right halves, not the old front/rear halves. Print side-down at 40 degrees with the printer-specific supports.',42,145,755,10,color=ORANGE)
+  b.note('PETG/FDM检查通过；仍有悬垂、桥接等提示。尚无实物验证。' if z else 'PETG/FDM checks pass; overhang and bridge warnings remain. Physical fit is untested.');b.end();b.save();print(b.path.name)

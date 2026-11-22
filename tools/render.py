@@ -47,8 +47,8 @@ def exploding(r):
     elif 'divider' in n:z=40
     elif 'lock' in n:y=100;z=10
     elif 'drawer' in n or 'side_bin' in n:y=-110;z=38
-    if n=='standard_2_drawer_1':y=-170
-    if n=='standard_2_drawer_2':y=-90
+    if n=='standard_2_drawer_1':x=-25;y=-90
+    if n=='standard_2_drawer_2':x=25;y=-150
     if n=='device_adapter_1':x=-40;y=20
     return [x,y,z]
 
@@ -59,10 +59,11 @@ for group,(prefix,folder,z) in enumerate(LAYERS):
     jobs.append(save_scene('layer-'+prefix.lower()+'-exploded',selected,exploding,width=1800,height=1200))
     jobs.append(save_scene('layer-'+prefix.lower()+'-assembled',selected,lambda r:[0,0,0],width=1600,height=1000))
 jobs.append(save_scene('rail-detail',[r for r in rows if r['name']=='standard_1_cassette_plates_1'],lambda r:[0,0,0],angle=(35,35),width=1600,height=1000))
-jobs.append(save_scene('drawer-joint',[r for r in rows if r['name'].startswith('standard_2_drawer_')],lambda r:([70,0,0] if r['name'].endswith('_1') else [0,0,0]),angle=(-65,-28),width=1600,height=1000))
+jobs.append(save_scene('drawer-joint',[r for r in rows if r['name'].startswith('standard_2_drawer_')],lambda r:([0,70,0] if r['name'].endswith('_1') else [0,0,0]),angle=(-65,-28),width=1600,height=1000))
 locks=[r for r in rows if r['name'] in ['standard_1_end_left_1','standard_2_end_left_1','seam_2_False_layer_lock']]
 jobs.append(save_scene('layer-lock-detail',locks,lambda r:([0,0,-60] if r['name']=='standard_1_end_left_1' else ([0,55,0] if 'lock' in r['name'] else [0,0,0])),angle=(130,20),width=1200,height=1200))
 (OUT/'jobs.json').write_text(json.dumps(jobs,indent=2))
+if '--prepare-only' in sys.argv:raise SystemExit(0)
 cad=shutil.which('cad')
 if not cad:raise SystemExit('Install text-to-cad (cad) to render these CAD illustrations.')
 def render(j):

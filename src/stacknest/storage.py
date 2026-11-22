@@ -7,8 +7,9 @@ def drawer_and_stops(carrier, H):
     floor=solid_floor(92.5,310)
     walls=[box(92.5,0,8.5,310,8,H-9),box(92.5,0,8.5,6,271,H-9),
            box(396.5,0,8.5,6,271,H-9),box(92.5,265,8.5,310,6,H-9),box(92.5,0,8.5,310,8,3)]
-    # Three underside pads support the sliding dovetail without raising the storage floor.
-    pads=[box(x-20,119.5,6.3,40,32,4.45) for x in [140,247.5,355]]
+    # A continuous spine backs the longitudinal joint above and below its channel.
+    # The local 0.8 mm interior ridge leaves at least 1.4 mm above the female slot.
+    pads=[box(241.5,42.5,6.3,14,228.5,5)]
     drawer=union([floor]+walls+pads+[box(92.5,0,6.5,310,2,9)])
     drawer=cut(drawer,rounded_xz(212.5,H-22,70,14,4,-1,10))
     # Continuous front-open grooves stop at Y204: tongue backY24 => travel180mm.

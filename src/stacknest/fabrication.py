@@ -26,31 +26,43 @@ def sliding_profile(z,head,neck,plane=247.5,length=4):
                     (plane+length,z+head/2),(plane,z+neck/2)])
 
 
-def drawer_front_back_split(mesh):
-    # Transverse YZ dovetails, assembled along X from the right.
-    plane=135.5;gap=.3
-    def transverse(profile,x,length):
-        m=xz_extrude(profile,x,length)
-        m.apply_transform(np.array([[0,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,1]]))
-        return m
+def drawer_left_right_split(mesh):
+    # Longitudinal XZ dovetails. Slide the left half forward from the rear.
+    plane=247.5;gap=.3
     profile=sliding_profile(8.5,2,1,plane=plane,length=2)
-    front=box(-10,-10,-20,520,plane+10,120)
-    tongues=[transverse(profile,x-15,30) for x in [140,247.5,355]]
-    mask=union([front,*tongues])
-    clearance=union([box(-10,-10,-20,520,plane+10+gap,120),
-                     transverse(profile.buffer(gap,join_style=2),124.7,300),
-                     box(400.3,135.8,9.4,2.3,2.2,.7)])
+    left=box(-10,-10,-20,plane+10,320,120)
+    tongues=[xz_extrude(profile,y-15,30) for y in [60,135.5,211]]
+    mask=union([left,*tongues])
+    clearance=union([box(-10,-10,-20,plane+10+gap,320,120),
+                     xz_extrude(profile.buffer(gap,join_style=2),44.7,260)])
     parts=[intersection(mesh,mask),cut(mesh,clearance)]
     assert all(m.is_watertight and len(m.split())==1 for m in parts)
     for travel in [0,.5,1,3,8,20,40,80,160,320]:
-        assert overlap(move(parts[0],[travel,0,0]),parts[1])<.01,('drawer transverse assembly',travel)
-    for delta in [[0,-1.5,0],[0,0,1],[0,0,-1],[-1,0,0]]:
+        assert overlap(move(parts[0],[0,travel,0]),parts[1])<.01,('drawer longitudinal assembly',travel)
+    for delta in [[-1.5,0,0],[0,0,1],[0,0,-1],[0,-1,0]]:
         assert overlap(move(parts[0],delta),parts[1])>.1,('drawer capture',delta)
     return parts
 
 
+def drawer_print_pose(mesh):
+    # Side-down, 40 degrees on the bed: flat contact and a 3 mm brim on 256 mm beds.
+    t=(trimesh.transformations.rotation_matrix(np.radians(40),[0,0,1]) @
+       trimesh.transformations.rotation_matrix(-np.pi/2,[0,1,0]))
+    m=mesh.copy();m.apply_transform(t)
+    shift=-m.bounds[0];m.apply_translation(shift);t[:3,3]+=shift
+    assert np.all(m.extents<=np.array([250,250,256])),m.extents
+    down=m.face_normals[:,2]<-.707;elevated=m.triangles_center[:,2]>.25
+    bed=float(m.area_faces[down&~elevated].sum())
+    flat=(m.face_normals[:,2]<-.99999)&(m.triangles_center[:,2]<.01)
+    assert m.area_faces[flat].sum()>20,'drawer needs planar contact'
+    return m,{'assembly_to_print':t.tolist(),'bounds_mm':m.extents.tolist(),
+              'downward_area_mm2':float(m.area_faces[down&elevated].sum()),
+              'bed_contact_area_mm2':bed,'supports_required':True,'brim_mm':3,
+              'required_extruder_area_mm':[256,256]}
+
+
 def sliding_split(name,mesh):
-    if name=='drawer':return drawer_front_back_split(mesh)
+    if name=='drawer':return drawer_left_right_split(mesh)
     # XZ dovetails slide along Y: centered in solid section, not on a thin outer lip.
     gap=.3
     plane=247.5 if name=='device_adapter' else 202.5

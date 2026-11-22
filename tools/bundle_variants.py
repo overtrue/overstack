@@ -12,6 +12,7 @@ for device in ['ams2pro+ht','ams2pro','common']:
     files.extend(p for p in (ROOT/'docs/images').glob('*.png') if device=='ams2pro+ht' or (device=='ams2pro' and p.name in ['lip-r3-detail.png','showcase-no-ht.png']) or p.name.startswith(('no-ht-','common-ends','common-grid-alignment','wide-pegboard')))
     if device!='common':files.append(ROOT/'docs/render-assets.md')
     if device=='ams2pro+ht':
+        files.append(ROOT/'docs/drawer-repair.md')
         files.extend(p for p in (ROOT/'docs/pdf').iterdir() if p.is_file())
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     archive=DIST/(name+'.zip')

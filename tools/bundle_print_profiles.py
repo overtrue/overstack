@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,runpy,zipfile,re,posixpath,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1];P=ROOT/'print-profiles'
 runpy.run_path(str(ROOT/'tools/check_print_profiles.py'),run_name='__main__')
-files=[ROOT/'LICENSE',P/'README.md',*sorted(P.glob('**/presets/*.json')),*(ROOT/'models/fit-check').glob('*')];lines=['# 配置索引 / Profile index','','所有项目尚未实物验收，不可标记为 MakerWorld 已验证配置。 / None is physically validated.','',
+files=[ROOT/'LICENSE',ROOT/'docs/drawer-repair.md',P/'README.md',*sorted(P.glob('**/presets/*.json')),*(ROOT/'models/fit-check').glob('*')];lines=['# 配置索引 / Profile index','','所有项目尚未实物验收，不可标记为 MakerWorld 已验证配置。 / None is physically validated.','',
  '小于 256 × 256 mm 的打印板不支持，不提供小板工程。 / Beds smaller than 256 × 256 mm are unsupported; no small-bed projects are provided.',''];records=[]
 from print_profile_targets import TARGETS
 current_group=None
@@ -24,7 +24,7 @@ for p in paths:
   files.extend([p,p.parent/project_name,p.parent/'slice-info.xml'])
   files.extend(p.parent/f"plate_{q['number']}.png" for q in r['plates'])
   if (p.parent/'printing-checks.json').exists():files.append(p.parent/'printing-checks.json')
-  if printer_key!='x2d':files.append(p.parent/'slice-validation.json')
+  files.append(p.parent/'slice-validation.json')
   readme += [f'[打开摆盘工程 / Open project]({project_name})','',f'预计 / Estimate: {hours:.1f} h · {weight:.1f} g PETG','',
      '| Plate | Parts | Preview |','| --- | --- | --- |']
   for plate in r['plates']:

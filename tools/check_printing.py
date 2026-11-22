@@ -3,7 +3,7 @@ from pathlib import Path
 import sys,json,subprocess,concurrent.futures,shutil,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import *
-from fabrication import orient
+from fabrication import orient,drawer_print_pose
 from multi_drawers import orient_candidate
 D=ROOT/'output/model';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
 data=json.loads((D/'checks.json').read_text());cad=shutil.which('cad')
@@ -14,14 +14,11 @@ for r in data['parts']:
     if sha in unique:
         placements.append({'name':r['name'],'same_geometry_as':unique[sha]['name']});continue
     m=trimesh.load_mesh(f)
-    try:printed,placement=orient(m)
-    except AssertionError:
-        # The wide single-drawer front follows the documented 46-degree candidate.
-        if r['name']=='standard_2_drawer_1':
-            printed=m.copy();printed.apply_transform(trimesh.transformations.rotation_matrix(np.radians(46),[0,1,0]));printed.apply_translation(-printed.bounds[0])
-            assert np.all(printed.extents+np.array([2,2,0])<np.array([256,256,260]))
-            placement={'bounds_mm':printed.extents.tolist(),'brim_mm':1,'supports_required':True,'note':'tilted candidate; actual slicing and support stability not verified'}
-        else:printed,placement=orient_candidate(m)
+    if r['name'].startswith(('standard_2_drawer_','3drawers_drawer_')):
+        printed,placement=drawer_print_pose(m)
+    else:
+        try:printed,placement=orient(m)
+        except AssertionError:printed,placement=orient_candidate(m)
     path=OUT/(r['name']+'.stl');printed.export(path)
     entry={'name':r['name'],'source_sha256':sha,'file':path.name,'placement':placement};unique[sha]=entry;placements.append(entry)
 
