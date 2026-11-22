@@ -15,11 +15,26 @@ Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 **Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
 
-Images show the actual base geometry. Equipment renders are pending the correct device models.
+Images show the actual base geometry. Equipment scenes use the measured STEP models supplied by Engineered Reality; see [render asset credits](docs/render-assets.md).
 
 **This is an unprinted digital prototype.** Geometry checks have passed; the original HT set still has local thin-wall / thin-skin failures; the new AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
 [Arranged Bambu Studio projects](print-profiles/) — X2D/PETG preview profiles; see each manifest for slicing status. Not physically tested.
+
+## With AMS 2 Pro and AMS HT
+
+![Compact stack with AMS 2 Pro and AMS HT](docs/images/showcase-compact.png)
+
+Five-slot plate layer + double-drawer layer + top; base height 129 mm.
+
+<details>
+<summary>Full stack · 309 mm base height</summary>
+
+![Full stack with AMS 2 Pro and AMS HT](docs/images/showcase-full.png)
+
+</details>
+
+Device CAD: **Engineered Reality** ([AMS 2 Pro](https://makerworld.com/en/models/1283144-bambu-ams-2-pro-cad-model-stp-file), [AMS HT](https://makerworld.com/en/models/1551756-bambu-ams-ht-cad-model-stp-file)). Rendering only; physical seating, ventilation and load capacity remain untested. [Sources and rebuild instructions](docs/render-assets.md).
 
 ## Model files
 

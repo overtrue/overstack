@@ -15,11 +15,26 @@
 
 **打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。
 
-图片由实际底座模型渲染。设备效果图待正确的设备模型就绪后补充。
+图片由实际底座模型渲染。设备效果图使用 Engineered Reality 的实测 STEP 模型，详见[素材说明](docs/render-assets.md)。
 
 当前是 **数字样机**：几何检查通过；原 HT 版仍有单抽屉后半件薄壁及三抽屉薄层错误；新增无 HT 件通过通用打印检查，尚未实物试装或验证承重；各层切片状态见摆盘工程索引。
 
 [Bambu Studio 摆盘工程](print-profiles/)：X2D/PETG 预览配置，切片状态见清单，尚未实物验证。
+
+## 摆上 AMS 2 Pro 和 AMS HT
+
+![AMS 2 Pro 和 AMS HT 紧凑组合](docs/images/showcase-compact.png)
+
+五槽板层 + 双抽屉层 + 顶件，底座总高 129 mm。
+
+<details>
+<summary>完整组合 · 底座总高 309 mm</summary>
+
+![AMS 2 Pro 和 AMS HT 完整组合](docs/images/showcase-full.png)
+
+</details>
+
+设备 CAD 作者：**Engineered Reality**（[AMS 2 Pro](https://makerworld.com/en/models/1283144-bambu-ams-2-pro-cad-model-stp-file)、[AMS HT](https://makerworld.com/en/models/1551756-bambu-ams-ht-cad-model-stp-file)）。这是渲染效果，实际落脚、通风和承重尚未验证。[素材来源与重建方法](docs/render-assets.md)。
 
 ## 模型文件
 

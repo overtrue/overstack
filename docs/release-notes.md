@@ -21,3 +21,5 @@ StackNest packages the parametric AMS storage base with 58 numbered parts, six l
 All illustrations were rerendered with corrected face normals and soft area lighting. All eight drawers now have 2 mm solid floors. Existing joinery, slide grooves and stops are retained. The model builds without external mesh inputs.
 
 This is a digital prototype, not a print-tested release. Physical fit, device clearance and load capacity remain unverified. Geometry-only 3MF files are not slicer projects. Generic PETG/FDM checks passed for 36 of 40 distinct geometries; four drawer parts report thin-wall or thin-skin errors. Candidate print poses still require orientation/support work.
+
+Equipment previews / 设备效果图：新增当前紧凑组合和完整组合摆放 AMS 2 Pro、AMS HT 的高清渲染，使用 Engineered Reality 的原尺寸 STEP，并附素材说明。设备源文件不包含在下载包中。 / Added compact and full-stack renders using Engineered Reality’s unscaled STEP assemblies, with asset credits. Device source files are not redistributed.
