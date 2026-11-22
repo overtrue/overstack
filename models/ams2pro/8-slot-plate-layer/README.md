@@ -4,22 +4,26 @@
 
 60 mm；八片板，无侧抽屉。含下接缝的两枚锁片，作底层时不装这两枚。 / 60 mm, eight plates, no side bins. Omit lower seam keys when this is the bottom layer.
 
-![Exploded view](../../../docs/images/no-ht-8-slot-plate-layer-exploded.png)
+![带编号的爆炸图 / Numbered exploded view](parts-numbered.png)
+
+编号与下表一一对应；左右以面对入口为准。爆炸图只用于辨认零件，不代表装入方向。
+
+Match each callout to its table row. Left/right are viewed from the front. Exploded positions identify parts, not insertion directions.
 
 [GLB](layer-assembly.glb) · [Geometry 3MF](layer-assembly-geometry.3mf) · [BOM](parts.json)
 
-| Part | STL | X offset in this layer |
-| --- | --- | ---: |
-| end_left | [Download](../../common/end_left_60_plain.stl) | 0 mm |
-| end_right | [Download](../../common/end_right_60_plain.stl) | -96 mm |
-| plate_carrier_left | [Download](plate_carrier_left.stl) | 0 mm |
-| plate_carrier_right | [Download](plate_carrier_right.stl) | 0 mm |
-| front_beam_1 | [Download](front_beam_1.stl) | 0 mm |
-| front_beam_2 | [Download](front_beam_2.stl) | 0 mm |
-| rear_beam_1 | [Download](rear_beam_1.stl) | 0 mm |
-| rear_beam_2 | [Download](rear_beam_2.stl) | 0 mm |
-| lock_left | [Download](../../common/lock_left.stl) | 0 mm |
-| lock_right | [Download](../../common/lock_right.stl) | -96 mm |
+| 编号 / ID | 零件 | STL | X offset |
+| --- | --- | --- | ---: |
+| [NB01](../../common/end_left_60_plain.stl) | 左端框 | `end_left_60_plain.stl` | 0 mm |
+| [NB02](../../common/end_right_60_plain.stl) | 右端框 | `end_right_60_plain.stl` | -96 mm |
+| [NB03](plate_carrier_left.stl) | 左板托架 | `plate_carrier_left.stl` | 0 mm |
+| [NB04](plate_carrier_right.stl) | 右板托架 | `plate_carrier_right.stl` | 0 mm |
+| [NB05](front_beam_1.stl) | 前横梁左半 | `front_beam_1.stl` | 0 mm |
+| [NB06](front_beam_2.stl) | 前横梁右半 | `front_beam_2.stl` | 0 mm |
+| [NB07](rear_beam_1.stl) | 后横梁左半 | `rear_beam_1.stl` | 0 mm |
+| [NB08](rear_beam_2.stl) | 后横梁右半 | `rear_beam_2.stl` | 0 mm |
+| [NB09](../../common/lock_left.stl) | 左后锁片 | `lock_left.stl` | 0 mm |
+| [NB10](../../common/lock_right.stl) | 右后锁片 | `lock_right.stl` | -96 mm |
 
 两端和锁片直接引用通用件。右件保持 HT 版导出坐标，在此装配中向左移动 96 mm；切片前将每件单独落到平台。3MF 是装配几何，不是打印任务。
 

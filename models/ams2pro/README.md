@@ -24,6 +24,10 @@ Complete example: 47 assembly parts, 11 plates, three main drawers, 239 mm total
 
 Common STLs keep wide-set coordinates; right parts move −96 mm on X in the compact assembly. Layer manifests record these placements; GLB/3MF files already apply them. Replace either plain end with the matching height/side pegboard end.
 
+各层提供带编号爆炸图，NA–NE 编号与零件表和 `parts.json` 一一对应；点击编号下载零件。
+
+Each layer includes a numbered exploded view. NA–NE IDs match its download table and `parts.json`; click an ID to download that part.
+
 [Assembly checks](assembly-checks.json) · [Geometry checks](validation.json) · [PETG/FDM checks](printing.json)
 
 1081 complete assembly pairs, 1739 exported layer-pair checks and 36 new exported-part FDM checks pass. Generic rules still flag bridges, overhangs and knife edges. Candidate orientations are in `printing.json`; actual slicing, supports, hook fit, device feet and load capacity are unverified.

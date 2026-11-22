@@ -159,6 +159,8 @@ uv run python tools/render.py
 cad run tools/render_blender.py
 uv run python tools/render_variants.py
 uv run python tools/model_previews.py
+uv run python tools/number_compact_parts.py
+cad run tools/render_blender.py --jobs output/numbered/jobs.json
 cad run tools/render_blender.py --jobs output/previews/jobs.json
 cad run tools/render_blender.py --jobs output/variants/render-jobs.json
 uv run --group docs python tools/manual.py

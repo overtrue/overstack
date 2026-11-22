@@ -72,7 +72,7 @@ def build():
     tops=compact.top_parts(top_parts())
     layers.append(('device-top',26,{f'top_{i}':m for i,m in enumerate(tops,1)}))
     assembly={};peg_assembly={};z=0
-    for slug,H,parts in layers:
+    for layer_index,(slug,H,parts) in enumerate(layers):
         folder=OUT/slug;folder.mkdir(exist_ok=True)
         for side,right in [('left',False),('right',True)]:
             if z>0:parts['lock_'+side]=move(common['lock_'+side],[399-495 if right else 0,0,0])
@@ -87,7 +87,7 @@ def build():
             else:
                 file=folder/(name+'.stl');m.export(file);peg=m
                 report['parts'].append({'name':slug+'/'+name,'file':str(file.relative_to(ROOT)), 'sha256':hashlib.sha256(file.read_bytes()).hexdigest()})
-            records.append({'name':name,'file':str(file.relative_to(ROOT)),
+            records.append({'id':f'N{chr(65+layer_index)}{len(records)+1:02d}','name':name,'file':str(file.relative_to(ROOT)),
                             'offset_mm':[-96 if right and (name.startswith('end_') or name.startswith('lock_')) else 0,0,0]})
             assembly[slug+'__'+name]=move(m,[0,0,z]);peg_assembly[slug+'__'+name]=move(peg,[0,0,z]);peg_parts[name]=peg
         pairs=verify(parts,slug);verify(peg_parts,slug+' pegboard')
