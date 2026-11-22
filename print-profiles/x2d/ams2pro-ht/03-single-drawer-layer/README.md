@@ -10,7 +10,7 @@ X2D · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 [打开摆盘工程 / Open project](x2d-04-petg.3mf)
 
-预计 / Estimate: 36.5 h · 1321.6 g PETG
+预计 / Estimate: 36.4 h · 1314.6 g PETG
 
 | Plate | Parts | Preview |
 | --- | --- | --- |

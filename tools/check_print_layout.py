@@ -33,6 +33,10 @@ if __name__=='__main__':
     validate(groups,paths,TARGETS['x2d'])
     assert any(any('C05-' in o['path'] for o in g) and any('C06-' in o['path'] for o in g) for g in groups),'rails must share a plate'
     assert len(groups)<=7,'drawer layout regressed'
+    for name in ['C05-standard_2_cassette_drawer_3.stl','C06-standard_2_cassette_drawer_4.stl']:
+        m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/03-single-drawer-layer/parts'/name)
+        _,pose=orient_for_area(m,TARGETS['x2d']['area'],260)
+        assert pose['bounds_mm'][2]<=6.001 and pose['bed_contact_area_mm2']>5800,pose
     # A mirrored half must rest on its outside face, not its open inside face.
     for name in ['C07-standard_2_drawer_1.stl','C08-standard_2_drawer_2.stl']:
         m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/03-single-drawer-layer/parts'/name)

@@ -1,13 +1,16 @@
 """Check actual G-code metadata for every printer profile."""
 from pathlib import Path
-import hashlib,json,zipfile
+import argparse,hashlib,json,zipfile
 from print_profile_targets import TARGETS
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser();parser.add_argument('--printer',choices=TARGETS);parser.add_argument('--only');args=parser.parse_args()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 for key,target in TARGETS.items():
+    if args.printer and key!=args.printer:continue
     base=ROOT/'print-profiles'/target['folder']
     for p in sorted(base.glob('*/*/manifest.json')):
         report=json.loads(p.read_text())
+        if args.only and args.only!=report['profile']:continue
         if report['status']!='sliced_not_printed':continue
         project=p.parent/report.get('project_file',key+'-04-petg.3mf');assert sha(project)==report['project_sha256']
         sliced=ROOT/'output/print-profiles'/target['folder']/report['profile']/'sliced.3mf'

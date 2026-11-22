@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "b45eb519017cd20fafdd8f0e8902bb93984c9a88",
+  "source_commit": "95f5b94eba0cf4a75a227638f29be51cb54f14a6",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -199,22 +199,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.9063077870366499,
-          -2.5877905075098294e-17,
-          -0.42261826174069944,
-          -98.57159662410474
+          0.8660254037844387,
+          -0.49999999999999994,
+          0.0,
+          -84.12881982007269
         ],
         [
-          0.42261826174069944,
-          5.549534652183772e-17,
-          0.9063077870366499,
-          -48.541981026667486
+          0.49999999999999994,
+          0.8660254037844387,
+          0.0,
+          -57.23205080756887
         ],
         [
           0.0,
-          -1.0,
-          6.123233995736766e-17,
-          24.0
+          0.0,
+          1.0,
+          0.0
         ],
         [
           0.0,
@@ -224,12 +224,12 @@
         ]
       ],
       "bounds_mm": [
-        248.68988074698757,
-        118.0937090324015,
-        24.0
+        247.42493523315176,
+        155.55255888325763,
+        6.0
       ],
-      "downward_area_mm2": 1.500000000000001,
-      "bed_contact_area_mm2": 1524.7499976158135,
+      "downward_area_mm2": 670.0999374389655,
+      "bed_contact_area_mm2": 5856.000000000001,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -564,14 +564,14 @@
       ]
     }
   ],
-  "project_sha256": "4cb00874a774ce94a79ac5bc8777ecf99eec5693bd79beca6cc0a7e40ffabd62",
+  "project_sha256": "5b315292f6655b7eb713c3484d6389d6c000229236427653a5184d63b7907a6a",
   "slice_exit_code": 0,
   "gcode_files": [
     "Metadata/plate_1.gcode",
     "Metadata/plate_2.gcode",
     "Metadata/plate_3.gcode",
-    "Metadata/plate_4.gcode",
     "Metadata/plate_5.gcode",
+    "Metadata/plate_4.gcode",
     "Metadata/plate_6.gcode",
     "Metadata/plate_7.gcode"
   ]

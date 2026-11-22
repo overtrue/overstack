@@ -23,6 +23,13 @@ def orient_for_area(mesh,area,height):
             score=(round(overhang,1),-round(bed,1),round(float(np.prod(m.extents[:2])),1),yaw)
             candidates.append((score,m,t,overhang,bed))
     assert candidates,('no fitting planar orientation',mesh.extents.tolist())
+    # Thin plates/straps should rest on a broad face. A small ledge's support
+    # saving does not justify standing the whole plate on its narrow edge.
+    dimensions=sorted(mesh.extents)
+    if dimensions[0]*4<=dimensions[1]+1e-6:
+        flat=[c for c in candidates if c[1].extents[2]<=dimensions[0]+1e-6
+              and c[4]>=MultiPoint(c[1].vertices[:,:2]).convex_hull.area*.5]
+        if flat:candidates=flat
     _,m,t,overhang,bed=min(candidates,key=lambda c:c[0])
     return m,{'assembly_to_print':t.tolist(),'bounds_mm':m.extents.tolist(),
               'downward_area_mm2':overhang,'bed_contact_area_mm2':bed,
@@ -38,7 +45,7 @@ def pack(inputs,parts,target):
         mesh=trimesh.load_mesh(path)
         hull=MultiPoint(mesh.vertices[:,:2]).convex_hull.buffer(part['brim_mm']+.5)
         # A supported tall part's branches can extend beyond its projected mesh.
-        separate=part['downward_area_mm2']>100
+        separate=part['downward_area_mm2']>100 and part['bounds_mm'][2]>10
         obj={'path':path,'count':1,'filaments':[1]}
         placed=False
         if not separate:

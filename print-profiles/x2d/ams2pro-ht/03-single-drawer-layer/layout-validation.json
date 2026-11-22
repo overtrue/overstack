@@ -49,8 +49,8 @@
   "after": [
     {
       "plate": "Metadata/plate_1.gcode",
-      "total_g": 55.55,
-      "support_g": 0.0
+      "total_g": 48.5,
+      "support_g": 0.65
     },
     {
       "plate": "Metadata/plate_2.gcode",
@@ -63,14 +63,14 @@
       "support_g": 0.65
     },
     {
-      "plate": "Metadata/plate_4.gcode",
-      "total_g": 217.39,
-      "support_g": 0.79
-    },
-    {
       "plate": "Metadata/plate_5.gcode",
       "total_g": 216.87,
       "support_g": 0.86
+    },
+    {
+      "plate": "Metadata/plate_4.gcode",
+      "total_g": 217.39,
+      "support_g": 0.79
     },
     {
       "plate": "Metadata/plate_6.gcode",
@@ -85,7 +85,7 @@
   ],
   "method": "Sum positive XY extrusion moves under Support and Support interface G-code features; 1.75 mm filament, density 1.25 g/cm3. Excludes retractions and purge.",
   "before_project_sha256": "2dcb84134de96d1e257cd2fe0565f3eec969671c98bc5196009b16470a23a1fd",
-  "after_project_sha256": "4cb00874a774ce94a79ac5bc8777ecf99eec5693bd79beca6cc0a7e40ffabd62",
+  "after_project_sha256": "5b315292f6655b7eb713c3484d6389d6c000229236427653a5184d63b7907a6a",
   "manufacturing_checks": [
     {
       "file": "C01-C01-seam_2_False_layer_lock-dfm.json",

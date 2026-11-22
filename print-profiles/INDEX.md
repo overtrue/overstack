@@ -23,7 +23,7 @@
 | P2S | [fit-check/pegboard](p2s/fit-check/pegboard/README.md) | sliced_not_printed | 1 | 0.6 | 19.9 |
 | X2D | [ams2pro-ht/01-five-slot-plate-layer](x2d/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 7 | 33.1 | 814.7 |
 | X2D | [ams2pro-ht/02-eight-slot-plate-layer](x2d/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 7 | 48.9 | 1223.4 |
-| X2D | [ams2pro-ht/03-single-drawer-layer](x2d/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 7 | 36.5 | 1321.6 |
+| X2D | [ams2pro-ht/03-single-drawer-layer](x2d/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 7 | 36.4 | 1314.6 |
 | X2D | [ams2pro-ht/04-double-drawer-layer](x2d/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 11 | 55.5 | 1553.2 |
 | X2D | [ams2pro-ht/05-triple-drawer-layer](x2d/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 13 | 64.4 | 1713.7 |
 | X2D | [ams2pro-ht/06-device-top](x2d/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 3 | 15.3 | 332.8 |

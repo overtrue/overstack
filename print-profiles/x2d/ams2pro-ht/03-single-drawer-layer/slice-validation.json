@@ -1,16 +1,16 @@
 {
   "printer": "Bambu Lab X2D",
-  "project_sha256": "4cb00874a774ce94a79ac5bc8777ecf99eec5693bd79beca6cc0a7e40ffabd62",
-  "sliced_archive_sha256": "e00a9d934b042f4d31b8b21638ed5c726a7769f796e71fe3772e03ebdfea81ab",
+  "project_sha256": "5b315292f6655b7eb713c3484d6389d6c000229236427653a5184d63b7907a6a",
+  "sliced_archive_sha256": "d9352b2a63882cac9f459081000c95058414f4b31ecc862302d5ecaa78c79f1b",
   "plates": [
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "019454e5fb28b6aec909c41c564b994f56b50ab7f3929f02cac3201c63392061",
+      "sha256": "76c0b4aae950f38437cc5ffa576487a95078711af98ce2a8d9b57fa6b394c837",
       "bbox_xy_mm": [
         0.6575700000000001,
         0.65758,
-        255.02450000000002,
-        225.37627
+        252.59521,
+        243.11729000000003
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab X2D",
@@ -55,13 +55,13 @@
       "filament_map": "1"
     },
     {
-      "file": "Metadata/plate_4.gcode",
-      "sha256": "aeec6b3052fc1647c0baee4ddcaeddf2a1564926737c1ec9b96210e357d910b9",
+      "file": "Metadata/plate_5.gcode",
+      "sha256": "a3d82a1c0b662e2f4bc69518b3201f95dca0983faa59c041ac49e3d41b2d6b10",
       "bbox_xy_mm": [
-        17.760930000000002,
-        4.26149,
-        238.23906000000002,
-        250.32419000000002
+        5.6794,
+        17.76453,
+        251.73474000000002,
+        238.23546000000002
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab X2D",
@@ -72,13 +72,13 @@
       "filament_map": "1"
     },
     {
-      "file": "Metadata/plate_5.gcode",
-      "sha256": "a3d82a1c0b662e2f4bc69518b3201f95dca0983faa59c041ac49e3d41b2d6b10",
+      "file": "Metadata/plate_4.gcode",
+      "sha256": "aeec6b3052fc1647c0baee4ddcaeddf2a1564926737c1ec9b96210e357d910b9",
       "bbox_xy_mm": [
-        5.6794,
-        17.76453,
-        251.73474000000002,
-        238.23546000000002
+        17.760930000000002,
+        4.26149,
+        238.23906000000002,
+        250.32419000000002
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab X2D",
