@@ -2,7 +2,12 @@
 
 为 AMS 2 Pro 和 AMS HT 设计的模块化收纳底座，包含打印板收纳、抽屉和设备顶件。
 
-![StackNest 底座](docs/images/hero.png)
+| AMS 2 Pro + HT · 有 HT | AMS 2 Pro · 无 HT |
+| --- | --- |
+| [![有 HT 版，普通端框](models/ams2pro+ht/preview.png)](models/ams2pro+ht/) | [![无 HT 版，洞洞板端框](models/ams2pro/preview.png)](models/ams2pro/) |
+| 495 × 287 mm · 单／双／三抽屉 | 399 × 287 mm · 单／双抽屉 |
+
+两种型号均可选普通或洞洞板端框。点击图片查看对应模型。
 
 [English](README.md) · [模型下载](models/) · [组装教程](docs/pdf/)
 

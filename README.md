@@ -1,7 +1,13 @@
 # StackNest · 叠序
 
-A modular storage base for AMS 2 Pro and AMS HT: two plate-storage layers, three drawer layers and a split device top.
+A modular storage base for AMS 2 Pro, with or without AMS HT: stackable plate-storage layers, drawers and a matching device top.
 
+| AMS 2 Pro + HT | AMS 2 Pro only |
+| --- | --- |
+| [![With HT, plain ends](models/ams2pro+ht/preview.png)](models/ams2pro+ht/) | [![AMS-only, pegboard ends](models/ams2pro/preview.png)](models/ams2pro/) |
+| 495 × 287 mm · Single / double / triple drawers | 399 × 287 mm · Single / double drawers |
+
+Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 [中文](README.zh-CN.md) · [Models](models/) · [Assembly guides](docs/pdf/)
 
