@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stackne
 from geometry import *
 from fabrication import orient
 from multi_drawers import orient_candidate
-D=ROOT/'output/model-v54';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
+D=ROOT/'output/model-v55';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
 data=json.loads((D/'checks.json').read_text());cad=shutil.which('cad')
 if not cad:raise SystemExit('Install text-to-cad (cad) to run the optional manufacturing checks.')
 unique={};placements=[]
@@ -30,10 +30,11 @@ def check(r):
     result=subprocess.run(cmd,capture_output=True,text=True)
     (OUT/(path.stem+'-dfm.json')).write_text(result.stdout)
     d=json.loads(result.stdout)
-    row={**r,'status':d['status'],'warnings':sorted(set(f['code'] for f in d['findings'] if f['severity']=='warning'))}
+    row={**r,'status':d['status'],'warnings':sorted(set(f['code'] for f in d['findings'] if f['severity']=='warning')),'errors':[f for f in d['findings'] if f['severity']=='error']}
     print(path.name,result.returncode,flush=True)
-    if result.returncode:raise AssertionError((path.name,d))
     return row
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:results=list(pool.map(check,unique.values()))
 (OUT/'checks.json').write_text(json.dumps({'material':'PETG','process':'FDM','unique_parts':results,'all_parts':placements,'sliced':False,'physical_fit':'not_verified'},indent=2))
-print('PASS',len(results),'distinct parts; no slicing or load validation')
+failed=[r for r in results if r['status']!='ok']
+print('FAILED' if failed else 'PASS',len(results),'distinct parts;',len(failed),'failed; no slicing or load validation')
+raise SystemExit(bool(failed))

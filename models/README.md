@@ -1,3 +1,3 @@
 # Models
 
-- [V54 - six layer groups, 58 parts](v54/)
+- [V55 - six layer groups, 58 parts](v55/)

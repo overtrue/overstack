@@ -6,6 +6,8 @@ Plate ledges run to integrated rear stops. The low layer has integral front clos
 
 Overall size: 495 × 287 × 299 mm. The package contains 58 numbered parts, organized by layer, with separate Chinese and English assembly guides. STL units are millimetres. The 3MF files contain assembly geometry only, not sliced printer projects.
 
-V54 is a digital prototype. All images are CAD renders. Assembly interference, drawer travel and generic PETG/FDM checks have been performed, but physical fit, load capacity and a complete print profile remain unverified. Add actual print settings, assembly photos and device-fit results before presenting this as a tested build.
+V55 is a digital prototype. All images are CAD renders. Assembly interference, drawer travel and generic PETG/FDM checks have been performed, but physical fit, load capacity and a complete print profile remain unverified. Add actual print settings, assembly photos and device-fit results before presenting this as a tested build.
 
 Suggested tags: AMS, AMS HT, storage, drawer, build plate, modular.
+
+All drawers use 2 mm solid floors, with existing joinery and slide interfaces retained. The design is based on practical experience with existing community models.

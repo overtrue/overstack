@@ -13,4 +13,4 @@
 
 Combined reference: [中文](stacknest-assembly-zh.pdf) / [English](stacknest-assembly-en.pdf).
 
-V54 is an unprinted digital prototype. / V54尚未实物试装。
+V55 is an unprinted digital prototype. / V55尚未实物试装。

@@ -1,0 +1,145 @@
+{
+  "version": "V55",
+  "parts": 58,
+  "assembly_pairs": 1653,
+  "distinct_geometries": 40,
+  "printing_statuses": [
+    "failed",
+    "ok"
+  ],
+  "warnings": [
+    "no_bed_contact",
+    "printing.bridge_length",
+    "printing.gap",
+    "printing.knife_edge",
+    "printing.overhang_angle"
+  ],
+  "physical_fit": "not_verified",
+  "load_rating": null,
+  "sliced": false,
+  "printing_candidate_limitations": [
+    "Single-drawer front and rear halves have no planar bed contact in the candidate poses.",
+    "Single-drawer rear half candidate height is 260.586 mm, exceeding the 260 mm target.",
+    "Candidate poses are not release-ready print layouts; revise orientation and supports before slicing."
+  ],
+  "printing_passed": 36,
+  "printing_failures": [
+    {
+      "part": "standard_2_drawer_2",
+      "status": "failed",
+      "errors": [
+        {
+          "severity": "error",
+          "code": "printing.wall_supported",
+          "message": "supported wall thickness 0.6158 mm is under the 0.8 mm minimum (2 beads of the 0.4 mm nozzle given)",
+          "location": "121.618, 1.9997, 99.5051",
+          "hint": "thicken it to at least 0.8 mm",
+          "items": [],
+          "rule": "printing.wall_supported",
+          "value": 0.615832169,
+          "limit": 0.8,
+          "unit": "mm",
+          "op": "min",
+          "source": "cad, its own figure: no published guide states one",
+          "refs": []
+        },
+        {
+          "severity": "error",
+          "code": "printing.wall_supported",
+          "message": "supported wall thickness 0.6358 mm is under the 0.8 mm minimum (2 beads of the 0.4 mm nozzle given)",
+          "location": "65.7709, 1.9956, 157.766",
+          "hint": "thicken it to at least 0.8 mm",
+          "items": [],
+          "rule": "printing.wall_supported",
+          "value": 0.63584472,
+          "limit": 0.8,
+          "unit": "mm",
+          "op": "min",
+          "source": "cad, its own figure: no published guide states one",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "part": "3drawers_drawer_1",
+      "status": "failed",
+      "errors": [
+        {
+          "severity": "error",
+          "code": "printing.skin_layer",
+          "message": "thickness of a skin lying in the layer plane 0.04338 mm is under the 0.2 mm minimum (1 layer(s) of 0.2 mm)",
+          "location": "177.856, 85.8946, 0.002",
+          "hint": "thicken it to at least 0.2 mm, or print finer layers (--layer-height)",
+          "items": [],
+          "rule": "printing.skin_layer",
+          "value": 0.043377391,
+          "limit": 0.2,
+          "unit": "mm",
+          "op": "min",
+          "source": "cad, its own figure: no published guide states one",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "part": "3drawers_drawer_2",
+      "status": "failed",
+      "errors": [
+        {
+          "severity": "error",
+          "code": "printing.skin_layer",
+          "message": "thickness of a skin lying in the layer plane 0.04624 mm is under the 0.2 mm minimum (1 layer(s) of 0.2 mm)",
+          "location": "177.856, 85.8946, 0.002",
+          "hint": "thicken it to at least 0.2 mm, or print finer layers (--layer-height)",
+          "items": [],
+          "rule": "printing.skin_layer",
+          "value": 0.046235618,
+          "limit": 0.2,
+          "unit": "mm",
+          "op": "min",
+          "source": "cad, its own figure: no published guide states one",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "part": "3drawers_drawer_3",
+      "status": "failed",
+      "errors": [
+        {
+          "severity": "error",
+          "code": "printing.skin_layer",
+          "message": "thickness of a skin lying in the layer plane 0.03296 mm is under the 0.2 mm minimum (1 layer(s) of 0.2 mm)",
+          "location": "141.794, 51.2465, 112.998",
+          "hint": "thicken it to at least 0.2 mm, or print finer layers (--layer-height)",
+          "items": [],
+          "rule": "printing.skin_layer",
+          "value": 0.032959574,
+          "limit": 0.2,
+          "unit": "mm",
+          "op": "min",
+          "source": "cad, its own figure: no published guide states one",
+          "refs": []
+        }
+      ]
+    }
+  ],
+  "solid_floor_check": {
+    "version": "V55",
+    "main_drawers": 6,
+    "side_bins": 2,
+    "solid_floor_mm": 2,
+    "changed_meshes": [
+      "standard_2_drawer_1",
+      "standard_2_drawer_2",
+      "2drawers_drawer_1",
+      "2drawers_drawer_2",
+      "3drawers_drawer_1",
+      "3drawers_drawer_2",
+      "3drawers_drawer_3"
+    ],
+    "functional_interfaces": "unchanged outside floor slab",
+    "baseline_negative_control": "V54 lattice rejected",
+    "note": "Single drawer retains original seam and locally thicker joint pads."
+  }
+}

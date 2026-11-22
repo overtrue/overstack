@@ -3,8 +3,8 @@ from geometry import *
 
 
 def drawer_and_stops(carrier, H):
-    from surfaces import lattice_floor
-    floor=lattice_floor(92.5,310)
+    from surfaces import solid_floor
+    floor=solid_floor(92.5,310)
     walls=[box(92.5,0,8.5,310,8,H-9),box(92.5,0,8.5,6,271,H-9),
            box(396.5,0,8.5,6,271,H-9),box(92.5,265,8.5,310,6,H-9),box(92.5,0,8.5,310,8,3)]
     # Three underside pads support the sliding dovetail without raising the storage floor.

@@ -9,15 +9,9 @@ def rounded_rectangle(x,y,w,d,r):
     return rectangle(x+r,y+r,x+w-r,y+d-r).buffer(r,quad_segs=16)
 
 
-def lattice_floor(x,width):
-    """Original 2.4 mm floor: rounded square openings on a 24 mm pitch."""
-    border=rectangle(x,0,x+width,271)
-    holes=[]
-    for xx in np.arange(x+10,x+width-28+.001,24):
-        for yy in np.arange(10,244,24):
-            holes.append(rounded_rectangle(xx,yy,18,18,2))
-    from shapely.ops import unary_union
-    return extrude(border.difference(unary_union(holes)),8.5,2.4)
+def solid_floor(x,width):
+    """Continuous 2 mm floor, retaining the existing underside datum."""
+    return box(x,0,8.5,width,271,2)
 
 
 def top_parts():

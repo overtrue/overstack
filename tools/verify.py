@@ -3,7 +3,7 @@ from pathlib import Path
 import sys,json,ast
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import *
-D=ROOT/'output/model-v54';data=json.loads((D/'checks.json').read_text())
+D=ROOT/'output/model-v55';data=json.loads((D/'checks.json').read_text())
 assert len(data['parts'])==58
 assert data['source_mesh_inputs']==[]
 assert data['assembly_pairs_checked']==1653

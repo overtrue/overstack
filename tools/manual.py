@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 
 DOC=ROOT/'docs';PDF=DOC/'pdf';PDF.mkdir(exist_ok=True)
-PACK=ROOT/'dist/stacknest-v54'
+PACK=ROOT/'dist/stacknest-v55'
 PARTS=json.loads((PACK/'parts.json').read_text())
 JOBS={j['key']:j for j in json.loads((ROOT/'output/illustrations/jobs.json').read_text())}
 W,H=landscape(A4);INK=colors.HexColor('#20343C');TEAL=colors.HexColor('#257A78');MUTED=colors.HexColor('#607079');PALE=colors.HexColor('#F3F6F5');ORANGE=colors.HexColor('#BF743D')
@@ -46,7 +46,7 @@ class Book:
  def __init__(self,lang):
   self.lang=lang;self.zh=lang=='zh';self.reg='CN' if self.zh else 'Helvetica';self.bold='CNB' if self.zh else 'Helvetica-Bold';self.page=0
   self.path=PDF/f'stacknest-assembly-{lang}.pdf';self.c=canvas.Canvas(str(self.path),pagesize=(W,H),pageCompression=1)
-  self.c.setTitle(('叠序 StackNest 组装教程' if self.zh else 'StackNest Assembly Guide')+' - V54');self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
+  self.c.setTitle(('叠序 StackNest 组装教程' if self.zh else 'StackNest Assembly Guide')+' - V55');self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
  def text(self,s,x,y,size=11,bold=False,color=INK):
   self.c.setFillColor(color);self.c.setFont(self.bold if bold else self.reg,size);self.c.drawString(x,y,s)
  def para(self,s,x,top,width,size=10.5,color=INK):
@@ -57,7 +57,7 @@ class Book:
   self.text('STACKNEST / '+kicker,38,H-29,8,True,TEAL);self.text(title,38,H-62,23,True)
   c.bookmarkPage('p'+str(self.page));c.addOutlineEntry(title,'p'+str(self.page),level=0)
   c.setStrokeColor(colors.HexColor('#DFE6E3'));c.line(38,35,W-38,35)
-  self.text('V54  |  '+('数字样机 · 尚未实物试装' if self.zh else 'DIGITAL PROTOTYPE - PHYSICAL FIT NOT VERIFIED'),38,20,8,color=MUTED)
+  self.text('V55  |  '+('数字样机 · 尚未实物试装' if self.zh else 'DIGITAL PROTOTYPE - PHYSICAL FIT NOT VERIFIED'),38,20,8,color=MUTED)
   self.text(f'{self.page:02d}',W-55,20,9,True)
  def end(self):self.c.showPage()
  def image(self,key,x,y,w,h,labels=False):
@@ -95,7 +95,7 @@ def build(lang):
  b.para('把打印板、抽屉与设备托架，叠成一套。' if z else 'Build-plate storage, drawers and a device top in one modular stack.',40,389,195,18)
  b.para('5 层 + 顶件\n58 个制作零件\n11 个打印板位\n6 只主抽屉 + 2 只侧抽屉'.replace('\n','<br/>') if z else '5 layers + device top<br/>58 fabrication parts<br/>11 plate slots<br/>6 main drawers + 2 side bins',40,283,193,11.5)
  b.para('495 × 287 × 299 mm<br/>当前整套装配外廓，含底脚。' if z else '495 x 287 x 299 mm<br/>Complete stack, including feet.',40,160,195,10.5)
- b.note('本教程对应 V54 数字样机。爆炸图用于辨认零件；实际装入方向请按步骤操作。' if z else 'This guide describes the V54 digital prototype. Exploded offsets identify parts; follow the written insertion directions.');b.end()
+ b.note('本教程对应 V55 数字样机。爆炸图用于辨认零件；实际装入方向请按步骤操作。' if z else 'This guide describes the V55 digital prototype. Exploded offsets identify parts; follow the written insertion directions.');b.end()
  b.start('从下到上的六组零件' if z else 'Six groups, from bottom to top')
  b.image('stack-exploded',35,58,420,448)
  y=482
@@ -129,9 +129,9 @@ def build(lang):
  b.start('打印板与抽屉怎么取出' if z else 'Removing plates and drawers')
  b.image('rail-detail',35,240,470,259)
  b.image('drawer-joint',35,63,470,180)
- b.steps([('打印板：抬约1 mm后前抽','两侧托条一直延伸到后挡。后挡是刚性限位，不是弹性卡扣；不要强行继续向后推。'),('主抽屉：180 mm + 抬7 mm','先移开上层或顶件，拉到止点，再抬高约7 mm继续前抽。小侧抽屉对应60 mm + 抬12 mm。'),('格栅底板与设备底部','抽屉底板为开孔格栅，零碎小物需另放内盒。设备上机前应核对脚位、底壳、进气和走线。')] if z else [('Plates: lift about 1 mm, then pull','The side ledges run to the rear stops. These are rigid stops, not spring clips; do not force a plate farther back.'),('Main drawers: 180 mm + 7 mm lift','Remove the upper layer or top, pull to the stop, lift about 7 mm and continue forward. Side bins use 60 mm travel + 12 mm lift.'),('Open floors and device clearance','Drawer floors are open lattices; use an inner container for small loose items. Check device feet, underside, ventilation and cables before use.')],x=545,top=482,width=258);b.end()
+ b.steps([('打印板：抬约1 mm后前抽','两侧托条一直延伸到后挡。后挡是刚性限位，不是弹性卡扣；不要强行继续向后推。'),('主抽屉：180 mm + 抬7 mm','先移开上层或顶件，拉到止点，再抬高约7 mm继续前抽。小侧抽屉对应60 mm + 抬12 mm。'),('实心底板与设备底部','所有抽屉均采用2 mm实心底板；单抽屉保留原拼接缝。设备上机前应核对脚位、底壳、进气和走线。')] if z else [('Plates: lift about 1 mm, then pull','The side ledges run to the rear stops. These are rigid stops, not spring clips; do not force a plate farther back.'),('Main drawers: 180 mm + 7 mm lift','Remove the upper layer or top, pull to the stop, lift about 7 mm and continue forward. Side bins use 60 mm travel + 12 mm lift.'),('Solid floors and device clearance','All drawers have 2 mm solid floors; the single drawer retains its assembly seam. Check device feet, underside, ventilation and cables before use.')],x=545,top=482,width=258);b.end()
  b.start('检查完成了什么，还差什么' if z else 'What is checked, and what remains')
- checks=[('58 个零件都是封闭实体','整装1653对关系无体积干涉；托条、抽取、止挡与连接路径做了数字检查。'),('40 种不同几何通过通用打印检查','条件为PETG/FDM、0.4 mm喷嘴、0.2 mm层高、256×256×260 mm空间。仍有悬垂、桥接、间隙和局部薄尖边提示；单抽屉两半候选无平面着床，需重做摆放与支撑。'),('还没有实物试装和承重结果','最新整套没有实际切片时间、耗材重量或打印成品记录。网格检查未覆盖孔轴和刻字等细节规则。')] if z else [('58 closed solid parts','All 1,653 assembly pairs are free of volumetric clashes. Ledges, travel, stops and connection paths have digital checks.'),('40 distinct geometries passed generic print checks','Conditions: PETG/FDM, 0.4 mm nozzle, 0.2 mm layers, 256 x 256 x 260 mm volume. Overhang, bridge, gap and local thin-edge warnings remain. Both single-drawer halves lack planar bed contact in the candidate poses.'),('Physical fit and strength are still untested','There is no measured slicing time, filament weight or print result for this complete revision. Mesh checks do not evaluate all hole-axis or detail rules.')]
+ checks=[('58 个零件都是封闭实体','整装1653对关系无体积干涉；托条、抽取、止挡与连接路径做了数字检查。'),('通用打印检查仍有未通过项','条件为PETG/FDM、0.4 mm喷嘴、0.2 mm层高、256×256×260 mm空间。单抽屉后半件有薄壁错误，三抽屉有薄层错误，另有悬垂、桥接和薄尖边提示；单抽屉两半候选无平面着床，需重做摆放与支撑。'),('还没有实物试装和承重结果','最新整套没有实际切片时间、耗材重量或打印成品记录。网格检查未覆盖孔轴和刻字等细节规则。')] if z else [('58 closed solid parts','All 1,653 assembly pairs are free of volumetric clashes. Ledges, travel, stops and connection paths have digital checks.'),('Generic print checks still have failures','Conditions: PETG/FDM, 0.4 mm nozzle, 0.2 mm layers, 256 x 256 x 260 mm volume. Four drawer parts have thin-wall or thin-skin errors; overhang, bridge and thin-edge warnings remain. Both single-drawer halves lack planar bed contact in the candidate poses.'),('Physical fit and strength are still untested','There is no measured slicing time, filament weight or print result for this complete revision. Mesh checks do not evaluate all hole-axis or detail rules.')]
  b.steps(checks,x=42,top=480,width=405)
  b.text('发布前实物记录' if z else 'Before a community release',494,480,15,True)
  items=['每层装配与拆卸照片','燕尾、层间锁片、后梁的配合','打印板尺寸和止挡是否合适','抽屉完整行程与抬出操作','AMS 2 Pro / HT脚位、通风和稳定性','实际材料、摆盘、支撑与打印配置'] if z else ['Photograph each assembled layer','Check dovetails, keys and rear-beam fit','Test actual plates against the stops','Test full drawer travel and lift-out','Check device seating, airflow and stability','Record material, orientation and support settings']

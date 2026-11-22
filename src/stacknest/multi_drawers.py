@@ -29,8 +29,8 @@ def orient_candidate(mesh):
 
 
 def drawer(x,w):
-    from surfaces import lattice_floor
-    floor=lattice_floor(x,w)
+    from surfaces import solid_floor
+    floor=solid_floor(x,w)
     walls=[box(x,0,8.5,w,8,51),box(x,0,8.5,6,271,51),
            box(x+w-6,0,8.5,6,271,51),box(x,265,8.5,w,6,51),
            box(x,0,6.5,w,2,2.1)]

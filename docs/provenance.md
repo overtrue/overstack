@@ -4,4 +4,6 @@
 
 The design is based on practical experience with existing community models.
 
-The model builds from parametric geometry without external model meshes.
+StackNest is built from parametric geometry. The build does not require external model meshes. V55 uses 2 mm solid drawer floors and retains the existing assembly and slide interfaces.
+
+All illustrations are CAD renders. Physical fit and load capacity remain unverified.

@@ -35,9 +35,9 @@ def package(source,dest):
             record={**r,'id':ident,'label':title,'packaged_file':str((path/'parts'/filename).relative_to(dest))};records.append(record)
         glb.export(path/'layer-assembly.glb');(path/'layer-assembly-geometry.3mf').write_bytes(export_3MF(layer))
         (path/'README.md').write_text('# '+folder+'\n\n'+ '\n'.join(f'- {r["id"]} {r["label"]}' for r in records if r['layer']==group)+'\n\nSTL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n')
-    whole.export(dest/'stacknest-v54-assembly.glb')
+    whole.export(dest/'stacknest-v55-assembly.glb')
     (dest/'parts.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
-    check=trimesh.load(dest/'stacknest-v54-assembly.glb');assert len(check.graph.nodes_geometry)==58
+    check=trimesh.load(dest/'stacknest-v55-assembly.glb');assert len(check.graph.nodes_geometry)==58
     for prefix,folder,z in LAYERS:
         loaded=trimesh.load(dest/folder/'layer-assembly-geometry.3mf')
         assert len(loaded.graph.nodes_geometry)==sum(r['packaged_file'].startswith(folder+'/') for r in records)
@@ -45,5 +45,5 @@ def package(source,dest):
     return records
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,default=ROOT/'output/model-v54');p.add_argument('--dest',type=Path,default=ROOT/'dist/stacknest-v54')
+    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,default=ROOT/'output/model-v55');p.add_argument('--dest',type=Path,default=ROOT/'dist/stacknest-v55')
     a=p.parse_args();package(a.source,a.dest)

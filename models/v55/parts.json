@@ -1,0 +1,1220 @@
+[
+  {
+    "name": "low_0_cassette_plates_1",
+    "layer": 0,
+    "file": "parts/low_0_cassette_plates_1.stl",
+    "sha256": "1b244b923a2dcd8577f95bf04e2d7eedee768689732a341d998758ecfe594088",
+    "bounds_mm": [
+      [
+        54.29999923706055,
+        0.0,
+        0.0
+      ],
+      [
+        134.0,
+        287.0,
+        30.0
+      ]
+    ],
+    "id": "A01",
+    "label": "左侧承架",
+    "packaged_file": "01-three-slot-plate-layer/parts/A01-low_0_cassette_plates_1.stl"
+  },
+  {
+    "name": "low_0_cassette_plates_2",
+    "layer": 0,
+    "file": "parts/low_0_cassette_plates_2.stl",
+    "sha256": "9bef73fb144505fd06c85f1504057a742a47170188c26686586cab18989abdf1",
+    "bounds_mm": [
+      [
+        361.0,
+        0.0,
+        0.0
+      ],
+      [
+        440.70001220703125,
+        287.0,
+        30.0
+      ]
+    ],
+    "id": "A02",
+    "label": "右侧承架",
+    "packaged_file": "01-three-slot-plate-layer/parts/A02-low_0_cassette_plates_2.stl"
+  },
+  {
+    "name": "low_0_cassette_plates_3",
+    "layer": 0,
+    "file": "parts/low_0_cassette_plates_3.stl",
+    "sha256": "81254ced0f0338318759dca4a64159664834391ae79e9c64afc346995ce73842",
+    "bounds_mm": [
+      [
+        111.0,
+        0.0,
+        0.0
+      ],
+      [
+        384.0,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "A03",
+    "label": "前横梁",
+    "packaged_file": "01-three-slot-plate-layer/parts/A03-low_0_cassette_plates_3.stl"
+  },
+  {
+    "name": "low_0_cassette_plates_4",
+    "layer": 0,
+    "file": "parts/low_0_cassette_plates_4.stl",
+    "sha256": "bf7eabddb09ea6d8a4e7450b56f5d64b0294ba43e891ca23368ab3b813c750da",
+    "bounds_mm": [
+      [
+        116.5,
+        263.0,
+        0.0
+      ],
+      [
+        378.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "A04",
+    "label": "后横梁",
+    "packaged_file": "01-three-slot-plate-layer/parts/A04-low_0_cassette_plates_4.stl"
+  },
+  {
+    "name": "low_0_end_left_1",
+    "layer": 0,
+    "file": "parts/low_0_end_left_1.stl",
+    "sha256": "c834159eb3cc1549ebfa5efbb40a5bacb65641d461560c2db83532dc69f225db",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        60.0,
+        287.0,
+        30.0
+      ]
+    ],
+    "id": "A05",
+    "label": "左端框",
+    "packaged_file": "01-three-slot-plate-layer/parts/A05-low_0_end_left_1.stl"
+  },
+  {
+    "name": "low_0_end_right_1",
+    "layer": 0,
+    "file": "parts/low_0_end_right_1.stl",
+    "sha256": "24cf57b6137fda4a7926c10341cf75699ec8eaadf2e82c4eaebfae70edb80d08",
+    "bounds_mm": [
+      [
+        435.0,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        30.0
+      ]
+    ],
+    "id": "A06",
+    "label": "右端框",
+    "packaged_file": "01-three-slot-plate-layer/parts/A06-low_0_end_right_1.stl"
+  },
+  {
+    "name": "seam_1_False_layer_lock",
+    "layer": 1,
+    "file": "parts/seam_1_False_layer_lock.stl",
+    "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "bounds_mm": [
+      [
+        32.0,
+        281.35,
+        -8.0
+      ],
+      [
+        44.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "B01",
+    "label": "层间锁片",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B01-seam_1_False_layer_lock.stl"
+  },
+  {
+    "name": "seam_1_True_layer_lock",
+    "layer": 1,
+    "file": "parts/seam_1_True_layer_lock.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "bounds_mm": [
+      [
+        451.0,
+        281.35,
+        -8.0
+      ],
+      [
+        463.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "B02",
+    "label": "层间锁片",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B02-seam_1_True_layer_lock.stl"
+  },
+  {
+    "name": "standard_1_cassette_plates_1",
+    "layer": 1,
+    "file": "parts/standard_1_cassette_plates_1.stl",
+    "sha256": "066fce7a9c67180aa6f2c2a0dce690b938afaa265630853fc7a2ba0dc529efa7",
+    "bounds_mm": [
+      [
+        54.29999923706055,
+        0.0,
+        0.0
+      ],
+      [
+        134.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "B03",
+    "label": "左侧承架",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B03-standard_1_cassette_plates_1.stl"
+  },
+  {
+    "name": "standard_1_cassette_plates_2",
+    "layer": 1,
+    "file": "parts/standard_1_cassette_plates_2.stl",
+    "sha256": "33765bcc11eed0b234091af3d20bf83d77b48802020e534f262afa1d8c15581c",
+    "bounds_mm": [
+      [
+        361.0,
+        0.0,
+        0.0
+      ],
+      [
+        440.70001220703125,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "B04",
+    "label": "右侧承架",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B04-standard_1_cassette_plates_2.stl"
+  },
+  {
+    "name": "standard_1_cassette_plates_3",
+    "layer": 1,
+    "file": "parts/standard_1_cassette_plates_3.stl",
+    "sha256": "81254ced0f0338318759dca4a64159664834391ae79e9c64afc346995ce73842",
+    "bounds_mm": [
+      [
+        111.0,
+        0.0,
+        0.0
+      ],
+      [
+        384.0,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "B05",
+    "label": "前横梁",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B05-standard_1_cassette_plates_3.stl"
+  },
+  {
+    "name": "standard_1_cassette_plates_4",
+    "layer": 1,
+    "file": "parts/standard_1_cassette_plates_4.stl",
+    "sha256": "bf7eabddb09ea6d8a4e7450b56f5d64b0294ba43e891ca23368ab3b813c750da",
+    "bounds_mm": [
+      [
+        116.5,
+        263.0,
+        0.0
+      ],
+      [
+        378.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "B06",
+    "label": "后横梁",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B06-standard_1_cassette_plates_4.stl"
+  },
+  {
+    "name": "standard_1_end_left_1",
+    "layer": 1,
+    "file": "parts/standard_1_end_left_1.stl",
+    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        60.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "B07",
+    "label": "左端框",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B07-standard_1_end_left_1.stl"
+  },
+  {
+    "name": "standard_1_end_right_1",
+    "layer": 1,
+    "file": "parts/standard_1_end_right_1.stl",
+    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "bounds_mm": [
+      [
+        435.0,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "B08",
+    "label": "右端框",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B08-standard_1_end_right_1.stl"
+  },
+  {
+    "name": "standard_1_side_bin_left_1",
+    "layer": 1,
+    "file": "parts/standard_1_side_bin_left_1.stl",
+    "sha256": "87fa8e9c3d34b2dcc8b67878f687a2fd3f66bebb75390bf0fc3a92c3cf4ab5ab",
+    "bounds_mm": [
+      [
+        69.0,
+        0.0,
+        8.5
+      ],
+      [
+        109.0,
+        140.0,
+        59.5
+      ]
+    ],
+    "id": "B09",
+    "label": "左小抽屉",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B09-standard_1_side_bin_left_1.stl"
+  },
+  {
+    "name": "standard_1_side_bin_right_1",
+    "layer": 1,
+    "file": "parts/standard_1_side_bin_right_1.stl",
+    "sha256": "02b9211f98798152f32039021702aaa62293ca883eb311659f02f4addfc2ef7b",
+    "bounds_mm": [
+      [
+        386.0,
+        0.0,
+        8.5
+      ],
+      [
+        426.0,
+        140.0,
+        59.5
+      ]
+    ],
+    "id": "B10",
+    "label": "右小抽屉",
+    "packaged_file": "02-eight-slot-plate-layer/parts/B10-standard_1_side_bin_right_1.stl"
+  },
+  {
+    "name": "seam_2_False_layer_lock",
+    "layer": 2,
+    "file": "parts/seam_2_False_layer_lock.stl",
+    "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "bounds_mm": [
+      [
+        32.0,
+        281.35,
+        -8.0
+      ],
+      [
+        44.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "C01",
+    "label": "层间锁片",
+    "packaged_file": "03-single-drawer-layer/parts/C01-seam_2_False_layer_lock.stl"
+  },
+  {
+    "name": "seam_2_True_layer_lock",
+    "layer": 2,
+    "file": "parts/seam_2_True_layer_lock.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "bounds_mm": [
+      [
+        451.0,
+        281.35,
+        -8.0
+      ],
+      [
+        463.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "C02",
+    "label": "层间锁片",
+    "packaged_file": "03-single-drawer-layer/parts/C02-seam_2_True_layer_lock.stl"
+  },
+  {
+    "name": "standard_2_cassette_drawer_1",
+    "layer": 2,
+    "file": "parts/standard_2_cassette_drawer_1.stl",
+    "sha256": "00c552cb48bd75d18aa3c162fce0cc770ad62d582376d197c433bd838f765b91",
+    "bounds_mm": [
+      [
+        54.29999923706055,
+        0.0,
+        0.0
+      ],
+      [
+        125.5,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "C03",
+    "label": "左侧承架",
+    "packaged_file": "03-single-drawer-layer/parts/C03-standard_2_cassette_drawer_1.stl"
+  },
+  {
+    "name": "standard_2_cassette_drawer_2",
+    "layer": 2,
+    "file": "parts/standard_2_cassette_drawer_2.stl",
+    "sha256": "6615c6d37967fc4e77e2b296be2cc2d2fa8bf9f45c935a4ae9e23c53501decfd",
+    "bounds_mm": [
+      [
+        369.5,
+        0.0,
+        0.0
+      ],
+      [
+        440.70001220703125,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "C04",
+    "label": "右侧承架",
+    "packaged_file": "03-single-drawer-layer/parts/C04-standard_2_cassette_drawer_2.stl"
+  },
+  {
+    "name": "standard_2_cassette_drawer_3",
+    "layer": 2,
+    "file": "parts/standard_2_cassette_drawer_3.stl",
+    "sha256": "06b87c47de82a7a0076bf878b2bb0859d988ac03256874a7e7e838ce0a29ee12",
+    "bounds_mm": [
+      [
+        111.0,
+        0.0,
+        0.0
+      ],
+      [
+        384.0,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "C05",
+    "label": "前横梁",
+    "packaged_file": "03-single-drawer-layer/parts/C05-standard_2_cassette_drawer_3.stl"
+  },
+  {
+    "name": "standard_2_cassette_drawer_4",
+    "layer": 2,
+    "file": "parts/standard_2_cassette_drawer_4.stl",
+    "sha256": "e3e7cd94988f15b6cec51ed5a796149c248ca80863d13b3437a2bf697b415867",
+    "bounds_mm": [
+      [
+        116.5,
+        263.0,
+        0.0
+      ],
+      [
+        378.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "C06",
+    "label": "后横梁",
+    "packaged_file": "03-single-drawer-layer/parts/C06-standard_2_cassette_drawer_4.stl"
+  },
+  {
+    "name": "standard_2_drawer_1",
+    "layer": 2,
+    "file": "parts/standard_2_drawer_1.stl",
+    "sha256": "9ab50ed53c619768ff064d27b588a2ac84610730d7ddee81dc81ffeb1e35e750",
+    "bounds_mm": [
+      [
+        92.5,
+        0.0,
+        6.300000190734863
+      ],
+      [
+        402.5,
+        137.5,
+        59.5
+      ]
+    ],
+    "id": "C07",
+    "label": "抽屉前半",
+    "packaged_file": "03-single-drawer-layer/parts/C07-standard_2_drawer_1.stl"
+  },
+  {
+    "name": "standard_2_drawer_2",
+    "layer": 2,
+    "file": "parts/standard_2_drawer_2.stl",
+    "sha256": "d4faad7816139018ef886c936e910af175a8a986beefed7466762d64b13abfe5",
+    "bounds_mm": [
+      [
+        92.5,
+        135.8000030517578,
+        6.300000190734863
+      ],
+      [
+        402.5,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "C08",
+    "label": "抽屉后半",
+    "packaged_file": "03-single-drawer-layer/parts/C08-standard_2_drawer_2.stl"
+  },
+  {
+    "name": "standard_2_end_left_1",
+    "layer": 2,
+    "file": "parts/standard_2_end_left_1.stl",
+    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        60.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "C09",
+    "label": "左端框",
+    "packaged_file": "03-single-drawer-layer/parts/C09-standard_2_end_left_1.stl"
+  },
+  {
+    "name": "standard_2_end_right_1",
+    "layer": 2,
+    "file": "parts/standard_2_end_right_1.stl",
+    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "bounds_mm": [
+      [
+        435.0,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "C10",
+    "label": "右端框",
+    "packaged_file": "03-single-drawer-layer/parts/C10-standard_2_end_right_1.stl"
+  },
+  {
+    "name": "2drawers_divider_1",
+    "layer": 3,
+    "file": "parts/2drawers_divider_1.stl",
+    "sha256": "a8ddd98564a01e71321e43c4040cfc78cc69f4cc1dbcc4303c027ab3cbe01a27",
+    "bounds_mm": [
+      [
+        239.5,
+        0.0,
+        2.0
+      ],
+      [
+        255.5,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "D01",
+    "label": "隔墙",
+    "packaged_file": "04-double-drawer-layer/parts/D01-2drawers_divider_1.stl"
+  },
+  {
+    "name": "2drawers_drawer_1",
+    "layer": 3,
+    "file": "parts/2drawers_drawer_1.stl",
+    "sha256": "4dd76f7dca904ba41eb372675c4ee1f43cf1a582dc08054295ee0d1d60520710",
+    "bounds_mm": [
+      [
+        69.0,
+        0.0,
+        6.5
+      ],
+      [
+        243.0,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "D02",
+    "label": "抽屉1",
+    "packaged_file": "04-double-drawer-layer/parts/D02-2drawers_drawer_1.stl"
+  },
+  {
+    "name": "2drawers_drawer_2",
+    "layer": 3,
+    "file": "parts/2drawers_drawer_2.stl",
+    "sha256": "c460e6da412713764c2f8a1c3a7da3dd6434c3c61c01a703d7fd592ccff171cb",
+    "bounds_mm": [
+      [
+        252.0,
+        0.0,
+        6.5
+      ],
+      [
+        426.0,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "D03",
+    "label": "抽屉2",
+    "packaged_file": "04-double-drawer-layer/parts/D03-2drawers_drawer_2.stl"
+  },
+  {
+    "name": "2drawers_end_left_1",
+    "layer": 3,
+    "file": "parts/2drawers_end_left_1.stl",
+    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        60.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "D04",
+    "label": "左端框",
+    "packaged_file": "04-double-drawer-layer/parts/D04-2drawers_end_left_1.stl"
+  },
+  {
+    "name": "2drawers_end_right_1",
+    "layer": 3,
+    "file": "parts/2drawers_end_right_1.stl",
+    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "bounds_mm": [
+      [
+        435.0,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "D05",
+    "label": "右端框",
+    "packaged_file": "04-double-drawer-layer/parts/D05-2drawers_end_right_1.stl"
+  },
+  {
+    "name": "2drawers_front_beam_1",
+    "layer": 3,
+    "file": "parts/2drawers_front_beam_1.stl",
+    "sha256": "5bbc609edd07656490073cbaa324a1eb8e76e2e40b87733410390aa6bab13220",
+    "bounds_mm": [
+      [
+        63.5,
+        0.0,
+        0.0
+      ],
+      [
+        252.5,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "D06",
+    "label": "前横梁",
+    "packaged_file": "04-double-drawer-layer/parts/D06-2drawers_front_beam_1.stl"
+  },
+  {
+    "name": "2drawers_front_beam_2",
+    "layer": 3,
+    "file": "parts/2drawers_front_beam_2.stl",
+    "sha256": "2d0bc14b3201dd428a7c764ca084a29efaa03a521f5254e36bdd496dafc1629d",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        0.0,
+        0.0
+      ],
+      [
+        431.5,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "D07",
+    "label": "前横梁",
+    "packaged_file": "04-double-drawer-layer/parts/D07-2drawers_front_beam_2.stl"
+  },
+  {
+    "name": "2drawers_rear_beam_1",
+    "layer": 3,
+    "file": "parts/2drawers_rear_beam_1.stl",
+    "sha256": "c524baf11b4502dbdbba2a77cb04c8afc4569846203fff8b5bd5931c421088cf",
+    "bounds_mm": [
+      [
+        63.5,
+        263.0,
+        0.0
+      ],
+      [
+        252.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "D08",
+    "label": "后横梁",
+    "packaged_file": "04-double-drawer-layer/parts/D08-2drawers_rear_beam_1.stl"
+  },
+  {
+    "name": "2drawers_rear_beam_2",
+    "layer": 3,
+    "file": "parts/2drawers_rear_beam_2.stl",
+    "sha256": "d9ae7cd62397aedf10c03597e8ea0a5f6ac2476680f9d0531890b6b55884d8f4",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        263.0,
+        0.0
+      ],
+      [
+        431.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "D09",
+    "label": "后横梁",
+    "packaged_file": "04-double-drawer-layer/parts/D09-2drawers_rear_beam_2.stl"
+  },
+  {
+    "name": "2drawers_seam_2_False_layer_lock",
+    "layer": 3,
+    "file": "parts/2drawers_seam_2_False_layer_lock.stl",
+    "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "bounds_mm": [
+      [
+        32.0,
+        281.35,
+        -8.0
+      ],
+      [
+        44.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "D10",
+    "label": "层间锁片",
+    "packaged_file": "04-double-drawer-layer/parts/D10-2drawers_seam_2_False_layer_lock.stl"
+  },
+  {
+    "name": "2drawers_seam_2_True_layer_lock",
+    "layer": 3,
+    "file": "parts/2drawers_seam_2_True_layer_lock.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "bounds_mm": [
+      [
+        451.0,
+        281.35,
+        -8.0
+      ],
+      [
+        463.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "D11",
+    "label": "层间锁片",
+    "packaged_file": "04-double-drawer-layer/parts/D11-2drawers_seam_2_True_layer_lock.stl"
+  },
+  {
+    "name": "2drawers_side_left",
+    "layer": 3,
+    "file": "parts/2drawers_side_left.stl",
+    "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
+    "bounds_mm": [
+      [
+        54.29999923706055,
+        0.0,
+        0.0
+      ],
+      [
+        75.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "D12",
+    "label": "左侧承架",
+    "packaged_file": "04-double-drawer-layer/parts/D12-2drawers_side_left.stl"
+  },
+  {
+    "name": "2drawers_side_right",
+    "layer": 3,
+    "file": "parts/2drawers_side_right.stl",
+    "sha256": "d3a1ddac4dc3ea16f8dbe3ac673a991911c696c7263ac099cf4e0088d203bbe2",
+    "bounds_mm": [
+      [
+        420.0,
+        0.0,
+        0.0
+      ],
+      [
+        440.70000076293945,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "D13",
+    "label": "右侧承架",
+    "packaged_file": "04-double-drawer-layer/parts/D13-2drawers_side_right.stl"
+  },
+  {
+    "name": "3drawers_divider_1",
+    "layer": 4,
+    "file": "parts/3drawers_divider_1.stl",
+    "sha256": "f6600bef26f97f4fa6129da008ab0aabc0cd49af6e2a0b296fb60fd352a407c6",
+    "bounds_mm": [
+      [
+        178.5,
+        0.0,
+        2.0
+      ],
+      [
+        194.5,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E01",
+    "label": "隔墙",
+    "packaged_file": "05-triple-drawer-layer/parts/E01-3drawers_divider_1.stl"
+  },
+  {
+    "name": "3drawers_divider_2",
+    "layer": 4,
+    "file": "parts/3drawers_divider_2.stl",
+    "sha256": "06396e4e6552ed6750fb9b89aa985ae1e4373afbe06b4991ce799d157b164665",
+    "bounds_mm": [
+      [
+        300.5,
+        0.0,
+        2.0
+      ],
+      [
+        316.5,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E02",
+    "label": "隔墙",
+    "packaged_file": "05-triple-drawer-layer/parts/E02-3drawers_divider_2.stl"
+  },
+  {
+    "name": "3drawers_drawer_1",
+    "layer": 4,
+    "file": "parts/3drawers_drawer_1.stl",
+    "sha256": "ee52fa5b4d6aef58f0e081343b5a96f5e181226611472e916f2ce079f3418313",
+    "bounds_mm": [
+      [
+        69.0,
+        0.0,
+        6.5
+      ],
+      [
+        182.0,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "E03",
+    "label": "抽屉1",
+    "packaged_file": "05-triple-drawer-layer/parts/E03-3drawers_drawer_1.stl"
+  },
+  {
+    "name": "3drawers_drawer_2",
+    "layer": 4,
+    "file": "parts/3drawers_drawer_2.stl",
+    "sha256": "64b9714a2364ea8f86f2435b50312be17433d844fd683120f1343a56a0ee4245",
+    "bounds_mm": [
+      [
+        191.0,
+        0.0,
+        6.5
+      ],
+      [
+        304.0,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "E04",
+    "label": "抽屉2",
+    "packaged_file": "05-triple-drawer-layer/parts/E04-3drawers_drawer_2.stl"
+  },
+  {
+    "name": "3drawers_drawer_3",
+    "layer": 4,
+    "file": "parts/3drawers_drawer_3.stl",
+    "sha256": "aad5b78e27d645d81ac711f81776375f60634c27bb04bca757e8284f06d0ef0b",
+    "bounds_mm": [
+      [
+        313.0,
+        0.0,
+        6.5
+      ],
+      [
+        426.0,
+        271.0,
+        59.5
+      ]
+    ],
+    "id": "E05",
+    "label": "抽屉3",
+    "packaged_file": "05-triple-drawer-layer/parts/E05-3drawers_drawer_3.stl"
+  },
+  {
+    "name": "3drawers_end_left_1",
+    "layer": 4,
+    "file": "parts/3drawers_end_left_1.stl",
+    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        60.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E06",
+    "label": "左端框",
+    "packaged_file": "05-triple-drawer-layer/parts/E06-3drawers_end_left_1.stl"
+  },
+  {
+    "name": "3drawers_end_right_1",
+    "layer": 4,
+    "file": "parts/3drawers_end_right_1.stl",
+    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "bounds_mm": [
+      [
+        435.0,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E07",
+    "label": "右端框",
+    "packaged_file": "05-triple-drawer-layer/parts/E07-3drawers_end_right_1.stl"
+  },
+  {
+    "name": "3drawers_front_beam_1",
+    "layer": 4,
+    "file": "parts/3drawers_front_beam_1.stl",
+    "sha256": "fe3d7ed2e9e8f24b841db08ca6c1620b4de36364edfd19b2f0b3ffe188fc66de",
+    "bounds_mm": [
+      [
+        63.5,
+        0.0,
+        0.0
+      ],
+      [
+        252.5,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "E08",
+    "label": "前横梁",
+    "packaged_file": "05-triple-drawer-layer/parts/E08-3drawers_front_beam_1.stl"
+  },
+  {
+    "name": "3drawers_front_beam_2",
+    "layer": 4,
+    "file": "parts/3drawers_front_beam_2.stl",
+    "sha256": "8e628e3749523ed08120510a52c376de62cd750bd7ba078f0b4328010aabacb0",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        0.0,
+        0.0
+      ],
+      [
+        431.5,
+        24.0,
+        6.0
+      ]
+    ],
+    "id": "E09",
+    "label": "前横梁",
+    "packaged_file": "05-triple-drawer-layer/parts/E09-3drawers_front_beam_2.stl"
+  },
+  {
+    "name": "3drawers_rear_beam_1",
+    "layer": 4,
+    "file": "parts/3drawers_rear_beam_1.stl",
+    "sha256": "939a4a123ad97c2631e4bf3e9ad3359c40b47188059ef8b209e470e8e775ab03",
+    "bounds_mm": [
+      [
+        63.5,
+        263.0,
+        0.0
+      ],
+      [
+        252.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "E10",
+    "label": "后横梁",
+    "packaged_file": "05-triple-drawer-layer/parts/E10-3drawers_rear_beam_1.stl"
+  },
+  {
+    "name": "3drawers_rear_beam_2",
+    "layer": 4,
+    "file": "parts/3drawers_rear_beam_2.stl",
+    "sha256": "3e86a085da6391327b67f9a8c63c475571bd9b9200db5592c999ee53adbf97ca",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        263.0,
+        0.0
+      ],
+      [
+        431.5,
+        287.0,
+        6.0
+      ]
+    ],
+    "id": "E11",
+    "label": "后横梁",
+    "packaged_file": "05-triple-drawer-layer/parts/E11-3drawers_rear_beam_2.stl"
+  },
+  {
+    "name": "3drawers_seam_2_False_layer_lock",
+    "layer": 4,
+    "file": "parts/3drawers_seam_2_False_layer_lock.stl",
+    "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "bounds_mm": [
+      [
+        32.0,
+        281.35,
+        -8.0
+      ],
+      [
+        44.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "E12",
+    "label": "层间锁片",
+    "packaged_file": "05-triple-drawer-layer/parts/E12-3drawers_seam_2_False_layer_lock.stl"
+  },
+  {
+    "name": "3drawers_seam_2_True_layer_lock",
+    "layer": 4,
+    "file": "parts/3drawers_seam_2_True_layer_lock.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "bounds_mm": [
+      [
+        451.0,
+        281.35,
+        -8.0
+      ],
+      [
+        463.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "E13",
+    "label": "层间锁片",
+    "packaged_file": "05-triple-drawer-layer/parts/E13-3drawers_seam_2_True_layer_lock.stl"
+  },
+  {
+    "name": "3drawers_side_left",
+    "layer": 4,
+    "file": "parts/3drawers_side_left.stl",
+    "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
+    "bounds_mm": [
+      [
+        54.29999923706055,
+        0.0,
+        0.0
+      ],
+      [
+        75.0,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E14",
+    "label": "左侧承架",
+    "packaged_file": "05-triple-drawer-layer/parts/E14-3drawers_side_left.stl"
+  },
+  {
+    "name": "3drawers_side_right",
+    "layer": 4,
+    "file": "parts/3drawers_side_right.stl",
+    "sha256": "d3a1ddac4dc3ea16f8dbe3ac673a991911c696c7263ac099cf4e0088d203bbe2",
+    "bounds_mm": [
+      [
+        420.0,
+        0.0,
+        0.0
+      ],
+      [
+        440.70000076293945,
+        287.0,
+        60.0
+      ]
+    ],
+    "id": "E15",
+    "label": "右侧承架",
+    "packaged_file": "05-triple-drawer-layer/parts/E15-3drawers_side_right.stl"
+  },
+  {
+    "name": "device_adapter_1",
+    "layer": 5,
+    "file": "parts/device_adapter_1.stl",
+    "sha256": "634c542df52e29d4f2662bd53e82bb247cfec1981f8b245c0fb8f479ad8c3dfd",
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      [
+        252.5,
+        287.0,
+        26.0
+      ]
+    ],
+    "id": "F01",
+    "label": "顶部左片",
+    "packaged_file": "06-device-top/parts/F01-device_adapter_1.stl"
+  },
+  {
+    "name": "device_adapter_2",
+    "layer": 5,
+    "file": "parts/device_adapter_2.stl",
+    "sha256": "4217d525e08be7040432bea1688ddf403b6c2d19ae33062ab5a5651e754133f5",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        0.0,
+        -3.0
+      ],
+      [
+        495.0,
+        287.0,
+        26.0
+      ]
+    ],
+    "id": "F02",
+    "label": "顶部右片",
+    "packaged_file": "06-device-top/parts/F02-device_adapter_2.stl"
+  },
+  {
+    "name": "top_rear_lock_1",
+    "layer": 5,
+    "file": "parts/top_rear_lock_1.stl",
+    "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "bounds_mm": [
+      [
+        32.0,
+        281.35,
+        -8.0
+      ],
+      [
+        44.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "F03",
+    "label": "层间锁片",
+    "packaged_file": "06-device-top/parts/F03-top_rear_lock_1.stl"
+  },
+  {
+    "name": "top_rear_lock_2",
+    "layer": 5,
+    "file": "parts/top_rear_lock_2.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "bounds_mm": [
+      [
+        451.0,
+        281.35,
+        -8.0
+      ],
+      [
+        463.0,
+        286.65000000000003,
+        8.0
+      ]
+    ],
+    "id": "F04",
+    "label": "层间锁片",
+    "packaged_file": "06-device-top/parts/F04-top_rear_lock_2.stl"
+  }
+]

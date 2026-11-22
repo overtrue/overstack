@@ -1,4 +1,4 @@
-"""Build every V54 part from analytic geometry, with no mesh inputs."""
+"""Build every V55 part from analytic geometry, with no mesh inputs."""
 from pathlib import Path
 import sys,json,argparse,hashlib
 ROOT=Path(__file__).resolve().parents[1]
@@ -95,7 +95,7 @@ def build(output):
         path=output/'parts'/f'{name}.stl';path.parent.mkdir(exist_ok=True);local_parts[name].export(path)
         records.append({'name':name,'layer':groups[name],'file':str(path.relative_to(output)),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bounds_mm':local_parts[name].bounds.tolist()})
     scene.export(output/'assembly.glb')
-    report={'version':'V54','name':'StackNest','construction':'analytic geometry only; no input STL, GLB, PLY, 3MF or traced sections',
+    report={'version':'V55','name':'StackNest','construction':'analytic geometry only; no input STL, GLB, PLY, 3MF or traced sections',
             'parts':records,'assembly_pairs_checked':pairs,'multi_drawer_tests':multi,'source_mesh_inputs':[],
             'physical_fit':'not_verified','load_rating':None,'sliced':False,'sent':False}
     (output/'checks.json').write_text(json.dumps(report,indent=2))
@@ -103,5 +103,5 @@ def build(output):
     return report
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'output/model-v54')
+    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'output/model-v55')
     args=parser.parse_args();build(args.output)
