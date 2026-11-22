@@ -17,7 +17,9 @@ Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 Images show the actual base geometry. Equipment renders are pending the correct device models.
 
-**This is an unprinted digital prototype.** Geometry checks have passed; the original HT set still has local thin-wall / thin-skin failures; the new AMS-only exports pass generic FDM checks; device fit, slicing, load capacity and physical assembly have not been validated. The drawings show the model, not a finished print.
+**This is an unprinted digital prototype.** Geometry checks have passed; the original HT set still has local thin-wall / thin-skin failures; the new AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
+
+[Arranged Bambu Studio projects](print-profiles/) — X2D/PETG preview profiles; see each manifest for slicing status. Not physically tested.
 
 ## Model files
 
@@ -204,4 +206,4 @@ Rear beams and seam keys are removable and are not captive. Remove devices and t
 
 The design is based on practical experience with existing community models. The current model builds from parametric geometry without external model meshes. See [design basis](docs/provenance.md).
 
-The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. It has not been sliced or physically tested. The HT set has also been updated with the 40 mm five-slot layer and R3 top lip rounds.
+The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. Its X2D/PETG layer projects have been sliced, but have not been physically tested. The HT set has also been updated with the 40 mm five-slot layer and R3 top lip rounds.

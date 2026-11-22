@@ -12,3 +12,5 @@
 
 先选设备组合，再选层数与中段。相同高度端框通用，整层和顶件不能跨宽度混搭。
 Choose the device set first, then the layers. Same-height ends are shared; whole layers and tops must match width.
+
+[接口试配小件 / Interface fit specimens](fit-check/) · [Bambu Studio 摆盘工程 / Print profiles](../print-profiles/)

@@ -1,3 +1,5 @@
+Added X2D 0.4 mm / PETG Bambu Studio projects, organized as complete functional layers with named plates, source hashes and slice previews. Small interface specimens cover dovetails, plate ledges, rear keys and stacking feet, alongside the pegboard coupon. Only fully sliced projects enter `stacknest-print-profiles-preview.zip`; physical fit and MakerWorld publication remain pending. HT single- and triple-drawer profiles remain blocked by the documented geometry findings.
+
 Checked both widths and common parts against rebuilt source geometry. Download bundles now check internal documentation links as well as file hashes. Corrected an outdated HT geometry statement in the bilingual documentation.
 
 Replaced the staggered pegboard layout with a straight grid: 12 holes in two rows on 40 mm ends, 18 holes in three rows on 60 mm ends. Every 40/60 mm stacking order keeps the same 20 mm row pitch across seams. Updated the fit coupon, illustrations and downloads. Hook fit, cross-seam loads and full SKÅDIS compatibility remain unverified.
@@ -12,7 +14,7 @@ Both widths share the 40/60 mm end frames and rear keys. Pegboard ends use 5 × 
 
 Downloads: `stacknest-ams2pro+ht.zip` is the original HT set, `stacknest-ams2pro.zip` includes the AMS-only set plus common parts, and `stacknest-common.zip` contains the common plain/pegboard ends and keys. Open the README inside each package before slicing.
 
-The AMS-only export passes complete assembly and layer-pair checks. All 36 new exported parts pass generic PETG/FDM checks, with support, bridge and knife-edge warnings remaining. No complete slicing, device-fit or load test has been performed.
+The AMS-only export passes complete assembly and layer-pair checks. All 36 new exported parts pass generic PETG/FDM checks, with support, bridge and knife-edge warnings remaining. X2D/PETG slice coverage is listed in the print-profile index; device-fit and load tests remain pending.
 
 StackNest packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
 
