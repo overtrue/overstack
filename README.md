@@ -6,7 +6,7 @@ A modular, stackable storage system for AMS 2 Pro, with or without AMS HT. Start
 
 | AMS 2 Pro + HT | AMS 2 Pro only |
 | --- | --- |
-| [![With HT, plain ends](models/ams2pro+ht/preview.png)](models/ams2pro+ht/) | [![AMS-only, pegboard ends](models/ams2pro/preview.png)](models/ams2pro/) |
+| [![AMS 2 Pro and AMS HT on StackNest](docs/images/showcase-compact.png)](models/ams2pro+ht/) | [![AMS 2 Pro on the AMS-only StackNest](docs/images/showcase-no-ht.png)](models/ams2pro/) |
 | 495 × 287 mm · Single / double / triple drawers | 399 × 287 mm · Single / double drawers |
 
 Both sets support plain or pegboard ends. Click a preview to browse its models.
