@@ -1,0 +1,53 @@
+{
+  "printer": "h2s",
+  "profile": "ams2pro-ht/06-device-top",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 128.61,
+        "seconds": 21874.0,
+        "support_g": 0.824
+      },
+      {
+        "plate": 2,
+        "total_g": 203.96,
+        "seconds": 32381.0,
+        "support_g": 36.033
+      },
+      {
+        "plate": 3,
+        "total_g": 1.71,
+        "seconds": 429.0,
+        "support_g": 0.0
+      }
+    ],
+    "plate_count": 3,
+    "total_g": 334.28,
+    "hours": 15.19,
+    "support_g": 36.857
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 307.48,
+        "seconds": 47818.0,
+        "support_g": 23.725
+      },
+      {
+        "plate": 2,
+        "total_g": 1.71,
+        "seconds": 429.0,
+        "support_g": 0.0
+      }
+    ],
+    "plate_count": 2,
+    "total_g": 309.19,
+    "hours": 13.402,
+    "support_g": 23.725
+  },
+  "before_project_sha256": "1bda4704b533cede327d37ebadf272fde41a32fea49fe0bdc62d441b9d02c78c",
+  "after_project_sha256": "fc514ce7b60afb6514efc1bdff9519061836843459f21fbc4b6a84be2e581de2",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

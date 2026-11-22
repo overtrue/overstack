@@ -28,5 +28,5 @@ for lang in ['zh','en']:
   if i in [1,2,3,4]:
    b.para('抽屉底板为2 mm实心板，单抽屉接缝另有局部加厚筋。' if z else 'Drawers use 2 mm solid floors; the single-drawer seam has local reinforcement.',42,118,755,10)
   if i==2:
-   b.para('使用新版左右两半，不能混用旧前后两半；侧放40°打印，按机型工程设置支撑。' if z else 'Use the new left/right halves, not the old front/rear halves. Print side-down at 40 degrees with the printer-specific supports.',42,145,755,10,color=ORANGE)
+   b.para('使用新版左右两半，不能混用旧前后两半；方向和支撑以对应机型的摆盘工程为准。' if z else 'Use the new left/right halves, not the old front/rear halves. Follow the printer-specific project for orientation and supports.',42,145,755,10,color=ORANGE)
   b.note('PETG/FDM检查通过；仍有悬垂、桥接等提示。尚无实物验证。' if z else 'PETG/FDM checks pass; overhang and bridge warnings remain. Physical fit is untested.');b.end();b.save();print(b.path.name)

@@ -1,0 +1,89 @@
+{
+  "printer": "h3c",
+  "profile": "ams2pro/2-drawer-layer",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 193.86,
+        "seconds": 21617.0,
+        "support_g": 15.985
+      },
+      {
+        "plate": 2,
+        "total_g": 193.16,
+        "seconds": 21465.0,
+        "support_g": 15.862
+      },
+      {
+        "plate": 3,
+        "total_g": 113.6,
+        "seconds": 10621.0,
+        "support_g": 9.203
+      },
+      {
+        "plate": 4,
+        "total_g": 113.8,
+        "seconds": 10684.0,
+        "support_g": 9.346
+      },
+      {
+        "plate": 5,
+        "total_g": 102.28,
+        "seconds": 10457.0,
+        "support_g": 13.702
+      },
+      {
+        "plate": 6,
+        "total_g": 51.03,
+        "seconds": 4790.0,
+        "support_g": 0.158
+      },
+      {
+        "plate": 7,
+        "total_g": 301.35,
+        "seconds": 36412.0,
+        "support_g": 83.84
+      },
+      {
+        "plate": 8,
+        "total_g": 304.6,
+        "seconds": 36482.0,
+        "support_g": 88.391
+      }
+    ],
+    "plate_count": 8,
+    "total_g": 1373.68,
+    "hours": 42.369,
+    "support_g": 236.487
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 638.47,
+        "seconds": 61154.0,
+        "support_g": 29.364
+      },
+      {
+        "plate": 2,
+        "total_g": 146.33,
+        "seconds": 13752.0,
+        "support_g": 6.27
+      },
+      {
+        "plate": 3,
+        "total_g": 551.21,
+        "seconds": 55254.0,
+        "support_g": 63.408
+      }
+    ],
+    "plate_count": 3,
+    "total_g": 1336.01,
+    "hours": 36.156,
+    "support_g": 99.042
+  },
+  "before_project_sha256": "619b558870bdca7c9426f96b01af877d30f0dfedce8cb106fad84a3f82acc7d9",
+  "after_project_sha256": "a9c2fe3f795f3157af9e63173f1751359976dd8a26c72ef6a789574108ca0c28",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

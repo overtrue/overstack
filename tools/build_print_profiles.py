@@ -33,8 +33,15 @@ def run(args,folder,log):
     (folder/log).write_text(result.stdout)
     return result.returncode,result.stdout
 
-def orient_for_target(mesh):
-    return orient_for_area(mesh,TARGET['area'],TARGET['height'])
+def orient_for_target(mesh,source):
+    # These thin drawer edges were manufacturing-checked at a 40-degree bed yaw.
+    small_bed=TARGET['area'][2]-TARGET['area'][0]<=256 and TARGET['area'][3]-TARGET['area'][1]<=256
+    yaw=40 if small_bed and any(n in source.stem for n in ['standard_2_drawer_','3drawers_drawer_']) else None
+    # Divider candidates were sliced separately: this stable 58 mm pose is
+    # faster and uses less support than broad-face printing; it avoids the
+    # support collision found with the tall end pose.
+    rotation=([1,0,0],180) if '3drawers_divider_' in source.stem else None
+    return orient_for_area(mesh,TARGET['area'],TARGET['height'],preferred_yaw=yaw,rotation=rotation)
 
 
 def build(key,rows,slice_project):
@@ -48,11 +55,12 @@ def build(key,rows,slice_project):
     report.update(printer_key=PRINTER_KEY,bed_group=TARGET['group'],printable_area_mm=TARGET['area'],build_height_mm=TARGET['height'],project_file=project_name,preset_directory=str((OUT/'presets').relative_to(ROOT)))
     sources=[*sorted((ROOT/'src/stacknest').glob('*.py')),ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
     report['model_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in sources}
+    report['layout_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'tools/print_layout.py',ROOT/'tools/build_print_profiles.py']}
     inputs=[];blockers=[]
     for r in rows:
         source=ROOT/r['file'];mesh=trimesh.load_mesh(source)
         try:
-            printed,pose=orient_for_target(mesh)
+            printed,pose=orient_for_target(mesh,source)
         except AssertionError:
             blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
             report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
@@ -91,6 +99,8 @@ def build(key,rows,slice_project):
     report['preset_hashes']={p.name:digest(p) for p in preset.glob('*.json')}
     report['process_overrides']={k:process[k] for k in ['curr_bed_type','wall_loops','sparse_infill_density','sparse_infill_pattern','enable_support','support_type','brim_type','brim_width']}
     groups=pack(inputs,report['parts'],TARGET)
+    from check_print_layout import validate
+    validate(groups,inputs,TARGET)
     identifiers={path:r['id'] for path,r in zip(inputs,report['parts'])}
     assembly={'plates':[{'plate_name':f'{i+1:02d} '+', '.join(identifiers[o['path']] for o in group),
         'need_arrange':False,'objects':group} for i,group in enumerate(groups)]}
@@ -111,6 +121,7 @@ def build(key,rows,slice_project):
         for n,b in content.items():z.writestr(n,b)
     plates=[{'number':i+1,'name':p['plate_name'],'objects':[Path(o['path']).stem for o in p['objects']]} for i,p in enumerate(assembly['plates'])]
     report.update(status='arranged',plates=plates,project_sha256=digest(target))
+    (dest/'manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     if slice_project:
         sliced=work/'sliced.3mf'
         if sliced.exists():sliced.unlink()
@@ -137,6 +148,12 @@ def build(key,rows,slice_project):
         for n,b in content.items():z.writestr(n,b)
     report['project_sha256']=digest(target)
     (dest/'manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    comparison=dest/'layout-validation.json'
+    if report['status']=='sliced_not_printed' and comparison.exists():
+        from print_slice_metrics import metrics
+        data=json.loads(comparison.read_text())
+        data.update(after=metrics(work/'sliced.3mf'),after_project_sha256=report['project_sha256'])
+        comparison.write_text(json.dumps(data,indent=2)+'\n')
     print(key,report['status'],len(plates),'plates',flush=True)
 
 if __name__=='__main__':

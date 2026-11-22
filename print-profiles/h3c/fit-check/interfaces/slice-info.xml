@@ -11,10 +11,10 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="6471"/>
+    <metadata key="prediction" value="6477"/>
     <metadata key="weight" value="50.00"/>
     <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
+    <metadata key="first_layer_time" value="-0.000000"/>
     <metadata key="outside" value="false"/>
     <metadata key="support_used" value="true"/>
     <metadata key="label_object_enabled" value="true"/>

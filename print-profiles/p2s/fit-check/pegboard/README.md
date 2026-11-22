@@ -8,6 +8,17 @@ P2S · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
 
+摆盘切片对比 / Sliced layout comparison:
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| Plates | 1 | 1 |
+| Estimated hours | 0.615 | 0.615 |
+| PETG g | 19.93 | 19.93 |
+| Support extrusion g | 0.0 | 0.0 |
+
+支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
+
 [打开摆盘工程 / Open project](p2s-04-petg.3mf)
 
 预计 / Estimate: 0.6 h · 19.9 g PETG

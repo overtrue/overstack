@@ -1,16 +1,16 @@
 {
   "printer": "Bambu Lab H3C",
-  "project_sha256": "daeeeae3eaa4e95040daeed2ccb163010fd3c51b7ddf17fb0901ae8734e7eaa2",
-  "sliced_archive_sha256": "22b9d6d68c7c0c63c612d93503ad8ea560515db6fd3ae74e930624e8ff20bb33",
+  "project_sha256": "07f890b3be186c5d50c842d1f4c27a1a6b65882b2301c11fdf27f00bd27dc509",
+  "sliced_archive_sha256": "79f8b715f04a4c711788cd71b212c8c45fd37464ff31b62a476b9e2bc273f00e",
   "plates": [
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "9499c4d8a1a8170a0b319f8b8a99ca1f54473553a28e04bbcb3bdcfea64f8193",
+      "sha256": "7c2c63c95d6ce0ebfc70ca99de5ea52454720b832c7231d9dac3b3cd0ea38511",
       "bbox_xy_mm": [
-        6.673800000000001,
-        5.157570000000001,
-        295.07978,
-        57.498070000000006
+        5.923800000000001,
+        0.65758,
+        314.13539000000003,
+        71.52751
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab H3C",

@@ -8,16 +8,23 @@ H2S · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
 
+摆盘切片对比 / Sliced layout comparison:
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| Plates | 7 | 3 |
+| Estimated hours | 27.632 | 27.54 |
+| PETG g | 779.46 | 789.95 |
+| Support extrusion g | 62.393 | 57.797 |
+
+支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
+
 [打开摆盘工程 / Open project](h2s-04-petg.3mf)
 
-预计 / Estimate: 27.6 h · 779.5 g PETG
+预计 / Estimate: 27.5 h · 790.0 g PETG
 
 | Plate | Parts | Preview |
 | --- | --- | --- |
-| 1 | 01 A01 | ![Plate 1](plate_1.png) |
-| 2 | 02 A02 | ![Plate 2](plate_2.png) |
-| 3 | 03 A03 | ![Plate 3](plate_3.png) |
-| 4 | 04 A04 | ![Plate 4](plate_4.png) |
-| 5 | 05 A05 | ![Plate 5](plate_5.png) |
-| 6 | 06 A06 | ![Plate 6](plate_6.png) |
-| 7 | 07 KEY-left, KEY-right | ![Plate 7](plate_7.png) |
+| 1 | 01 A01, A02, A05, KEY-left, KEY-right | ![Plate 1](plate_1.png) |
+| 2 | 02 A03, A04 | ![Plate 2](plate_2.png) |
+| 3 | 03 A06 | ![Plate 3](plate_3.png) |

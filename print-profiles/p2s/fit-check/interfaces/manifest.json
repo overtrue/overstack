@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": null,
   "studio_version": "02.09.01.70",
-  "source_commit": "2e4aa63a663364bb26df21b19afe6414ef2096a0",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -401,6 +401,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "5f56aeb346e2a65d947f3efde3b251cf4c02c0364bd651673105ef1071dde0fd",
+    "tools/build_print_profiles.py": "acb35d16c933d180b5499d3e368dcf1aff6ea1b36eff4fcc990d081149aedff2"
+  },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
     "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
@@ -436,7 +440,7 @@
       ]
     }
   ],
-  "project_sha256": "0d61ced432574140ff7bb2704904a85da51fd3ca4e16d82ba9123e2f39d05cc3",
+  "project_sha256": "cc110a4fbcef5b5d6b090dadeb914cb17279539b9463fd7bc3d823098cd2b7f0",
   "slice_exit_code": 0,
   "gcode_files": [
     "Metadata/plate_1.gcode"

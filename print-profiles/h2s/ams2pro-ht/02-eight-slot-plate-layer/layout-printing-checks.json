@@ -1,0 +1,356 @@
+[
+  {
+    "id": "B01",
+    "source_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -32.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        7.999999999999983
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17,
+        -281.3500061035156
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": []
+  },
+  {
+    "id": "B02",
+    "source_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -451.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        7.999999999999983
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17,
+        -281.3500061035156
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": []
+  },
+  {
+    "id": "B03",
+    "source_sha256": "066fce7a9c67180aa6f2c2a0dce690b938afaa265630853fc7a2ba0dc529efa7",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -54.29999923706055
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.knife_edge",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B04",
+    "source_sha256": "33765bcc11eed0b234091af3d20bf83d77b48802020e534f262afa1d8c15581c",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -361.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.knife_edge",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B05",
+    "source_sha256": "81254ced0f0338318759dca4a64159664834391ae79e9c64afc346995ce73842",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -111.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.gap",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B06",
+    "source_sha256": "bf7eabddb09ea6d8a4e7450b56f5d64b0294ba43e891ca23368ab3b813c750da",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -116.5
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        287.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        5.999999999999968
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": []
+  },
+  {
+    "id": "B07",
+    "source_sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        3.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B08",
+    "source_sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -435.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        3.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B09",
+    "source_sha256": "87fa8e9c3d34b2dcc8b67878f687a2fd3f66bebb75390bf0fc3a92c3cf4ab5ab",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -69.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -8.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "B10",
+    "source_sha256": "6f04f3f55222d4c48bb04ee841d9f197a7fd5623462795ff85c810aec39074e5",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -386.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -8.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  }
+]

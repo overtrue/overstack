@@ -25,7 +25,16 @@ for p in paths:
   files.extend(p.parent/f"plate_{q['number']}.png" for q in r['plates'])
   if (p.parent/'printing-checks.json').exists():files.append(p.parent/'printing-checks.json')
   files.append(p.parent/'slice-validation.json')
-  if (p.parent/'layout-validation.json').exists():files.append(p.parent/'layout-validation.json')
+  for name in ['layout-validation.json','layout-printing-checks.json','layout-rule-validation.json']:
+   if (p.parent/name).exists():files.append(p.parent/name)
+  comparison=p.parent/'layout-validation.json'
+  if comparison.exists():
+   c=json.loads(comparison.read_text());before=c['before'];after=c['after']
+   readme += ['摆盘切片对比 / Sliced layout comparison:', '',
+      '| Metric | Before | After |','| --- | ---: | ---: |',
+      *[f"| {label} | {before[field]} | {after[field]} |" for label,field in
+        [('Plates','plate_count'),('Estimated hours','hours'),('PETG g','total_g'),('Support extrusion g','support_g')]],
+      '', '支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.', '']
   readme += [f'[打开摆盘工程 / Open project]({project_name})','',f'预计 / Estimate: {hours:.1f} h · {weight:.1f} g PETG','',
      '| Plate | Parts | Preview |','| --- | --- | --- |']
   for plate in r['plates']:

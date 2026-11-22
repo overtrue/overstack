@@ -1,0 +1,65 @@
+{
+  "printer": "h2c",
+  "profile": "ams2pro/5-slot-plate-layer",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 144.22,
+        "seconds": 19476.0,
+        "support_g": 12.132
+      },
+      {
+        "plate": 2,
+        "total_g": 143.87,
+        "seconds": 19235.0,
+        "support_g": 12.355
+      },
+      {
+        "plate": 3,
+        "total_g": 121.82,
+        "seconds": 21486.0,
+        "support_g": 28.37
+      },
+      {
+        "plate": 4,
+        "total_g": 122.16,
+        "seconds": 21438.0,
+        "support_g": 28.148
+      },
+      {
+        "plate": 5,
+        "total_g": 51.91,
+        "seconds": 5637.0,
+        "support_g": 0.0
+      }
+    ],
+    "plate_count": 5,
+    "total_g": 583.98,
+    "hours": 24.242,
+    "support_g": 81.005
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 405.09,
+        "seconds": 54856.0,
+        "support_g": 42.583
+      },
+      {
+        "plate": 2,
+        "total_g": 146.64,
+        "seconds": 22286.0,
+        "support_g": 19.214
+      }
+    ],
+    "plate_count": 2,
+    "total_g": 551.73,
+    "hours": 21.428,
+    "support_g": 61.797
+  },
+  "before_project_sha256": "289077303309dcb0c399bf4d654988b489e4b706adec8b56e49be1630be38059",
+  "after_project_sha256": "229f812497957a5505d3ea06c00463d6fd7edb2d58c910c17fed899ff5597d8e",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

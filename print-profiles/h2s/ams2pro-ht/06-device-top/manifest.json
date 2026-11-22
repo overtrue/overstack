@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "aa590888ccd3169346fa09335c9e876134308ba2",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -19,16 +19,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          221.32442251138937
+          6.123233995736766e-17,
+          0.0,
+          -1.0,
+          26.0
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          18.384776310850235
+          0.0,
+          1.0,
+          0.0,
+          0.0
         ],
         [
           1.0,
@@ -44,12 +44,13 @@
         ]
       ],
       "bounds_mm": [
-        221.32442251138937,
-        221.3244225113894,
+        29.0,
+        287.0,
         252.5
       ],
-      "downward_area_mm2": 574.7239765750822,
-      "bed_contact_area_mm2": 6835.091290855411,
+      "downward_area_mm2": 574.7239765750824,
+      "bed_contact_area_mm2": 6682.0,
+      "support_column_estimate_mm3": 3624.0004149257184,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -64,22 +65,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          202.9396462005391
-        ],
-        [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -1.0729195668892168e-14
-        ],
-        [
-          -1.0,
+          1.0,
           0.0,
-          6.123233995736766e-17,
-          495.0
+          0.0,
+          -247.8000030517578
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
         ],
         [
           0.0,
@@ -89,12 +90,13 @@
         ]
       ],
       "bounds_mm": [
-        221.32442251138934,
-        221.32442251138943,
-        247.1999969482422
+        247.1999969482422,
+        287.0,
+        29.0
       ],
-      "downward_area_mm2": 4867.396255584483,
-      "bed_contact_area_mm2": 6835.091162815183,
+      "downward_area_mm2": 18620.977781211925,
+      "bed_contact_area_mm2": 182.0408285467347,
+      "support_column_estimate_mm3": 58506.64460897808,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -140,6 +142,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -185,6 +188,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -221,6 +225,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "5f56aeb346e2a65d947f3efde3b251cf4c02c0364bd651673105ef1071dde0fd",
+    "tools/build_print_profiles.py": "acb35d16c933d180b5499d3e368dcf1aff6ea1b36eff4fcc990d081149aedff2"
+  },
   "validation_source": {
     "file": "models/ams2pro+ht/validation.json",
     "sha256": "8919f491f6487b20930fe7203fc162c8c5b0227a26666673ea333144a14f68cb"
@@ -243,32 +251,25 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 F01",
+      "name": "01 F01, F02",
       "objects": [
-        "F01-F01-device_adapter_1"
-      ]
-    },
-    {
-      "number": 2,
-      "name": "02 F02",
-      "objects": [
+        "F01-F01-device_adapter_1",
         "F02-F02-device_adapter_2"
       ]
     },
     {
-      "number": 3,
-      "name": "03 F03, F04",
+      "number": 2,
+      "name": "02 F03, F04",
       "objects": [
         "F03-F03-top_rear_lock_1",
         "F04-F04-top_rear_lock_2"
       ]
     }
   ],
-  "project_sha256": "1bda4704b533cede327d37ebadf272fde41a32fea49fe0bdc62d441b9d02c78c",
+  "project_sha256": "fc514ce7b60afb6514efc1bdff9519061836843459f21fbc4b6a84be2e581de2",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_3.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_2.gcode"
+    "Metadata/plate_2.gcode",
+    "Metadata/plate_1.gcode"
   ]
 }

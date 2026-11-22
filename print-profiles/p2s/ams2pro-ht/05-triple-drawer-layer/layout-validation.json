@@ -1,0 +1,161 @@
+{
+  "printer": "p2s",
+  "profile": "ams2pro-ht/05-triple-drawer-layer",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 102.36,
+        "seconds": 12634.0,
+        "support_g": 13.786
+      },
+      {
+        "plate": 2,
+        "total_g": 102.36,
+        "seconds": 12634.0,
+        "support_g": 13.786
+      },
+      {
+        "plate": 3,
+        "total_g": 272.8,
+        "seconds": 39837.0,
+        "support_g": 69.909
+      },
+      {
+        "plate": 4,
+        "total_g": 275.78,
+        "seconds": 40342.0,
+        "support_g": 72.864
+      },
+      {
+        "plate": 5,
+        "total_g": 278.04,
+        "seconds": 40780.0,
+        "support_g": 75.136
+      },
+      {
+        "plate": 6,
+        "total_g": 194.64,
+        "seconds": 26471.0,
+        "support_g": 16.756
+      },
+      {
+        "plate": 7,
+        "total_g": 194.78,
+        "seconds": 26592.0,
+        "support_g": 17.001
+      },
+      {
+        "plate": 8,
+        "total_g": 16.95,
+        "seconds": 1880.0,
+        "support_g": 0.085
+      },
+      {
+        "plate": 9,
+        "total_g": 16.72,
+        "seconds": 1829.0,
+        "support_g": 0.089
+      },
+      {
+        "plate": 10,
+        "total_g": 17.08,
+        "seconds": 1877.0,
+        "support_g": 0.09
+      },
+      {
+        "plate": 11,
+        "total_g": 18.37,
+        "seconds": 2088.0,
+        "support_g": 0.089
+      },
+      {
+        "plate": 12,
+        "total_g": 112.01,
+        "seconds": 12832.0,
+        "support_g": 9.89
+      },
+      {
+        "plate": 13,
+        "total_g": 111.81,
+        "seconds": 12717.0,
+        "support_g": 9.679
+      }
+    ],
+    "plate_count": 13,
+    "total_g": 1713.7,
+    "hours": 64.587,
+    "support_g": 299.16
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 120.9,
+        "seconds": 14747.0,
+        "support_g": 13.893
+      },
+      {
+        "plate": 2,
+        "total_g": 118.93,
+        "seconds": 14464.0,
+        "support_g": 13.893
+      },
+      {
+        "plate": 3,
+        "total_g": 279.44,
+        "seconds": 40907.0,
+        "support_g": 76.568
+      },
+      {
+        "plate": 4,
+        "total_g": 275.51,
+        "seconds": 40335.0,
+        "support_g": 72.648
+      },
+      {
+        "plate": 5,
+        "total_g": 275.51,
+        "seconds": 40309.0,
+        "support_g": 72.645
+      },
+      {
+        "plate": 6,
+        "total_g": 211.28,
+        "seconds": 26110.0,
+        "support_g": 11.727
+      },
+      {
+        "plate": 7,
+        "total_g": 210.81,
+        "seconds": 25955.0,
+        "support_g": 11.311
+      },
+      {
+        "plate": 8,
+        "total_g": 33.58,
+        "seconds": 3712.0,
+        "support_g": 0.212
+      },
+      {
+        "plate": 9,
+        "total_g": 105.79,
+        "seconds": 11152.0,
+        "support_g": 3.638
+      },
+      {
+        "plate": 10,
+        "total_g": 105.61,
+        "seconds": 11134.0,
+        "support_g": 3.575
+      }
+    ],
+    "plate_count": 10,
+    "total_g": 1737.36,
+    "hours": 63.562,
+    "support_g": 280.11
+  },
+  "before_project_sha256": "3fdba9550b1f36d04f1e5922f78df53961a4024a9b4a3817d58a03190e3e8f9d",
+  "after_project_sha256": "3c9229022167bad2636d49702a1d09c95aa6a8cdc571b75403d09322e06f4cad",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

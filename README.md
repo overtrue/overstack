@@ -19,7 +19,7 @@ Images show the actual base geometry. Equipment scenes use the measured STEP mod
 
 **This is an unprinted digital prototype.** Geometry checks have passed; all 41 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
-[Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. See the index for sliced and blocked entries. Not physically tested.
+[Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. Each profile includes a before/after slice comparison; see the index for status. Not physically tested.
 
 [Drawer repair and verification](docs/drawer-repair.md)
 
@@ -224,7 +224,7 @@ uv run --group docs python tools/layer_manuals.py
 
 ## Validation and limits
 
-The build checks all 1,653 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 41 distinct HT geometries pass. The single-drawer joint now has a reinforced channel; its left/right halves and the triple drawers print side-down at 40 degrees, within a 256 mm build height. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks joint stock, sliding capture, solid floors and planar bed contact. These checks are not a tested print profile or load rating.
+The build checks all 1,653 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 41 distinct HT geometries pass. The single-drawer joint now has a reinforced channel; use the printer-specific projects for drawer orientation and supports. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks joint stock, sliding capture, solid floors and planar bed contact. These checks are not a tested print profile or load rating.
 
 Rear beams and seam keys are removable and are not captive. Remove devices and the upper layer before servicing drawers. Verify actual device feet, underside clearance, ventilation, cables and stability before placing equipment on the stack.
 

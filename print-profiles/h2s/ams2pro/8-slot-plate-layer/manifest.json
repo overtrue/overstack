@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "aa590888ccd3169346fa09335c9e876134308ba2",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -19,22 +19,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          245.36605307173198
-        ],
-        [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          42.426406871192846
-        ],
-        [
           1.0,
           0.0,
-          6.123233995736766e-17,
+          0.0,
           0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
         ],
         [
           0.0,
@@ -44,12 +44,13 @@
         ]
       ],
       "bounds_mm": [
-        245.36605307173198,
-        245.366053071732,
-        60.00000000000001
+        60.0,
+        287.0,
+        63.0
       ],
-      "downward_area_mm2": 6497.288351793352,
-      "bed_contact_area_mm2": 15773.394033688226,
+      "downward_area_mm2": 9444.451584018689,
+      "bed_contact_area_mm2": 182.04088149353015,
+      "support_column_estimate_mm3": 28969.624723789162,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -64,10 +65,10 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          6.123233995736766e-17,
-          0.0,
           1.0,
-          2.9999999999999707
+          0.0,
+          0.0,
+          -435.0
         ],
         [
           0.0,
@@ -76,10 +77,10 @@
           0.0
         ],
         [
-          -1.0,
           0.0,
-          6.123233995736766e-17,
-          495.0
+          0.0,
+          1.0,
+          3.0
         ],
         [
           0.0,
@@ -89,12 +90,13 @@
         ]
       ],
       "bounds_mm": [
-        63.0,
+        60.0,
         287.0,
-        60.0
+        63.0
       ],
-      "downward_area_mm2": 6497.289996396581,
-      "bed_contact_area_mm2": 15773.39373974829,
+      "downward_area_mm2": 9444.451694124022,
+      "bed_contact_area_mm2": 182.0408285467347,
+      "support_column_estimate_mm3": 28969.625723012352,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -110,21 +112,21 @@
       "assembly_to_print": [
         [
           6.123233995736766e-17,
-          -6.123233995736766e-17,
-          1.0,
-          1.3869125000343774e-14
-        ],
-        [
-          1.0,
-          3.749399456654644e-33,
-          -6.123233995736766e-17,
-          -54.29999923706054
+          0.0,
+          -1.0,
+          60.0
         ],
         [
           0.0,
           1.0,
-          6.123233995736766e-17,
+          0.0,
           0.0
+        ],
+        [
+          1.0,
+          0.0,
+          6.123233995736766e-17,
+          -54.29999923706055
         ],
         [
           0.0,
@@ -134,12 +136,13 @@
         ]
       ],
       "bounds_mm": [
-        60.00000000000002,
-        29.70000076293946,
-        287.0
+        60.00000000000001,
+        287.0,
+        29.700000762939453
       ],
-      "downward_area_mm2": 1468.1442636939878,
-      "bed_contact_area_mm2": 561.1343423249084,
+      "downward_area_mm2": 16554.79099836791,
+      "bed_contact_area_mm2": 1344.0,
+      "support_column_estimate_mm3": 102694.15092749307,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -154,22 +157,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          4.329780281177466e-17,
-          -0.7071067811865475,
-          -181.72644276494273
-        ],
-        [
-          -0.7071067811865475,
-          4.329780281177467e-17,
-          -0.7071067811865476,
-          286.1661229778704
+          6.123233995736766e-17,
+          0.0,
+          1.0,
+          -2.0237288355910012e-14
         ],
         [
           0.0,
           1.0,
-          6.123233995736766e-17,
+          0.0,
           0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          6.123233995736766e-17,
+          344.70001220703125
         ],
         [
           0.0,
@@ -179,12 +182,13 @@
         ]
       ],
       "bounds_mm": [
-        59.1848462169886,
-        58.972714047762764,
-        287.0
+        60.0,
+        287.0,
+        29.70001220703125
       ],
-      "downward_area_mm2": 1468.1454576242413,
-      "bed_contact_area_mm2": 561.1342719100846,
+      "downward_area_mm2": 16554.791069299794,
+      "bed_contact_area_mm2": 1344.0,
+      "support_column_estimate_mm3": 102694.3413819109,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -230,6 +234,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 3292.5058698654175,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -244,16 +249,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          6.123233995736766e-17,
           1.0,
-          1.2246467991473532e-16,
-          -1.223422171034833e-14
+          0.0,
+          0.0,
+          -199.8000030517578
         ],
         [
-          1.0,
-          -6.123233995736766e-17,
-          -7.498798913309288e-33,
-          -199.8000030517578
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          24.0
         ],
         [
           0.0,
@@ -269,12 +274,13 @@
         ]
       ],
       "bounds_mm": [
-        24.00000000000001,
         135.6999969482422,
+        24.0,
         6.000000000000003
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.414425373078,
+      "bed_contact_area_mm2": 3181.4144253730774,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -289,16 +295,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
-          -8.659560562354932e-17,
-          158.03836559519337
+          1.0,
+          0.0,
+          0.0,
+          -63.5
         ],
         [
-          -0.7071067811865475,
-          -0.7071067811865476,
-          -8.659560562354934e-17,
-          344.00744904725536
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          287.0
         ],
         [
           0.0,
@@ -314,12 +320,13 @@
         ]
       ],
       "bounds_mm": [
-        113.13708498984761,
-        110.3086578651014,
+        141.0,
+        24.0,
         6.0000000000000036
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3292.5057983398456,
+      "bed_contact_area_mm2": 3292.5057983398438,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -334,16 +341,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          6.123233995736766e-17,
           1.0,
-          1.2246467991473532e-16,
-          -263.0
+          0.0,
+          0.0,
+          -199.8000030517578
         ],
         [
-          1.0,
-          -6.123233995736766e-17,
-          -7.498798913309288e-33,
-          -199.80000305175778
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          287.0
         ],
         [
           0.0,
@@ -359,12 +366,13 @@
         ]
       ],
       "bounds_mm": [
+        135.6999969482422,
         24.0,
-        135.69999694824222,
         6.0000000000000036
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.4144897460947,
+      "bed_contact_area_mm2": 3181.4144897460938,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -410,6 +418,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -455,6 +464,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -491,6 +501,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
+    "tools/build_print_profiles.py": "3960eda52f86d37208c9be608faf210bd3533a86cc6ad509e56b76f808b7c982"
+  },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
     "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
@@ -513,51 +527,30 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 NB01",
+      "name": "01 NB01, NB02, NB03, NB09, NB10",
       "objects": [
-        "NB01-end_left_60_plain"
+        "NB01-end_left_60_plain",
+        "NB02-end_right_60_plain",
+        "NB03-plate_carrier_left",
+        "NB09-lock_left",
+        "NB10-lock_right"
       ]
     },
     {
       "number": 2,
-      "name": "02 NB02",
+      "name": "02 NB04, NB05, NB06, NB07, NB08",
       "objects": [
-        "NB02-end_right_60_plain"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 NB03",
-      "objects": [
-        "NB03-plate_carrier_left"
-      ]
-    },
-    {
-      "number": 4,
-      "name": "04 NB04",
-      "objects": [
-        "NB04-plate_carrier_right"
-      ]
-    },
-    {
-      "number": 5,
-      "name": "05 NB05, NB06, NB07, NB08, NB09, NB10",
-      "objects": [
+        "NB04-plate_carrier_right",
         "NB05-front_beam_1",
         "NB06-front_beam_2",
         "NB07-rear_beam_1",
-        "NB08-rear_beam_2",
-        "NB09-lock_left",
-        "NB10-lock_right"
+        "NB08-rear_beam_2"
       ]
     }
   ],
-  "project_sha256": "d5a540c25ccfab2e9cfccc9668b506e7179b206eaed10d339a244ee885516000",
+  "project_sha256": "b4c1cbca9411b8aeefacd6481811ed8b1aea4687c88db18c17a00cd2b6da6bdb",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_5.gcode",
-    "Metadata/plate_3.gcode",
-    "Metadata/plate_4.gcode",
     "Metadata/plate_2.gcode",
     "Metadata/plate_1.gcode"
   ]

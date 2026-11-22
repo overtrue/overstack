@@ -23,6 +23,7 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
     found[printer_key].add(report['profile'])
     assert {(r['id'],r['source']) for r in report['parts']}=={(r['id'],r['file']) for r in expected[report['profile']]},(path,'incomplete recipe')
     for name,digest in report['model_source_hashes'].items():assert sha(ROOT/name)==digest,(path,'model source changed')
+    assert report.get('layout_source_hashes'),(path,'missing layout provenance')
     if 'validation_source' in report:
         v=report['validation_source'];assert sha(ROOT/v['file'])==v['sha256'],(path,'validation changed')
     for name,digest in report.get('preset_hashes',{}).items():assert sha(base/'presets'/name)==digest,(path,'preset changed')
@@ -71,6 +72,21 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
         assigned=[next(m.get('value') for m in i.findall('metadata') if m.get('key')=='object_id') for i in config.findall('./plate/model_instance')]
         assert sorted(assigned)==sorted(o.get('id') for o in objects),(path,'plate coverage')
     if report['status']=='sliced_not_printed':
+        proof=json.loads((folder/'layout-rule-validation.json').read_text())
+        assert proof['project_sha256']==report['project_sha256'],(path,'stale layout rule check')
+        for name,digest in proof['rule_source_hashes'].items():assert sha(ROOT/name)==digest,(path,'layout rules changed')
+        layout=folder/'layout-validation.json'
+        if layout.exists():
+            comparison=json.loads(layout.read_text())
+            assert comparison['after_project_sha256']==report['project_sha256'],(path,'stale layout comparison')
+        printing=folder/'layout-printing-checks.json'
+        if printing.exists():
+            checks=json.loads(printing.read_text())
+            assert {c['id'] for c in checks}=={p['id'] for p in report['parts']},(path,'incomplete pose checks')
+            for part in report['parts']:
+                check=next(c for c in checks if c['id']==part['id'])
+                assert check['status']=='ok' and check['source_sha256']==part['sha256'],(path,part['id'],'manufacturing check')
+                assert np.allclose(check['assembly_to_print'],part['assembly_to_print'],atol=.0001),(path,part['id'],'stale checked pose')
         assert report['slice_exit_code']==0 and len(report['gcode_files'])==len(report['plates'])
         evidence=json.loads((folder/'slice-validation.json').read_text())
         assert evidence['project_sha256']==report['project_sha256']

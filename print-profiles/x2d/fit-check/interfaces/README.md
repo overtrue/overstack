@@ -8,6 +8,17 @@ X2D · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
 
+摆盘切片对比 / Sliced layout comparison:
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| Plates | 1 | 1 |
+| Estimated hours | 2.121 | 2.123 |
+| PETG g | 50.05 | 50.05 |
+| Support extrusion g | 4.954 | 4.954 |
+
+支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
+
 [打开摆盘工程 / Open project](x2d-04-petg.3mf)
 
 预计 / Estimate: 2.1 h · 50.0 g PETG

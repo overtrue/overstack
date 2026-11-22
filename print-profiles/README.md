@@ -4,9 +4,13 @@
 
 Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-series beds. Each printer uses its own official Bambu Studio 02.09.01.70 preset, a 0.4 mm nozzle, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
 
-X2D 的 AMS 2 Pro + HT 单抽屉层已重新优化：薄连接片优先大面平放，其他零件按悬垂面积选方向，两半抽屉分别翻面；按投影轮廓和裙边间距合盘，9 盘减为 7 盘。实际 G-code 统计支撑约 134.1 g → 31.1 g；原第 07 盘对应的半抽屉约 97.6 g → 0.9 g。其他现有工程尚未套用这次摆盘优化。方向搜索和合盘是启发式，不保证全局最少支撑或盘数。
+所有机型统一按稳定着床、强度和打印效率选择方向：薄连接片优先大面平放，镜像件分别检查；比较悬垂高度与接触面积，避免为了减少局部支撑把长件竖高。按零件投影、裙边和支撑间距合盘。各工程的 `layout-validation.json` 记录优化前后的实际切片盘数、时间、总耗材和支撑挤出量；方向搜索与合盘是启发式，不保证全局最优。
 
-The X2D AMS 2 Pro + HT single-drawer profile now lays thin connecting plates on their broad faces, chooses each drawer half's orientation separately, prioritizes overhang reduction, and packs projected outlines with brim clearance: 9 plates become 7. Support extrusion in the G-code falls from about 134.1 g to 31.1 g; the drawer half formerly on plate 07 falls from 97.6 g to 0.9 g. Other existing profiles have not yet been rebuilt with this layout change. The search and packing are heuristics, not a proof of a global optimum.
+All printers use the same layout priorities: stable bed contact, strength and printing efficiency. Thin connectors lie on broad faces, mirrored parts are checked separately, and overhang height and contact area are considered before standing a long part upright. Packing reserves brim and support clearance around projected outlines. Each profile's `layout-validation.json` compares sliced plate count, time, total material and support extrusion before and after the change. Orientation and packing are heuristics, not a proof of a global optimum.
+
+带凸台和导轨的侧板单独比较方向。H2S 单件侧板对比中，低侧放约 3.0 h、3.3 g 支撑；平放约 5.7 h、28.2 g 支撑，因此保留低侧放。以上均为相同工艺的切片估算，未实物验证。
+
+Side panels with rails and protrusions are compared separately. An H2S single-panel comparison estimated 3.0 h and 3.3 g of support in the low side pose, versus 5.7 h and 28.2 g when laid flat, so the low side pose is retained. Both use the same process settings; neither is physically validated.
 
 [配置索引 / Profile index](INDEX.md) · [抽屉修复说明 / Drawer repair](../docs/drawer-repair.md)
 
@@ -36,9 +40,9 @@ H2C 保留官方 330 × 320 mm 板配置，但摆盘限制在两喷嘴范围交�
 
 H2C retains its official 330 × 320 mm bed preset, while layouts stay in the intersection of both nozzle regions (300 × 320 mm, starting at X=25) and the smaller 320 mm height limit. H2S uses its own 340 × 320 mm preset. Limits come from Studio's official machine presets.
 
-小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。单抽屉采用新版左右拼接，三抽屉采用侧放40°方向；旧阻塞状态已由重新检查和切片替代。
+小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。单抽屉采用新版左右拼接，三抽屉按机型可用范围分别选择方向；旧阻塞状态已由重新检查和切片替代。
 
-Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. The single drawer uses revised left/right halves; triple drawers print side-down at 40 degrees. Fresh checks and slicing replace the former blocked status.
+Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. The single drawer uses revised left/right halves; triple-drawer orientations are selected for each printer’s usable area. Fresh checks and slicing replace the former blocked status.
 
 ## 组织 / Organization
 
@@ -72,6 +76,8 @@ All profiles remain `makerworld_ready=false` until print, support-removal, assem
 - `<printer>-04-petg.3mf`（`x2d`、`p2s`、`h2s`、`h2c`、`h3c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
 - `manifest.json`：来源文件及 SHA-256、数量、摆放变换、打印条件和验证状态。
 - `slice-validation.json`：各机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for every printer.
+- `layout-rule-validation.json`：确认已有工程的方向、分盘与位置符合当前规则，保留原始生成来源记录。 / Confirms that orientations, grouping and positions match current rules while preserving generation provenance.
+- `layout-validation.json`、`layout-printing-checks.json`：切片对比和当前方向的通用打印检查；不代表实物验证。 / Slice comparisons and manufacturing checks for the current orientations; not physical validation.
 - `plate_*.png`、`slice-info.xml`：实际切片产生的预览与耗材/时间估算；不是实拍或实测。
 
 The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in `models/`. Manifests track source hashes, quantities, transforms and checks. Slice previews and estimates come from Studio, not physical measurements.
@@ -88,6 +94,8 @@ cad run tools/build_print_profiles.py --printer h2s --slice
 cad run tools/build_print_profiles.py --printer h2c --slice
 cad run tools/build_print_profiles.py --printer h3c --slice
 python3 tools/check_sliced_targets.py
+cad run tools/check_print_layout.py --all
+cad run tools/check_profile_printing.py
 cad run tools/check_print_profiles.py
 ```
 

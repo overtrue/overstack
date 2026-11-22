@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "aa590888ccd3169346fa09335c9e876134308ba2",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -19,16 +19,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          221.32442251138937
+          6.123233995736766e-17,
+          0.0,
+          -1.0,
+          26.0
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          18.384776310850235
+          0.0,
+          1.0,
+          0.0,
+          0.0
         ],
         [
           1.0,
@@ -44,12 +44,13 @@
         ]
       ],
       "bounds_mm": [
-        221.32442251138937,
-        221.3244225113894,
+        29.0,
+        287.0,
         204.5
       ],
       "downward_area_mm2": 574.7239765750822,
-      "bed_contact_area_mm2": 6835.091290855411,
+      "bed_contact_area_mm2": 6682.0,
+      "support_column_estimate_mm3": 3624.0004149257184,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -64,16 +65,16 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          202.9396462005391
+          6.123233995736766e-17,
+          0.0,
+          1.0,
+          2.9999999999999765
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -8.650901133926984e-15
+          0.0,
+          1.0,
+          0.0,
+          0.0
         ],
         [
           -1.0,
@@ -89,12 +90,13 @@
         ]
       ],
       "bounds_mm": [
-        221.32442251138934,
-        221.3244225113894,
+        29.0,
+        287.0,
         199.1999969482422
       ],
-      "downward_area_mm2": 574.7242092533356,
-      "bed_contact_area_mm2": 6835.091162815184,
+      "downward_area_mm2": 574.7242092533359,
+      "bed_contact_area_mm2": 6682.0,
+      "support_column_estimate_mm3": 3624.002328484423,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -140,6 +142,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -185,6 +188,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -221,6 +225,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
+    "tools/build_print_profiles.py": "3960eda52f86d37208c9be608faf210bd3533a86cc6ad509e56b76f808b7c982"
+  },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
     "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
@@ -243,32 +251,18 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 NE01",
+      "name": "01 NE01, NE02, NE03, NE04",
       "objects": [
-        "NE01-top_1"
-      ]
-    },
-    {
-      "number": 2,
-      "name": "02 NE02",
-      "objects": [
-        "NE02-top_2"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 NE03, NE04",
-      "objects": [
+        "NE01-top_1",
+        "NE02-top_2",
         "NE03-lock_left",
         "NE04-lock_right"
       ]
     }
   ],
-  "project_sha256": "5b71cb549d26277c0c60be49524dbd5a3df1b50ff2740c2009ab234833af7390",
+  "project_sha256": "1ea1eb050ff989a62e2313469dc2ea7637f3822bf09d1192c35f5824d4861bfa",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_3.gcode",
-    "Metadata/plate_2.gcode",
     "Metadata/plate_1.gcode"
   ]
 }

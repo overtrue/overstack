@@ -1,131 +1,107 @@
 {
-  "before": [
-    {
-      "plate": "Metadata/plate_1.gcode",
-      "total_g": 1.71,
-      "support_g": 0.0
-    },
-    {
-      "plate": "Metadata/plate_5.gcode",
-      "total_g": 22.68,
-      "support_g": 0.0
-    },
-    {
-      "plate": "Metadata/plate_4.gcode",
-      "total_g": 24.07,
-      "support_g": 0.63
-    },
-    {
-      "plate": "Metadata/plate_3.gcode",
-      "total_g": 203.07,
-      "support_g": 0.65
-    },
-    {
-      "plate": "Metadata/plate_2.gcode",
-      "total_g": 202.71,
-      "support_g": 0.67
-    },
-    {
-      "plate": "Metadata/plate_6.gcode",
-      "total_g": 217.39,
-      "support_g": 0.79
-    },
-    {
-      "plate": "Metadata/plate_9.gcode",
-      "total_g": 194.78,
-      "support_g": 17.0
-    },
-    {
-      "plate": "Metadata/plate_8.gcode",
-      "total_g": 194.64,
-      "support_g": 16.76
-    },
-    {
-      "plate": "Metadata/plate_7.gcode",
-      "total_g": 313.45,
-      "support_g": 97.57
-    }
-  ],
-  "after": [
-    {
-      "plate": "Metadata/plate_1.gcode",
-      "total_g": 48.5,
-      "support_g": 0.65
-    },
-    {
-      "plate": "Metadata/plate_2.gcode",
-      "total_g": 202.71,
-      "support_g": 0.67
-    },
-    {
-      "plate": "Metadata/plate_3.gcode",
-      "total_g": 203.07,
-      "support_g": 0.65
-    },
-    {
-      "plate": "Metadata/plate_5.gcode",
-      "total_g": 216.87,
-      "support_g": 0.86
-    },
-    {
-      "plate": "Metadata/plate_4.gcode",
-      "total_g": 217.39,
-      "support_g": 0.79
-    },
-    {
-      "plate": "Metadata/plate_6.gcode",
-      "total_g": 213.01,
-      "support_g": 13.69
-    },
-    {
-      "plate": "Metadata/plate_7.gcode",
-      "total_g": 213.05,
-      "support_g": 13.8
-    }
-  ],
-  "method": "Sum positive XY extrusion moves under Support and Support interface G-code features; 1.75 mm filament, density 1.25 g/cm3. Excludes retractions and purge.",
-  "before_project_sha256": "2dcb84134de96d1e257cd2fe0565f3eec969671c98bc5196009b16470a23a1fd",
-  "after_project_sha256": "5b315292f6655b7eb713c3484d6389d6c000229236427653a5184d63b7907a6a",
-  "manufacturing_checks": [
-    {
-      "file": "C01-C01-seam_2_False_layer_lock-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C02-C02-seam_2_True_layer_lock-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C03-C03-standard_2_cassette_drawer_1-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C04-C04-standard_2_cassette_drawer_2-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C05-C05-standard_2_cassette_drawer_3-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C06-C06-standard_2_cassette_drawer_4-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C07-C07-standard_2_drawer_1-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C08-C08-standard_2_drawer_2-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C09-C09-standard_2_end_left_1-dfm.json",
-      "status": "ok"
-    },
-    {
-      "file": "C10-C10-standard_2_end_right_1-dfm.json",
-      "status": "ok"
-    }
-  ]
+  "printer": "x2d",
+  "profile": "ams2pro-ht/03-single-drawer-layer",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 48.5,
+        "seconds": 5550.0,
+        "support_g": 0.655
+      },
+      {
+        "plate": 2,
+        "total_g": 202.71,
+        "seconds": 17058.0,
+        "support_g": 0.672
+      },
+      {
+        "plate": 3,
+        "total_g": 203.07,
+        "seconds": 16957.0,
+        "support_g": 0.653
+      },
+      {
+        "plate": 4,
+        "total_g": 217.39,
+        "seconds": 19799.0,
+        "support_g": 0.785
+      },
+      {
+        "plate": 5,
+        "total_g": 216.87,
+        "seconds": 19673.0,
+        "support_g": 0.857
+      },
+      {
+        "plate": 6,
+        "total_g": 213.01,
+        "seconds": 25950.0,
+        "support_g": 13.686
+      },
+      {
+        "plate": 7,
+        "total_g": 213.05,
+        "seconds": 25939.0,
+        "support_g": 13.8
+      }
+    ],
+    "plate_count": 7,
+    "total_g": 1314.6,
+    "hours": 36.368,
+    "support_g": 31.108
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 48.28,
+        "seconds": 5302.0,
+        "support_g": 0.625
+      },
+      {
+        "plate": 2,
+        "total_g": 202.71,
+        "seconds": 17058.0,
+        "support_g": 0.672
+      },
+      {
+        "plate": 3,
+        "total_g": 203.07,
+        "seconds": 16957.0,
+        "support_g": 0.653
+      },
+      {
+        "plate": 4,
+        "total_g": 217.39,
+        "seconds": 19799.0,
+        "support_g": 0.785
+      },
+      {
+        "plate": 5,
+        "total_g": 216.88,
+        "seconds": 19739.0,
+        "support_g": 0.877
+      },
+      {
+        "plate": 6,
+        "total_g": 211.28,
+        "seconds": 26089.0,
+        "support_g": 11.727
+      },
+      {
+        "plate": 7,
+        "total_g": 210.81,
+        "seconds": 25934.0,
+        "support_g": 11.311
+      }
+    ],
+    "plate_count": 7,
+    "total_g": 1310.42,
+    "hours": 36.355,
+    "support_g": 26.65
+  },
+  "before_project_sha256": "5b315292f6655b7eb713c3484d6389d6c000229236427653a5184d63b7907a6a",
+  "after_project_sha256": "fd4ff7ee9ada2f2b868099a2b550647ef0cf7b631674b439df4532077b9a5139",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
 }

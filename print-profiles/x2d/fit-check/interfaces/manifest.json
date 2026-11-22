@@ -5,8 +5,9 @@
   "material": "Bambu PETG Basic",
   "bed": "Textured PEI Plate",
   "layer_mm": 0.2,
+  "end_style": null,
   "studio_version": "02.09.01.70",
-  "source_commit": "0379846baa1a604083752f0d13d665eaf55dab38",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -373,6 +374,37 @@
     }
   ],
   "status": "sliced_not_printed",
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
+  "model_source_hashes": {
+    "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
+    "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
+    "src/stacknest/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
+    "src/stacknest/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
+    "src/stacknest/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/stacknest/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
+    "src/stacknest/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/stacknest/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/stacknest/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
+    "src/stacknest/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/stacknest/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
+    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
+    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
+    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+  },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
+    "tools/build_print_profiles.py": "2b10f096970ded63237f903e7568f20ef65e99b9a9b8c198427a0355c093e423"
+  },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
     "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
@@ -408,27 +440,9 @@
       ]
     }
   ],
-  "project_sha256": "a23ce7254366411681996ee6465afcd42dbe14418d803bfa28526a89fcf121ec",
+  "project_sha256": "78f7701781f4bb64ddf92722e8a6d171052803effc6a27e30d13805a70f65719",
   "slice_exit_code": 0,
   "gcode_files": [
     "Metadata/plate_1.gcode"
-  ],
-  "model_source_hashes": {
-    "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
-    "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
-    "src/stacknest/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/stacknest/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
-    "src/stacknest/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
-    "src/stacknest/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
-    "src/stacknest/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
-    "src/stacknest/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/stacknest/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
-    "src/stacknest/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
-    "src/stacknest/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
-    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
-    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
-    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
-  },
-  "end_style": null,
-  "preset_directory": "print-profiles/x2d/presets"
+  ]
 }

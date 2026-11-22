@@ -1,0 +1,101 @@
+{
+  "printer": "x2d",
+  "profile": "ams2pro-ht/02-eight-slot-plate-layer",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 141.37,
+        "seconds": 10971.0,
+        "support_g": 1.024
+      },
+      {
+        "plate": 2,
+        "total_g": 322.7,
+        "seconds": 53436.0,
+        "support_g": 74.042
+      },
+      {
+        "plate": 3,
+        "total_g": 323.18,
+        "seconds": 53395.0,
+        "support_g": 73.963
+      },
+      {
+        "plate": 4,
+        "total_g": 24.07,
+        "seconds": 2758.0,
+        "support_g": 0.625
+      },
+      {
+        "plate": 5,
+        "total_g": 22.68,
+        "seconds": 2339.0,
+        "support_g": 0.0
+      },
+      {
+        "plate": 6,
+        "total_g": 194.64,
+        "seconds": 26431.0,
+        "support_g": 16.756
+      },
+      {
+        "plate": 7,
+        "total_g": 194.78,
+        "seconds": 26551.0,
+        "support_g": 17.001
+      }
+    ],
+    "plate_count": 7,
+    "total_g": 1223.42,
+    "hours": 48.856,
+    "support_g": 183.411
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 48.28,
+        "seconds": 5302.0,
+        "support_g": 0.625
+      },
+      {
+        "plate": 2,
+        "total_g": 322.7,
+        "seconds": 53436.0,
+        "support_g": 74.042
+      },
+      {
+        "plate": 3,
+        "total_g": 323.18,
+        "seconds": 53395.0,
+        "support_g": 73.963
+      },
+      {
+        "plate": 4,
+        "total_g": 211.28,
+        "seconds": 26089.0,
+        "support_g": 11.727
+      },
+      {
+        "plate": 5,
+        "total_g": 210.81,
+        "seconds": 25934.0,
+        "support_g": 11.311
+      },
+      {
+        "plate": 6,
+        "total_g": 139.6,
+        "seconds": 10728.0,
+        "support_g": 1.098
+      }
+    ],
+    "plate_count": 6,
+    "total_g": 1255.85,
+    "hours": 48.579,
+    "support_g": 172.766
+  },
+  "before_project_sha256": "e6fed6d5993517df668e58f57c3d65ab5dd42c69966103de3a77fe2c63b111eb",
+  "after_project_sha256": "accf0422b81e2958ec5b254baad87756571686eb5a9beb1fdb1cca4d39a96fdc",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

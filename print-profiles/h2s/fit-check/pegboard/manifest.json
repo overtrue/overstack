@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": null,
   "studio_version": "02.09.01.70",
-  "source_commit": "aa590888ccd3169346fa09335c9e876134308ba2",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -50,6 +50,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 5974.573080227672,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -86,6 +87,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
+    "tools/build_print_profiles.py": "3960eda52f86d37208c9be608faf210bd3533a86cc6ad509e56b76f808b7c982"
+  },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
     "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
@@ -114,7 +119,7 @@
       ]
     }
   ],
-  "project_sha256": "c24cbf99519eac45421527a1e52c17e1f70b5fac85a2f3dbf8088a7cf70d818d",
+  "project_sha256": "faf5e552d7cdce825bee9f0dd73b4c1d4ad8e9af83dd04ebb00be2aef1eb0991",
   "slice_exit_code": 0,
   "gcode_files": [
     "Metadata/plate_1.gcode"

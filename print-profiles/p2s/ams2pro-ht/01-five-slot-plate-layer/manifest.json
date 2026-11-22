@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "2e4aa63a663364bb26df21b19afe6414ef2096a0",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -50,6 +50,7 @@
       ],
       "downward_area_mm2": 19733.550631957303,
       "bed_contact_area_mm2": 864.0000000000006,
+      "support_column_estimate_mm3": 548498.1108277477,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -95,6 +96,7 @@
       ],
       "downward_area_mm2": 19733.55067277599,
       "bed_contact_area_mm2": 864.0000000000005,
+      "support_column_estimate_mm3": 548498.3388599105,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -140,6 +142,7 @@
       ],
       "downward_area_mm2": 670.0999374389656,
       "bed_contact_area_mm2": 5856.000000000002,
+      "support_column_estimate_mm3": 1534.0499162673966,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -155,15 +158,15 @@
       "assembly_to_print": [
         [
           0.7071067811865476,
-          -0.7071067811865475,
-          -8.659560562354932e-17,
-          118.44038584874667
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -270.4683438038544
         ],
         [
-          -0.7071067811865475,
+          0.7071067811865475,
           -0.7071067811865476,
           -8.659560562354934e-17,
-          468.4582425360877
+          118.44038584874671
         ],
         [
           0.0,
@@ -179,12 +182,13 @@
         ]
       ],
       "bounds_mm": [
-        197.98989873223329,
-        197.98989873223326,
+        197.9898987322333,
+        197.9898987322333,
         6.0000000000000036
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 6125.999897003171,
+      "bed_contact_area_mm2": 6125.99989700317,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -199,22 +203,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          0.7071067811865475,
-          -0.7071067811865476,
-          28.284271247461902
-        ],
-        [
-          -4.329780281177466e-17,
           0.7071067811865476,
-          0.7071067811865475,
-          2.5978681687064796e-15
+          -0.7071067811865475,
+          0.0,
+          196.7264400637114
         ],
         [
-          1.0,
+          0.7071067811865475,
+          0.7071067811865476,
           0.0,
-          6.123233995736766e-17,
-          0.0
+          -6.2132034394294005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
         ],
         [
           0.0,
@@ -224,12 +228,13 @@
         ]
       ],
       "bounds_mm": [
-        231.22391744800103,
-        231.22391744800106,
-        60.0
+        239.15284693490426,
+        239.1528496323026,
+        43.0
       ],
-      "downward_area_mm2": 4289.714473654853,
-      "bed_contact_area_mm2": 10515.596022458816,
+      "downward_area_mm2": 9444.4515840187,
+      "bed_contact_area_mm2": 182.04088149353018,
+      "support_column_estimate_mm3": 28969.62472378919,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -244,22 +249,22 @@
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          0.7071067811865475,
-          0.7071067811865476,
-          -1.8834544223121983e-14
-        ],
-        [
-          -4.329780281177466e-17,
           0.7071067811865476,
           -0.7071067811865475,
-          28.28427124746192
+          0.0,
+          -104.6518036156091
         ],
         [
-          -1.0,
+          0.7071067811865475,
+          0.7071067811865476,
           0.0,
-          6.123233995736766e-17,
-          495.0
+          -307.59144981614816
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
         ],
         [
           0.0,
@@ -269,12 +274,13 @@
         ]
       ],
       "bounds_mm": [
-        231.223917448001,
-        231.22391744800106,
-        60.0
+        239.15284693490423,
+        239.15284423750597,
+        43.0
       ],
-      "downward_area_mm2": 4289.7155640608435,
-      "bed_contact_area_mm2": 10515.595826498859,
+      "downward_area_mm2": 9444.451694124025,
+      "bed_contact_area_mm2": 182.0408285467346,
+      "support_column_estimate_mm3": 28969.625723012356,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -320,6 +326,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -365,6 +372,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -400,6 +408,10 @@
     "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+  },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "8f9f342383cba5c3bffea727efc3e0b1c1752ad6f375ebd48d4b24d22efe96c3",
+    "tools/build_print_profiles.py": "acb35d16c933d180b5499d3e368dcf1aff6ea1b36eff4fcc990d081149aedff2"
   },
   "validation_source": {
     "file": "models/ams2pro+ht/validation.json",
@@ -437,50 +449,36 @@
     },
     {
       "number": 3,
-      "name": "03 A03",
+      "name": "03 A03, A04, KEY-left, KEY-right",
       "objects": [
-        "A03-A03-low_0_cassette_plates_3"
+        "A03-A03-low_0_cassette_plates_3",
+        "A04-A04-low_0_cassette_plates_4",
+        "KEY-left-lock_left",
+        "KEY-right-lock_right"
       ]
     },
     {
       "number": 4,
-      "name": "04 A04",
-      "objects": [
-        "A04-A04-low_0_cassette_plates_4"
-      ]
-    },
-    {
-      "number": 5,
-      "name": "05 A05",
+      "name": "04 A05",
       "objects": [
         "A05-A05-low_0_end_left_1"
       ]
     },
     {
-      "number": 6,
-      "name": "06 A06",
+      "number": 5,
+      "name": "05 A06",
       "objects": [
         "A06-A06-low_0_end_right_1"
       ]
-    },
-    {
-      "number": 7,
-      "name": "07 KEY-left, KEY-right",
-      "objects": [
-        "KEY-left-lock_left",
-        "KEY-right-lock_right"
-      ]
     }
   ],
-  "project_sha256": "52ecbc31dc90eb5e4857cbb0459530c785ba73d97eada9c679b17c03b7294595",
+  "project_sha256": "5b33709fb97da19713d5f8206984836b1922888839cf1b40328e1472bc36a746",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_7.gcode",
-    "Metadata/plate_4.gcode",
     "Metadata/plate_3.gcode",
-    "Metadata/plate_6.gcode",
     "Metadata/plate_5.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_2.gcode"
+    "Metadata/plate_4.gcode",
+    "Metadata/plate_2.gcode",
+    "Metadata/plate_1.gcode"
   ]
 }

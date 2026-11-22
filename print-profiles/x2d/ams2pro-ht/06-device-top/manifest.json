@@ -5,8 +5,9 @@
   "material": "Bambu PETG Basic",
   "bed": "Textured PEI Plate",
   "layer_mm": 0.2,
+  "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "0379846baa1a604083752f0d13d665eaf55dab38",
+  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -48,7 +49,8 @@
         252.5
       ],
       "downward_area_mm2": 574.7239765750822,
-      "bed_contact_area_mm2": 6835.091290855411,
+      "bed_contact_area_mm2": 6682.000000000002,
+      "support_column_estimate_mm3": 3624.00041492572,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -93,7 +95,8 @@
         247.1999969482422
       ],
       "downward_area_mm2": 4867.396255584483,
-      "bed_contact_area_mm2": 6835.091162815183,
+      "bed_contact_area_mm2": 6682.000000000002,
+      "support_column_estimate_mm3": 497734.5357616054,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -139,6 +142,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -184,6 +188,7 @@
       ],
       "downward_area_mm2": 0.0,
       "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -193,37 +198,17 @@
     }
   ],
   "status": "sliced_not_printed",
-  "plates": [
-    {
-      "number": 1,
-      "name": "01 F01",
-      "objects": [
-        "F01-F01-device_adapter_1"
-      ]
-    },
-    {
-      "number": 2,
-      "name": "02 F02",
-      "objects": [
-        "F02-F02-device_adapter_2"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 F03, F04",
-      "objects": [
-        "F03-F03-top_rear_lock_1",
-        "F04-F04-top_rear_lock_2"
-      ]
-    }
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
   ],
-  "project_sha256": "48bca4684251f1ed430cd03313734ead92fde3bd4966eb1cb595b0bae8bf5b98",
-  "slice_exit_code": 0,
-  "gcode_files": [
-    "Metadata/plate_3.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_2.gcode"
-  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
   "model_source_hashes": {
     "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
     "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
@@ -240,7 +225,10 @@
     "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
     "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
   },
-  "end_style": "plain",
+  "layout_source_hashes": {
+    "tools/print_layout.py": "986be725dbfedcdafc114bbb3c19ef773f46a11c733529589a0c76d5941dfa92",
+    "tools/build_print_profiles.py": "3960eda52f86d37208c9be608faf210bd3533a86cc6ad509e56b76f808b7c982"
+  },
   "validation_source": {
     "file": "models/ams2pro+ht/validation.json",
     "sha256": "8919f491f6487b20930fe7203fc162c8c5b0227a26666673ea333144a14f68cb"
@@ -260,5 +248,28 @@
     "brim_type": "outer_only",
     "brim_width": "3"
   },
-  "preset_directory": "print-profiles/x2d/presets"
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 F01, F03, F04",
+      "objects": [
+        "F01-F01-device_adapter_1",
+        "F03-F03-top_rear_lock_1",
+        "F04-F04-top_rear_lock_2"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "02 F02",
+      "objects": [
+        "F02-F02-device_adapter_2"
+      ]
+    }
+  ],
+  "project_sha256": "664bc3147063ba058e06e4ef9ed8581b14a027ab04ee491715cfcc721f1ebd1f",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_1.gcode",
+    "Metadata/plate_2.gcode"
+  ]
 }
