@@ -1,0 +1,728 @@
+{
+  "profile": "ams2pro-ht/05-triple-drawer-layer",
+  "printer": "Bambu Lab H2S",
+  "nozzle_mm": 0.4,
+  "material": "Bambu PETG Basic",
+  "bed": "Textured PEI Plate",
+  "layer_mm": 0.2,
+  "end_style": "plain",
+  "studio_version": "02.09.01.70",
+  "source_commit": "aa590888ccd3169346fa09335c9e876134308ba2",
+  "physical_fit": "not_verified",
+  "load_test": "not_verified",
+  "makerworld_ready": false,
+  "parts": [
+    {
+      "id": "E01",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E01-3drawers_divider_1.stl",
+      "sha256": "f6600bef26f97f4fa6129da008ab0aabc0cd49af6e2a0b296fb60fd352a407c6",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -178.5
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          287.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        16.0,
+        287.0,
+        58.000000000000036
+      ],
+      "downward_area_mm2": 2057.199951171875,
+      "bed_contact_area_mm2": 2296.0,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E02",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E02-3drawers_divider_2.stl",
+      "sha256": "06396e4e6552ed6750fb9b89aa985ae1e4373afbe06b4991ce799d157b164665",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -215.31401487130373
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          -12.37436867076454
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        208.59650045003153,
+        208.59650045003156,
+        58.000000000000036
+      ],
+      "downward_area_mm2": 2057.1999511718723,
+      "bed_contact_area_mm2": 2296.0000000000045,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E03",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E03-3drawers_drawer_1.stl",
+      "sha256": "ee52fa5b4d6aef58f0e081343b5a96f5e181226611472e916f2ce079f3418313",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          4.329780281177467e-17,
+          0.7071067811865475,
+          -0.7071067811865476,
+          42.072853480599576
+        ],
+        [
+          -4.329780281177466e-17,
+          0.7071067811865476,
+          0.7071067811865475,
+          -4.596194077712551
+        ],
+        [
+          1.0,
+          0.0,
+          6.123233995736766e-17,
+          -69.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        227.6883835420683,
+        229.10259710444143,
+        113.0
+      ],
+      "downward_area_mm2": 13713.709737838435,
+      "bed_contact_area_mm2": 12802.474990844727,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E04",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E04-3drawers_drawer_2.stl",
+      "sha256": "64b9714a2364ea8f86f2435b50312be17433d844fd683120f1343a56a0ee4245",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          6.123233995736766e-17,
+          0.0,
+          -1.0,
+          59.499999999999986
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          6.123233995736766e-17,
+          -191.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        53.00000000000001,
+        271.0,
+        113.0
+      ],
+      "downward_area_mm2": 13713.709695330808,
+      "bed_contact_area_mm2": 12802.474990844727,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E05",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E05-3drawers_drawer_3.stl",
+      "sha256": "aad5b78e27d645d81ac711f81776375f60634c27bb04bca757e8284f06d0ef0b",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          4.329780281177467e-17,
+          -0.7071067811865475,
+          0.7071067811865476,
+          185.6155300614687
+        ],
+        [
+          4.329780281177466e-17,
+          0.7071067811865476,
+          0.7071067811865475,
+          -4.596194077712572
+        ],
+        [
+          -1.0,
+          0.0,
+          6.123233995736766e-17,
+          426.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        227.6883835420683,
+        229.1025971044414,
+        113.0
+      ],
+      "downward_area_mm2": 13713.709695330808,
+      "bed_contact_area_mm2": 12802.47499084473,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E06",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E06-3drawers_end_left_1.stl",
+      "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          4.329780281177467e-17,
+          -0.7071067811865475,
+          -0.7071067811865476,
+          245.36605307173198
+        ],
+        [
+          4.329780281177466e-17,
+          0.7071067811865476,
+          -0.7071067811865475,
+          42.426406871192846
+        ],
+        [
+          1.0,
+          0.0,
+          6.123233995736766e-17,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        245.36605307173198,
+        245.366053071732,
+        60.00000000000001
+      ],
+      "downward_area_mm2": 6497.288351793352,
+      "bed_contact_area_mm2": 15773.394033688226,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E07",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E07-3drawers_end_right_1.stl",
+      "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          6.123233995736766e-17,
+          0.0,
+          1.0,
+          2.9999999999999707
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          6.123233995736766e-17,
+          495.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        63.0,
+        287.0,
+        60.0
+      ],
+      "downward_area_mm2": 6497.289996396581,
+      "bed_contact_area_mm2": 15773.39373974829,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E08",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E08-3drawers_front_beam_1.stl",
+      "sha256": "fe3d7ed2e9e8f24b841db08ca6c1620b4de36364edfd19b2f0b3ffe188fc66de",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -63.5
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          24.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        189.0,
+        24.0,
+        6.000000000000003
+      ],
+      "downward_area_mm2": 75.59999656677246,
+      "bed_contact_area_mm2": 4368.905873298645,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E09",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E09-3drawers_front_beam_2.stl",
+      "sha256": "8e628e3749523ed08120510a52c376de62cd750bd7ba078f0b4328010aabacb0",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -175.22106253594512
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          -158.25049978746796
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        144.0376491697811,
+        146.86607629452726,
+        6.000000000000003
+      ],
+      "downward_area_mm2": 75.59999656677256,
+      "bed_contact_area_mm2": 4257.814428806308,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E10",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E10-3drawers_rear_beam_1.stl",
+      "sha256": "939a4a123ad97c2631e4bf3e9ad3359c40b47188059ef8b209e470e8e775ab03",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -233.69879118215394
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          158.0383655951934
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          5.999999999999968
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        144.24978336205575,
+        147.07821048680188,
+        6.0000000000000036
+      ],
+      "downward_area_mm2": 75.59985351562501,
+      "bed_contact_area_mm2": 4368.905944824221,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E11",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E11-3drawers_rear_beam_2.stl",
+      "sha256": "3e86a085da6391327b67f9a8c63c475571bd9b9200db5592c999ee53adbf97ca",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -361.1901459880071
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          27.718583664594064
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          5.999999999999968
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        146.86607629452732,
+        144.03764916978108,
+        6.0000000000000036
+      ],
+      "downward_area_mm2": 75.59985351562501,
+      "bed_contact_area_mm2": 4257.814636230471,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E12",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E12-3drawers_seam_2_False_layer_lock.stl",
+      "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -32.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          7.999999999999983
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -281.3500061035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        12.0,
+        16.0,
+        5.29998779296875
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 162.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E13",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E13-3drawers_seam_2_True_layer_lock.stl",
+      "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -451.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          7.999999999999983
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -281.3500061035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        12.0,
+        16.0,
+        5.29998779296875
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 162.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E14",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E14-3drawers_side_left.stl",
+      "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -54.29999923706055
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          287.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        20.700000762939453,
+        287.0,
+        60.000000000000036
+      ],
+      "downward_area_mm2": 1871.279906387339,
+      "bed_contact_area_mm2": 2415.60001373291,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    },
+    {
+      "id": "E15",
+      "source": "models/ams2pro+ht/05-triple-drawer-layer/parts/E15-3drawers_side_right.stl",
+      "sha256": "bcc1e988e4086c84919424ba4853b073b163e7974092f38cbd4aa86cb53218fc",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          1.2246467991473532e-16,
+          -2.6115592991817308e-14
+        ],
+        [
+          1.0,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          -420.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        287.00000000000006,
+        20.70001220703125,
+        60.000000000000036
+      ],
+      "downward_area_mm2": 1871.2794112397823,
+      "bed_contact_area_mm2": 2415.600219726563,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        340,
+        320
+      ]
+    }
+  ],
+  "status": "blocked",
+  "printer_key": "h2s",
+  "bed_group": "h-series",
+  "printable_area_mm": [
+    0,
+    0,
+    340,
+    320
+  ],
+  "build_height_mm": 340,
+  "project_file": "h2s-04-petg.3mf",
+  "preset_directory": "print-profiles/bed-h/h2s/presets",
+  "model_source_hashes": {
+    "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
+    "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
+    "src/stacknest/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
+    "src/stacknest/fabrication.py": "e7c2a3d7d2f6c8dcb95bf074bc42e1f92f85f66a5ed9b82b8c21ea99600753a6",
+    "src/stacknest/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/stacknest/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
+    "src/stacknest/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/stacknest/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/stacknest/storage.py": "53862a6df80d90e17903d85e32b9b7d9edd96da5c208583a8b5e0f8e3183a661",
+    "src/stacknest/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/stacknest/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
+    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
+    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
+    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+  },
+  "validation_source": {
+    "file": "models/ams2pro+ht/validation.json",
+    "sha256": "13ea8dd34c2d523408d725350c075d05c8fe81e17053e1a531d5d10a24bf9b56"
+  },
+  "blockers": [
+    "3drawers_drawer_1: printing.skin_layer",
+    "3drawers_drawer_2: printing.skin_layer",
+    "3drawers_drawer_3: printing.skin_layer"
+  ]
+}

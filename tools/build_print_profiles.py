@@ -6,6 +6,8 @@ sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import trimesh,np
 from fabrication import orient
 from multi_drawers import orient_candidate
+from print_profile_targets import TARGETS
+TARGET=TARGETS['x2d'];PRINTER_KEY='x2d'
 STUDIO='/Applications/BambuStudio.app/Contents/MacOS/BambuStudio'
 OUT=ROOT/'print-profiles';WORK=ROOT/'output/print-profiles'
 
@@ -32,32 +34,59 @@ def run(args,folder,log):
     (folder/log).write_text(result.stdout)
     return result.returncode,result.stdout
 
+def orient_for_target(mesh):
+    if PRINTER_KEY=='x2d':
+        try:return orient(mesh)
+        except AssertionError:return orient_candidate(mesh)
+    x0,y0,x1,y1=TARGET['area'];limit=np.array([x1-x0-6,y1-y0-6,TARGET['height']])
+    candidates=[]
+    for axis,angle in [([1,0,0],0),([1,0,0],np.pi),([1,0,0],np.pi/2),
+                       ([1,0,0],-np.pi/2),([0,1,0],np.pi/2),([0,1,0],-np.pi/2)]:
+        for yaw in [0,np.pi/2,np.pi/4,-np.pi/4]:
+            t=trimesh.transformations.rotation_matrix(yaw,[0,0,1])@trimesh.transformations.rotation_matrix(angle,axis)
+            m=mesh.copy();m.apply_transform(t)
+            if np.any(m.extents>limit):continue
+            shift=-m.bounds[0];m.apply_translation(shift);t[:3,3]+=shift
+            down=m.face_normals[:,2]<-.707;elevated=m.triangles_center[:,2]>.25
+            overhang=float(m.area_faces[down&elevated].sum());bed=float(m.area_faces[down&~elevated].sum())
+            if bed<1:continue
+            # Leave room for tree support branches on the narrower dual-nozzle bed.
+            if PRINTER_KEY=='h2c' and overhang>1 and np.any(m.extents[:2]>limit[:2]-24):continue
+            candidates.append((overhang-2*bed,m,t,overhang,bed))
+    assert candidates,('no fitting planar orientation',mesh.extents.tolist())
+    _,m,t,overhang,bed=min(candidates,key=lambda v:v[0])
+    return m,{'assembly_to_print':t.tolist(),'bounds_mm':m.extents.tolist(),
+              'downward_area_mm2':overhang,'bed_contact_area_mm2':bed,'supports_required':overhang>1,
+              'brim_mm':3,'required_extruder_area_mm':[x1-x0,y1-y0]}
+
 def build(key,rows,slice_project):
     dest=OUT/key;dest.mkdir(parents=True,exist_ok=True)
     work=WORK/key;work.mkdir(parents=True,exist_ok=True)
-    report={'profile':key,'printer':'Bambu Lab X2D','nozzle_mm':.4,'material':'Bambu PETG Basic','bed':'Textured PEI Plate','layer_mm':.2,
+    project_name=PRINTER_KEY+'-04-petg.3mf'
+    x0,y0,x1,y1=TARGET['area'];cx=(x0+x1)/2;cy=(y0+y1)/2
+    report={'profile':key,'printer':TARGET['printer'],'nozzle_mm':.4,'material':'Bambu PETG Basic','bed':'Textured PEI Plate','layer_mm':.2,
             'end_style':'plain' if key.startswith('ams2pro') else None,'studio_version':'02.09.01.70','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'physical_fit':'not_verified','load_test':'not_verified','makerworld_ready':False,'parts':[],'status':'preparing'}
+    report.update(printer_key=PRINTER_KEY,bed_group=TARGET['group'],printable_area_mm=TARGET['area'],build_height_mm=TARGET['height'],project_file=project_name,preset_directory=str((OUT/'presets').relative_to(ROOT)))
     sources=[*sorted((ROOT/'src/stacknest').glob('*.py')),ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
     report['model_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in sources}
     inputs=[];blockers=[]
     for r in rows:
         source=ROOT/r['file'];mesh=trimesh.load_mesh(source)
-        try:printed,pose=orient(mesh)
+        try:printed,pose=orient_for_target(mesh)
         except AssertionError:
-            try:printed,pose=orient_candidate(mesh)
-            except AssertionError:
-                blockers.append(r['id']+': no fitting orientation');report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
+            blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
+            report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
         if 'print_rotation' in r:
             t=np.eye(4);t[:3,:3]=r['print_rotation'];printed=mesh.copy();printed.apply_transform(t)
             shift=-printed.bounds[0];printed.apply_translation(shift);t[:3,3]=shift
             down=printed.face_normals[:,2]<-.707;elevated=printed.triangles_center[:,2]>.25
             overhang=float(printed.area_faces[down&elevated].sum());bed=float(printed.area_faces[down&~elevated].sum())
             pose={'assembly_to_print':t.tolist(),'bounds_mm':printed.extents.tolist(),'downward_area_mm2':overhang,
-                  'bed_contact_area_mm2':bed,'supports_required':overhang>1,'brim_mm':3,'required_extruder_area_mm':[256,256]}
+                  'bed_contact_area_mm2':bed,'supports_required':overhang>1,'brim_mm':3,'required_extruder_area_mm':[x1-x0,y1-y0]}
         record={'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1,**pose};report['parts'].append(record)
-        if pose['bed_contact_area_mm2']<1 or printed.extents[2]>260:blockers.append(r['id']+': no planar bed contact or exceeds build height')
-        printed.apply_translation([128-printed.bounds.mean(axis=0)[0],128-printed.bounds.mean(axis=0)[1],0]);path=work/(r['id']+'-'+source.stem+'.stl');printed.export(path);inputs.append(str(path))
+        if pose['bed_contact_area_mm2']<1 or np.any(printed.extents>np.array([x1-x0-6,y1-y0-6,TARGET['height']])):blockers.append(r['id']+': no planar bed contact or exceeds build height')
+        printed.apply_translation([cx-printed.bounds.mean(axis=0)[0],cy-printed.bounds.mean(axis=0)[1],0]);path=work/(r['id']+'-'+source.stem+'.stl');printed.export(path);inputs.append(str(path))
     # Consume the published manufacturing findings instead of guessing by layer name.
     validation=ROOT/('models/ams2pro+ht/validation.json' if key.startswith('ams2pro-ht/') else 'models/ams2pro/printing.json')
     report['validation_source']={'file':str(validation.relative_to(ROOT)),'sha256':digest(validation)}
@@ -68,12 +97,12 @@ def build(key,rows,slice_project):
         checks=[]
         for path,r in zip(inputs,report['parts']):
             result=subprocess.run(['cad','stl','dfm',path,'--process','printing','--technology','fdm','--material','petg',
-                '--build-volume','256x256x260','--nozzle','.4','--layer-height','.2','--json'],capture_output=True,text=True)
+                '--build-volume',f"{x1-x0}x{y1-y0}x{TARGET['height']}",'--nozzle','.4','--layer-height','.2','--json'],capture_output=True,text=True)
             data=json.loads(result.stdout);checks.append({'id':r['id'],'source_sha256':r['sha256'],'status':data['status'],'findings':data['findings']})
             if data['status']!='ok':blockers.append(r['id']+': generic printing check failed')
         (dest/'printing-checks.json').write_text(json.dumps(checks,indent=2)+'\n')
     if blockers:
-        for old in [dest/'x2d-04-petg.3mf',dest/'slice-info.xml',*dest.glob('plate_*.png')]:
+        for old in [dest/project_name,dest/'slice-info.xml',*dest.glob('plate_*.png')]:
             if old.exists():old.unlink()
         report.update(status='blocked',blockers=blockers);(dest/'manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(key,'BLOCKED',flush=True);return
     preset=OUT/'presets';process=json.loads((preset/'process.json').read_text())
@@ -82,15 +111,16 @@ def build(key,rows,slice_project):
     (work/'process.json').write_text(json.dumps(process,indent=2))
     report['preset_hashes']={p.name:digest(p) for p in preset.glob('*.json')}
     report['process_overrides']={k:process[k] for k in ['curr_bed_type','wall_loops','sparse_infill_density','sparse_infill_pattern','enable_support','support_type','brim_type','brim_width']}
-    groups=[];small=None;x=y=8;row_height=0
+    groups=[];small=None;x=x0+8;y=y0+8;row_height=0
     for path,r in zip(inputs,report['parts']):
         w,h,_=r['bounds_mm'];obj={'path':path,'count':1,'filaments':[1]}
-        if max(w,h)>180:
+        # Tall supported parts need their own plate: tree branches can cross the mesh footprint.
+        if max(w,h)>180 or (PRINTER_KEY!='x2d' and r['supports_required'] and r['bounds_mm'][2]>180):
             groups.append([obj]);continue
         if small is None:small=[];groups.append(small)
-        if x+w>248:x=8;y+=row_height+10;row_height=0
-        if y+h>248:small=[];groups.append(small);x=y=8;row_height=0
-        obj.update(pos_x=[x+w/2-128],pos_y=[y+h/2-128])
+        if x+w>x1-8:x=x0+8;y+=row_height+10;row_height=0
+        if y+h>y1-8:small=[];groups.append(small);x=x0+8;y=y0+8;row_height=0
+        obj.update(pos_x=[x+w/2-TARGET['bed'][0]/2],pos_y=[y+h/2-TARGET['bed'][1]/2])
         small.append(obj);x+=w+10;row_height=max(row_height,h)
     identifiers={path:r['id'] for path,r in zip(inputs,report['parts'])}
     assembly={'plates':[{'plate_name':f'{i+1:02d} '+', '.join(identifiers[o['path']] for o in group),
@@ -107,7 +137,7 @@ def build(key,rows,slice_project):
     for field in ['extruder_nozzle_stats','extruder_ams_count']:
         if settings.get(field)==[]:settings.pop(field)
     content['Metadata/project_settings.config']=json.dumps(settings).encode()
-    target=dest/'x2d-04-petg.3mf'
+    target=dest/project_name
     with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
         for n,b in content.items():z.writestr(n,b)
     plates=[{'number':i+1,'name':p['plate_name'],'objects':[Path(o['path']).stem for o in p['objects']]} for i,p in enumerate(assembly['plates'])]
@@ -140,7 +170,9 @@ def build(key,rows,slice_project):
     print(key,report['status'],len(plates),'plates',flush=True)
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--only');p.add_argument('--slice',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--only');p.add_argument('--slice',action='store_true');p.add_argument('--printer',choices=TARGETS,default='x2d');a=p.parse_args()
+    PRINTER_KEY=a.printer;TARGET=TARGETS[PRINTER_KEY]
+    OUT=OUT/TARGET['folder'];WORK=WORK/TARGET['folder']
     WORK.mkdir(parents=True,exist_ok=True)
     version=subprocess.run([STUDIO,'--help'],cwd=WORK,capture_output=True,text=True).stdout
     if not version.startswith('BambuStudio-02.09.01.70:'):raise SystemExit('Studio version changed; refresh presets and revalidate before rebuilding.')

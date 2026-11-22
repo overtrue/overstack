@@ -1,0 +1,92 @@
+{
+  "printer": "Bambu Lab H2C",
+  "project_sha256": "289077303309dcb0c399bf4d654988b489e4b706adec8b56e49be1630be38059",
+  "sliced_archive_sha256": "06f81a69b7a3dcf0cf33817f0e8d378e90b9c46742fe28c8f98b14ce147db213",
+  "plates": [
+    {
+      "file": "Metadata/plate_5.gcode",
+      "sha256": "90703ec6be2c88f39294a5948726a74eb2729148a8f6995a861de9beb838c5c3",
+      "bbox_xy_mm": [
+        40.15757,
+        5.15758,
+        236.97950000000003,
+        292.24244000000004
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_3.gcode",
+      "sha256": "ea8e15ea68bbdabe16870d4180792655bbea92a96b68d745a1878faba6e231de",
+      "bbox_xy_mm": [
+        135.93763,
+        83.51325000000001,
+        189.25194000000002,
+        182.84241
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_4.gcode",
+      "sha256": "de8acce2a1b8ec5dd552cbcd8360550f505ff1f18c3b326d102811b88501e646",
+      "bbox_xy_mm": [
+        121.37566000000001,
+        92.78437000000001,
+        198.79475000000002,
+        180.45947
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_2.gcode",
+      "sha256": "2fa0eae1843c84d8e3c17f4ab3bc55062a57454c9489833d3fcd9dfa79ac2b35",
+      "bbox_xy_mm": [
+        143.44544000000002,
+        20.847710000000003,
+        209.57447000000002,
+        314.09362000000004
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_1.gcode",
+      "sha256": "ee9803439b34a28df2cd76638b379f4f3b1c2150bddf61aa8b5cefe31b3964cc",
+      "bbox_xy_mm": [
+        61.53927,
+        46.87563,
+        301.52177,
+        286.80902000000003
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    }
+  ]
+}

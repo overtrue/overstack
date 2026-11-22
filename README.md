@@ -19,7 +19,7 @@ Images show the actual base geometry. Equipment scenes use the measured STEP mod
 
 **This is an unprinted digital prototype.** Geometry checks have passed; the original HT set still has local thin-wall / thin-skin failures; the new AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
-[Arranged Bambu Studio projects](print-profiles/) — X2D/PETG preview profiles; see each manifest for slicing status. Not physically tested.
+[Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / H2S / H2C PETG presets. Beds smaller than 256 × 256 mm are unsupported. See the index for sliced and blocked entries. Not physically tested.
 
 ## AMS 2 Pro only
 

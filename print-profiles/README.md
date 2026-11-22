@@ -1,12 +1,42 @@
 # 摆盘工程 / Print profiles
 
-当前基线：Bambu Studio 02.09.01.70、X2D 0.4 mm、Bambu PETG Basic、纹理 PEI、0.20 mm 层高。4 道墙、20% gyroid；有悬垂的零件启用自动树状支撑，外裙边 3 mm。这些是待实测的起始工艺，不代表承重已经验证。
+按打印板尺寸区分：小于 256 × 256 mm 不支持；提供 256 mm 与 H 系列大板方案。各机型分别使用 Bambu Studio 02.09.01.70 的官方配置，统一 0.4 mm 喷嘴、Bambu PETG Basic、纹理 PEI、0.20 mm 层高。4 道墙、20% gyroid；有悬垂的零件启用自动树状支撑，外裙边 3 mm。这些是待实测的起始工艺，不代表承重已经验证。
 
-Baseline: Bambu Studio 02.09.01.70, X2D 0.4 mm, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
+Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-series beds. Each printer uses its own official Bambu Studio 02.09.01.70 preset, a 0.4 mm nozzle, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
 
 [配置索引 / Profile index](INDEX.md)
 
+两版下载包 / Two download packages:
+
+- `stacknest-print-profiles-256.zip`：X2D 标准板版 / X2D standard bed.
+- `stacknest-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C 工程 / Large-bed edition with separate H2S and H2C projects.
+
+`stacknest-print-profiles-preview.zip` 保留为两版合集。 / The preview ZIP contains both editions.
+
+## 打印板尺寸分组 / Build-plate groups
+
+| Group / 分组 | Printer / 切片机型 | Slicing region / 摆盘范围 | Directory / 目录 |
+| --- | --- | --- | --- |
+| 小于 256 × 256 mm / Smaller beds | A1 mini 等 / e.g. A1 mini | **不支持 / Unsupported** | No project / 不提供工程 |
+| 256 mm | X2D | 256 × 256 × 260 mm | Existing root directories / 沿用原有目录 |
+| H 系列大板 / H-series | H2S | 340 × 320 × 340 mm | `bed-h/h2s/` |
+| H 系列大板 / H-series | H2C | X 25–325, Y 0–320, Z 0–320 mm | `bed-h/h2c/` |
+
+这里按**用于打印零件的板尺寸**分组，不改变底座收纳的钢板规格：收纳层仍只针对 256 × 256 mm 打印面积级别的钢板。尺寸相近不代表机器配置通用，256 mm 组仅验证 X2D；其他同尺寸机型仍需重新切片。
+
+These groups describe the beds used to manufacture the parts. They do not change the rack's stored-plate compatibility, which remains the 256 × 256 mm printable-area class. Similar bed sizes do not make printer presets interchangeable: only X2D is validated in the 256 mm group.
+
+H2C 保留官方 330 × 320 mm 板配置，但摆盘限制在两喷嘴范围交集（300 × 320 mm，X 从 25 mm 起），并使用较小的 320 mm 高度限制。H2S 使用独立的 340 × 320 mm 配置。范围以当前 Studio 官方预设中的 `printable_area`、`extruder_printable_area`、`extruder_printable_height` 为依据，不修改机器固件参数。
+
+H2C retains its official 330 × 320 mm bed preset, while layouts stay in the intersection of both nozzle regions (300 × 320 mm, starting at X=25) and the smaller 320 mm height limit. H2S uses its own 340 × 320 mm preset. Limits come from Studio's official machine presets.
+
+小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。已有薄壁／薄层问题不会因换用大板而自动解除。
+
+Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. Existing thin-wall/skin findings remain blockers on larger printers too.
+
 ## 组织 / Organization
+
+以下目录结构在各机型目录内保持一致，256 mm 组沿用根目录。 / The same structure is used inside each printer directory; the 256 mm baseline stays at the root.
 
 - `fit-check/`：先打印试配件。包括孔板、燕尾、板槽、锁片和堆叠脚；只验证局部配合，不验证承重。
 - `ams2pro/`：399 mm 宽完整功能层。
@@ -33,8 +63,9 @@ All profiles remain `makerworld_ready=false` until print, support-removal, assem
 
 ## 文件 / Files
 
-- `x2d-04-petg.3mf`：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
+- `<printer>-04-petg.3mf`（`x2d`、`h2s`、`h2c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
 - `manifest.json`：来源文件及 SHA-256、数量、摆放变换、打印条件和验证状态。
+- `slice-validation.json`：新增机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for the additional printers.
 - `plate_*.png`、`slice-info.xml`：实际切片产生的预览与耗材/时间估算；不是实拍或实测。
 
 The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in `models/`. Manifests track source hashes, quantities, transforms and checks. Slice previews and estimates come from Studio, not physical measurements.
@@ -46,12 +77,15 @@ The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in
 ```sh
 cad run tools/build_fit_checks.py
 cad run tools/build_print_profiles.py --slice
+cad run tools/build_print_profiles.py --printer h2s --slice
+cad run tools/build_print_profiles.py --printer h2c --slice
+python3 tools/check_sliced_targets.py
 cad run tools/check_print_profiles.py
 ```
 
-可用 `--only ams2pro/5-slot` 限定范围。生成器从已导出的零件清单读取模型，只旋转和平移，不修改零件几何。使用 `presets/` 内固定配置；来源是本机该版本 Studio 的官方 X2D/PETG 配置及继承值。升级 Studio 或修改模型后必须重建并重验。
+可用 `--only ams2pro/5-slot` 限定范围。生成器从已导出的零件清单读取模型，只旋转和平移，不修改零件几何。使用各机型目录 `presets/` 内固定配置；来源是本机该版本 Studio 的官方机器、PETG 和工艺配置及继承值。升级 Studio 或修改模型后必须重建并重验。
 
-Use `--only ams2pro/5-slot` to limit rebuilding. Parts are only rotated and translated. Pinned presets come from the installed Studio version's official X2D/PETG settings with inheritance resolved. Rebuild and revalidate after any geometry or Studio update.
+Use `--only ams2pro/5-slot` to limit rebuilding. Parts are only rotated and translated. Each printer's pinned presets come from the installed Studio version's official machine, PETG and process settings with inheritance resolved. Rebuild and revalidate after any geometry or Studio update.
 
 ## MakerWorld 发布 / Publishing
 
