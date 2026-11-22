@@ -21,6 +21,12 @@
 
 [Bambu Studio 摆盘工程](print-profiles/)：X2D/PETG 预览配置，切片状态见清单，尚未实物验证。
 
+## 无 HT 版摆放效果
+
+![无 HT 底座摆上 AMS 2 Pro](docs/images/showcase-no-ht.png)
+
+五槽板层 + 双抽屉层 + 无 HT 顶件，底座尺寸 399 × 287 × 129 mm。设备使用 Engineered Reality 的原比例 CAD，[素材说明](docs/render-assets.md)。尚未实物试装或验证承重。
+
 ## 摆上 AMS 2 Pro 和 AMS HT
 
 ![AMS 2 Pro 和 AMS HT 紧凑组合](docs/images/showcase-compact.png)

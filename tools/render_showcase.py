@@ -8,8 +8,9 @@ import bpy
 from mathutils import Vector, Matrix
 from cad.blender import load
 ROOT=Path(__file__).resolve().parents[1]
-final='--final' in sys.argv;compact='--compact' in sys.argv
-key='compact' if compact else 'full';top=.100 if compact else .280
+no_ht='--no-ht' in sys.argv
+final='--final' in sys.argv;compact='--compact' in sys.argv or no_ht
+key='no-ht' if no_ht else 'compact' if compact else 'full';top=.100 if compact else .280
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene=bpy.context.scene
 
@@ -28,10 +29,12 @@ plate=material('Textured PEI',(.24,.18,.09),.68,.45)
 spool_colors=[(.17,.38,.37),(.7,.35,.16),(.77,.7,.48),(.19,.22,.25)]
 model=load(ROOT/'output/showcase'/f'{key}.glb')
 rows={r['id']:r['name'] for r in json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text())}
+if no_ht:
+ rows={r['id']:r['name'] for p in (ROOT/'models/ams2pro').glob('*/parts.json') for r in json.loads(p.read_text())}
 for obj in scene.objects:
  if obj.type!='MESH':continue
  name=rows.get(obj.name,obj.name)
- mat=plate if obj.name.startswith('plate-') else accent if 'lock' in name else drawer if ('_drawer_' in name or 'side_bin' in name) else frame
+ mat=plate if obj.name.startswith('plate-') else accent if 'lock' in name else drawer if ('_drawer_' in name or name.startswith('drawer_') or 'side_bin' in name) else frame
  obj.data.materials.clear();obj.data.materials.append(mat)
  for p in obj.data.polygons:p.use_smooth=False
 
@@ -74,14 +77,14 @@ def device(key,xcenter,z,rotate=False):
    cyl(key+f' spool flange {i} {side}',(cx+side*.032,.149,z+.119),.099,.0035,white)
    cyl(key+f' spool hub {i} {side}',(cx+side*.034,.149,z+.119),.026,.004,shell)
 # Keep original model scale. Rotate the HT to face the same way as the AMS 2 Pro.
-device('ams-2-pro',.1875,top+.016)
-device('ams-ht',.4308,top+.0105,rotate=True)
+device('ams-2-pro',.1995 if no_ht else .1875,top+.016)
+if not no_ht:device('ams-ht',.4308,top+.0105,rotate=True)
 floor=material('Studio background',(.78,.79,.75),.85)
 cube('Studio floor',(.25,.1,-.008),(200,200,.01),floor,0)
 cam=bpy.data.objects.new('Camera',bpy.data.cameras.new('Camera'));scene.collection.objects.link(cam);scene.camera=cam
-center=Vector((.2475,.139,(top+.255)/2))
+center=Vector((.1995 if no_ht else .2475,.139,(top+.255)/2))
 cam.location=center+Vector((.88,-1.60,.89));cam.rotation_euler=(center-cam.location).to_track_quat('-Z','Y').to_euler()
-cam.data.type='ORTHO';cam.data.ortho_scale=.89 if not compact else .80
+cam.data.type='ORTHO';cam.data.ortho_scale=.70 if no_ht else .89 if not compact else .80
 for name,position,power,size in [('Key',(-.5,-.5,1.4),95,1.0),('Fill',(.95,-.2,.9),45,.8),('Rim',(.3,.9,1.3),110,.65)]:
  l=bpy.data.objects.new(name,bpy.data.lights.new(name,'AREA'));scene.collection.objects.link(l);l.location=position;l.data.energy=power;l.data.shape='DISK';l.data.size=size;l.rotation_euler=(center-l.location).to_track_quat('-Z','Y').to_euler()
 scene.world=bpy.data.worlds.new('World');scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.8,.85,.9,1);scene.world.node_tree.nodes['Background'].inputs[1].default_value=.22

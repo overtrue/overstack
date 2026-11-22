@@ -21,6 +21,12 @@ Images show the actual base geometry. Equipment scenes use the measured STEP mod
 
 [Arranged Bambu Studio projects](print-profiles/) — X2D/PETG preview profiles; see each manifest for slicing status. Not physically tested.
 
+## AMS 2 Pro only
+
+![AMS 2 Pro on the compact AMS-only stack](docs/images/showcase-no-ht.png)
+
+Five-slot plate layer + double-drawer layer + AMS-only top: 399 × 287 × 129 mm base. Original-scale device CAD by Engineered Reality; [asset credits](docs/render-assets.md). Physical fit and load capacity remain untested.
+
 ## With AMS 2 Pro and AMS HT
 
 ![Compact stack with AMS 2 Pro and AMS HT](docs/images/showcase-compact.png)

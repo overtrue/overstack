@@ -23,3 +23,5 @@ All illustrations were rerendered with corrected face normals and soft area ligh
 This is a digital prototype, not a print-tested release. Physical fit, device clearance and load capacity remain unverified. Geometry-only 3MF files are not slicer projects. Generic PETG/FDM checks passed for 36 of 40 distinct geometries; four drawer parts report thin-wall or thin-skin errors. Candidate print poses still require orientation/support work.
 
 Equipment previews / 设备效果图：新增当前紧凑组合和完整组合摆放 AMS 2 Pro、AMS HT 的高清渲染，使用 Engineered Reality 的原尺寸 STEP，并附素材说明。设备源文件不包含在下载包中。 / Added compact and full-stack renders using Engineered Reality’s unscaled STEP assemblies, with asset credits. Device source files are not redistributed.
+
+AMS-only preview / 无 HT 效果图：补充 399 mm 宽紧凑组合摆放 AMS 2 Pro 的高清渲染，并同步中英文 README、素材说明和模型下载包。 / Added an AMS 2 Pro render on the 399 mm compact stack, with bilingual README, asset credits and model download packages updated.

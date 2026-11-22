@@ -1,6 +1,6 @@
 # Equipment render assets / 设备渲染素材
 
-The equipment in `showcase-compact.png` and `showcase-full.png` uses the original, unscaled STEP assemblies by **Engineered Reality**, with rendering materials applied. These are measured community CAD models, not official Bambu Lab CAD or photographs. Spools and build plates are illustrative; the base uses the current exported StackNest parts.
+The equipment in `showcase-compact.png`, `showcase-full.png` and `showcase-no-ht.png` uses the original, unscaled STEP assemblies by **Engineered Reality**, with rendering materials applied. These are measured community CAD models, not official Bambu Lab CAD or photographs. Spools and build plates are illustrative; the base uses the current exported StackNest parts.
 
 设备效果图使用 **Engineered Reality** 的原始 STEP 装配模型，保持原比例，仅设置渲染材质。这是社区实测模型，不是拓竹官方 CAD 或实拍照片；料盘和打印板为展示模型，底座来自当前 StackNest 导出零件。图中摆放不代表脚垫、通风、开盖净空或承重已实物验证。
 
@@ -25,6 +25,8 @@ cad step export output/device-reference/ams-ht.stp output/device-reference/ams-h
 cad run tools/showcase_scene.py
 cad run tools/render_showcase.py --compact --final
 cad run tools/render_showcase.py --final
+cad run tools/showcase_scene.py --no-ht
+cad run tools/render_showcase.py --no-ht --final
 ```
 
 The compact base uses the 40 mm five-slot layer, 60 mm double-drawer layer and device top (129 mm overall). The full base uses all five storage layers and the top (309 mm overall). Device STEP envelopes are 371 × 281 × 226.5 mm and 114.1 × 282.5 × 245.8 mm; they are not rescaled to the nominal product specifications.
@@ -37,3 +39,5 @@ The compact base uses the 40 mm five-slot layer, 60 mm double-drawer layer and d
 fbdf013fca02b9bcbe12bc3d0b5e8defd0f9c902144ceae2208dcd14f6288c9d  ams-2-pro.stp
 372a369c8f6470effdb5d8d14a66df865b62fa35e0c01ee4feed94fde89700f1  ams-ht.stp
 ```
+
+The AMS-only scene uses its own 399 mm-wide five-slot layer, double-drawer layer and top (129 mm overall); the AMS 2 Pro is centred on the single opening. / 无 HT 场景使用独立的 399 mm 宽五槽板层、双抽屉层和顶件，总高 129 mm，AMS 2 Pro 居中摆放于单设备开口上。
