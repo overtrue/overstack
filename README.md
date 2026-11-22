@@ -1,6 +1,6 @@
 # StackNest · 叠序
 
-**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
+**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
 
 A modular storage base for AMS 2 Pro, with or without AMS HT: stackable plate-storage layers, drawers and a matching device top.
 
@@ -26,9 +26,9 @@ The [HT set](models/ams2pro+ht/) has 58 assembly parts. The [AMS-only set](model
 | | AMS 2 Pro + HT | AMS 2 Pro only |
 | --- | --- | --- |
 | Footprint | 495 × 287 mm | 399 × 287 mm |
-| Plate layers | Three / eight slots; eight-slot layer includes two side bins | Three / eight slots, no side bins |
+| Plate layers | Five / eight slots; eight-slot layer includes two side bins | Five / eight slots, no side bins |
 | Drawer middle | One, two or three drawers | **One or two drawers; no three-drawer option** |
-| Complete example | 11 plates, six main drawers, two bins; 299 mm high | 11 plates, three main drawers; 239 mm high |
+| Complete example | 13 plates, six main drawers, two bins; 309 mm high | 13 plates, three main drawers; 249 mm high |
 | Ends and keys | Shared by layer height | Same parts, right side moved inward |
 
 The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1 mm play on each side and the original 60 mm end frames. That makes its base slightly wider than the [372 mm AMS 2 Pro](https://store.bblcdn.com/s3/default/02bc9c24b207476a9608a314b8039509/AMS_2_Pro-EN.pdf). Its top has a single device opening, without an HT cutout.
@@ -39,7 +39,7 @@ The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1
 
 ### Common ends: plain or pegboard
 
-**Choose the ends, then the middle.** Use 30 mm ends for the low plate layer and 60 mm ends for tall plate or drawer layers. The same-height end frames and rear keys work in both widths. Middle sections and tops are width-specific; do not stack a 399 mm layer on a 495 mm layer. Left and right ends remain distinct because the right-front socket has extra lateral clearance.
+**Choose the ends, then the middle.** Use 40 mm ends for the low plate layer and 60 mm ends for tall plate or drawer layers. The same-height end frames and rear keys work in both widths. Middle sections and tops are width-specific; do not stack a 399 mm layer on a 495 mm layer. Left and right ends remain distinct because the right-front socket has extra lateral clearance.
 
 ![Plain and pegboard common ends](docs/images/common-ends.png)
 
@@ -47,7 +47,7 @@ Pegboard ends retain the original rounded outline, locating feet, sockets, dovet
 
 - SKÅDIS-style vertical slots: **5 × 15 mm, R2.5, 5 mm panel**.
 - **40 mm** repeat along each row/column; alternate rows offset **20 × 20 mm**.
-- The 30 mm end has six slots in one row. The 60 mm end has 17 slots across three rows, including a 40 mm vertical pair for two-point accessories.
+- The 40 mm end has six slots in one row. The 60 mm end has 17 slots across three rows, including a 40 mm vertical pair for two-point accessories.
 - At least **20 mm rear clearance** behind each slot. Each layer is a separate mounting zone; the pattern is not continuous across seams.
 - Print the [80 × 80 mm fit coupon](models/common/pegboard_fit_coupon.stl) before a full end. Hook fit and payload have not been physically tested.
 
@@ -58,24 +58,24 @@ Pegboard ends retain the original rounded outline, locating feet, sockets, dovet
 Each storage function lives in its own layer. The end frames connect the layers above and below; the centre holds plate ledges or drawers; one device top finishes the stack. Start with one layer and add storage as needed.
 
 - **Stackable:** all layers share curved locating feet and matching sockets. Lower a layer vertically, then insert two rear keys at each seam to resist vertical separation. The keys can slide out rearward; they are not captive latches.
-- **Mix and match:** choose, reorder or repeat complete three-slot, eight-slot, single-, double- and triple-drawer layers. Keep every front opening facing forward and the device top uppermost.
-- **Expand incrementally:** add plate layers for more plates or drawer layers for more categories. Retain the existing layers and print the new layer plus two keys for each added seam. The three-slot layer package does not include seam keys; add a pair of common keys when using it above another layer. Omit the lower seam keys on whichever layer is used as the base.
+- **Mix and match:** choose, reorder or repeat complete five-slot, eight-slot, single-, double- and triple-drawer layers. Keep every front opening facing forward and the device top uppermost.
+- **Expand incrementally:** add plate layers for more plates or drawer layers for more categories. Retain the existing layers and print the new layer plus two keys for each added seam. The five-slot layer package does not include seam keys; add a pair of common keys when using it above another layer. Omit the lower seam keys on whichever layer is used as the base.
 - **Replace individual parts:** frames, carriers, beams, drawers and the top are separate parts. Unload the devices and remove upper layers before changing a module. Change drawer layouts as complete layers: a wide drawer does not fit the double-drawer guides.
 
-The 30 mm and 60 mm figures are layer increments. With the top fitted, overall base height is **the sum of layer heights + 29 mm** (26 mm top and 3 mm feet), excluding devices. Width and depth remain 495 × 287 mm.
+The 40 mm and 60 mm figures are layer increments. With the top fitted, overall base height is **the sum of layer heights + 29 mm** (26 mm top and 3 mm feet), excluding devices. Width and depth remain 495 × 287 mm.
 
 | Example, bottom to top | Capacity | Base height |
 | --- | --- | ---: |
-| Three-slot layer → top | 3 plates | 59 mm |
-| Three-slot layer → double-drawer layer → top | 3 plates, 2 main drawers | 119 mm |
+| Five-slot layer → top | 5 plates | 69 mm |
+| Five-slot layer → double-drawer layer → top | 5 plates, 2 main drawers | 129 mm |
 | Eight-slot layer × 2 → triple-drawer layer → top | 16 plates, 3 main drawers, 4 side bins | 209 mm |
 | Single → double → triple-drawer layer → top | 6 main drawers | 209 mm |
-| Full arrangement A → B → C → D → E → F | 11 plates, 6 main drawers, 2 side bins | 299 mm |
+| Full arrangement A → B → C → D → E → F | 13 plates, 6 main drawers, 2 side bins | 309 mm |
 
 
 The full HT stack separated into layers:
 
-<img src="docs/images/stack-exploded-en.png" alt="Labeled layers: device top, triple drawer, double drawer, single drawer, eight-slot rack, three-slot rack" width="960">
+<img src="docs/images/stack-exploded-en.png" alt="Labeled layers: device top, triple drawer, double drawer, single drawer, eight-slot rack, five-slot rack" width="960">
 
 From top to bottom in the image (click a layer name for its models):
 
@@ -86,7 +86,7 @@ From top to bottom in the image (click a layer name for its models):
 | D | [Double-drawer layer](models/ams2pro+ht/04-double-drawer-layer/) | Two separate drawers for tools and spares |
 | C | [Single-drawer layer](models/ams2pro+ht/03-single-drawer-layer/) | One wide drawer for longer tools |
 | B | [Eight-slot plate layer](models/ams2pro+ht/02-eight-slot-plate-layer/) | Stores 8 plates, with one small bin on each side |
-| A | [Three-slot plate layer](models/ams2pro+ht/01-three-slot-plate-layer/) | Stores 3 frequently used plates |
+| A | [Five-slot plate layer](models/ams2pro+ht/01-five-slot-plate-layer/) | Stores 5 frequently used plates |
 
 This is the full example stack. Choose only the storage layers you need; always keep the device top uppermost.
 
@@ -94,13 +94,15 @@ Reusable interfaces do not imply unlimited stacking. No maximum layer count or l
 
 ## A closer look at each HT layer
 
-### A · 30 mm three-slot plate layer
+### A · 40 mm five-slot plate layer
 
-A low-profile starting point for three frequently used plates. Continuous side ledges support the plate edges up to rigid rear stops. Front closures are integral with the carriers, so no separate blanking plates are needed. Six parts: two end frames, two carriers and front/rear beams. Insert plates from the front; lift about 1 mm before pulling them out.
+The 40 mm layer holds 5 plates at 6 mm pitch, allowing plates up to 1.5 mm thick and 7 mm clearance above the top plate. A sixth slot would require at least 46 mm at this spacing. The old 30 mm three-slot version is retired; replace its low end frames and carriers together when upgrading.
 
-![A: three-slot plate layer, exploded](docs/images/layer-a-exploded.png)
+A low-profile starting point for five frequently used plates. Continuous side ledges support the plate edges up to rigid rear stops. Front closures are integral with the carriers, so no separate blanking plates are needed. Six parts: two end frames, two carriers and front/rear beams. Insert plates from the front; lift about 1 mm before pulling them out.
 
-[Models and parts](models/ams2pro+ht/01-three-slot-plate-layer/) · [Assembly guide](docs/pdf/01-three-slot-plate-layer-assembly-en.pdf)
+![A: five-slot plate layer, exploded](docs/images/layer-a-exploded.png)
+
+[Models and parts](models/ams2pro+ht/01-five-slot-plate-layer/) · [Assembly guide](docs/pdf/01-five-slot-plate-layer-assembly-en.pdf)
 
 ### B · 60 mm eight-slot plate layer
 

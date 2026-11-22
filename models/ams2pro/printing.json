@@ -5,22 +5,22 @@
   "layer_mm": 0.2,
   "parts": [
     {
-      "name": "end_left_30_pegboard",
-      "file": "models/common/end_left_30_pegboard.stl",
-      "sha256": "14bfd3c3fd549c1725ef46b1238ab5a7f8b78eb905c2c59b457c646c24793c9c",
+      "name": "end_left_40_pegboard",
+      "file": "models/common/end_left_40_pegboard.stl",
+      "sha256": "480b2bf05abed9ceee2a4fa66f2b400bf3913248084b6fd20e3e6df475bd5b04",
       "placement": {
         "assembly_to_print": [
           [
             4.329780281177467e-17,
             -0.7071067811865475,
             -0.7071067811865476,
-            224.15284963613556
+            231.22391744800103
           ],
           [
             4.329780281177466e-17,
             0.7071067811865476,
             -0.7071067811865475,
-            21.213203435596423
+            28.2842712474619
           ],
           [
             1.0,
@@ -36,12 +36,12 @@
           ]
         ],
         "bounds_mm": [
-          224.15284963613556,
-          224.15284963613558,
+          231.22391744800103,
+          231.22391744800106,
           60.0
         ],
-        "downward_area_mm2": 3504.192785303051,
-        "bed_contact_area_mm2": 7469.07645690813,
+        "downward_area_mm2": 4607.979728463482,
+        "bed_contact_area_mm2": 10097.975458778646,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -58,9 +58,9 @@
       ]
     },
     {
-      "name": "end_right_30_pegboard",
-      "file": "models/common/end_right_30_pegboard.stl",
-      "sha256": "dd65e37fabef75db44bed1cc36dc520b2cc8f98d0d363d44338c7e3b3254abc1",
+      "name": "end_right_40_pegboard",
+      "file": "models/common/end_right_40_pegboard.stl",
+      "sha256": "95d11bf3e477b8ee651da28242c742c099c5b1e7949c7b8a11e60f7645764cd8",
       "placement": {
         "assembly_to_print": [
           [
@@ -89,12 +89,12 @@
           ]
         ],
         "bounds_mm": [
-          224.15284963613556,
-          224.15284963613558,
+          231.22391744800103,
+          231.22391744800106,
           60.0
         ],
-        "downward_area_mm2": 3504.193598610424,
-        "bed_contact_area_mm2": 7469.076309938162,
+        "downward_area_mm2": 4607.980818869474,
+        "bed_contact_area_mm2": 10097.975262818694,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -266,9 +266,9 @@
       "warnings": []
     },
     {
-      "name": "3-slot-plate-layer/plate_carrier_left",
-      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_left.stl",
-      "sha256": "83bd06a5faab5b53e9c1078178348130849e452776da0567b0fbbdf4c24d6f8d",
+      "name": "5-slot-plate-layer/plate_carrier_left",
+      "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "a61e2536fe5d8f6feaf92ac6e2838369c6051235a01e0c4162daf5ac6f7338b1",
       "placement": {
         "assembly_to_print": [
           [
@@ -287,7 +287,7 @@
             0.0,
             1.2246467991473532e-16,
             -1.0,
-            30.0
+            40.0
           ],
           [
             0.0,
@@ -299,9 +299,9 @@
         "bounds_mm": [
           215.19269668515165,
           214.54624844913212,
-          30.000000000000036
+          40.000000000000036
         ],
-        "downward_area_mm2": 7711.370817372768,
+        "downward_area_mm2": 12606.649366583893,
         "bed_contact_area_mm2": 2407.600013732911,
         "supports_required": true,
         "brim_mm": 3,
@@ -317,9 +317,9 @@
       ]
     },
     {
-      "name": "3-slot-plate-layer/plate_carrier_right",
-      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_right.stl",
-      "sha256": "5fd06152639725f2eaf1074ed83dd4c6906c8f1f6d4f442a1b1e1a918c746573",
+      "name": "5-slot-plate-layer/plate_carrier_right",
+      "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "b76ddc6198fae642a38cbcc3dd1926e20de0cfbb22d606da8f7d8a1c1fbdb1ca",
       "placement": {
         "assembly_to_print": [
           [
@@ -332,13 +332,13 @@
             0.7071067811865475,
             -0.7071067811865476,
             -8.659560562354934e-17,
-            -24.162948746494635
+            -24.16294874649464
           ],
           [
             0.0,
             1.2246467991473532e-16,
             -1.0,
-            30.0
+            40.0
           ],
           [
             0.0,
@@ -350,10 +350,10 @@
         "bounds_mm": [
           214.5462376595389,
           215.19269668515167,
-          30.000000000000036
+          40.000000000000036
         ],
-        "downward_area_mm2": 7711.370365765846,
-        "bed_contact_area_mm2": 2407.6002197265607,
+        "downward_area_mm2": 12606.648917637895,
+        "bed_contact_area_mm2": 2407.6002197265634,
         "supports_required": true,
         "brim_mm": 3,
         "required_extruder_area_mm": [
@@ -368,8 +368,8 @@
       ]
     },
     {
-      "name": "3-slot-plate-layer/front_beam_1",
-      "file": "models/ams2pro/3-slot-plate-layer/front_beam_1.stl",
+      "name": "5-slot-plate-layer/front_beam_1",
+      "file": "models/ams2pro/5-slot-plate-layer/front_beam_1.stl",
       "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
       "placement": {
         "assembly_to_print": [
@@ -417,8 +417,8 @@
       "warnings": []
     },
     {
-      "name": "3-slot-plate-layer/front_beam_2",
-      "file": "models/ams2pro/3-slot-plate-layer/front_beam_2.stl",
+      "name": "5-slot-plate-layer/front_beam_2",
+      "file": "models/ams2pro/5-slot-plate-layer/front_beam_2.stl",
       "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
       "placement": {
         "assembly_to_print": [
@@ -466,8 +466,8 @@
       "warnings": []
     },
     {
-      "name": "3-slot-plate-layer/rear_beam_1",
-      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_1.stl",
+      "name": "5-slot-plate-layer/rear_beam_1",
+      "file": "models/ams2pro/5-slot-plate-layer/rear_beam_1.stl",
       "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
       "placement": {
         "assembly_to_print": [
@@ -515,8 +515,8 @@
       "warnings": []
     },
     {
-      "name": "3-slot-plate-layer/rear_beam_2",
-      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_2.stl",
+      "name": "5-slot-plate-layer/rear_beam_2",
+      "file": "models/ams2pro/5-slot-plate-layer/rear_beam_2.stl",
       "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
       "placement": {
         "assembly_to_print": [

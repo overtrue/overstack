@@ -40,17 +40,17 @@ for layer in report['layers']:
 save('no-ht-plain',plain)
 save('no-ht-pegboard',peg)
 common={}
-for i,H in enumerate([30,60]):
+for i,H in enumerate([40,60]):
     for j,style in enumerate(['plain','pegboard']):
         name=f'end_left_{H}_{style}';m=trimesh.load_mesh(ROOT/'models/common'/(name+'.stl'))
         common[name]=move(m,[j*115,0,i*110])
 save('common-ends',common,angle=(-140,22))
 rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text());wide={}
-heights=[0,30,90,150,210,270]
+heights=[0,40,100,160,220,280]
 for r in rows:
     name=r['name'];m=trimesh.load_mesh(ROOT/'models/ams2pro+ht'/r['packaged_file'])
     if 'end_left' in name or 'end_right' in name:
-        side='left' if 'end_left' in name else 'right';H=30 if r['layer']==0 else 60
+        side='left' if 'end_left' in name else 'right';H=40 if r['layer']==0 else 60
         m=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')
     wide[name]=move(m,[0,0,heights[r['layer']]])
 save('wide-pegboard',wide)

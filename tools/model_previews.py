@@ -25,7 +25,7 @@ rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text())
 for index,folder in enumerate(sorted((ROOT/'models/ams2pro+ht').glob('0*'))):
     parts={r['name']:trimesh.load_mesh(ROOT/'models/ams2pro+ht'/r['packaged_file']) for r in rows if r['layer']==index}
     prepare(folder,parts)
-    wide.update({n:move(m,[0,0,[0,30,90,150,210,270][index]]) for n,m in parts.items()})
+    wide.update({n:move(m,[0,0,[0,40,100,160,220,280][index]]) for n,m in parts.items()})
 prepare(ROOT/'models/ams2pro+ht',wide)
 for manifest in sorted((ROOT/'models/ams2pro').glob('*/parts.json')):
     parts={r['name']:move(trimesh.load_mesh(ROOT/r['file']),r['offset_mm']) for r in json.loads(manifest.read_text())}

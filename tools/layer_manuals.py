@@ -1,7 +1,7 @@
 """One self-contained Chinese and English assembly guide per layer."""
 from manual import *
 from reportlab.pdfgen import canvas
-SLUGS=['three-slot-plate-layer','eight-slot-plate-layer','single-drawer-layer','double-drawer-layer','triple-drawer-layer','device-top']
+SLUGS=['five-slot-plate-layer','eight-slot-plate-layer','single-drawer-layer','double-drawer-layer','triple-drawer-layer','device-top']
 for lang in ['zh','en']:
  for i,slug in enumerate(SLUGS):
   b=Book(lang);z=b.zh;prefix=chr(65+i);title=(TITLES_ZH if z else TITLES_EN)[i]

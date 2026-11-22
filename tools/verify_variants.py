@@ -37,7 +37,7 @@ for lower,(H,lp) in layers.items():
                     if not an.startswith('lock_'):assert overlap(k,a)<.03,('rear key lower',lower,travel,an)
                 for bn,b in up.items():
                     if not bn.startswith('lock_'):assert overlap(k,move(b,[0,0,H]))<.03,('rear key upper',upper,travel,bn)
-for H in [30,60]:
+for H in [40,60]:
     for side in ['left','right']:
         plain=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_plain.stl')
         peg=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')

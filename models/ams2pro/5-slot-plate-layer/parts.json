@@ -1,90 +1,90 @@
 [
   {
+    "id": "NA01",
     "name": "end_left",
-    "file": "models/common/end_left_30_plain.stl",
+    "file": "models/common/end_left_40_plain.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA01",
     "label": "左端框"
   },
   {
+    "id": "NA02",
     "name": "end_right",
-    "file": "models/common/end_right_30_plain.stl",
+    "file": "models/common/end_right_40_plain.stl",
     "offset_mm": [
       -96,
       0,
       0
     ],
-    "id": "NA02",
     "label": "右端框"
   },
   {
+    "id": "NA03",
     "name": "plate_carrier_left",
-    "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_left.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_left.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA03",
     "label": "左板托架"
   },
   {
+    "id": "NA04",
     "name": "plate_carrier_right",
-    "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_right.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_right.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA04",
     "label": "右板托架"
   },
   {
+    "id": "NA05",
     "name": "front_beam_1",
-    "file": "models/ams2pro/3-slot-plate-layer/front_beam_1.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/front_beam_1.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA05",
     "label": "前横梁左半"
   },
   {
+    "id": "NA06",
     "name": "front_beam_2",
-    "file": "models/ams2pro/3-slot-plate-layer/front_beam_2.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/front_beam_2.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA06",
     "label": "前横梁右半"
   },
   {
+    "id": "NA07",
     "name": "rear_beam_1",
-    "file": "models/ams2pro/3-slot-plate-layer/rear_beam_1.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/rear_beam_1.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA07",
     "label": "后横梁左半"
   },
   {
+    "id": "NA08",
     "name": "rear_beam_2",
-    "file": "models/ams2pro/3-slot-plate-layer/rear_beam_2.stl",
+    "file": "models/ams2pro/5-slot-plate-layer/rear_beam_2.stl",
     "offset_mm": [
       0,
       0,
       0
     ],
-    "id": "NA08",
     "label": "后横梁右半"
   }
 ]

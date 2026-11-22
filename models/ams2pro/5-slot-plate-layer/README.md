@@ -1,12 +1,14 @@
-# 三槽打印板层 / Three-slot plate layer
+# 五槽打印板层 / Five-slot plate layer
 
-**打印板适配：当前所有三槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。
+40 mm 层高，5 个板位，槽距 6 mm；按板厚最大 1.5 mm 预留，顶槽上方净空 7 mm。 / 40 mm layer, 5 plate slots at 6 mm pitch, allowing up to 1.5 mm plate thickness with 7 mm top clearance.
 
-**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
+**打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。
+
+**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
 
 ![装配预览 / Assembly preview](preview.png)
 
-30 mm；三片板，两只通用端框、两只托架、四片横梁。无侧抽屉。 / 30 mm, three plates, common ends and four beam halves. No side bins.
+40 mm；五片板，两只通用端框、两只托架、四片横梁。无侧抽屉。 / 40 mm, five plates, common ends and four beam halves. No side bins.
 
 ![带编号的爆炸图 / Numbered exploded view](parts-numbered.png)
 
@@ -18,8 +20,8 @@ Match each callout to its table row. Left/right are viewed from the front. Explo
 
 | 编号 / ID | 零件 | STL | X offset |
 | --- | --- | --- | ---: |
-| [NA01](../../common/end_left_30_plain.stl) | 左端框 | `end_left_30_plain.stl` | 0 mm |
-| [NA02](../../common/end_right_30_plain.stl) | 右端框 | `end_right_30_plain.stl` | -96 mm |
+| [NA01](../../common/end_left_40_plain.stl) | 左端框 | `end_left_40_plain.stl` | 0 mm |
+| [NA02](../../common/end_right_40_plain.stl) | 右端框 | `end_right_40_plain.stl` | -96 mm |
 | [NA03](plate_carrier_left.stl) | 左板托架 | `plate_carrier_left.stl` | 0 mm |
 | [NA04](plate_carrier_right.stl) | 右板托架 | `plate_carrier_right.stl` | 0 mm |
 | [NA05](front_beam_1.stl) | 前横梁左半 | `front_beam_1.stl` | 0 mm |

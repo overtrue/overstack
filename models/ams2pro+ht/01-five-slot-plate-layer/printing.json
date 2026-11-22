@@ -1,0 +1,322 @@
+{
+  "material": "PETG",
+  "process": "FDM",
+  "nozzle_mm": 0.4,
+  "layer_mm": 0.2,
+  "parts": [
+    {
+      "name": "ht-low40-A01-low_0_cassette_plates_1",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A01-low_0_cassette_plates_1.stl",
+      "sha256": "32ef1cf98cd9b729646c9bf983488b3994fc5ecb2e0660ed7b7a2a8369abc594",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            231.22391744800103
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            28.284271247461895
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            -54.29999923706055
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          231.22391744800103,
+          231.22391744800106,
+          79.70000076293945
+        ],
+        "downward_area_mm2": 19733.550631957303,
+        "bed_contact_area_mm2": 864.0000000000006,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "ht-low40-A02-low_0_cassette_plates_2",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A02-low_0_cassette_plates_2.stl",
+      "sha256": "f619104eab08fde47f43bb8b2a9b5b0699f411b1de4e9648125a78371886556e",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.5998538138950735e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            440.70001220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          231.22391744800103,
+          231.22391744800103,
+          79.70001220703125
+        ],
+        "downward_area_mm2": 19733.55067277599,
+        "bed_contact_area_mm2": 864.0000000000005,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "ht-low40-A03-low_0_cassette_plates_3",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A03-low_0_cassette_plates_3.stl",
+      "sha256": "2f78eb5a89c3787c65d9ff43c4b4e3caa75d07acf5a8a41b55a13e809e869537",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            -0.7071067811865475,
+            0.0,
+            -61.51828996322965
+          ],
+          [
+            0.7071067811865475,
+            0.7071067811865476,
+            0.0,
+            -79.90306627407986
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.59650045003153,
+          208.59650045003153,
+          6.0
+        ],
+        "downward_area_mm2": 670.0999374389656,
+        "bed_contact_area_mm2": 5856.000000000002,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.gap",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "ht-low40-A04-low_0_cassette_plates_4",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A04-low_0_cassette_plates_4.stl",
+      "sha256": "bf7eabddb09ea6d8a4e7450b56f5d64b0294ba43e891ca23368ab3b813c750da",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -270.4683438038544
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            118.44038584874671
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          197.9898987322333,
+          197.9898987322333,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 6125.99989700317,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "ht-low40-A05-low_0_end_left_1",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A05-low_0_end_left_1.stl",
+      "sha256": "d17513987e7763e81810d3c9e1ca91347da738917cff395995eb96d1eea4c601",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            231.22391744800103
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            28.2842712474619
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          231.22391744800103,
+          231.22391744800106,
+          60.0
+        ],
+        "downward_area_mm2": 4289.7144736548535,
+        "bed_contact_area_mm2": 10515.596022458816,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "ht-low40-A06-low_0_end_right_1",
+      "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A06-low_0_end_right_1.stl",
+      "sha256": "653d6cfb967a0a60e41b6dff3019f1d1db6d20384820a987f9d8b3eb476eb78f",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.8834544223121976e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            495.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          231.22391744800103,
+          231.22391744800106,
+          60.0
+        ],
+        "downward_area_mm2": 4289.715564060846,
+        "bed_contact_area_mm2": 10515.595826498859,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.overhang_angle"
+      ]
+    }
+  ],
+  "sliced": false,
+  "physical_fit": "not_verified"
+}

@@ -4,7 +4,7 @@ import sys,json,argparse,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import *
 from trimesh.exchange.threemf import export_3MF
-LAYERS=[('A','01-three-slot-plate-layer',0),('B','02-eight-slot-plate-layer',30),('C','03-single-drawer-layer',90),('D','04-double-drawer-layer',150),('E','05-triple-drawer-layer',210),('F','06-device-top',270)]
+LAYERS=[('A','01-five-slot-plate-layer',0),('B','02-eight-slot-plate-layer',40),('C','03-single-drawer-layer',100),('D','04-double-drawer-layer',160),('E','05-triple-drawer-layer',220),('F','06-device-top',280)]
 
 def label(n):
     if 'layer_lock' in n or n.startswith('top_rear_lock'):return '层间锁片'
@@ -20,10 +20,12 @@ def write_layer_readme(path,records):
     slug=path.name
     image=f'../../../docs/images/{slug}-assembly-zh.png'
     text=f'# {slug}\n\n![装配预览 / Assembly preview](preview.png)\n\n'
-    if slug in ('01-three-slot-plate-layer','02-eight-slot-plate-layer'):
-        text+='**打印板适配：当前所有三槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。\n\n**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.\n\n'
+    if slug in ('01-five-slot-plate-layer','02-eight-slot-plate-layer'):
+        text+='**打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。\n\n**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.\n\n'
     if slug=='06-device-top':
         text+='两端挡边的四个外露上角已做 R3 mm 圆角，承托面和连接接口不变；打印后仍需检查毛刺。 / The four exposed upper lip ends have R3 mm rounds; bearing faces and joints are unchanged. Check printed parts for burrs.\n\n![R3 挡边端头 / Rounded lip tip](../../../docs/images/lip-r3-detail.png)\n\n'
+    if slug=='01-five-slot-plate-layer':
+        text+='40 mm 层高，5 个板位，槽距 6 mm；按板厚最大 1.5 mm 预留，顶槽上方净空 7 mm。 / 40 mm layer, 5 plate slots at 6 mm pitch, allowing up to 1.5 mm plate thickness with 7 mm top clearance.\n\n'
     text+='## 零件编号 / Part IDs\n\n编号对应下方爆炸图和 STL 文件名；点击编号下载对应零件。左右以面对抽屉／打印板入口为准。\n\n'
     text+='Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.\n\n'
     text+=f'![带零件编号的爆炸图 / Numbered exploded view]({image})\n\n'

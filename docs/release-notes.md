@@ -1,8 +1,10 @@
+Replaced the 30 mm three-slot layer with a 40 mm five-slot layer in both widths. The five slots use 6 mm pitch with 7 mm top clearance for plates up to 1.5 mm thick; six slots would require at least 46 mm at this spacing. Old 30 mm parts are removed from current downloads. Replace the low end frames and carriers together. Complete stacks now hold 13 plates and measure 309 mm (HT) or 249 mm (AMS-only) high.
+
 Rounded the exposed upper lip ends on both device tops to R3 mm. Updated STL, 3MF and GLB files; all eight tips pass exported-geometry checks and all four revised top parts pass generic PETG/FDM checks. Physical fit and printed surface finish remain untested.
 
-Added a 399 × 287 mm AMS-only set with three/eight-slot plate layers, single/double drawers and a dedicated top. There is no three-drawer option in this width. The 495 mm HT set keeps its existing footprint and joints.
+Added a 399 × 287 mm AMS-only set with five/eight-slot plate layers, single/double drawers and a dedicated top. There is no three-drawer option in this width. The 495 mm HT set keeps its existing footprint and joints.
 
-Both widths share the 30/60 mm end frames and rear keys. New pegboard ends use 5 × 15 mm SKÅDIS-style slots, a 5 mm panel and 40 mm repeat with 20 mm stagger. A fit coupon is included; actual accessory fit and payload remain untested.
+Both widths share the 40/60 mm end frames and rear keys. New pegboard ends use 5 × 15 mm SKÅDIS-style slots, a 5 mm panel and 40 mm repeat with 20 mm stagger. A fit coupon is included; actual accessory fit and payload remain untested.
 
 Downloads: `stacknest-ams2pro+ht.zip` is the original HT set, `stacknest-ams2pro.zip` includes the AMS-only set plus common parts, and `stacknest-common.zip` contains the common plain/pegboard ends and keys. Open the README inside each package before slicing.
 

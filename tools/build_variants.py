@@ -40,8 +40,8 @@ def verify(parts,label):
 
 def build():
     for d in [OUT,COMMON,CHECKS]:d.mkdir(parents=True,exist_ok=True)
-    print('Building common 30 / 60 mm modules',flush=True)
-    modules={h:build_module(h,n) for h,n in [(30,3),(60,8)]}
+    print('Building common 40 / 60 mm modules',flush=True)
+    modules={h:build_module(h,n) for h,n in [(40,5),(60,8)]}
     common={};report={'width_mm':399,'depth_mm':287,'three_drawer_available':False,'layers':[],
         'pegboard':{'slot_mm':[5,15],'panel_mm':5,'repeat_mm':40,'stagger_mm':20,'rear_clearance_mm':20,
                     'cross_layer_accessories':False,'physical_fit':'not_verified'},'parts':[]}
@@ -59,7 +59,7 @@ def build():
     template={'end_left_1':modules[60]['ends'][0],'end_right_1':modules[60]['ends'][1]}
     template.update({f'cassette_drawer_{i}':m for i,m in enumerate(segment('cassette_drawer',modules[60]['parts']['cassette_drawer']),1)})
     layers=[]
-    for H,count in [(30,3),(60,8)]:
+    for H,count in [(40,5),(60,8)]:
         layers.append((f'{count}-slot-plate-layer',H,compact.plate_layer(modules[H])))
     for count in [1,2]:
         print('Building compact drawer count',count,flush=True)
@@ -114,7 +114,7 @@ def build():
             normal=common[name.replace('_pegboard','_plain')]
             assert abs(cut(m,normal).volume)<.01,('pegboard expands envelope',name)
     # Deliberately move a plate into its sidewall: the interference test must fail.
-    p=compact.plate_layer(modules[30]);probe=box(61,100,10,3,30,4)
+    p=compact.plate_layer(modules[40]);probe=box(61,100,10,3,30,4)
     assert overlap(probe,p['plate_carrier_left'])>100
     report['negative_control']='plate deliberately inside sidewall detected'
     report.update(physical_fit='not_verified',load_rating=None,sliced=False)

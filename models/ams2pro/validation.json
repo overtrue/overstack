@@ -4,8 +4,8 @@
   "three_drawer_available": false,
   "layers": [
     {
-      "name": "3-slot-plate-layer",
-      "height_mm": 30,
+      "name": "5-slot-plate-layer",
+      "height_mm": 40,
       "z_mm": 0,
       "parts": 8,
       "pairs_checked": 28
@@ -13,28 +13,28 @@
     {
       "name": "8-slot-plate-layer",
       "height_mm": 60,
-      "z_mm": 30,
+      "z_mm": 40,
       "parts": 10,
       "pairs_checked": 45
     },
     {
       "name": "1-drawer-layer",
       "height_mm": 60,
-      "z_mm": 90,
+      "z_mm": 100,
       "parts": 12,
       "pairs_checked": 66
     },
     {
       "name": "2-drawer-layer",
       "height_mm": 60,
-      "z_mm": 150,
+      "z_mm": 160,
       "parts": 13,
       "pairs_checked": 78
     },
     {
       "name": "device-top",
       "height_mm": 26,
-      "z_mm": 210,
+      "z_mm": 220,
       "parts": 4,
       "pairs_checked": 6
     }
@@ -53,24 +53,24 @@
   },
   "parts": [
     {
-      "name": "end_left_30_plain",
-      "file": "models/common/end_left_30_plain.stl",
-      "sha256": "c834159eb3cc1549ebfa5efbb40a5bacb65641d461560c2db83532dc69f225db"
+      "name": "end_left_40_plain",
+      "file": "models/common/end_left_40_plain.stl",
+      "sha256": "d17513987e7763e81810d3c9e1ca91347da738917cff395995eb96d1eea4c601"
     },
     {
-      "name": "end_right_30_plain",
-      "file": "models/common/end_right_30_plain.stl",
-      "sha256": "24cf57b6137fda4a7926c10341cf75699ec8eaadf2e82c4eaebfae70edb80d08"
+      "name": "end_right_40_plain",
+      "file": "models/common/end_right_40_plain.stl",
+      "sha256": "653d6cfb967a0a60e41b6dff3019f1d1db6d20384820a987f9d8b3eb476eb78f"
     },
     {
-      "name": "end_left_30_pegboard",
-      "file": "models/common/end_left_30_pegboard.stl",
-      "sha256": "14bfd3c3fd549c1725ef46b1238ab5a7f8b78eb905c2c59b457c646c24793c9c"
+      "name": "end_left_40_pegboard",
+      "file": "models/common/end_left_40_pegboard.stl",
+      "sha256": "480b2bf05abed9ceee2a4fa66f2b400bf3913248084b6fd20e3e6df475bd5b04"
     },
     {
-      "name": "end_right_30_pegboard",
-      "file": "models/common/end_right_30_pegboard.stl",
-      "sha256": "dd65e37fabef75db44bed1cc36dc520b2cc8f98d0d363d44338c7e3b3254abc1"
+      "name": "end_right_40_pegboard",
+      "file": "models/common/end_right_40_pegboard.stl",
+      "sha256": "95d11bf3e477b8ee651da28242c742c099c5b1e7949c7b8a11e60f7645764cd8"
     },
     {
       "name": "end_left_60_plain",
@@ -108,33 +108,33 @@
       "sha256": "2452ff8eb90ceb9c048cfe47e517d3f163ba261c17639adcaf0854c73b1b0095"
     },
     {
-      "name": "3-slot-plate-layer/plate_carrier_left",
-      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_left.stl",
-      "sha256": "83bd06a5faab5b53e9c1078178348130849e452776da0567b0fbbdf4c24d6f8d"
+      "name": "5-slot-plate-layer/plate_carrier_left",
+      "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "a61e2536fe5d8f6feaf92ac6e2838369c6051235a01e0c4162daf5ac6f7338b1"
     },
     {
-      "name": "3-slot-plate-layer/plate_carrier_right",
-      "file": "models/ams2pro/3-slot-plate-layer/plate_carrier_right.stl",
-      "sha256": "5fd06152639725f2eaf1074ed83dd4c6906c8f1f6d4f442a1b1e1a918c746573"
+      "name": "5-slot-plate-layer/plate_carrier_right",
+      "file": "models/ams2pro/5-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "b76ddc6198fae642a38cbcc3dd1926e20de0cfbb22d606da8f7d8a1c1fbdb1ca"
     },
     {
-      "name": "3-slot-plate-layer/front_beam_1",
-      "file": "models/ams2pro/3-slot-plate-layer/front_beam_1.stl",
+      "name": "5-slot-plate-layer/front_beam_1",
+      "file": "models/ams2pro/5-slot-plate-layer/front_beam_1.stl",
       "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1"
     },
     {
-      "name": "3-slot-plate-layer/front_beam_2",
-      "file": "models/ams2pro/3-slot-plate-layer/front_beam_2.stl",
+      "name": "5-slot-plate-layer/front_beam_2",
+      "file": "models/ams2pro/5-slot-plate-layer/front_beam_2.stl",
       "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269"
     },
     {
-      "name": "3-slot-plate-layer/rear_beam_1",
-      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_1.stl",
+      "name": "5-slot-plate-layer/rear_beam_1",
+      "file": "models/ams2pro/5-slot-plate-layer/rear_beam_1.stl",
       "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba"
     },
     {
-      "name": "3-slot-plate-layer/rear_beam_2",
-      "file": "models/ams2pro/3-slot-plate-layer/rear_beam_2.stl",
+      "name": "5-slot-plate-layer/rear_beam_2",
+      "file": "models/ams2pro/5-slot-plate-layer/rear_beam_2.stl",
       "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be"
     },
     {
@@ -297,7 +297,7 @@
   "bounds_mm": [
     399.0,
     287.0,
-    239.0
+    249.0
   ],
   "negative_control": "plate deliberately inside sidewall detected",
   "physical_fit": "not_verified",

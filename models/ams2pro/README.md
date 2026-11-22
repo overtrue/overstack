@@ -1,12 +1,12 @@
 # 无 HT 版 / AMS 2 Pro only
 
-**打印板适配：当前所有三槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。
+**打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。
 
-**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
+**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
 
-399 × 287 mm。三槽／八槽板层，单／双抽屉；没有三抽屉，没有侧抽屉，没有 HT 开口。
+399 × 287 mm。五槽／八槽板层，单／双抽屉；没有三抽屉，没有侧抽屉，没有 HT 开口。
 
-399 × 287 mm. Three/eight-slot plate layers, single/double drawers. No triple drawer, side bins or HT opening.
+399 × 287 mm. Five/eight-slot plate layers, single/double drawers. No triple drawer, side bins or HT opening.
 
 ![Pegboard version](preview.png)
 
@@ -14,15 +14,15 @@
 
 | Layer | Height increment | Assembly parts |
 | --- | ---: | ---: |
-| [三槽打印板层 / Three-slot plate layer](3-slot-plate-layer/) | 30 mm | 8 |
+| [五槽打印板层 / Five-slot plate layer](5-slot-plate-layer/) | 40 mm | 8 |
 | [八槽打印板层 / Eight-slot plate layer](8-slot-plate-layer/) | 60 mm | 10 |
 | [单抽屉层 / Single-drawer layer](1-drawer-layer/) | 60 mm | 12 |
 | [双抽屉层 / Double-drawer layer](2-drawer-layer/) | 60 mm | 13 |
 | [无 HT 顶件 / AMS-only top](device-top/) | 26 mm | 4 |
 
-Complete example: 47 assembly parts, 11 plates, three main drawers, 239 mm total height including feet. Reorder, repeat or omit storage layers; add two common keys for every seam, including beneath the top. Omit lower keys on the bottom layer. Width-specific middles and tops must remain together.
+Complete example: 47 assembly parts, 13 plates, three main drawers, 249 mm total height including feet. Reorder, repeat or omit storage layers; add two common keys for every seam, including beneath the top. Omit lower keys on the bottom layer. Width-specific middles and tops must remain together.
 
-完整示例共 47 件：11 个板位、3 只主抽屉，含脚总高 239 mm。收纳层可增减、换序、重复；每道接缝需两枚通用锁片，顶件下方也需要。底层不装下接缝锁片。中段和顶件必须保持同一宽度。
+完整示例共 47 件：13 个板位、3 只主抽屉，含脚总高 249 mm。收纳层可增减、换序、重复；每道接缝需两枚通用锁片，顶件下方也需要。底层不装下接缝锁片。中段和顶件必须保持同一宽度。
 
 通用件 STL 保留原 HT 版坐标；右件在无 HT 装配中 X 偏移 −96 mm。各层 `parts.json` 记录文件及偏移，GLB/3MF 已放好。两侧普通端框可分别换为同高度、同侧洞洞板端框。
 

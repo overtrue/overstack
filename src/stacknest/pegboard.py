@@ -14,9 +14,9 @@ def yz_extrude(profile,x,depth):
 
 
 def slot_centers(H):
-    if H==30:return [(y,15) for y in np.arange(43.5,244,40)]
+    if H==40:return [(y,20) for y in np.arange(43.5,244,40)]
     if H==60:return [(y,z) for y0,z in [(43.5,10),(63.5,30),(43.5,50)] for y in np.arange(y0,244,40)]
-    raise ValueError('Common ends have 30 or 60 mm height')
+    raise ValueError('Common ends have 40 or 60 mm height')
 
 
 def end(module,right=False):

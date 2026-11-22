@@ -23,8 +23,8 @@ bold=os.environ.get('STACKNEST_FONT_BOLD','/System/Library/Fonts/STHeiti Medium.
 if not Path(regular).exists() or not Path(bold).exists():raise SystemExit('Set STACKNEST_FONT_REGULAR and STACKNEST_FONT_BOLD to CJK TrueType font files.')
 pdfmetrics.registerFont(TTFont('CN',regular,subfontIndex=0));pdfmetrics.registerFont(TTFont('CNB',bold,subfontIndex=0))
 EN_LABEL={'左端框':'Left end frame','右端框':'Right end frame','左侧承架':'Left carrier','右侧承架':'Right carrier','前横梁':'Front beam','后横梁':'Rear beam','左小抽屉':'Left side bin','右小抽屉':'Right side bin','层间锁片':'Rear locking key','隔墙':'Divider','抽屉前半':'Drawer front half','抽屉后半':'Drawer rear half','顶部左片':'Left top half','顶部右片':'Right top half','抽屉1':'Drawer 1','抽屉2':'Drawer 2','抽屉3':'Drawer 3'}
-TITLES_ZH=['三槽打印板层','八槽打印板层','单抽屉层','双抽屉层','三抽屉层','设备顶件']
-TITLES_EN=['Three-slot plate layer','Eight-slot plate layer','Single-drawer layer','Double-drawer layer','Triple-drawer layer','Device top']
+TITLES_ZH=['五槽打印板层','八槽打印板层','单抽屉层','双抽屉层','三抽屉层','设备顶件']
+TITLES_EN=['Five-slot plate layer','Eight-slot plate layer','Single-drawer layer','Double-drawer layer','Triple-drawer layer','Device top']
 STEPS_ZH=[
  [('先装中段承架','左右承架的前封闭面已做成一体，不再安装独立封板。托条朝内，后挡在后。'),('装前后横梁','前梁从底部入口托入，再向前滑约29 mm。后梁从后方水平推入，位于托条下方。'),('装左右端框','对齐两侧竖向燕尾，从上方落入端框槽。检查中段不扭曲、底面能平放。')],
  [('先拼好中段和端框','托条朝内，后挡朝后。前梁走底部入口，后梁从后方滑入；再装左右端框。'),('装两只小抽屉','从正面放入侧仓导向。到位后检查两边间隙，不要敲入。'),('试走完整行程','小抽屉可拉出约60 mm。拆卸时先移开上层，再在止点抬高约12 mm，向前取出。')],
@@ -93,14 +93,14 @@ def build(lang):
  b.image('hero',245,91,565,392)
  b.text('ASSEMBLY GUIDE',40,419,10,True,TEAL)
  b.para('把打印板、抽屉与设备托架，叠成一套。' if z else 'Build-plate storage, drawers and a device top in one modular stack.',40,389,195,18)
- b.para('5 层 + 顶件\n58 个制作零件\n11 个打印板位\n6 只主抽屉 + 2 只侧抽屉'.replace('\n','<br/>') if z else '5 layers + device top<br/>58 fabrication parts<br/>11 plate slots<br/>6 main drawers + 2 side bins',40,283,193,11.5)
- b.para('495 × 287 × 299 mm<br/>当前整套装配外廓，含底脚。' if z else '495 x 287 x 299 mm<br/>Complete stack, including feet.',40,160,195,10.5)
+ b.para('5 层 + 顶件\n58 个制作零件\n13 个打印板位\n6 只主抽屉 + 2 只侧抽屉'.replace('\n','<br/>') if z else '5 layers + device top<br/>58 fabrication parts<br/>13 plate slots<br/>6 main drawers + 2 side bins',40,283,193,11.5)
+ b.para('495 × 287 × 309 mm<br/>当前整套装配外廓，含底脚。' if z else '495 x 287 x 309 mm<br/>Complete stack, including feet.',40,160,195,10.5)
  b.note('本教程对应 数字样机。爆炸图用于辨认零件；实际装入方向请按步骤操作。' if z else 'This guide describes the digital prototype. Exploded offsets identify parts; follow the written insertion directions.');b.end()
  b.start('从下到上的六组零件' if z else 'Six groups, from bottom to top')
  b.image('stack-exploded',35,58,420,448)
  y=482
  for i in reversed(range(6)):
-  n=sum(r['layer']==i for r in PARTS);height=30 if i==0 else (60 if i<5 else 26)
+  n=sum(r['layer']==i for r in PARTS);height=40 if i==0 else (60 if i<5 else 26)
   b.text(chr(65+i),495,y,22,True,TEAL)
   b.text((TITLES_ZH if z else TITLES_EN)[i],535,y+1,13,True)
   b.text((f'{n} 个零件 / '+('顶面高 26 mm' if i==5 else f'层高 {height} mm')) if z else f'{n} parts / '+('26 mm above layer' if i==5 else f'{height} mm layer'),535,y-19,10,color=MUTED);y-=66

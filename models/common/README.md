@@ -2,14 +2,14 @@
 
 ![Plain and pegboard ends](preview.png)
 
-30 mm / 60 mm 两种高度；相同高度用于 495 mm HT 版和 399 mm 无 HT 版。左右件不可互换。普通版与洞洞板版使用相同定位和连接接口，可以单侧替换。
+40 mm / 60 mm 两种高度；相同高度用于 495 mm HT 版和 399 mm 无 HT 版。左右件不可互换。普通版与洞洞板版使用相同定位和连接接口，可以单侧替换。
 
 Two heights, shared by both widths. Left and right parts differ; choose the matching side. Plain and pegboard variants preserve their connection geometry and can be replaced independently.
 
 | Height | Side | Plain | Pegboard |
 | --- | --- | --- | --- |
-| 30 mm | left | [STL](end_left_30_plain.stl) | [STL](end_left_30_pegboard.stl) |
-| 30 mm | right | [STL](end_right_30_plain.stl) | [STL](end_right_30_pegboard.stl) |
+| 40 mm | left | [STL](end_left_40_plain.stl) | [STL](end_left_40_pegboard.stl) |
+| 40 mm | right | [STL](end_right_40_plain.stl) | [STL](end_right_40_pegboard.stl) |
 | 60 mm | left | [STL](end_left_60_plain.stl) | [STL](end_left_60_pegboard.stl) |
 | 60 mm | right | [STL](end_right_60_plain.stl) | [STL](end_right_60_pegboard.stl) |
 
@@ -24,11 +24,11 @@ Two heights, shared by both widths. Left and right parts differ; choose the matc
 | Same-row / same-column repeat | 40 mm |
 | Alternating row offset | 20 mm horizontally and vertically |
 | Clear space behind each slot | At least 20 mm |
-| 30 mm end | 6 slots, one row; 7.5 mm top/bottom slot margins |
+| 40 mm end | 6 slots, one row; 12.5 mm top/bottom slot margins |
 | 60 mm end | 17 slots, three rows; 2.5 mm top/bottom slot margins |
 | Fit coupon | 80 × 80 × 5 mm |
 
-孔阵只适用于各层内部。60 mm 端框可放同列 40 mm 双点配件；30 mm 端框不支持上下双孔挂钩。不要跨层缝安装依赖连续孔距的配件。面板两端保留宽实心边框，洞孔不触及弧形底脚、定位槽、燕尾及后锁片。
+孔阵只适用于各层内部。60 mm 端框可放同列 40 mm 双点配件；40 mm 端框不支持上下双孔挂钩。不要跨层缝安装依赖连续孔距的配件。面板两端保留宽实心边框，洞孔不触及弧形底脚、定位槽、燕尾及后锁片。
 
 Each layer is a separate mounting zone. The tall end includes a 40 mm vertical pair; the low end does not. Do not bridge seams with accessories that require a continuous hole grid. Wide solid end borders retain the corner feet, sockets, dovetails and rear key pockets.
 

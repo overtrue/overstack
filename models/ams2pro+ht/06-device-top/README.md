@@ -1,10 +1,10 @@
 # 06-device-top
 
+![装配预览 / Assembly preview](preview.png)
+
 两端挡边的四个外露上角已做 R3 mm 圆角，承托面和连接接口不变；打印后仍需检查毛刺。 / The four exposed upper lip ends have R3 mm rounds; bearing faces and joints are unchanged. Check printed parts for burrs.
 
 ![R3 挡边端头 / Rounded lip tip](../../../docs/images/lip-r3-detail.png)
-
-![装配预览 / Assembly preview](preview.png)
 
 ## 零件编号 / Part IDs
 

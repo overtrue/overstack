@@ -1,6 +1,6 @@
 """Parametric modules. Dimensions in mm; H is body height, excluding3mm feet.
 Fixed interface: XY axes, short arc feet/sockets, vertical dovetail cross-sections.
-Eight slots use6mm pitch; other counts retain7mm. Require7mm overhead. Physical fit/load unverified.
+Plate slots use6mm pitch. Require7mm overhead. Physical fit/load unverified.
 """
 
 def build_module(H, N, fit=.35):
@@ -13,8 +13,8 @@ def build_module(H, N, fit=.35):
  from structure import install_structure,BAR_DEPTH
  outline=rectangle(15,15,480,272).buffer(15,quad_segs=32)
  if not isinstance(N,int) or isinstance(N,bool) or N<1:raise ValueError('Plate count must be positive')
- pitch=6 if N==8 else 7
- if not 30<=H<=60:raise ValueError('Supported module height is 30 to 60 mm')
+ pitch=6
+ if not 40<=H<=60:raise ValueError('Supported module height is 40 to 60 mm')
  if not .25<=fit<=.5:raise ValueError('Fit must be 0.25 to 0.5 mm')
  if H<7.5+(N-1)*pitch+1.5+7:raise ValueError('Insufficient plate clearance')
  prism=trimesh.creation.extrude_polygon(outline,H,engine='earcut')

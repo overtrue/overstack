@@ -6,7 +6,7 @@ from build_variants import scene
 from geometry import *
 
 OUT=ROOT/'output/numbered';OUT.mkdir(exist_ok=True);jobs=[]
-LAYERS=['3-slot-plate-layer','8-slot-plate-layer','1-drawer-layer','2-drawer-layer','device-top']
+LAYERS=['5-slot-plate-layer','8-slot-plate-layer','1-drawer-layer','2-drawer-layer','device-top']
 LABELS={'end_left':'左端框','end_right':'右端框','end_left_1':'左端框','end_right_1':'右端框',
         'plate_carrier_left':'左板托架','plate_carrier_right':'右板托架','side_left':'左抽屉承架','side_right':'右抽屉承架',
         'front_beam_1':'前横梁左半','front_beam_2':'前横梁右半','rear_beam_1':'后横梁左半','rear_beam_2':'后横梁右半',
