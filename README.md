@@ -175,8 +175,6 @@ Rear beams and seam keys are removable and are not captive. Remove devices and t
 
 ## Design basis
 
-从社区已有模型的实践为参考设计基础。
-
 The design is based on practical experience with existing community models. The current model builds from parametric geometry without external model meshes. See [design basis](docs/provenance.md).
 
 The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. It has not been sliced or physically tested. The original HT geometry is byte-for-byte unchanged.
