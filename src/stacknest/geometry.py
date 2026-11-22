@@ -38,8 +38,8 @@ def xz_extrude(profile,y,length):
     m.apply_transform(np.array([[1,0,0,0],[0,0,1,y],[0,1,0,0],[0,0,0,1]],float));return m
 
 
-def mirror_x(m):
-    m=m.copy();m.apply_transform(np.array([[-1,0,0,495],[0,1,0,0],[0,0,1,0],[0,0,0,1]],float));return m
+def mirror_x(m,width=495):
+    m=m.copy();m.apply_transform(np.array([[-1,0,0,width],[0,1,0,0],[0,0,1,0],[0,0,0,1]],float));return m
 
 
 def cylinder_y(x,y,z,r,length,sections=48):

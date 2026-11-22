@@ -1,5 +1,9 @@
 # StackNest models
 
+[无 HT / AMS-only set](no-ht/) · [两端通用件 / Common ends](common/)
+
+## AMS 2 Pro + HT
+
 [Complete assembly GLB](stacknest-assembly.glb) · [Part manifest](parts.json)
 
 | Layer | Parts |

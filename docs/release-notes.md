@@ -1,3 +1,11 @@
+Added a 399 × 287 mm AMS-only set with three/eight-slot plate layers, single/double drawers and a dedicated top. There is no three-drawer option in this width. The original 495 mm HT geometry is unchanged.
+
+Both widths share the 30/60 mm end frames and rear keys. New pegboard ends use 5 × 15 mm SKÅDIS-style slots, a 5 mm panel and 40 mm repeat with 20 mm stagger. A fit coupon is included; actual accessory fit and payload remain untested.
+
+Downloads: `stacknest.zip` is the original HT set, `stacknest-no-ht.zip` includes the AMS-only set plus common parts, and `stacknest-common.zip` contains the common plain/pegboard ends and keys. Open the README inside each package before slicing.
+
+The AMS-only export passes complete assembly and layer-pair checks. All 36 new exported parts pass generic PETG/FDM checks, with support, bridge and knife-edge warnings remaining. No complete slicing, device-fit or load test has been performed.
+
 StackNest packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
 
 All illustrations were rerendered with corrected face normals and soft area lighting. All eight drawers now have 2 mm solid floors. Existing joinery, slide grooves and stops are retained. The model builds without external mesh inputs.

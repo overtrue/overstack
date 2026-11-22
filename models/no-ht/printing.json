@@ -1,0 +1,1828 @@
+{
+  "material": "PETG",
+  "process": "FDM",
+  "nozzle_mm": 0.4,
+  "layer_mm": 0.2,
+  "parts": [
+    {
+      "name": "end_left_30_pegboard",
+      "file": "models/common/end_left_30_pegboard.stl",
+      "sha256": "14bfd3c3fd549c1725ef46b1238ab5a7f8b78eb905c2c59b457c646c24793c9c",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            224.15284963613556
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            21.213203435596423
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          224.15284963613556,
+          224.15284963613558,
+          60.0
+        ],
+        "downward_area_mm2": 3504.192785303051,
+        "bed_contact_area_mm2": 7469.07645690813,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "end_right_30_pegboard",
+      "file": "models/common/end_right_30_pegboard.stl",
+      "sha256": "dd65e37fabef75db44bed1cc36dc520b2cc8f98d0d363d44338c7e3b3254abc1",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.8834544223121976e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            495.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          224.15284963613556,
+          224.15284963613558,
+          60.0
+        ],
+        "downward_area_mm2": 3504.193598610424,
+        "bed_contact_area_mm2": 7469.076309938162,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "end_left_60_pegboard",
+      "file": "models/common/end_left_60_pegboard.stl",
+      "sha256": "40dbc9c3f6b262d9877b0d95dccdbdd0e86bb1b875b21d942fc64170999de457",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            245.36605307173198
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            42.426406871192846
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          245.36605307173198,
+          245.366053071732,
+          60.00000000000001
+        ],
+        "downward_area_mm2": 6815.55360660198,
+        "bed_contact_area_mm2": 14590.135791709628,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "end_right_60_pegboard",
+      "file": "models/common/end_right_60_pegboard.stl",
+      "sha256": "9f278d9b5d4cb6f70af3337ac07e68b5050af4cf4605da0cc2d375062ccfffbe",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.8834544223121976e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            495.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          245.36605307173198,
+          245.366053071732,
+          60.0
+        ],
+        "downward_area_mm2": 6815.555251205209,
+        "bed_contact_area_mm2": 14590.135497769697,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge",
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "pegboard_fit_coupon",
+      "file": "models/common/pegboard_fit_coupon.stl",
+      "sha256": "2452ff8eb90ceb9c048cfe47e517d3f163ba261c17639adcaf0854c73b1b0095",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            -0.7071067811865475,
+            0.0,
+            55.32590344233564
+          ],
+          [
+            0.7071067811865475,
+            0.7071067811865476,
+            0.0,
+            -1.2426406541684012
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          110.65180688467129,
+          110.65180688467129,
+          5.0
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 6044.176508870141,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "3-slot-plate-layer/plate_carrier_left",
+      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "83bd06a5faab5b53e9c1078178348130849e452776da0567b0fbbdf4c24d6f8d",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -42.77996026178613
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            160.15968593875303
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            30.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          215.19269668515165,
+          214.54624844913212,
+          30.000000000000036
+        ],
+        "downward_area_mm2": 7711.370817372768,
+        "bed_contact_area_mm2": 2407.600013732911,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "3-slot-plate-layer/plate_carrier_right",
+      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "5fd06152639725f2eaf1074ed83dd4c6906c8f1f6d4f442a1b1e1a918c746573",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -227.74905397264658
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            -24.162948746494635
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            30.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          214.5462376595389,
+          215.19269668515167,
+          30.000000000000036
+        ],
+        "downward_area_mm2": 7711.370365765846,
+        "bed_contact_area_mm2": 2407.6002197265607,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "3-slot-plate-layer/front_beam_1",
+      "file": "models/no-ht/3-slot-plate-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            24.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5058698654175,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "3-slot-plate-layer/front_beam_2",
+      "file": "models/no-ht/3-slot-plate-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -1.223422171034833e-14
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.8000030517578
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.00000000000001,
+          135.6999969482422,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.414425373078,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "3-slot-plate-layer/rear_beam_1",
+      "file": "models/no-ht/3-slot-plate-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            287.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5057983398438,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "3-slot-plate-layer/rear_beam_2",
+      "file": "models/no-ht/3-slot-plate-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -263.0
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.80000305175778
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.0,
+          135.69999694824222,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.4144897460947,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "8-slot-plate-layer/plate_carrier_left",
+      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "50f6129d97a2532b7dadd09c6f4312086fc37a92eabb16348794be93c97125c7",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            245.36605307173198
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            42.426406871192846
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            -54.29999923706055
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          245.36605307173198,
+          245.366053071732,
+          29.700000762939453
+        ],
+        "downward_area_mm2": 16554.79099836791,
+        "bed_contact_area_mm2": 1344.0000000000011,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "8-slot-plate-layer/plate_carrier_right",
+      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "5a7a21eafdee36e393c55a52a1e41b7dadff52d83d283a978d68f819e88a6b2a",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.4309923829291525e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            344.70001220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          245.36605307173198,
+          245.36605307173198,
+          29.70001220703125
+        ],
+        "downward_area_mm2": 16554.79106929979,
+        "bed_contact_area_mm2": 1343.9999999999986,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "8-slot-plate-layer/front_beam_1",
+      "file": "models/no-ht/8-slot-plate-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            24.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5058698654175,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "8-slot-plate-layer/front_beam_2",
+      "file": "models/no-ht/8-slot-plate-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -1.223422171034833e-14
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.8000030517578
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.00000000000001,
+          135.6999969482422,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.414425373078,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "8-slot-plate-layer/rear_beam_1",
+      "file": "models/no-ht/8-slot-plate-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            287.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5057983398438,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "8-slot-plate-layer/rear_beam_2",
+      "file": "models/no-ht/8-slot-plate-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -263.0
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.80000305175778
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.0,
+          135.69999694824222,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.4144897460947,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/side_left",
+      "file": "models/no-ht/1-drawer-layer/side_left.stl",
+      "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -42.77996026178613
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            160.15968593875306
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            60.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.5965004500315,
+          208.59650045003156,
+          60.000000000000036
+        ],
+        "downward_area_mm2": 1871.2799063873413,
+        "bed_contact_area_mm2": 2415.6000137329106,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "1-drawer-layer/side_right",
+      "file": "models/no-ht/1-drawer-layer/side_right.stl",
+      "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -233.69879118215397
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            -30.75914498161478
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            60.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.5965004500315,
+          208.59650045003153,
+          60.000000000000036
+        ],
+        "downward_area_mm2": 1871.2794112397871,
+        "bed_contact_area_mm2": 2415.6002197265616,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "1-drawer-layer/front_beam_1",
+      "file": "models/no-ht/1-drawer-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            24.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5058698654175,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/front_beam_2",
+      "file": "models/no-ht/1-drawer-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -1.223422171034833e-14
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.8000030517578
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.00000000000001,
+          135.6999969482422,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.414425373078,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/rear_beam_1",
+      "file": "models/no-ht/1-drawer-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
+      "placement": {
+        "assembly_to_print": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -63.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            287.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          141.0,
+          24.0,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3292.5057983398438,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/rear_beam_2",
+      "file": "models/no-ht/1-drawer-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -263.0
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.80000305175778
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.0,
+          135.69999694824222,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 3181.4144897460947,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/drawer_half_1",
+      "file": "models/no-ht/1-drawer-layer/drawer_half_1.stl",
+      "sha256": "85cce5feb25497609ccb85a70d30c1391cce8e34199ff937eabb27c3231cbf97",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            -4.329780281177466e-17,
+            0.7071067811865475,
+            -53.38656197958434
+          ],
+          [
+            0.7071067811865475,
+            4.329780281177467e-17,
+            -0.7071067811865476,
+            -6.7175144212721944
+          ],
+          [
+            0.0,
+            1.0,
+            6.123233995736766e-17,
+            -3.9801020972288977e-16
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          222.03152929257593,
+          222.0315292925759,
+          137.5
+        ],
+        "downward_area_mm2": 0.0,
+        "bed_contact_area_mm2": 12867.056889319443,
+        "supports_required": false,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "1-drawer-layer/drawer_half_2",
+      "file": "models/no-ht/1-drawer-layer/drawer_half_2.stl",
+      "sha256": "5338c7c3b4e01c3545dbe8d218bcb57b0e2e790e2d8352abd7fb8514209b72fc",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            -4.329780281177466e-17,
+            -0.7071067811865475,
+            -6.717514421272197
+          ],
+          [
+            0.7071067811865475,
+            4.329780281177467e-17,
+            0.7071067811865476,
+            -54.800775541957435
+          ],
+          [
+            0.0,
+            -1.0,
+            6.123233995736766e-17,
+            271.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          220.61731573020285,
+          220.61731573020285,
+          135.1999969482422
+        ],
+        "downward_area_mm2": 6.30000686645508,
+        "bed_contact_area_mm2": 13311.000000000005,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/side_left",
+      "file": "models/no-ht/2-drawer-layer/side_left.stl",
+      "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -42.77996026178613
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            160.15968593875306
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            60.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.5965004500315,
+          208.59650045003156,
+          60.000000000000036
+        ],
+        "downward_area_mm2": 1871.2799063873413,
+        "bed_contact_area_mm2": 2415.6000137329106,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/side_right",
+      "file": "models/no-ht/2-drawer-layer/side_right.stl",
+      "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -233.69879118215397
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            -30.75914498161478
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            60.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.5965004500315,
+          208.59650045003153,
+          60.000000000000036
+        ],
+        "downward_area_mm2": 1871.2794112397871,
+        "bed_contact_area_mm2": 2415.6002197265616,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/divider_1",
+      "file": "models/no-ht/2-drawer-layer/divider_1.stl",
+      "sha256": "6218488d0e4f2607ac97ae1558866f2e4d0ca10de579647f53048ab2376e587d",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -138.23937572197005
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            64.70027047856914
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            60.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          208.59650045003153,
+          208.59650045003156,
+          58.000000000000036
+        ],
+        "downward_area_mm2": 2057.199951171876,
+        "bed_contact_area_mm2": 2296.0000000000073,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/front_beam_1",
+      "file": "models/no-ht/2-drawer-layer/front_beam_1.stl",
+      "sha256": "688000a8ac32c6c4cbf1797027afb709c050e62e4cd5830c4082f4ad1ee93631",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -4.133182947122317e-15
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -63.5
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.00000000000001,
+          141.0,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 64.22012337981143,
+        "bed_contact_area_mm2": 3228.2857442733225,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/front_beam_2",
+      "file": "models/no-ht/2-drawer-layer/front_beam_2.stl",
+      "sha256": "00af2d3c1dad795b761e4ba9cc04df6272b63f7dd96f42418bf3df1a55110126",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -1.223422171034833e-14
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.8000030517578
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.00000000000001,
+          135.6999969482422,
+          6.000000000000003
+        ],
+        "downward_area_mm2": 9.058419002612936,
+        "bed_contact_area_mm2": 3172.356004087255,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/rear_beam_1",
+      "file": "models/no-ht/2-drawer-layer/rear_beam_1.stl",
+      "sha256": "7292a3c43137cce6ec3590145fbca69784385aa537d9e657c68d7e26e26c4753",
+      "placement": {
+        "assembly_to_print": [
+          [
+            0.7071067811865476,
+            0.7071067811865475,
+            8.659560562354932e-17,
+            -233.69879118215394
+          ],
+          [
+            0.7071067811865475,
+            -0.7071067811865476,
+            -8.659560562354934e-17,
+            158.0383655951934
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          110.30865786510142,
+          113.13708498984758,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 64.21996662300089,
+        "bed_contact_area_mm2": 3228.285799429753,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.knife_edge"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/rear_beam_2",
+      "file": "models/no-ht/2-drawer-layer/rear_beam_2.stl",
+      "sha256": "d79070810a46642dcaf778d7ef2deb6dde0c819becf4836b66e230fee69e6893",
+      "placement": {
+        "assembly_to_print": [
+          [
+            6.123233995736766e-17,
+            1.0,
+            1.2246467991473532e-16,
+            -263.0
+          ],
+          [
+            1.0,
+            -6.123233995736766e-17,
+            -7.498798913309288e-33,
+            -199.80000305175778
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            5.999999999999968
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          24.0,
+          135.69999694824222,
+          6.0000000000000036
+        ],
+        "downward_area_mm2": 9.058395828353241,
+        "bed_contact_area_mm2": 3172.356057206868,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/drawer_1",
+      "file": "models/no-ht/2-drawer-layer/drawer_1.stl",
+      "sha256": "e59ccce935457c45042c0e2c0c3f9b462990ad9ddd50fc01c0f1864a7440b575",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            233.69879118215394
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            42.07285348059957
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            -69.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          229.1025971044414,
+          227.68838354206832,
+          126.0
+        ],
+        "downward_area_mm2": 13713.70973783844,
+        "bed_contact_area_mm2": 12802.474990844723,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length"
+      ]
+    },
+    {
+      "name": "2-drawer-layer/drawer_2",
+      "file": "models/no-ht/2-drawer-layer/drawer_2.stl",
+      "sha256": "669105c754bf9a6d4c57dba97d6d4ff1621aa9bdc0e00a76deef62e43671307b",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            233.69879118215394
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            42.07285348059956
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            -204.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          229.1025971044414,
+          227.68838354206832,
+          126.0
+        ],
+        "downward_area_mm2": 13713.709695330812,
+        "bed_contact_area_mm2": 12802.474990844723,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length"
+      ]
+    },
+    {
+      "name": "device-top/top_1",
+      "file": "models/no-ht/device-top/top_1.stl",
+      "sha256": "2614faab65e87500509d1c630a38a54162cc96e1a092005f9efe8abbece9e641",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            221.32442251138937
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            18.384776310850235
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          221.32442251138937,
+          221.3244225113894,
+          204.5
+        ],
+        "downward_area_mm2": 574.7239765750822,
+        "bed_contact_area_mm2": 6835.091290855411,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "device-top/top_2",
+      "file": "models/no-ht/device-top/top_2.stl",
+      "sha256": "2d854c3dd50a259b2188b1a9017dcebcd5bf99152decd9f1b3884a2c918f3a9b",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -8.650901133926984e-15
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            399.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          221.32442251138934,
+          221.3244225113894,
+          199.1999969482422
+        ],
+        "downward_area_mm2": 574.7242092533356,
+        "bed_contact_area_mm2": 6835.091162815184,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    }
+  ],
+  "sliced": false,
+  "physical_fit": "not_verified"
+}

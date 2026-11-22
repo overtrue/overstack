@@ -1,0 +1,74 @@
+[
+  {
+    "name": "end_left",
+    "file": "models/common/end_left_30_plain.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "end_right",
+    "file": "models/common/end_right_30_plain.stl",
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "plate_carrier_left",
+    "file": "models/no-ht/3-slot-plate-layer/plate_carrier_left.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "plate_carrier_right",
+    "file": "models/no-ht/3-slot-plate-layer/plate_carrier_right.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "front_beam_1",
+    "file": "models/no-ht/3-slot-plate-layer/front_beam_1.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "front_beam_2",
+    "file": "models/no-ht/3-slot-plate-layer/front_beam_2.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "rear_beam_1",
+    "file": "models/no-ht/3-slot-plate-layer/rear_beam_1.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "rear_beam_2",
+    "file": "models/no-ht/3-slot-plate-layer/rear_beam_2.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ]
+  }
+]

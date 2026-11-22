@@ -56,7 +56,7 @@ def divider(x):
     return m
 
 
-def middle_side(right):
+def middle_side(right,width=495):
     # Preserve the original vertical dovetails and the separate outer end frames.
     old=template['cassette_drawer_1']
     side=intersection(old,box(50,-1,-1,14.5,290,62))
@@ -64,33 +64,36 @@ def middle_side(right):
                 box(68.4,8,6,6.6,255,2.5),box(64.4,14,8.4,4.6,16,51.6),
                 box(68,20,10.35,2.65,4,4.3)])
     for y in [-.1,266.7]:side=cut(side,box(63.2,y,2,6,20.4,4.1))
-    if right:side=mirror_x(side)
+    if right:side=mirror_x(side,width)
     assert side.is_watertight and len(side.split())==1
     return side
 
 
-def middle_beam(front):
+def middle_beam(front,width=495):
     y=0 if front else 263
     tab_y=0 if front else 267
     tab=box(63.5,tab_y,2,5.4,20,4)
-    return union([box(68.8,y,0,357.4,24,6),tab,mirror_x(tab)])
+    return union([box(68.8,y,0,width-137.6,24,6),tab,mirror_x(tab,width)])
 
 
-def variant(count, source_template):
+def variant(count, source_template, width=495):
+    if width not in (399,495) or count not in ((1,2) if width==399 else (2,3)):
+        raise ValueError('399 mm: one or two drawers; 495 mm: two or three drawers')
     global template
     template=source_template
     parts={name:template[name].copy() for name in ['end_left_1','end_right_1']}
-    parts.update(side_left=middle_side(False),side_right=middle_side(True),
-                 front_beam=middle_beam(True),rear_beam=middle_beam(False))
+    parts['end_right_1']=move(parts['end_right_1'],[width-495,0,0])
+    parts.update(side_left=middle_side(False,width),side_right=middle_side(True,width),
+                 front_beam=middle_beam(True,width),rear_beam=middle_beam(False,width))
     # Middle frame spans X60.5..434.5, with 8 mm sidewalls and 0.5 mm running gaps.
-    width=(357-(count-1)*9)/count
-    spans=[(69+i*(width+9),width) for i in range(count)]
+    drawer_width=(width-138-(count-1)*9)/count
+    spans=[(69+i*(drawer_width+9),drawer_width) for i in range(count)]
     for i,(x,w) in enumerate(spans[:-1],1):
         dx=x+w+.5;parts[f'divider_{i}']=divider(dx)
         for key,y in [('front_beam',8),('rear_beam',267)]:
             parts[key]=cut(parts[key],box(dx+1,y-.3,2,6,12.6,4.1))
     for key,center in [('front_beam',12),('rear_beam',275)]:
-        halves=split_at(parts.pop(key),0,247.5,[(center,12)],gap=.3)
+        halves=split_at(parts.pop(key),0,width/2,[(center,12)],gap=.3)
         for i,m in enumerate(halves,1):parts[f'{key}_{i}']=m
     for prefix,direction in [('front_beam_',-1),('rear_beam_',1)]:
         for name,m in parts.items():
@@ -99,7 +102,7 @@ def variant(count, source_template):
                 for side in ['side_left','side_right']:
                     assert overlap(move(m,[0,direction*travel,0]),parts[side])<.02,('beam insertion',count,name,side,travel)
     for side in ['side_left','side_right']:
-        x=60.5 if side=='side_left' else 426.5
+        x=60.5 if side=='side_left' else width-68.5
         assert abs(cut(box(x,100,20,8,.2,10),parts[side]).volume)<.01,('wall thickness',side)
         for dz in [0,1,5,30,60]:
             for end in ['end_left_1','end_right_1']:

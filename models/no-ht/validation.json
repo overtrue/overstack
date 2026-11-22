@@ -1,0 +1,306 @@
+{
+  "width_mm": 399,
+  "depth_mm": 287,
+  "three_drawer_available": false,
+  "layers": [
+    {
+      "name": "3-slot-plate-layer",
+      "height_mm": 30,
+      "z_mm": 0,
+      "parts": 8,
+      "pairs_checked": 28
+    },
+    {
+      "name": "8-slot-plate-layer",
+      "height_mm": 60,
+      "z_mm": 30,
+      "parts": 10,
+      "pairs_checked": 45
+    },
+    {
+      "name": "1-drawer-layer",
+      "height_mm": 60,
+      "z_mm": 90,
+      "parts": 12,
+      "pairs_checked": 66
+    },
+    {
+      "name": "2-drawer-layer",
+      "height_mm": 60,
+      "z_mm": 150,
+      "parts": 13,
+      "pairs_checked": 78
+    },
+    {
+      "name": "device-top",
+      "height_mm": 26,
+      "z_mm": 210,
+      "parts": 4,
+      "pairs_checked": 6
+    }
+  ],
+  "pegboard": {
+    "slot_mm": [
+      5,
+      15
+    ],
+    "panel_mm": 5,
+    "repeat_mm": 40,
+    "stagger_mm": 20,
+    "rear_clearance_mm": 20,
+    "cross_layer_accessories": false,
+    "physical_fit": "not_verified"
+  },
+  "parts": [
+    {
+      "name": "end_left_30_plain",
+      "file": "models/common/end_left_30_plain.stl",
+      "sha256": "c834159eb3cc1549ebfa5efbb40a5bacb65641d461560c2db83532dc69f225db"
+    },
+    {
+      "name": "end_right_30_plain",
+      "file": "models/common/end_right_30_plain.stl",
+      "sha256": "24cf57b6137fda4a7926c10341cf75699ec8eaadf2e82c4eaebfae70edb80d08"
+    },
+    {
+      "name": "end_left_30_pegboard",
+      "file": "models/common/end_left_30_pegboard.stl",
+      "sha256": "14bfd3c3fd549c1725ef46b1238ab5a7f8b78eb905c2c59b457c646c24793c9c"
+    },
+    {
+      "name": "end_right_30_pegboard",
+      "file": "models/common/end_right_30_pegboard.stl",
+      "sha256": "dd65e37fabef75db44bed1cc36dc520b2cc8f98d0d363d44338c7e3b3254abc1"
+    },
+    {
+      "name": "end_left_60_plain",
+      "file": "models/common/end_left_60_plain.stl",
+      "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73"
+    },
+    {
+      "name": "end_right_60_plain",
+      "file": "models/common/end_right_60_plain.stl",
+      "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149"
+    },
+    {
+      "name": "end_left_60_pegboard",
+      "file": "models/common/end_left_60_pegboard.stl",
+      "sha256": "40dbc9c3f6b262d9877b0d95dccdbdd0e86bb1b875b21d942fc64170999de457"
+    },
+    {
+      "name": "end_right_60_pegboard",
+      "file": "models/common/end_right_60_pegboard.stl",
+      "sha256": "9f278d9b5d4cb6f70af3337ac07e68b5050af4cf4605da0cc2d375062ccfffbe"
+    },
+    {
+      "name": "lock_left",
+      "file": "models/common/lock_left.stl",
+      "sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4"
+    },
+    {
+      "name": "lock_right",
+      "file": "models/common/lock_right.stl",
+      "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11"
+    },
+    {
+      "name": "pegboard_fit_coupon",
+      "file": "models/common/pegboard_fit_coupon.stl",
+      "sha256": "2452ff8eb90ceb9c048cfe47e517d3f163ba261c17639adcaf0854c73b1b0095"
+    },
+    {
+      "name": "3-slot-plate-layer/plate_carrier_left",
+      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "83bd06a5faab5b53e9c1078178348130849e452776da0567b0fbbdf4c24d6f8d"
+    },
+    {
+      "name": "3-slot-plate-layer/plate_carrier_right",
+      "file": "models/no-ht/3-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "5fd06152639725f2eaf1074ed83dd4c6906c8f1f6d4f442a1b1e1a918c746573"
+    },
+    {
+      "name": "3-slot-plate-layer/front_beam_1",
+      "file": "models/no-ht/3-slot-plate-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1"
+    },
+    {
+      "name": "3-slot-plate-layer/front_beam_2",
+      "file": "models/no-ht/3-slot-plate-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269"
+    },
+    {
+      "name": "3-slot-plate-layer/rear_beam_1",
+      "file": "models/no-ht/3-slot-plate-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba"
+    },
+    {
+      "name": "3-slot-plate-layer/rear_beam_2",
+      "file": "models/no-ht/3-slot-plate-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be"
+    },
+    {
+      "name": "8-slot-plate-layer/plate_carrier_left",
+      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_left.stl",
+      "sha256": "50f6129d97a2532b7dadd09c6f4312086fc37a92eabb16348794be93c97125c7"
+    },
+    {
+      "name": "8-slot-plate-layer/plate_carrier_right",
+      "file": "models/no-ht/8-slot-plate-layer/plate_carrier_right.stl",
+      "sha256": "5a7a21eafdee36e393c55a52a1e41b7dadff52d83d283a978d68f819e88a6b2a"
+    },
+    {
+      "name": "8-slot-plate-layer/front_beam_1",
+      "file": "models/no-ht/8-slot-plate-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1"
+    },
+    {
+      "name": "8-slot-plate-layer/front_beam_2",
+      "file": "models/no-ht/8-slot-plate-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269"
+    },
+    {
+      "name": "8-slot-plate-layer/rear_beam_1",
+      "file": "models/no-ht/8-slot-plate-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba"
+    },
+    {
+      "name": "8-slot-plate-layer/rear_beam_2",
+      "file": "models/no-ht/8-slot-plate-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be"
+    },
+    {
+      "name": "1-drawer-layer/side_left",
+      "file": "models/no-ht/1-drawer-layer/side_left.stl",
+      "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e"
+    },
+    {
+      "name": "1-drawer-layer/side_right",
+      "file": "models/no-ht/1-drawer-layer/side_right.stl",
+      "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de"
+    },
+    {
+      "name": "1-drawer-layer/front_beam_1",
+      "file": "models/no-ht/1-drawer-layer/front_beam_1.stl",
+      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1"
+    },
+    {
+      "name": "1-drawer-layer/front_beam_2",
+      "file": "models/no-ht/1-drawer-layer/front_beam_2.stl",
+      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269"
+    },
+    {
+      "name": "1-drawer-layer/rear_beam_1",
+      "file": "models/no-ht/1-drawer-layer/rear_beam_1.stl",
+      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba"
+    },
+    {
+      "name": "1-drawer-layer/rear_beam_2",
+      "file": "models/no-ht/1-drawer-layer/rear_beam_2.stl",
+      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be"
+    },
+    {
+      "name": "1-drawer-layer/drawer_half_1",
+      "file": "models/no-ht/1-drawer-layer/drawer_half_1.stl",
+      "sha256": "85cce5feb25497609ccb85a70d30c1391cce8e34199ff937eabb27c3231cbf97"
+    },
+    {
+      "name": "1-drawer-layer/drawer_half_2",
+      "file": "models/no-ht/1-drawer-layer/drawer_half_2.stl",
+      "sha256": "5338c7c3b4e01c3545dbe8d218bcb57b0e2e790e2d8352abd7fb8514209b72fc"
+    },
+    {
+      "name": "2-drawer-layer/side_left",
+      "file": "models/no-ht/2-drawer-layer/side_left.stl",
+      "sha256": "b8a8e78b0c06ec624c360181b30704719ec69bf238520b18eaf29efaa3e4874e"
+    },
+    {
+      "name": "2-drawer-layer/side_right",
+      "file": "models/no-ht/2-drawer-layer/side_right.stl",
+      "sha256": "905ae193363d5632698269802682b13dae66b5dda4c47ddf658ff71fda00d9de"
+    },
+    {
+      "name": "2-drawer-layer/divider_1",
+      "file": "models/no-ht/2-drawer-layer/divider_1.stl",
+      "sha256": "6218488d0e4f2607ac97ae1558866f2e4d0ca10de579647f53048ab2376e587d"
+    },
+    {
+      "name": "2-drawer-layer/front_beam_1",
+      "file": "models/no-ht/2-drawer-layer/front_beam_1.stl",
+      "sha256": "688000a8ac32c6c4cbf1797027afb709c050e62e4cd5830c4082f4ad1ee93631"
+    },
+    {
+      "name": "2-drawer-layer/front_beam_2",
+      "file": "models/no-ht/2-drawer-layer/front_beam_2.stl",
+      "sha256": "00af2d3c1dad795b761e4ba9cc04df6272b63f7dd96f42418bf3df1a55110126"
+    },
+    {
+      "name": "2-drawer-layer/rear_beam_1",
+      "file": "models/no-ht/2-drawer-layer/rear_beam_1.stl",
+      "sha256": "7292a3c43137cce6ec3590145fbca69784385aa537d9e657c68d7e26e26c4753"
+    },
+    {
+      "name": "2-drawer-layer/rear_beam_2",
+      "file": "models/no-ht/2-drawer-layer/rear_beam_2.stl",
+      "sha256": "d79070810a46642dcaf778d7ef2deb6dde0c819becf4836b66e230fee69e6893"
+    },
+    {
+      "name": "2-drawer-layer/drawer_1",
+      "file": "models/no-ht/2-drawer-layer/drawer_1.stl",
+      "sha256": "e59ccce935457c45042c0e2c0c3f9b462990ad9ddd50fc01c0f1864a7440b575"
+    },
+    {
+      "name": "2-drawer-layer/drawer_2",
+      "file": "models/no-ht/2-drawer-layer/drawer_2.stl",
+      "sha256": "669105c754bf9a6d4c57dba97d6d4ff1621aa9bdc0e00a76deef62e43671307b"
+    },
+    {
+      "name": "device-top/top_1",
+      "file": "models/no-ht/device-top/top_1.stl",
+      "sha256": "2614faab65e87500509d1c630a38a54162cc96e1a092005f9efe8abbece9e641"
+    },
+    {
+      "name": "device-top/top_2",
+      "file": "models/no-ht/device-top/top_2.stl",
+      "sha256": "2d854c3dd50a259b2188b1a9017dcebcd5bf99152decd9f1b3884a2c918f3a9b"
+    }
+  ],
+  "drawer_travel": [
+    {
+      "count": 1,
+      "drawer": 1,
+      "outer_width_mm": 261.0,
+      "inner_width_mm": 249.0,
+      "travel_mm": 180,
+      "lift_out_mm": 7,
+      "stop_overlap_mm3": 14.189977798465407
+    },
+    {
+      "count": 2,
+      "drawer": 1,
+      "outer_width_mm": 126.0,
+      "inner_width_mm": 114.0,
+      "travel_mm": 180,
+      "lift_out_mm": 7,
+      "stop_overlap_mm3": 14.189977798465407
+    },
+    {
+      "count": 2,
+      "drawer": 2,
+      "outer_width_mm": 126.0,
+      "inner_width_mm": 114.0,
+      "travel_mm": 180,
+      "lift_out_mm": 7,
+      "stop_overlap_mm3": 14.189944992074743
+    }
+  ],
+  "assembly_pairs_checked": 1081,
+  "pegboard_assembly_pairs_checked": 1081,
+  "bounds_mm": [
+    399.0,
+    287.0,
+    239.0
+  ],
+  "negative_control": "plate deliberately inside sidewall detected",
+  "physical_fit": "not_verified",
+  "load_rating": null,
+  "sliced": false
+}

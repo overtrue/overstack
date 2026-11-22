@@ -1,0 +1,11 @@
+{
+  "stack_pair_checks": 1739,
+  "layer_pairings": 20,
+  "common_interfaces": "unchanged",
+  "slot_dimensions_mm": [
+    5,
+    15
+  ],
+  "panel_thickness_mm": 5,
+  "physical_fit": "not_verified"
+}

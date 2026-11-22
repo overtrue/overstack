@@ -3,8 +3,11 @@ import bpy,json,sys,math
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[1]
-jobs=json.loads((ROOT/'output/illustrations/jobs.json').read_text())
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
+jobfile=ROOT/'output/illustrations/jobs.json'
+if '--jobs' in args:
+ i=args.index('--jobs');jobfile=Path(args[i+1]);del args[i:i+2]
+jobs=json.loads(jobfile.read_text())
 selected=[j for j in jobs if not args or j['key'] in args]
 for j in selected:
  bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -16,7 +19,12 @@ for j in selected:
    for face in obj.data.polygons:face.use_smooth=False
    obj.data.update()
    mat=bpy.data.materials.new(obj.name+'-matte');mat.diffuse_color=(.22,.36,.39,1);mat.use_nodes=True
-   p=mat.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(.22,.36,.39,1);p.inputs['Roughness'].default_value=.76
+   color=(.22,.36,.39,1)
+   if j.get('component_colors'):
+    if 'end_' in obj.name or 'top_' in obj.name:color=(.65,.71,.72,1)
+    if 'drawer_' in obj.name:color=(.60,.44,.26,1)
+    if 'lock' in obj.name:color=(.65,.24,.08,1)
+   p=mat.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=color;p.inputs['Roughness'].default_value=.76
    obj.data.materials.clear();obj.data.materials.append(mat)
  camera=bpy.data.cameras.new('Camera');cam=bpy.data.objects.new('Camera',camera);scene.collection.objects.link(cam);scene.camera=cam
  c=j['camera'];cam.location=Vector(c['position'])*.001;target=Vector(c['target'])*.001;cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()
