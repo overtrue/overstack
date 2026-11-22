@@ -77,6 +77,19 @@ The full HT stack separated into layers:
 
 <img src="docs/images/stack-exploded.png" alt="Full stack exploded by layer" width="640">
 
+From top to bottom in the image (click a layer name for its models):
+
+| Layer | Name | Purpose |
+| --- | --- | --- |
+| F | [Device top](models/ams2pro+ht/06-device-top/) | Supports AMS 2 Pro + AMS HT |
+| E | [Triple-drawer layer](models/ams2pro+ht/05-triple-drawer-layer/) | Three separate drawers for small parts |
+| D | [Double-drawer layer](models/ams2pro+ht/04-double-drawer-layer/) | Two separate drawers for tools and spares |
+| C | [Single-drawer layer](models/ams2pro+ht/03-single-drawer-layer/) | One wide drawer for longer tools |
+| B | [Eight-slot plate layer](models/ams2pro+ht/02-eight-slot-plate-layer/) | Stores 8 plates, with one small bin on each side |
+| A | [Three-slot plate layer](models/ams2pro+ht/01-three-slot-plate-layer/) | Stores 3 frequently used plates |
+
+This is the full example stack. Choose only the storage layers you need; always keep the device top uppermost.
+
 Reusable interfaces do not imply unlimited stacking. No maximum layer count or load rating has been established. Check stability, clearance and actual fit for each configuration. The two widths use separate middle sections and tops. Do not mix widths within a stack. Arbitrary widths and side-by-side joints are not included.
 
 ## A closer look at each HT layer

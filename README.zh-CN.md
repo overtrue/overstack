@@ -76,6 +76,19 @@ StackNest 把收纳功能放在独立层里：左右端框承接上下层，中�
 
 <img src="docs/images/stack-exploded.png" alt="完整组合的分层爆炸图" width="640">
 
+图中从上到下依次为（点击层名下载模型）：
+
+| 层 | 名称 | 用途 |
+| --- | --- | --- |
+| F | [设备顶件](models/ams2pro+ht/06-device-top/) | 承放 AMS 2 Pro + AMS HT |
+| E | [三抽屉层](models/ams2pro+ht/05-triple-drawer-layer/) | 三只独立抽屉，分类放小配件 |
+| D | [双抽屉层](models/ams2pro+ht/04-double-drawer-layer/) | 两只独立抽屉，分开收纳工具与备件 |
+| C | [单抽屉层](models/ams2pro+ht/03-single-drawer-layer/) | 一只宽抽屉，收纳较长工具 |
+| B | [八槽打印板层](models/ams2pro+ht/02-eight-slot-plate-layer/) | 收纳 8 张打印板，两侧各一只小抽屉 |
+| A | [三槽打印板层](models/ams2pro+ht/01-three-slot-plate-layer/) | 收纳 3 张常用打印板 |
+
+这是完整组合示例，收纳层可按需选配，无需全部打印；顶件始终放在最上层。
+
 接口可复用不代表能够无限加高。当前没有额定承重或最大层数；组合改变后需重新检查稳定性、设备净空与实际配合。两种宽度各自成套堆叠，不能把 399 mm 和 495 mm 的整层上下混搭；两端和锁片可复用，中段和顶件需匹配宽度。
 
 ## HT 版每一层怎么用
