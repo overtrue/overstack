@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 
 DOC=ROOT/'docs';PDF=DOC/'pdf';PDF.mkdir(exist_ok=True)
-PACK=ROOT/'dist/stacknest-v55'
+PACK=ROOT/'dist/stacknest'
 PARTS=json.loads((PACK/'parts.json').read_text())
 JOBS={j['key']:j for j in json.loads((ROOT/'output/illustrations/jobs.json').read_text())}
 W,H=landscape(A4);INK=colors.HexColor('#20343C');TEAL=colors.HexColor('#257A78');MUTED=colors.HexColor('#607079');PALE=colors.HexColor('#F3F6F5');ORANGE=colors.HexColor('#BF743D')
@@ -46,7 +46,7 @@ class Book:
  def __init__(self,lang):
   self.lang=lang;self.zh=lang=='zh';self.reg='CN' if self.zh else 'Helvetica';self.bold='CNB' if self.zh else 'Helvetica-Bold';self.page=0
   self.path=PDF/f'stacknest-assembly-{lang}.pdf';self.c=canvas.Canvas(str(self.path),pagesize=(W,H),pageCompression=1)
-  self.c.setTitle(('叠序 StackNest 组装教程' if self.zh else 'StackNest Assembly Guide')+' - V55');self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
+  self.c.setTitle(('叠序 StackNest 组装教程' if self.zh else 'StackNest Assembly Guide'));self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
  def text(self,s,x,y,size=11,bold=False,color=INK):
   self.c.setFillColor(color);self.c.setFont(self.bold if bold else self.reg,size);self.c.drawString(x,y,s)
  def para(self,s,x,top,width,size=10.5,color=INK):
@@ -57,7 +57,7 @@ class Book:
   self.text('STACKNEST / '+kicker,38,H-29,8,True,TEAL);self.text(title,38,H-62,23,True)
   c.bookmarkPage('p'+str(self.page));c.addOutlineEntry(title,'p'+str(self.page),level=0)
   c.setStrokeColor(colors.HexColor('#DFE6E3'));c.line(38,35,W-38,35)
-  self.text('V55  |  '+('数字样机 · 尚未实物试装' if self.zh else 'DIGITAL PROTOTYPE - PHYSICAL FIT NOT VERIFIED'),38,20,8,color=MUTED)
+  self.text(('数字样机 · 尚未实物试装' if self.zh else 'DIGITAL PROTOTYPE - PHYSICAL FIT NOT VERIFIED'),38,20,8,color=MUTED)
   self.text(f'{self.page:02d}',W-55,20,9,True)
  def end(self):self.c.showPage()
  def image(self,key,x,y,w,h,labels=False):
@@ -95,7 +95,7 @@ def build(lang):
  b.para('把打印板、抽屉与设备托架，叠成一套。' if z else 'Build-plate storage, drawers and a device top in one modular stack.',40,389,195,18)
  b.para('5 层 + 顶件\n58 个制作零件\n11 个打印板位\n6 只主抽屉 + 2 只侧抽屉'.replace('\n','<br/>') if z else '5 layers + device top<br/>58 fabrication parts<br/>11 plate slots<br/>6 main drawers + 2 side bins',40,283,193,11.5)
  b.para('495 × 287 × 299 mm<br/>当前整套装配外廓，含底脚。' if z else '495 x 287 x 299 mm<br/>Complete stack, including feet.',40,160,195,10.5)
- b.note('本教程对应 V55 数字样机。爆炸图用于辨认零件；实际装入方向请按步骤操作。' if z else 'This guide describes the V55 digital prototype. Exploded offsets identify parts; follow the written insertion directions.');b.end()
+ b.note('本教程对应 数字样机。爆炸图用于辨认零件；实际装入方向请按步骤操作。' if z else 'This guide describes the digital prototype. Exploded offsets identify parts; follow the written insertion directions.');b.end()
  b.start('从下到上的六组零件' if z else 'Six groups, from bottom to top')
  b.image('stack-exploded',35,58,420,448)
  y=482

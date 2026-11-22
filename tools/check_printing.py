@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stackne
 from geometry import *
 from fabrication import orient
 from multi_drawers import orient_candidate
-D=ROOT/'output/model-v55';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
+D=ROOT/'output/model';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
 data=json.loads((D/'checks.json').read_text());cad=shutil.which('cad')
 if not cad:raise SystemExit('Install text-to-cad (cad) to run the optional manufacturing checks.')
 unique={};placements=[]

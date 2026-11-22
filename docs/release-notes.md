@@ -1,4 +1,4 @@
-StackNest V55 packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
+StackNest packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
 
 All illustrations were rerendered with corrected face normals and soft area lighting. All eight drawers now have 2 mm solid floors. Existing joinery, slide grooves and stops are retained. The model builds without external mesh inputs.
 

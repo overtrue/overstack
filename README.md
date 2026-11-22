@@ -4,11 +4,11 @@ A modular storage base for AMS 2 Pro and AMS HT: two plate-storage layers, three
 
 ![StackNest](docs/images/hero.png)
 
-**V55 is an unprinted digital prototype.** Geometry checks have passed; generic FDM checks found local thin-wall / thin-skin failures; device fit, slicing, load capacity and physical assembly have not been validated. The drawings show the model, not a finished print.
+**This is an unprinted digital prototype.** Geometry checks have passed; generic FDM checks found local thin-wall / thin-skin failures; device fit, slicing, load capacity and physical assembly have not been validated. The drawings show the model, not a finished print.
 
 ## Model files
 
-Browse the [V55 models by layer](models/v55/): 58 STL parts, six geometry-only 3MF assemblies, per-layer GLBs and the complete assembly. Individual files are stored directly in this repository.
+Browse the [models by layer](models/): 58 STL parts, six geometry-only 3MF assemblies, per-layer GLBs and the complete assembly. Individual files are stored directly in this repository.
 
 ## Contents
 
@@ -33,7 +33,7 @@ uv run python tools/package.py
 
 The model is constructed from analytic primitives. Building it does not read STL, GLB, PLY, 3MF, vendor meshes or earlier project revisions. Generated STL units are millimetres. Generated 3MF files contain assembly geometry only, with no printer or support settings.
 
-Source: `src/stacknest/`. Outputs: `output/model-v55/` and `dist/stacknest-v55/`.
+Source: `src/stacknest/`. Outputs: `output/model/` and `dist/stacknest/`.
 
 ## Assembly guides
 

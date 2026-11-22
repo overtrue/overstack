@@ -1,9 +1,9 @@
-"""Validate V55 floors and unchanged functional interface regions against V54."""
+"""Validate floors and unchanged functional interface regions against V54."""
 from pathlib import Path
 import sys,json
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import *
-new=ROOT/'output/model-v55';old=ROOT/'output/model-v54'
+new=ROOT/'output/model';old=ROOT/'output/model-v54'
 rows=json.loads((new/'checks.json').read_text())['parts'];changed=[]
 for r in rows:
  n=r['name'];a=trimesh.load_mesh(new/r['file']);b=trimesh.load_mesh(old/r['file'])
@@ -31,5 +31,5 @@ for n,x in [('standard_1_side_bin_left_1',72),('standard_1_side_bin_right_1',389
  a=trimesh.load_mesh(new/'parts'/(n+'.stl'))
  assert abs(cut(box(x,4,8.5,34,134,2),a).volume)<.02,n
 assert len(changed)==7
-report={'version':'V55','main_drawers':6,'side_bins':2,'solid_floor_mm':2,'changed_meshes':changed,'functional_interfaces':'unchanged outside floor slab','baseline_negative_control':'V54 lattice rejected','note':'Single drawer retains original seam and locally thicker joint pads.'}
+report={'main_drawers':6,'side_bins':2,'solid_floor_mm':2,'changed_meshes':changed,'functional_interfaces':'unchanged outside floor slab','baseline_negative_control':'V54 lattice rejected','note':'Single drawer retains original seam and locally thicker joint pads.'}
 (new/'solid-floor-checks.json').write_text(json.dumps(report,indent=2));print('PASS: eight solid-bottom drawers; 2 mm floor; interfaces preserved')

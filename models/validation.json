@@ -1,5 +1,4 @@
 {
-  "version": "V55",
   "parts": 58,
   "assembly_pairs": 1653,
   "distinct_geometries": 40,
@@ -125,7 +124,6 @@
     }
   ],
   "solid_floor_check": {
-    "version": "V55",
     "main_drawers": 6,
     "side_bins": 2,
     "solid_floor_mm": 2,

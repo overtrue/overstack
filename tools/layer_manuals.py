@@ -5,7 +5,7 @@ SLUGS=['three-slot-plate-layer','eight-slot-plate-layer','single-drawer-layer','
 for lang in ['zh','en']:
  for i,slug in enumerate(SLUGS):
   b=Book(lang);z=b.zh;prefix=chr(65+i);title=(TITLES_ZH if z else TITLES_EN)[i]
-  b.path=PDF/f'{i+1:02d}-{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('StackNest / '+title+' / V55');b.c.setAuthor('overtrue')
+  b.path=PDF/f'{i+1:02d}-{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('StackNest / '+title);b.c.setAuthor('overtrue')
   b.start(prefix+' / '+title,'LAYER ASSEMBLY')
   b.image('layer-'+prefix.lower()+'-assembled',35,185,520,310)
   b.text('叠序 StackNest' if z else 'StackNest',585,470,18,True)
@@ -14,7 +14,7 @@ for lang in ['zh','en']:
   group=[r for r in PARTS if r['layer']==i]
   for j,r in enumerate(group):
    col=j%3;row=j//3;b.text(r['id']+'  '+(r['label'] if z else EN_LABEL[r['label']]),42+col*245,167-row*13,9)
-  b.note('V55数字样机；尚未实物试装。STL单位毫米，3MF仅含装配几何，尚未摆盘切片。' if z else 'V55 digital prototype; physical fit untested. STL units: mm. 3MF contains assembly geometry only, not a sliced job.');b.end()
+  b.note('数字样机；尚未实物试装。STL单位毫米，3MF仅含装配几何，尚未摆盘切片。' if z else 'digital prototype; physical fit untested. STL units: mm. 3MF contains assembly geometry only, not a sliced job.');b.end()
   b.start('装配顺序' if z else 'Assembly sequence')
   b.image('layer-'+prefix.lower()+'-exploded',30,130,552,373,labels=True)
   b.steps((STEPS_ZH if z else STEPS_EN)[i],top=484)
