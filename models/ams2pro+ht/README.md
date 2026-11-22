@@ -1,5 +1,7 @@
 # AMS 2 Pro + HT
 
+![装配预览 / Assembly preview](preview.png)
+
 [Common ends / 通用端框](../common/) · [Pegboard assembly GLB](stacknest-pegboard.glb) · [Assembly guides / 组装教程](../../docs/pdf/)
 
 [Complete assembly GLB](stacknest-assembly.glb) · [Part manifest](parts.json)

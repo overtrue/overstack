@@ -1,5 +1,7 @@
 # 三槽打印板层 / Three-slot plate layer
 
+![装配预览 / Assembly preview](preview.png)
+
 30 mm；三片板，两只通用端框、两只托架、四片横梁。无侧抽屉。 / 30 mm, three plates, common ends and four beam halves. No side bins.
 
 ![Exploded view](../../../docs/images/no-ht-3-slot-plate-layer-exploded.png)

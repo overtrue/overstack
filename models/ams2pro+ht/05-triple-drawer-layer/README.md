@@ -1,5 +1,7 @@
 # 05-triple-drawer-layer
 
+![装配预览 / Assembly preview](preview.png)
+
 - E01 隔墙
 - E02 隔墙
 - E03 抽屉1

@@ -1,5 +1,7 @@
 # 06-device-top
 
+![装配预览 / Assembly preview](preview.png)
+
 - F01 顶部左片
 - F02 顶部右片
 - F03 层间锁片

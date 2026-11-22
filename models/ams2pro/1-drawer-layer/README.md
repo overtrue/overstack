@@ -1,5 +1,7 @@
 # 单抽屉层 / Single-drawer layer
 
+![装配预览 / Assembly preview](preview.png)
+
 60 mm；抽屉外宽 261 mm、内宽 249 mm，2 mm 实心底。前后两半通过两侧壁的竖向燕尾拼合；平整承托后向下合拢，不能沿抽拉方向硬压。 / 60 mm; 261 mm outer / 249 mm inner drawer width and a 2 mm floor. Lower the front half onto the rear half through the vertical wall dovetails before installing the drawer.
 
 ![Exploded view](../../../docs/images/no-ht-1-drawer-layer-exploded.png)

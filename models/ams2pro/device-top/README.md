@@ -1,5 +1,7 @@
 # 无 HT 顶件 / AMS-only top
 
+![装配预览 / Assembly preview](preview.png)
+
 只有 AMS 2 Pro 开口，没有 HT 阶梯孔。两片燕尾沿前后方向滑合，再一起落入端框插槽，最后插后锁片。 / One AMS 2 Pro opening, no HT cutout. Slide the two halves together along Y, lower onto the end sockets, then insert the rear keys.
 
 ![Exploded view](../../../docs/images/no-ht-device-top-exploded.png)

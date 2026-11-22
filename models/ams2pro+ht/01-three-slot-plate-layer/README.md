@@ -1,5 +1,7 @@
 # 01-three-slot-plate-layer
 
+![装配预览 / Assembly preview](preview.png)
+
 - A01 左侧承架
 - A02 右侧承架
 - A03 前横梁

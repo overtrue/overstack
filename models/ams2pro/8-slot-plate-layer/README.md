@@ -1,5 +1,7 @@
 # 八槽打印板层 / Eight-slot plate layer
 
+![装配预览 / Assembly preview](preview.png)
+
 60 mm；八片板，无侧抽屉。含下接缝的两枚锁片，作底层时不装这两枚。 / 60 mm, eight plates, no side bins. Omit lower seam keys when this is the bottom layer.
 
 ![Exploded view](../../../docs/images/no-ht-8-slot-plate-layer-exploded.png)

@@ -34,7 +34,7 @@ def package(source,dest):
             world=move(m,[0,0,z]);world.unmerge_vertices();world.vertex_normals=np.repeat(m.face_normals,3,axis=0);world.apply_scale(.001);world.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]));whole.add_geometry(world,node_name=ident,geom_name=ident,parent_node_name=folder)
             record={**r,'id':ident,'label':title,'packaged_file':str((path/'parts'/filename).relative_to(dest))};records.append(record)
         glb.export(path/'layer-assembly.glb');(path/'layer-assembly-geometry.3mf').write_bytes(export_3MF(layer))
-        (path/'README.md').write_text('# '+folder+'\n\n'+ '\n'.join(f'- {r["id"]} {r["label"]}' for r in records if r['layer']==group)+'\n\nSTL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n')
+        (path/'README.md').write_text('# '+folder+'\n\n![Assembly preview](preview.png)\n\n'+ '\n'.join(f'- {r["id"]} {r["label"]}' for r in records if r['layer']==group)+'\n\nSTL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n')
     whole.export(dest/'stacknest-assembly.glb')
     (dest/'parts.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
     check=trimesh.load(dest/'stacknest-assembly.glb');assert len(check.graph.nodes_geometry)==58

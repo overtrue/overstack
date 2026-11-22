@@ -150,9 +150,11 @@ Each HT layer has its own Chinese and English PDF in [docs/pdf](docs/pdf). Match
 ```sh
 uv sync --frozen --group docs
 uv run python tools/render.py
-blender --background --factory-startup --python tools/render_blender.py
+cad run tools/render_blender.py
 uv run python tools/render_variants.py
-blender --background --python tools/render_blender.py -- --jobs output/variants/render-jobs.json
+uv run python tools/model_previews.py
+cad run tools/render_blender.py --jobs output/previews/jobs.json
+cad run tools/render_blender.py --jobs output/variants/render-jobs.json
 uv run --group docs python tools/manual.py
 uv run --group docs python tools/layer_manuals.py
 ```

@@ -1,5 +1,7 @@
 # 03-single-drawer-layer
 
+![装配预览 / Assembly preview](preview.png)
+
 - C01 层间锁片
 - C02 层间锁片
 - C03 左侧承架

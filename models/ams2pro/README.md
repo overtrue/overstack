@@ -4,7 +4,7 @@
 
 399 × 287 mm. Three/eight-slot plate layers, single/double drawers. No triple drawer, side bins or HT opening.
 
-![Pegboard version](../../docs/images/no-ht-pegboard.png)
+![Pegboard version](preview.png)
 
 [Plain assembly GLB](stacknest-no-ht.glb) · [Pegboard assembly GLB](stacknest-no-ht-pegboard.glb) · [Common ends](../common/)
 

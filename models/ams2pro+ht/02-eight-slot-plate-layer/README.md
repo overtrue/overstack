@@ -1,5 +1,7 @@
 # 02-eight-slot-plate-layer
 
+![装配预览 / Assembly preview](preview.png)
+
 - B01 层间锁片
 - B02 层间锁片
 - B03 左侧承架

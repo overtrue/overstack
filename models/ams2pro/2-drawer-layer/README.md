@@ -1,5 +1,7 @@
 # 双抽屉层 / Double-drawer layer
 
+![装配预览 / Assembly preview](preview.png)
+
 60 mm；两只一体抽屉，外宽各 126 mm、内宽各 114 mm，2 mm 实心底。先装中间隔墙，再装抽屉。 / 60 mm; two one-piece drawers, each 126 mm outside / 114 mm inside, with 2 mm floors. Fit the divider before inserting drawers.
 
 ![Exploded view](../../../docs/images/no-ht-2-drawer-layer-exploded.png)

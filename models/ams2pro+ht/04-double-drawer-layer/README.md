@@ -1,5 +1,7 @@
 # 04-double-drawer-layer
 
+![装配预览 / Assembly preview](preview.png)
+
 - D01 隔墙
 - D02 抽屉1
 - D03 抽屉2

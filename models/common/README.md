@@ -1,6 +1,6 @@
 # 两端通用组件 / Common end components
 
-![Plain and pegboard ends](../../docs/images/common-ends.png)
+![Plain and pegboard ends](preview.png)
 
 30 mm / 60 mm 两种高度；相同高度用于 495 mm HT 版和 399 mm 无 HT 版。左右件不可互换。普通版与洞洞板版使用相同定位和连接接口，可以单侧替换。
 
