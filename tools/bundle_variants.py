@@ -1,6 +1,7 @@
 """ZIP the new sets with shared parts, matching manifests, guides and images."""
 from pathlib import Path
 import hashlib,json,zipfile
+from check_bundles import check_bundle
 ROOT=Path(__file__).resolve().parents[1]
 DIST=ROOT/'dist';DIST.mkdir(exist_ok=True)
 for device in ['ams2pro+ht','ams2pro','common']:
@@ -16,7 +17,5 @@ for device in ['ams2pro+ht','ams2pro','common']:
         for p in sorted(files):z.write(p,name+'/'+str(p.relative_to(ROOT)))
         z.writestr(name+'/sha256.json',json.dumps(hashes,indent=2)+'\n')
         z.writestr(name+'/README.md','# StackNest\n\nStart with models/'+device+'/README.md.\n\n先阅读对应 models 目录中的 README。模型未切片，尚未实物验收。\n')
-    with zipfile.ZipFile(archive) as z:
-        assert z.testzip() is None
-        for path,digest in hashes.items():assert hashlib.sha256(z.read(name+'/'+path)).hexdigest()==digest
+    check_bundle(archive)
     print(archive.name,archive.stat().st_size,hashlib.sha256(archive.read_bytes()).hexdigest())

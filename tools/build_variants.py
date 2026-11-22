@@ -13,6 +13,12 @@ from trimesh.exchange.threemf import export_3MF
 
 OUT=ROOT/'models/ams2pro';COMMON=ROOT/'models/common';CHECKS=ROOT/'output/variants'
 
+LABELS={'end_left':'左端框','end_right':'右端框','end_left_1':'左端框','end_right_1':'右端框',
+        'plate_carrier_left':'左板托架','plate_carrier_right':'右板托架','side_left':'左抽屉承架','side_right':'右抽屉承架',
+        'front_beam_1':'前横梁左半','front_beam_2':'前横梁右半','rear_beam_1':'后横梁左半','rear_beam_2':'后横梁右半',
+        'drawer_half_1':'抽屉前半','drawer_half_2':'抽屉后半','drawer_1':'左抽屉','drawer_2':'右抽屉',
+        'divider_1':'中间隔墙','lock_left':'左后锁片','lock_right':'右后锁片','top_1':'左顶件','top_2':'右顶件'}
+
 
 def scene(parts):
     result=trimesh.Scene()
@@ -89,6 +95,7 @@ def build():
                 report['parts'].append({'name':slug+'/'+name,'file':str(file.relative_to(ROOT)), 'sha256':hashlib.sha256(file.read_bytes()).hexdigest()})
             records.append({'id':f'N{chr(65+layer_index)}{len(records)+1:02d}','name':name,'file':str(file.relative_to(ROOT)),
                             'offset_mm':[-96 if right and (name.startswith('end_') or name.startswith('lock_')) else 0,0,0]})
+            records[-1]['label']=LABELS[name]
             assembly[slug+'__'+name]=move(m,[0,0,z]);peg_assembly[slug+'__'+name]=move(peg,[0,0,z]);peg_parts[name]=peg
         pairs=verify(parts,slug);verify(peg_parts,slug+' pegboard')
         scene(parts).export(folder/'layer-assembly.glb')

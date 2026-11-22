@@ -164,6 +164,8 @@ uv run python tools/package.py
 cad run tools/build_variants.py
 uv run python tools/verify_variants.py
 uv run python tools/check_variants.py
+uv run python tools/bundle.py
+uv run python tools/check_bundles.py
 ```
 
 The model is constructed from analytic primitives. Building it does not read STL, GLB, PLY, 3MF, vendor meshes or earlier project revisions. Generated STL units are millimetres. Generated 3MF files contain assembly geometry only, with no printer or support settings.
@@ -202,4 +204,4 @@ Rear beams and seam keys are removable and are not captive. Remove devices and t
 
 The design is based on practical experience with existing community models. The current model builds from parametric geometry without external model meshes. See [design basis](docs/provenance.md).
 
-The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. It has not been sliced or physically tested. The original HT geometry is byte-for-byte unchanged.
+The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. It has not been sliced or physically tested. The HT set has also been updated with the 40 mm five-slot layer and R3 top lip rounds.

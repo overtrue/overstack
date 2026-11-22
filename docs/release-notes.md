@@ -1,3 +1,5 @@
+Checked both widths and common parts against rebuilt source geometry. Download bundles now check internal documentation links as well as file hashes. Corrected an outdated HT geometry statement in the bilingual documentation.
+
 Replaced the staggered pegboard layout with a straight grid: 12 holes in two rows on 40 mm ends, 18 holes in three rows on 60 mm ends. Every 40/60 mm stacking order keeps the same 20 mm row pitch across seams. Updated the fit coupon, illustrations and downloads. Hook fit, cross-seam loads and full SKÅDIS compatibility remain unverified.
 
 Replaced the 30 mm three-slot layer with a 40 mm five-slot layer in both widths. The five slots use 6 mm pitch with 7 mm top clearance for plates up to 1.5 mm thick; six slots would require at least 46 mm at this spacing. Old 30 mm parts are removed from current downloads. Replace the low end frames and carriers together. Complete stacks now hold 13 plates and measure 309 mm (HT) or 249 mm (AMS-only) high.

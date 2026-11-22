@@ -2,16 +2,12 @@
 from pathlib import Path
 import json,sys,os,re
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
-from build_variants import scene
+from build_variants import scene,LABELS
 from geometry import *
 
 OUT=ROOT/'output/numbered';OUT.mkdir(exist_ok=True);jobs=[]
 LAYERS=['5-slot-plate-layer','8-slot-plate-layer','1-drawer-layer','2-drawer-layer','device-top']
-LABELS={'end_left':'左端框','end_right':'右端框','end_left_1':'左端框','end_right_1':'右端框',
-        'plate_carrier_left':'左板托架','plate_carrier_right':'右板托架','side_left':'左抽屉承架','side_right':'右抽屉承架',
-        'front_beam_1':'前横梁左半','front_beam_2':'前横梁右半','rear_beam_1':'后横梁左半','rear_beam_2':'后横梁右半',
-        'drawer_half_1':'抽屉前半','drawer_half_2':'抽屉后半','drawer_1':'左抽屉','drawer_2':'右抽屉',
-        'divider_1':'中间隔墙','lock_left':'左后锁片','lock_right':'右后锁片','top_1':'左顶件','top_2':'右顶件'}
+
 
 for index,slug in enumerate(LAYERS):
     folder=ROOT/'models/ams2pro'/slug;manifest=folder/'parts.json';rows=json.loads(manifest.read_text());parts={}

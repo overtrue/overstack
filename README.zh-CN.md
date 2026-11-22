@@ -164,11 +164,13 @@ uv run python tools/package.py
 cad run tools/build_variants.py
 uv run python tools/verify_variants.py
 uv run python tools/check_variants.py
+uv run python tools/bundle.py
+uv run python tools/check_bundles.py
 ```
 
 模型由参数和基本几何生成，不读取旧版网格或第三方模型文件。STL 单位为毫米；3MF 只有装配几何，不含打印配置，不能直接发送打印。
 
-无 HT 版通过 1081 对总装、1739 对层间组合检查及 36 件新增导出件的 PETG/FDM 检查；仍有支撑、桥接和尖边提示，未完成切片或实物试装。原 HT 版检查涵盖 1653 对装配关系和主要运动路径。40 种不同几何中，36 种通过 PETG/FDM 通用规则检查；4 个抽屉零件有薄壁或薄层错误，另有悬垂、桥接和薄尖边提示。未给出额定承重，设备脚位、底壳、通风和走线需要实际确认。
+无 HT 版通过 1081 对总装、1739 对层间组合检查及 36 件新增导出件的 PETG/FDM 检查；仍有支撑、桥接和尖边提示，未完成切片或实物试装。HT 版也已同步更新 40 mm 五槽层和顶件 R3 圆角。原 HT 版检查涵盖 1653 对装配关系和主要运动路径。40 种不同几何中，36 种通过 PETG/FDM 通用规则检查；4 个抽屉零件有薄壁或薄层错误，另有悬垂、桥接和薄尖边提示。未给出额定承重，设备脚位、底壳、通风和走线需要实际确认。
 
 更多构建、渲染与验证方法见 [English README](README.md)。设计基础见 [provenance](docs/provenance.md)。
 
