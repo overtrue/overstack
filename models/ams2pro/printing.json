@@ -1723,7 +1723,7 @@
     {
       "name": "device-top/top_1",
       "file": "models/ams2pro/device-top/top_1.stl",
-      "sha256": "2614faab65e87500509d1c630a38a54162cc96e1a092005f9efe8abbece9e641",
+      "sha256": "a7782888c5e7d3b1a86d7a9bc8417586a671582959344d760e43227f0a85204a",
       "placement": {
         "assembly_to_print": [
           [
@@ -1774,7 +1774,7 @@
     {
       "name": "device-top/top_2",
       "file": "models/ams2pro/device-top/top_2.stl",
-      "sha256": "2d854c3dd50a259b2188b1a9017dcebcd5bf99152decd9f1b3884a2c918f3a9b",
+      "sha256": "2264fc99d1a86841c631b29f2216cf40700a079a656cdeb1d9687a4fc6ab5875",
       "placement": {
         "assembly_to_print": [
           [

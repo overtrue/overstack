@@ -1137,7 +1137,7 @@
     "name": "device_adapter_1",
     "layer": 5,
     "file": "parts/device_adapter_1.stl",
-    "sha256": "634c542df52e29d4f2662bd53e82bb247cfec1981f8b245c0fb8f479ad8c3dfd",
+    "sha256": "ceba29bc1f65315825bbc9a8ebf01776043b468824c45dcf79302405dc3c765c",
     "bounds_mm": [
       [
         0.0,
@@ -1158,7 +1158,7 @@
     "name": "device_adapter_2",
     "layer": 5,
     "file": "parts/device_adapter_2.stl",
-    "sha256": "4217d525e08be7040432bea1688ddf403b6c2d19ae33062ab5a5651e754133f5",
+    "sha256": "a4e050a90dd612844b6d3d210b6b2ec6231e34279ee7a3c8ddd7c1959137e15f",
     "bounds_mm": [
       [
         247.8000030517578,

@@ -1,5 +1,9 @@
 # 无 HT 顶件 / AMS-only top
 
+两端挡边的四个外露上角已做 R3 mm 圆角，承托面和连接接口不变；打印后仍需检查毛刺。 / The four exposed upper lip ends have R3 mm rounds; bearing faces and joints are unchanged. Check printed parts for burrs.
+
+![R3 挡边端头 / Rounded lip tip](../../../docs/images/lip-r3-detail.png)
+
 ![装配预览 / Assembly preview](preview.png)
 
 只有 AMS 2 Pro 开口，没有 HT 阶梯孔。两片燕尾沿前后方向滑合，再一起落入端框插槽，最后插后锁片。 / One AMS 2 Pro opening, no HT cutout. Slide the two halves together along Y, lower onto the end sockets, then insert the rear keys.

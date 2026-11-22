@@ -14,6 +14,14 @@ def solid_floor(x,width):
     return box(x,0,8.5,width,271,2)
 
 
+def round_lip_tips(lips,width):
+    """R3 on the four exposed upper lip ends; keep the z16 bearing face intact."""
+    from shapely.geometry import Point
+    corner=rectangle(57,23,60,26).difference(Point(57,23).buffer(3,quad_segs=24))
+    tool=xz_extrude(corner,-1,289)
+    return cut(lips,union([tool,mirror_x(tool,width)]))
+
+
 def top_parts():
     """495 x 287 mm bearing frame, independent stepped HT opening and locating lips."""
     outer=rounded_rectangle(0,0,495,287,15)
@@ -25,7 +33,7 @@ def top_parts():
     # Simple 3 mm perimeter lips at both ends; no imported device-shaped surface.
     rim=outer.difference(outer.buffer(-3,join_style=1))
     ends=rectangle(-1,-1,60,288).union(rectangle(435,-1,496,288))
-    lips=union([extrude(p,16,10) for p in rim.intersection(ends).geoms])
+    lips=round_lip_tips(union([extrude(p,16,10) for p in rim.intersection(ends).geoms]),495)
     separator=extrude(rounded_rectangle(371.5,126,4.65,42,1),16,5.5)
     feet=[]
     angles=np.radians(np.linspace(185,265,41))

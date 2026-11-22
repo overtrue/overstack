@@ -1,0 +1,113 @@
+{
+  "material": "PETG",
+  "process": "FDM",
+  "nozzle_mm": 0.4,
+  "layer_mm": 0.2,
+  "parts": [
+    {
+      "name": "ht-F01-device_adapter_1",
+      "file": "models/ams2pro+ht/06-device-top/parts/F01-device_adapter_1.stl",
+      "sha256": "ceba29bc1f65315825bbc9a8ebf01776043b468824c45dcf79302405dc3c765c",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            -0.7071067811865476,
+            221.32442251138937
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            -0.7071067811865475,
+            18.384776310850235
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          221.32442251138937,
+          221.3244225113894,
+          252.5
+        ],
+        "downward_area_mm2": 574.7239765750822,
+        "bed_contact_area_mm2": 6835.091290855411,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.overhang_angle"
+      ]
+    },
+    {
+      "name": "ht-F02-device_adapter_2",
+      "file": "models/ams2pro+ht/06-device-top/parts/F02-device_adapter_2.stl",
+      "sha256": "a4e050a90dd612844b6d3d210b6b2ec6231e34279ee7a3c8ddd7c1959137e15f",
+      "placement": {
+        "assembly_to_print": [
+          [
+            4.329780281177467e-17,
+            -0.7071067811865475,
+            0.7071067811865476,
+            202.9396462005391
+          ],
+          [
+            4.329780281177466e-17,
+            0.7071067811865476,
+            0.7071067811865475,
+            -1.0729195668892168e-14
+          ],
+          [
+            -1.0,
+            0.0,
+            6.123233995736766e-17,
+            495.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_mm": [
+          221.32442251138934,
+          221.32442251138943,
+          247.1999969482422
+        ],
+        "downward_area_mm2": 4867.396255584483,
+        "bed_contact_area_mm2": 6835.091162815183,
+        "supports_required": true,
+        "brim_mm": 3,
+        "required_extruder_area_mm": [
+          256,
+          256
+        ]
+      },
+      "status": "ok",
+      "errors": [],
+      "warnings": [
+        "printing.bridge_length",
+        "printing.overhang_angle"
+      ]
+    }
+  ],
+  "sliced": false,
+  "physical_fit": "not_verified"
+}
