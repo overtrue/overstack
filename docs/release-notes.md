@@ -27,3 +27,5 @@ Equipment previews / 设备效果图：新增当前紧凑组合和完整组合�
 AMS-only preview / 无 HT 效果图：补充 399 mm 宽紧凑组合摆放 AMS 2 Pro 的高清渲染，并同步中英文 README、素材说明和模型下载包。 / Added an AMS 2 Pro render on the 399 mm compact stack, with bilingual README, asset credits and model download packages updated.
 
 切片方案按两档打包：X2D 256 mm 标准板与 H 系列大板（H2S、H2C 独立工程）。小于 256 × 256 mm 不支持。保留原有 HT 单抽屉、三抽屉几何阻塞，不包含可打印工程；尚未实物验证。 / Print profiles are packaged in two editions: X2D 256 mm and H-series, with separate H2S and H2C projects. Smaller beds are unsupported. Existing HT single- and triple-drawer geometry blockers remain excluded from printable projects; physical validation is pending.
+
+切片目录统一按机型命名，新增 P2S 与 H3C 独立配置。标准板包包含 X2D、P2S，大板包包含 H2S、H2C、H3C。 / Print-profile directories now use printer names. Added separate P2S and H3C profiles: the standard-bed package covers X2D and P2S; the large-bed package covers H2S, H2C and H3C.

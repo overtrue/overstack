@@ -13,7 +13,7 @@ for p in paths:
  printer_key=r.get('printer_key','x2d');group=r.get('bed_group','256');project_name=r.get('project_file',printer_key+'-04-petg.3mf')
  relative=str(p.parent.relative_to(P))
  if group!=current_group:
-  current_group=group;lines += ['## '+{'256':'256 mm · X2D','h-series':'H 系列大板 / H-series · H2S / H2C'}[group],'','| Printer | Profile | Status | Plates | Estimated hours | PETG g |','| --- | --- | --- | ---: | ---: | ---: |']
+  current_group=group;lines += ['## '+{'256':'256 mm · X2D / P2S','h-series':'H 系列大板 / H-series · H2S / H2C / H3C'}[group],'','| Printer | Profile | Status | Plates | Estimated hours | PETG g |','| --- | --- | --- | ---: | ---: | ---: |']
  readme=[f"# {r['profile']}",'',f"Status: **{r['status']}**",'',
      r['printer'].replace('Bambu Lab ','')+' · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm', '',
      '端框：普通 / Ends: plain' if r['profile'].startswith('ams2pro') else '试配小件 / Fit specimens','',
@@ -43,7 +43,7 @@ def bundle(name,selected,index=None):
  if index is not None:contents['print-profiles/INDEX.md']=index.encode()
  if name=='stacknest-print-profiles-h-series.zip':
   guide='models/fit-check/README.md'
-  contents[guide]=contents[guide].replace(b'../../print-profiles/fit-check/',b'../../print-profiles/bed-h/h2s/fit-check/')
+  contents[guide]=contents[guide].replace(b'../../print-profiles/x2d/fit-check/',b'../../print-profiles/h2s/fit-check/')
  hashes={n:hashlib.sha256(data).hexdigest() for n,data in contents.items()}
  with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
   for n,data in contents.items():z.writestr(n,data)
@@ -67,6 +67,6 @@ for group,section in [('256',standard),('h-series',large)]:
   rel=p.relative_to(ROOT).parts
   if rel[0]!='print-profiles' or len(rel)==2:
    selected.append(p)
-  elif (rel[1]=='bed-h')==(group=='h-series'):
+  elif TARGETS[rel[1]]['group']==group:
    selected.append(p)
  bundle('stacknest-print-profiles-'+group+'.zip',selected,intro+'## '+section)

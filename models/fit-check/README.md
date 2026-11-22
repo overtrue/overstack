@@ -17,6 +17,6 @@ Use the separate FIT01 pegboard coupon for hooks. Rear keys are removable, not c
 
 [摆盘工程 / Print profiles](../../print-profiles/) · [零件与打印方向 / Parts and orientations](parts.json)
 
-![接口试配盘 / Interface test plate](../../print-profiles/fit-check/interfaces/plate_1.png)
+![接口试配盘 / Interface test plate](../../print-profiles/x2d/fit-check/interfaces/plate_1.png)
 
 样件采用左侧接口；不能替代右前插槽和完整层的实际试装。 / Samples use the left-side interfaces; still test the right-front socket and complete layers physically.

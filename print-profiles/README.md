@@ -8,8 +8,8 @@ Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-ser
 
 两版下载包 / Two download packages:
 
-- `stacknest-print-profiles-256.zip`：X2D 标准板版 / X2D standard bed.
-- `stacknest-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C 工程 / Large-bed edition with separate H2S and H2C projects.
+- `stacknest-print-profiles-256.zip`：X2D、P2S 标准板版 / X2D and P2S standard beds.
+- `stacknest-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C、H3C 工程 / Large-bed edition with separate H2S, H2C and H3C projects.
 
 `stacknest-print-profiles-preview.zip` 保留为两版合集。 / The preview ZIP contains both editions.
 
@@ -18,13 +18,15 @@ Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-ser
 | Group / 分组 | Printer / 切片机型 | Slicing region / 摆盘范围 | Directory / 目录 |
 | --- | --- | --- | --- |
 | 小于 256 × 256 mm / Smaller beds | A1 mini 等 / e.g. A1 mini | **不支持 / Unsupported** | No project / 不提供工程 |
-| 256 mm | X2D | 256 × 256 × 260 mm | Existing root directories / 沿用原有目录 |
-| H 系列大板 / H-series | H2S | 340 × 320 × 340 mm | `bed-h/h2s/` |
-| H 系列大板 / H-series | H2C | X 25–325, Y 0–320, Z 0–320 mm | `bed-h/h2c/` |
+| 256 mm | X2D | 256 × 256 × 260 mm | `x2d/` |
+| 256 mm | P2S | 256 × 256 × 256 mm | `p2s/` |
+| H 系列大板 / H-series | H2S | 340 × 320 × 340 mm | `h2s/` |
+| H 系列大板 / H-series | H2C | X 25–325, Y 0–320, Z 0–320 mm | `h2c/` |
+| H 系列大板 / H-series | H3C | 330 × 320 × 325 mm | `h3c/` |
 
-这里按**用于打印零件的板尺寸**分组，不改变底座收纳的钢板规格：收纳层仍只针对 256 × 256 mm 打印面积级别的钢板。尺寸相近不代表机器配置通用，256 mm 组仅验证 X2D；其他同尺寸机型仍需重新切片。
+这里按**用于打印零件的板尺寸**分组，不改变底座收纳的钢板规格：收纳层仍只针对 256 × 256 mm 打印面积级别的钢板。尺寸相近不代表机器配置通用，256 mm 组分别验证 X2D、P2S；其他同尺寸机型仍需重新切片。
 
-These groups describe the beds used to manufacture the parts. They do not change the rack's stored-plate compatibility, which remains the 256 × 256 mm printable-area class. Similar bed sizes do not make printer presets interchangeable: only X2D is validated in the 256 mm group.
+These groups describe the beds used to manufacture the parts. They do not change the rack's stored-plate compatibility, which remains the 256 × 256 mm printable-area class. Similar bed sizes do not make printer presets interchangeable: X2D and P2S are validated separately in the 256 mm group.
 
 H2C 保留官方 330 × 320 mm 板配置，但摆盘限制在两喷嘴范围交集（300 × 320 mm，X 从 25 mm 起），并使用较小的 320 mm 高度限制。H2S 使用独立的 340 × 320 mm 配置。范围以当前 Studio 官方预设中的 `printable_area`、`extruder_printable_area`、`extruder_printable_height` 为依据，不修改机器固件参数。
 
@@ -36,7 +38,7 @@ Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsuppor
 
 ## 组织 / Organization
 
-以下目录结构在各机型目录内保持一致，256 mm 组沿用根目录。 / The same structure is used inside each printer directory; the 256 mm baseline stays at the root.
+根目录只放说明和索引；`x2d/`、`p2s/`、`h2s/`、`h2c/`、`h3c/` 内统一使用以下结构，并分别保存 `presets/`。 / The root holds documentation and the index. Each printer directory uses the structure below and its own `presets/`.
 
 - `fit-check/`：先打印试配件。包括孔板、燕尾、板槽、锁片和堆叠脚；只验证局部配合，不验证承重。
 - `ams2pro/`：399 mm 宽完整功能层。
@@ -63,7 +65,7 @@ All profiles remain `makerworld_ready=false` until print, support-removal, assem
 
 ## 文件 / Files
 
-- `<printer>-04-petg.3mf`（`x2d`、`h2s`、`h2c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
+- `<printer>-04-petg.3mf`（`x2d`、`p2s`、`h2s`、`h2c`、`h3c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
 - `manifest.json`：来源文件及 SHA-256、数量、摆放变换、打印条件和验证状态。
 - `slice-validation.json`：新增机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for the additional printers.
 - `plate_*.png`、`slice-info.xml`：实际切片产生的预览与耗材/时间估算；不是实拍或实测。
@@ -76,9 +78,11 @@ The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in
 
 ```sh
 cad run tools/build_fit_checks.py
-cad run tools/build_print_profiles.py --slice
+cad run tools/build_print_profiles.py --printer x2d --slice
+cad run tools/build_print_profiles.py --printer p2s --slice
 cad run tools/build_print_profiles.py --printer h2s --slice
 cad run tools/build_print_profiles.py --printer h2c --slice
+cad run tools/build_print_profiles.py --printer h3c --slice
 python3 tools/check_sliced_targets.py
 cad run tools/check_print_profiles.py
 ```

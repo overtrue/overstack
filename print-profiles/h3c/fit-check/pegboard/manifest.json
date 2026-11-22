@@ -1,0 +1,122 @@
+{
+  "profile": "fit-check/pegboard",
+  "printer": "Bambu Lab H3C",
+  "nozzle_mm": 0.4,
+  "material": "Bambu PETG Basic",
+  "bed": "Textured PEI Plate",
+  "layer_mm": 0.2,
+  "end_style": null,
+  "studio_version": "02.09.01.70",
+  "source_commit": "2e4aa63a663364bb26df21b19afe6414ef2096a0",
+  "physical_fit": "not_verified",
+  "load_test": "not_verified",
+  "makerworld_ready": false,
+  "parts": [
+    {
+      "id": "FIT01",
+      "source": "models/common/pegboard_fit_coupon.stl",
+      "sha256": "bae3ef56ad5b3275c48ca6788503cf9b0ff0ff4598da6636e39ba5182fb5399e",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        80.0,
+        80.0,
+        5.0
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 5974.573080227672,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        330,
+        320
+      ]
+    }
+  ],
+  "status": "sliced_not_printed",
+  "printer_key": "h3c",
+  "bed_group": "h-series",
+  "printable_area_mm": [
+    0,
+    0,
+    330,
+    320
+  ],
+  "build_height_mm": 325,
+  "project_file": "h3c-04-petg.3mf",
+  "preset_directory": "print-profiles/h3c/presets",
+  "model_source_hashes": {
+    "src/stacknest/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
+    "src/stacknest/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
+    "src/stacknest/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
+    "src/stacknest/fabrication.py": "e7c2a3d7d2f6c8dcb95bf074bc42e1f92f85f66a5ed9b82b8c21ea99600753a6",
+    "src/stacknest/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/stacknest/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
+    "src/stacknest/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/stacknest/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/stacknest/storage.py": "53862a6df80d90e17903d85e32b9b7d9edd96da5c208583a8b5e0f8e3183a661",
+    "src/stacknest/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/stacknest/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
+    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
+    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
+    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+  },
+  "validation_source": {
+    "file": "models/ams2pro/printing.json",
+    "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+  },
+  "preset_hashes": {
+    "printer.json": "fe80a9e893d22839df991e5bdcb2276d03caadc0972e7f85650d8f41bd8ba5e3",
+    "filament-1.json": "6382ac7d25e310ce640fb1008cc1e34ea05d959ec61287f504c262cb4bb54edb",
+    "process.json": "f3f944fe13b32924c06d1097edaa73100d1465723a53b07869a6abfec757e4cf"
+  },
+  "process_overrides": {
+    "curr_bed_type": "Textured PEI Plate",
+    "wall_loops": "4",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "0",
+    "support_type": "tree(auto)",
+    "brim_type": "outer_only",
+    "brim_width": "3"
+  },
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 FIT01",
+      "objects": [
+        "FIT01-pegboard_fit_coupon"
+      ]
+    }
+  ],
+  "project_sha256": "d09bc3ddde778cbd83667c63cf5a9c808834a982f7672b63aa7abb45eb71dabe",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_1.gcode"
+  ]
+}
