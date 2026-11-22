@@ -1,0 +1,24 @@
+{
+  "version": "V54",
+  "parts": 58,
+  "assembly_pairs": 1653,
+  "distinct_geometries": 40,
+  "printing_statuses": [
+    "ok"
+  ],
+  "warnings": [
+    "no_bed_contact",
+    "printing.bridge_length",
+    "printing.gap",
+    "printing.knife_edge",
+    "printing.overhang_angle"
+  ],
+  "physical_fit": "not_verified",
+  "load_rating": null,
+  "sliced": false,
+  "printing_candidate_limitations": [
+    "Single-drawer front and rear halves have no planar bed contact in the candidate poses.",
+    "Single-drawer rear half candidate height is 260.586 mm, exceeding the 260 mm target.",
+    "Candidate poses are not release-ready print layouts; revise orientation and supports before slicing."
+  ]
+}

@@ -6,6 +6,10 @@ A modular storage base for AMS 2 Pro and AMS HT: two plate-storage layers, three
 
 **V54 is an unprinted digital prototype.** Geometry and generic FDM checks have passed; device fit, slicing, load capacity and physical assembly have not been validated. The drawings show the model, not a finished print.
 
+## Model files
+
+Browse the [V54 models by layer](models/v54/): 58 STL parts, six geometry-only 3MF assemblies, per-layer GLBs and the complete assembly. Individual files are stored directly in this repository.
+
 ## Contents
 
 - 30 mm three-slot plate layer with integral front closures
