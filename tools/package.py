@@ -20,6 +20,8 @@ def write_layer_readme(path,records):
     slug=path.name
     image=f'../../../docs/images/{slug}-assembly-zh.png'
     text=f'# {slug}\n\n![装配预览 / Assembly preview](preview.png)\n\n'
+    if slug in ('01-three-slot-plate-layer','02-eight-slot-plate-layer'):
+        text+='**打印板适配：当前所有三槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。\n\n**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.\n\n'
     text+='## 零件编号 / Part IDs\n\n编号对应下方爆炸图和 STL 文件名；点击编号下载对应零件。左右以面对抽屉／打印板入口为准。\n\n'
     text+='Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.\n\n'
     text+=f'![带零件编号的爆炸图 / Numbered exploded view]({image})\n\n'

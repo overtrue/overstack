@@ -1,5 +1,7 @@
 # StackNest · 叠序
 
+**Build plate compatibility: all current three- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
+
 A modular storage base for AMS 2 Pro, with or without AMS HT: stackable plate-storage layers, drawers and a matching device top.
 
 | AMS 2 Pro + HT | AMS 2 Pro only |
