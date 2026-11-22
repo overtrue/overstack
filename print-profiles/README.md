@@ -4,6 +4,10 @@
 
 Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-series beds. Each printer uses its own official Bambu Studio 02.09.01.70 preset, a 0.4 mm nozzle, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
 
+X2D 的 AMS 2 Pro + HT 单抽屉层已重新优化：按悬垂面积优先选方向，两半抽屉分别翻面；按投影轮廓和裙边间距合盘，9 盘减为 7 盘。实际 G-code 统计支撑约 134.1 g → 30.5 g；原第 07 盘对应的半抽屉约 97.6 g → 0.9 g。其他现有工程尚未套用这次摆盘优化。方向搜索和合盘是启发式，不保证全局最少支撑或盘数。
+
+The X2D AMS 2 Pro + HT single-drawer profile now chooses each half's orientation separately, prioritizes overhang reduction, and packs projected outlines with brim clearance: 9 plates become 7. Support extrusion in the G-code falls from about 134.1 g to 30.5 g; the drawer half formerly on plate 07 falls from 97.6 g to 0.9 g. Other existing profiles have not yet been rebuilt with this layout change. The search and packing are heuristics, not a proof of a global optimum.
+
 [配置索引 / Profile index](INDEX.md) · [抽屉修复说明 / Drawer repair](../docs/drawer-repair.md)
 
 两版下载包 / Two download packages:

@@ -1,0 +1,131 @@
+{
+  "before": [
+    {
+      "plate": "Metadata/plate_1.gcode",
+      "total_g": 1.71,
+      "support_g": 0.0
+    },
+    {
+      "plate": "Metadata/plate_5.gcode",
+      "total_g": 22.68,
+      "support_g": 0.0
+    },
+    {
+      "plate": "Metadata/plate_4.gcode",
+      "total_g": 24.07,
+      "support_g": 0.63
+    },
+    {
+      "plate": "Metadata/plate_3.gcode",
+      "total_g": 203.07,
+      "support_g": 0.65
+    },
+    {
+      "plate": "Metadata/plate_2.gcode",
+      "total_g": 202.71,
+      "support_g": 0.67
+    },
+    {
+      "plate": "Metadata/plate_6.gcode",
+      "total_g": 217.39,
+      "support_g": 0.79
+    },
+    {
+      "plate": "Metadata/plate_9.gcode",
+      "total_g": 194.78,
+      "support_g": 17.0
+    },
+    {
+      "plate": "Metadata/plate_8.gcode",
+      "total_g": 194.64,
+      "support_g": 16.76
+    },
+    {
+      "plate": "Metadata/plate_7.gcode",
+      "total_g": 313.45,
+      "support_g": 97.57
+    }
+  ],
+  "after": [
+    {
+      "plate": "Metadata/plate_1.gcode",
+      "total_g": 55.55,
+      "support_g": 0.0
+    },
+    {
+      "plate": "Metadata/plate_2.gcode",
+      "total_g": 202.71,
+      "support_g": 0.67
+    },
+    {
+      "plate": "Metadata/plate_3.gcode",
+      "total_g": 203.07,
+      "support_g": 0.65
+    },
+    {
+      "plate": "Metadata/plate_4.gcode",
+      "total_g": 217.39,
+      "support_g": 0.79
+    },
+    {
+      "plate": "Metadata/plate_5.gcode",
+      "total_g": 216.87,
+      "support_g": 0.86
+    },
+    {
+      "plate": "Metadata/plate_6.gcode",
+      "total_g": 213.01,
+      "support_g": 13.69
+    },
+    {
+      "plate": "Metadata/plate_7.gcode",
+      "total_g": 213.05,
+      "support_g": 13.8
+    }
+  ],
+  "method": "Sum positive XY extrusion moves under Support and Support interface G-code features; 1.75 mm filament, density 1.25 g/cm3. Excludes retractions and purge.",
+  "before_project_sha256": "2dcb84134de96d1e257cd2fe0565f3eec969671c98bc5196009b16470a23a1fd",
+  "after_project_sha256": "4cb00874a774ce94a79ac5bc8777ecf99eec5693bd79beca6cc0a7e40ffabd62",
+  "manufacturing_checks": [
+    {
+      "file": "C01-C01-seam_2_False_layer_lock-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C02-C02-seam_2_True_layer_lock-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C03-C03-standard_2_cassette_drawer_1-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C04-C04-standard_2_cassette_drawer_2-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C05-C05-standard_2_cassette_drawer_3-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C06-C06-standard_2_cassette_drawer_4-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C07-C07-standard_2_drawer_1-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C08-C08-standard_2_drawer_2-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C09-C09-standard_2_end_left_1-dfm.json",
+      "status": "ok"
+    },
+    {
+      "file": "C10-C10-standard_2_end_right_1-dfm.json",
+      "status": "ok"
+    }
+  ]
+}

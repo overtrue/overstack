@@ -25,6 +25,7 @@ for p in paths:
   files.extend(p.parent/f"plate_{q['number']}.png" for q in r['plates'])
   if (p.parent/'printing-checks.json').exists():files.append(p.parent/'printing-checks.json')
   files.append(p.parent/'slice-validation.json')
+  if (p.parent/'layout-validation.json').exists():files.append(p.parent/'layout-validation.json')
   readme += [f'[打开摆盘工程 / Open project]({project_name})','',f'预计 / Estimate: {hours:.1f} h · {weight:.1f} g PETG','',
      '| Plate | Parts | Preview |','| --- | --- | --- |']
   for plate in r['plates']:

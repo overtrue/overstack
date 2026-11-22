@@ -4,8 +4,7 @@ import argparse,hashlib,json,subprocess,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/stacknest'))
 from geometry import trimesh,np
-from fabrication import orient,drawer_print_pose
-from multi_drawers import orient_candidate
+from print_layout import orient_for_area,pack
 from print_profile_targets import TARGETS
 TARGET=TARGETS['x2d'];PRINTER_KEY='x2d'
 STUDIO='/Applications/BambuStudio.app/Contents/MacOS/BambuStudio'
@@ -35,29 +34,8 @@ def run(args,folder,log):
     return result.returncode,result.stdout
 
 def orient_for_target(mesh):
-    if PRINTER_KEY=='x2d':
-        try:return orient(mesh)
-        except AssertionError:return orient_candidate(mesh)
-    x0,y0,x1,y1=TARGET['area'];limit=np.array([x1-x0-6,y1-y0-6,TARGET['height']])
-    candidates=[]
-    for axis,angle in [([1,0,0],0),([1,0,0],np.pi),([1,0,0],np.pi/2),
-                       ([1,0,0],-np.pi/2),([0,1,0],np.pi/2),([0,1,0],-np.pi/2)]:
-        for yaw in [0,np.pi/2,np.pi/4,-np.pi/4]:
-            t=trimesh.transformations.rotation_matrix(yaw,[0,0,1])@trimesh.transformations.rotation_matrix(angle,axis)
-            m=mesh.copy();m.apply_transform(t)
-            if np.any(m.extents>limit):continue
-            shift=-m.bounds[0];m.apply_translation(shift);t[:3,3]+=shift
-            down=m.face_normals[:,2]<-.707;elevated=m.triangles_center[:,2]>.25
-            overhang=float(m.area_faces[down&elevated].sum());bed=float(m.area_faces[down&~elevated].sum())
-            if bed<1:continue
-            # Leave room for tree support branches on the narrower dual-nozzle bed.
-            if PRINTER_KEY=='h2c' and overhang>1 and np.any(m.extents[:2]>limit[:2]-24):continue
-            candidates.append((overhang-2*bed,m,t,overhang,bed))
-    assert candidates,('no fitting planar orientation',mesh.extents.tolist())
-    _,m,t,overhang,bed=min(candidates,key=lambda v:v[0])
-    return m,{'assembly_to_print':t.tolist(),'bounds_mm':m.extents.tolist(),
-              'downward_area_mm2':overhang,'bed_contact_area_mm2':bed,'supports_required':overhang>1,
-              'brim_mm':3,'required_extruder_area_mm':[x1-x0,y1-y0]}
+    return orient_for_area(mesh,TARGET['area'],TARGET['height'])
+
 
 def build(key,rows,slice_project):
     dest=OUT/key;dest.mkdir(parents=True,exist_ok=True)
@@ -74,9 +52,7 @@ def build(key,rows,slice_project):
     for r in rows:
         source=ROOT/r['file'];mesh=trimesh.load_mesh(source)
         try:
-            if any(n in source.stem for n in ['standard_2_drawer_','3drawers_drawer_']):
-                printed,pose=drawer_print_pose(mesh)
-            else:printed,pose=orient_for_target(mesh)
+            printed,pose=orient_for_target(mesh)
         except AssertionError:
             blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
             report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
@@ -114,17 +90,7 @@ def build(key,rows,slice_project):
     (work/'process.json').write_text(json.dumps(process,indent=2))
     report['preset_hashes']={p.name:digest(p) for p in preset.glob('*.json')}
     report['process_overrides']={k:process[k] for k in ['curr_bed_type','wall_loops','sparse_infill_density','sparse_infill_pattern','enable_support','support_type','brim_type','brim_width']}
-    groups=[];small=None;x=x0+8;y=y0+8;row_height=0
-    for path,r in zip(inputs,report['parts']):
-        w,h,_=r['bounds_mm'];obj={'path':path,'count':1,'filaments':[1]}
-        # Tall supported parts need their own plate: tree branches can cross the mesh footprint.
-        if max(w,h)>180 or (PRINTER_KEY!='x2d' and r['supports_required'] and r['bounds_mm'][2]>180):
-            groups.append([obj]);continue
-        if small is None:small=[];groups.append(small)
-        if x+w>x1-8:x=x0+8;y+=row_height+10;row_height=0
-        if y+h>y1-8:small=[];groups.append(small);x=x0+8;y=y0+8;row_height=0
-        obj.update(pos_x=[x+w/2-TARGET['bed'][0]/2],pos_y=[y+h/2-TARGET['bed'][1]/2])
-        small.append(obj);x+=w+10;row_height=max(row_height,h)
+    groups=pack(inputs,report['parts'],TARGET)
     identifiers={path:r['id'] for path,r in zip(inputs,report['parts'])}
     assembly={'plates':[{'plate_name':f'{i+1:02d} '+', '.join(identifiers[o['path']] for o in group),
         'need_arrange':False,'objects':group} for i,group in enumerate(groups)]}
@@ -153,6 +119,7 @@ def build(key,rows,slice_project):
         report['status']='slice_failed' if code or not (work/'sliced.3mf').exists() else 'sliced_not_printed'
         if report['status']=='slice_failed':report['slice_error']=log[-3000:]
         else:
+            for old in dest.glob('plate_*.png'):old.unlink()
             with zipfile.ZipFile(work/'sliced.3mf') as z:
                 for n in z.namelist():
                     if n.startswith('Metadata/plate_') and n.endswith('.png') and '_small' not in n and 'no_light' not in n:(dest/Path(n).name).write_bytes(z.read(n))
