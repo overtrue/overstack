@@ -16,6 +16,20 @@ def label(n):
     if 'drawer' in n:return '抽屉'+n.rsplit('_',1)[1]
     raise ValueError(n)
 
+def write_layer_readme(path,records):
+    slug=path.name
+    image=f'../../../docs/images/{slug}-assembly-zh.png'
+    text=f'# {slug}\n\n![装配预览 / Assembly preview](preview.png)\n\n'
+    text+='## 零件编号 / Part IDs\n\n编号对应下方爆炸图和 STL 文件名；点击编号下载对应零件。左右以面对抽屉／打印板入口为准。\n\n'
+    text+='Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.\n\n'
+    text+=f'![带零件编号的爆炸图 / Numbered exploded view]({image})\n\n'
+    text+='| 编号 / ID | 零件 |\n| --- | --- |\n'
+    for r in records:text+=f'| [{r["id"]}](parts/{Path(r["packaged_file"]).name}) | {r["label"]} |\n'
+    text+=f'\n[中文组装教程](../../../docs/pdf/{slug}-assembly-zh.pdf) · [English assembly guide](../../../docs/pdf/{slug}-assembly-en.pdf)\n\n'
+    text+='STL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n'
+    (path/'README.md').write_text(text)
+
+
 def package(source,dest):
     dest.mkdir(parents=True,exist_ok=True);data=json.loads((source/'checks.json').read_text());whole=trimesh.Scene();records=[]
     for group,(prefix,folder,z) in enumerate(LAYERS):
@@ -34,7 +48,7 @@ def package(source,dest):
             world=move(m,[0,0,z]);world.unmerge_vertices();world.vertex_normals=np.repeat(m.face_normals,3,axis=0);world.apply_scale(.001);world.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]));whole.add_geometry(world,node_name=ident,geom_name=ident,parent_node_name=folder)
             record={**r,'id':ident,'label':title,'packaged_file':str((path/'parts'/filename).relative_to(dest))};records.append(record)
         glb.export(path/'layer-assembly.glb');(path/'layer-assembly-geometry.3mf').write_bytes(export_3MF(layer))
-        (path/'README.md').write_text('# '+folder+'\n\n![Assembly preview](preview.png)\n\n'+ '\n'.join(f'- {r["id"]} {r["label"]}' for r in records if r['layer']==group)+'\n\nSTL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n')
+        write_layer_readme(path,[r for r in records if r['layer']==group])
     whole.export(dest/'stacknest-assembly.glb')
     (dest/'parts.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
     check=trimesh.load(dest/'stacknest-assembly.glb');assert len(check.graph.nodes_geometry)==58
