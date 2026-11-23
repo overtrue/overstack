@@ -236,6 +236,6 @@ The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair check
 
 ## License
 
-Copyright © 2026 [overtrue](https://github.com/overtrue). StackNest models, parametric source, tooling and documentation in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+Copyright © 2026 [overtrue](https://github.com/overtrue). Overstack models, parametric source, tooling and documentation in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
 
 You may 3D-print, modify, and share the models for **personal use**, with attribution. **Commercial sale and other commercial use are not allowed.** Third-party device CAD used only for rendering is not covered; see [render asset credits](docs/render-assets.md). Full legal text: [LICENSE](LICENSE).

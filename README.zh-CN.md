@@ -205,6 +205,6 @@ uv run python tools/check_bundles.py
 
 ## 许可
 
-版权所有 © 2026 [overtrue](https://github.com/overtrue)。本仓库中的 StackNest 模型、参数化源码、工具链与文档采用 [知识共享 署名-非商业性使用 4.0 国际 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可。
+版权所有 © 2026 [overtrue](https://github.com/overtrue)。本仓库中的 Overstack 模型、参数化源码、工具链与文档采用 [知识共享 署名-非商业性使用 4.0 国际 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可。
 
 您可以为**个人用途**自行 3D 打印、修改并在注明出处的前提下分享这些模型。**禁止商业销售及其他商业用途。** 仅用于渲染的第三方设备 CAD 不在许可范围内，见[素材说明](docs/render-assets.md)。完整法律文本见 [LICENSE](LICENSE)。
