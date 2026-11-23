@@ -1,7 +1,7 @@
 """Arrange the generated assembly into six named layers and numbered parts."""
 from pathlib import Path
 import sys,json,argparse,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from trimesh.exchange.threemf import export_3MF
 LAYERS=[('A','01-five-slot-plate-layer',0),('B','02-eight-slot-plate-layer',40),('C','03-single-drawer-layer',100),('D','04-double-drawer-layer',160),('E','05-triple-drawer-layer',220),('F','06-device-top',280)]
@@ -57,9 +57,9 @@ def package(source,dest):
             record={**r,'id':ident,'label':title,'packaged_file':str((path/'parts'/filename).relative_to(dest))};records.append(record)
         glb.export(path/'layer-assembly.glb');(path/'layer-assembly-geometry.3mf').write_bytes(export_3MF(layer))
         write_layer_readme(path,[r for r in records if r['layer']==group])
-    whole.export(dest/'stacknest-assembly.glb')
+    whole.export(dest/'overstack-assembly.glb')
     (dest/'parts.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
-    check=trimesh.load(dest/'stacknest-assembly.glb');assert len(check.graph.nodes_geometry)==58
+    check=trimesh.load(dest/'overstack-assembly.glb');assert len(check.graph.nodes_geometry)==58
     for prefix,folder,z in LAYERS:
         loaded=trimesh.load(dest/folder/'layer-assembly-geometry.3mf')
         assert len(loaded.graph.nodes_geometry)==sum(r['packaged_file'].startswith(folder+'/') for r in records)

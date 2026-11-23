@@ -4,7 +4,7 @@ import json,sys
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src/stacknest'))
+sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import trimesh
 from package import LAYERS
 job=next(j for j in json.loads((ROOT/'output/illustrations/jobs.json').read_text()) if j['key']=='stack-exploded')

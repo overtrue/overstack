@@ -5,7 +5,7 @@ from check_bundles import check_bundle
 ROOT=Path(__file__).resolve().parents[1]
 DIST=ROOT/'dist';DIST.mkdir(exist_ok=True)
 for device in ['ams2pro+ht','ams2pro','common']:
-    name='stacknest-'+device
+    name='overstack-'+device
     folders=['models/'+device]+(['models/common'] if device!='common' else [])
     files=[ROOT/'LICENSE']
     for folder in folders:files.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
@@ -19,6 +19,6 @@ for device in ['ams2pro+ht','ams2pro','common']:
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         for p in sorted(files):z.write(p,name+'/'+str(p.relative_to(ROOT)))
         z.writestr(name+'/sha256.json',json.dumps(hashes,indent=2)+'\n')
-        z.writestr(name+'/README.md','# StackNest\n\nStart with models/'+device+'/README.md.\n\n先阅读对应 models 目录中的 README。模型未切片，尚未实物验收。\n')
+        z.writestr(name+'/README.md','# Overstack\n\nStart with models/'+device+'/README.md.\n\n先阅读对应 models 目录中的 README。模型未切片，尚未实物验收。\n')
     check_bundle(archive)
     print(archive.name,archive.stat().st_size,hashlib.sha256(archive.read_bytes()).hexdigest())

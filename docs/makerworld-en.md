@@ -1,4 +1,4 @@
-# StackNest - Modular AMS Storage Base
+# Overstack - Modular AMS Storage Base
 
 A layered storage base for build plates, tools, AMS 2 Pro and AMS HT. The complete arrangement includes five-slot and eight-slot plate layers, single-, double- and triple-drawer layers, and a split device top.
 

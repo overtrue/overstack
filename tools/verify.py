@@ -1,7 +1,7 @@
 """Check exported deliverables and the absence of external model inputs."""
 from pathlib import Path
 import sys,json,ast
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 D=ROOT/'output/model';data=json.loads((D/'checks.json').read_text())
 assert len(data['parts'])==58
@@ -19,7 +19,7 @@ for n in scene.graph.nodes_geometry:
     m.apply_transform(trimesh.transformations.rotation_matrix(np.pi/2,[1,0,0]));m.apply_scale(1000);bounds.append(m.bounds)
 assert np.allclose(np.max(np.array(bounds)[:,1],axis=0)-np.min(np.array(bounds)[:,0],axis=0),[495,287,309],atol=.001)
 # Geometry constructors may only create shapes; model-file loaders are forbidden.
-for path in (ROOT/'src/stacknest').glob('*.py'):
+for path in (ROOT/'src/overstack').glob('*.py'):
     tree=ast.parse(path.read_text())
     for node in ast.walk(tree):
         if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute):

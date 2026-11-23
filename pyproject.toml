@@ -1,5 +1,5 @@
 [project]
-name = "stacknest"
+name = "overstack"
 version = "0.1.0"
 description = "A modular, stackable storage system for AMS 2 Pro, with or without AMS HT"
 requires-python = ">=3.12"

@@ -15,6 +15,6 @@
 | 05 triple-drawer-layer | [PDF](05-triple-drawer-layer-assembly-zh.pdf) | [PDF](05-triple-drawer-layer-assembly-en.pdf) |
 | 06 device-top | [PDF](06-device-top-assembly-zh.pdf) | [PDF](06-device-top-assembly-en.pdf) |
 
-Combined reference: [中文](stacknest-assembly-zh.pdf) / [English](stacknest-assembly-en.pdf).
+Combined reference: [中文](overstack-assembly-zh.pdf) / [English](overstack-assembly-en.pdf).
 
 This is an unprinted digital prototype. /尚未实物试装。

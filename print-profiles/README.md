@@ -16,10 +16,10 @@ Side panels with rails and protrusions are compared separately. An H2S single-pa
 
 两版下载包 / Two download packages:
 
-- `stacknest-print-profiles-256.zip`：X2D、P2S 标准板版 / X2D and P2S standard beds.
-- `stacknest-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C、H3C 工程 / Large-bed edition with separate H2S, H2C and H3C projects.
+- `overstack-print-profiles-256.zip`：X2D、P2S 标准板版 / X2D and P2S standard beds.
+- `overstack-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C、H3C 工程 / Large-bed edition with separate H2S, H2C and H3C projects.
 
-`stacknest-print-profiles-preview.zip` 保留为两版合集。 / The preview ZIP contains both editions.
+`overstack-print-profiles-preview.zip` 保留为两版合集。 / The preview ZIP contains both editions.
 
 ## 打印板尺寸分组 / Build-plate groups
 

@@ -1,7 +1,7 @@
 """Extract small fit specimens from the same analytic interfaces as production parts."""
 from pathlib import Path
 import sys,json,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from base import build_module
 from layer_locks import layer_lock

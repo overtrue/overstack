@@ -1,7 +1,7 @@
 """Validate floors and unchanged functional interface regions against V54."""
 from pathlib import Path
 import sys,json
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 new=ROOT/'output/model';old=ROOT/'output/model-v54'
 rows=json.loads((new/'checks.json').read_text())['parts'];changed=[]

@@ -1,8 +1,8 @@
 # Equipment render assets / 设备渲染素材
 
-The equipment in `showcase-compact.png`, `showcase-full.png` and `showcase-no-ht.png` uses the original, unscaled STEP assemblies by **Engineered Reality**, with rendering materials applied. These are measured community CAD models, not official Bambu Lab CAD or photographs. Spools and build plates are illustrative; the base uses the current exported StackNest parts.
+The equipment in `showcase-compact.png`, `showcase-full.png` and `showcase-no-ht.png` uses the original, unscaled STEP assemblies by **Engineered Reality**, with rendering materials applied. These are measured community CAD models, not official Bambu Lab CAD or photographs. Spools and build plates are illustrative; the base uses the current exported Overstack parts.
 
-设备效果图使用 **Engineered Reality** 的原始 STEP 装配模型，保持原比例，仅设置渲染材质。这是社区实测模型，不是拓竹官方 CAD 或实拍照片；料盘和打印板为展示模型，底座来自当前 StackNest 导出零件。图中摆放不代表脚垫、通风、开盖净空或承重已实物验证。
+设备效果图使用 **Engineered Reality** 的原始 STEP 装配模型，保持原比例，仅设置渲染材质。这是社区实测模型，不是拓竹官方 CAD 或实拍照片；料盘和打印板为展示模型，底座来自当前 Overstack 导出零件。图中摆放不代表脚垫、通风、开盖净空或承重已实物验证。
 
 | Asset / 素材 | Source / 来源 | Source license / 页面许可 |
 | --- | --- | --- |

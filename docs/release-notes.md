@@ -2,7 +2,7 @@
 
 修复 HT 单抽屉拼接槽薄壁：改为左右两半，槽周围加厚，内侧加强筋凸起 0.8 mm；旧前后两半需成对替换。三抽屉模型不变，侧放40°后通过制造检查。41种不同几何均通过 PETG/FDM 检查，装配和运动检查通过；两层按五种机型重新切片，教程和下载包同步更新，尚未实物验证。 / Fixed the HT single-drawer joint with reinforced left/right halves and a local 0.8 mm interior ridge; replace both old front/rear halves. Triple-drawer geometry is unchanged and passes manufacturing checks side-down at 40 degrees. All 41 distinct geometries pass PETG/FDM checks, with assembly and motion checks passed. Both layers are resliced for all five printers, with updated guides and downloads. Physical validation is pending.
 
-Added X2D 0.4 mm / PETG Bambu Studio projects, organized as complete functional layers with named plates, source hashes and slice previews. Small interface specimens cover dovetails, plate ledges, rear keys and stacking feet, alongside the pegboard coupon. Only fully sliced projects enter `stacknest-print-profiles-preview.zip`; physical fit and MakerWorld publication remain pending. The former HT single- and triple-drawer blockers are resolved in the latest update above.
+Added X2D 0.4 mm / PETG Bambu Studio projects, organized as complete functional layers with named plates, source hashes and slice previews. Small interface specimens cover dovetails, plate ledges, rear keys and stacking feet, alongside the pegboard coupon. Only fully sliced projects enter `overstack-print-profiles-preview.zip`; physical fit and MakerWorld publication remain pending. The former HT single- and triple-drawer blockers are resolved in the latest update above.
 
 Checked both widths and common parts against rebuilt source geometry. Download bundles now check internal documentation links as well as file hashes. Corrected an outdated HT geometry statement in the bilingual documentation.
 
@@ -16,11 +16,11 @@ Added a 399 × 287 mm AMS-only set with five/eight-slot plate layers, single/dou
 
 Both widths share the 40/60 mm end frames and rear keys. Pegboard ends use 5 × 15 mm slots in aligned columns, a 5 mm panel, 40 mm horizontal pitch and 20 mm vertical pitch. A fit coupon is included; actual accessory fit and payload remain untested.
 
-Downloads: `stacknest-ams2pro+ht.zip` is the original HT set, `stacknest-ams2pro.zip` includes the AMS-only set plus common parts, and `stacknest-common.zip` contains the common plain/pegboard ends and keys. Open the README inside each package before slicing.
+Downloads: `overstack-ams2pro+ht.zip` is the original HT set, `overstack-ams2pro.zip` includes the AMS-only set plus common parts, and `overstack-common.zip` contains the common plain/pegboard ends and keys. Open the README inside each package before slicing.
 
 The AMS-only export passes complete assembly and layer-pair checks. All 36 new exported parts pass generic PETG/FDM checks, with support, bridge and knife-edge warnings remaining. X2D/PETG slice coverage is listed in the print-profile index; device-fit and load tests remain pending.
 
-StackNest packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
+Overstack packages the parametric AMS storage base with 58 numbered parts, six layer assemblies, 12 standalone Chinese/English assembly booklets, exploded illustrations and reproducible source.
 
 All illustrations were rerendered with corrected face normals and soft area lighting. All eight drawers now have 2 mm solid floors. Existing joinery, slide grooves and stops are retained. The model builds without external mesh inputs.
 

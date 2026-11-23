@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys,json,argparse,hashlib
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src/stacknest'))
+sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from base import build_module
 from fabrication import segment
@@ -95,7 +95,7 @@ def build(output):
         path=output/'parts'/f'{name}.stl';path.parent.mkdir(exist_ok=True);local_parts[name].export(path)
         records.append({'name':name,'layer':groups[name],'file':str(path.relative_to(output)),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bounds_mm':local_parts[name].bounds.tolist()})
     scene.export(output/'assembly.glb')
-    report={'name':'StackNest','construction':'analytic geometry only; no input STL, GLB, PLY, 3MF or traced sections',
+    report={'name':'Overstack','construction':'analytic geometry only; no input STL, GLB, PLY, 3MF or traced sections',
             'parts':records,'assembly_pairs_checked':pairs,'multi_drawer_tests':multi,'source_mesh_inputs':[],
             'physical_fit':'not_verified','load_rating':None,'sliced':False,'sent':False}
     (output/'checks.json').write_text(json.dumps(report,indent=2))

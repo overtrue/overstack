@@ -1,7 +1,7 @@
 """Generate reproducible CAD scenes and illustrations for the two manuals."""
 from pathlib import Path
 import sys,json,subprocess,concurrent.futures,shutil
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from package import LAYERS
 D=ROOT/'models/ams2pro+ht';OUT=ROOT/'output/illustrations';OUT.mkdir(parents=True,exist_ok=True)

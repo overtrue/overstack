@@ -18,9 +18,9 @@ PACK=ROOT/'models/ams2pro+ht'
 PARTS=json.loads((PACK/'parts.json').read_text())
 JOBS={j['key']:j for j in json.loads((ROOT/'output/illustrations/jobs.json').read_text())}
 W,H=landscape(A4);INK=colors.HexColor('#20343C');TEAL=colors.HexColor('#257A78');MUTED=colors.HexColor('#607079');PALE=colors.HexColor('#F3F6F5');ORANGE=colors.HexColor('#BF743D')
-regular=os.environ.get('STACKNEST_FONT_REGULAR','/System/Library/Fonts/STHeiti Light.ttc')
-bold=os.environ.get('STACKNEST_FONT_BOLD','/System/Library/Fonts/STHeiti Medium.ttc')
-if not Path(regular).exists() or not Path(bold).exists():raise SystemExit('Set STACKNEST_FONT_REGULAR and STACKNEST_FONT_BOLD to CJK TrueType font files.')
+regular=os.environ.get('OVERSTACK_FONT_REGULAR','/System/Library/Fonts/STHeiti Light.ttc')
+bold=os.environ.get('OVERSTACK_FONT_BOLD','/System/Library/Fonts/STHeiti Medium.ttc')
+if not Path(regular).exists() or not Path(bold).exists():raise SystemExit('Set OVERSTACK_FONT_REGULAR and OVERSTACK_FONT_BOLD to CJK TrueType font files.')
 pdfmetrics.registerFont(TTFont('CN',regular,subfontIndex=0));pdfmetrics.registerFont(TTFont('CNB',bold,subfontIndex=0))
 EN_LABEL={'左端框':'Left end frame','右端框':'Right end frame','左侧承架':'Left carrier','右侧承架':'Right carrier','前横梁':'Front beam','后横梁':'Rear beam','左小抽屉':'Left side bin','右小抽屉':'Right side bin','层间锁片':'Rear locking key','隔墙':'Divider','抽屉左半':'Drawer left half','抽屉右半':'Drawer right half','顶部左片':'Left top half','顶部右片':'Right top half','抽屉1':'Drawer 1','抽屉2':'Drawer 2','抽屉3':'Drawer 3'}
 TITLES_ZH=['五槽打印板层','八槽打印板层','单抽屉层','双抽屉层','三抽屉层','设备顶件']
@@ -45,8 +45,8 @@ STEPS_EN=[
 class Book:
  def __init__(self,lang):
   self.lang=lang;self.zh=lang=='zh';self.reg='CN' if self.zh else 'Helvetica';self.bold='CNB' if self.zh else 'Helvetica-Bold';self.page=0
-  self.path=PDF/f'stacknest-assembly-{lang}.pdf';self.c=canvas.Canvas(str(self.path),pagesize=(W,H),pageCompression=1)
-  self.c.setTitle(('叠序 StackNest 组装教程' if self.zh else 'StackNest Assembly Guide'));self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
+  self.path=PDF/f'overstack-assembly-{lang}.pdf';self.c=canvas.Canvas(str(self.path),pagesize=(W,H),pageCompression=1)
+  self.c.setTitle(('Overstack 组装教程' if self.zh else 'Overstack Assembly Guide'));self.c.setAuthor('overtrue');self.c.setSubject('Assembly guide for an unprinted, geometry-checked prototype')
  def text(self,s,x,y,size=11,bold=False,color=INK):
   self.c.setFillColor(color);self.c.setFont(self.bold if bold else self.reg,size);self.c.drawString(x,y,s)
  def para(self,s,x,top,width,size=10.5,color=INK):
@@ -54,7 +54,7 @@ class Book:
   p=Paragraph(s,style);_,h=p.wrap(width,1000);p.drawOn(self.c,x,top-h);return h
  def start(self,title,kicker='ASSEMBLY GUIDE'):
   self.page+=1;c=self.c;c.setFillColor(colors.HexColor('#FCFCF9'));c.rect(0,0,W,H,fill=1,stroke=0)
-  self.text('STACKNEST / '+kicker,38,H-29,8,True,TEAL);self.text(title,38,H-62,23,True)
+  self.text('OVERSTACK / '+kicker,38,H-29,8,True,TEAL);self.text(title,38,H-62,23,True)
   c.bookmarkPage('p'+str(self.page));c.addOutlineEntry(title,'p'+str(self.page),level=0)
   c.setStrokeColor(colors.HexColor('#DFE6E3'));c.line(38,35,W-38,35)
   self.text(('数字样机 · 尚未实物试装' if self.zh else 'DIGITAL PROTOTYPE - PHYSICAL FIT NOT VERIFIED'),38,20,8,color=MUTED)
@@ -88,7 +88,7 @@ class Book:
 
 def build(lang):
  b=Book(lang);z=b.zh
- b.start('叠序 StackNest' if z else 'StackNest','MODULAR AMS STORAGE')
+ b.start('Overstack' if z else 'Overstack','MODULAR AMS STORAGE')
  b.text('AMS 模块化收纳底座' if z else 'Modular storage for AMS 2 Pro + AMS HT',40,H-92,15,color=MUTED)
  b.image('hero',245,91,565,392)
  b.text('ASSEMBLY GUIDE',40,419,10,True,TEAL)

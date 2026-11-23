@@ -1,7 +1,7 @@
 """Check exported drawer joints, floors and the supported 256 mm print poses."""
 from pathlib import Path
 import sys,json,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from fabrication import drawer_print_pose
 D=ROOT/'output/model/parts'
