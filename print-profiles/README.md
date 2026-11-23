@@ -84,7 +84,7 @@ The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in
 
 ## 重建 / Rebuild
 
-以下命令在[源码仓库](https://github.com/overtrue/stacknest)根目录运行；ZIP 仅含工程、说明和试件。 / Run these commands from the source checkout; the ZIP contains projects, guides and specimens.
+以下命令在[源码仓库](https://github.com/overtrue/overstack)根目录运行；ZIP 仅含工程、说明和试件。 / Run these commands from the source checkout; the ZIP contains projects, guides and specimens.
 
 ```sh
 cad run tools/build_fit_checks.py

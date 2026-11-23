@@ -17,6 +17,6 @@ The three drawer STLs are unchanged. At the old 45-degree side-down pose, the ge
 - `tools/verify.py`: 58 closed parts, 1,653 assembly-pair checks / 58个闭合零件、1653对装配检查。
 - `tools/verify_drawer_repair.py`: exported joint stock, 161 joining positions, stop/lift-out, solid floors, planar contact, and a deliberately cut roof as a failing control / 导出接缝余料、161个拼接位置、止挡与抬出、实心底板、平面着床，并用挖空槽顶验证检查能发现缺陷。
 - `tools/check_printing.py`: all 41 distinct geometries pass PETG/FDM, 0.4 mm nozzle and 0.2 mm layers. Overhang, bridge, gap and knife-edge warnings remain / 41种几何通过通用检查，仍有悬垂、桥接、间隙和尖边提示。
-- Printer-specific slicing and archive checks are recorded in [the profile index](https://github.com/overtrue/stacknest/blob/main/print-profiles/INDEX.md) / 各机型切片与下载包状态见配置索引。
+- Printer-specific slicing and archive checks are recorded in [the profile index](https://github.com/overtrue/overstack/blob/main/print-profiles/INDEX.md) / 各机型切片与下载包状态见配置索引。
 
 Physical fit, support removal and load capacity are still unverified. / 实物配合、拆支撑和承重仍未验证。
