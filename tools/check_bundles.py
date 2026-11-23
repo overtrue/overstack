@@ -27,4 +27,4 @@ def check_bundle(archive):
 
 
 if __name__=='__main__':
-    for device in DEVICES:check_bundle(ROOT/'dist'/('stacknest-'+device+'.zip'))
+    for device in DEVICES:check_bundle(ROOT/'dist'/('overstack-'+device+'.zip'))

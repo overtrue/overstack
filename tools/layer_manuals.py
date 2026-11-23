@@ -5,10 +5,10 @@ SLUGS=['five-slot-plate-layer','eight-slot-plate-layer','single-drawer-layer','d
 for lang in ['zh','en']:
  for i,slug in enumerate(SLUGS):
   b=Book(lang);z=b.zh;prefix=chr(65+i);title=(TITLES_ZH if z else TITLES_EN)[i]
-  b.path=PDF/f'{i+1:02d}-{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('StackNest / '+title);b.c.setAuthor('overtrue')
+  b.path=PDF/f'{i+1:02d}-{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('Overstack / '+title);b.c.setAuthor('overtrue')
   b.start(prefix+' / '+title,'LAYER ASSEMBLY')
   b.image('layer-'+prefix.lower()+'-assembled',35,185,520,310)
-  b.text('叠序 StackNest' if z else 'StackNest',585,470,18,True)
+  b.text('Overstack' if z else 'Overstack',585,470,18,True)
   b.para(('本册只介绍本层的零件、装配与检查。' if z else 'This booklet covers this layer: its parts, assembly and checks.'),585,430,215,12)
   b.para(('先去毛边，再空载试配。不要敲入燕尾或导轨。' if z else 'Deburr first and dry-fit without load. Do not hammer dovetails or guides.'),585,350,215,11)
   group=[r for r in PARTS if r['layer']==i]

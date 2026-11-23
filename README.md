@@ -1,4 +1,4 @@
-# StackNest · 叠序
+# Overstack
 
 **Mix, match, and stack.**
 
@@ -6,7 +6,7 @@ A modular, stackable storage system for AMS 2 Pro, with or without AMS HT. Start
 
 | AMS 2 Pro + HT | AMS 2 Pro only |
 | --- | --- |
-| [![AMS 2 Pro and AMS HT on StackNest](docs/images/showcase-compact.png)](models/ams2pro+ht/) | [![AMS 2 Pro on the AMS-only StackNest](docs/images/showcase-no-ht.png)](models/ams2pro/) |
+| [![AMS 2 Pro and AMS HT on Overstack](docs/images/showcase-compact.png)](models/ams2pro+ht/) | [![AMS 2 Pro on the AMS-only Overstack](docs/images/showcase-no-ht.png)](models/ams2pro/) |
 | 495 × 287 mm · Single / double / triple drawers | 399 × 287 mm · Single / double drawers |
 
 Both sets support plain or pegboard ends. Click a preview to browse its models.
@@ -197,7 +197,7 @@ uv run python tools/check_bundles.py
 
 The model is constructed from analytic primitives. Building it does not read STL, GLB, PLY, 3MF, vendor meshes or earlier project revisions. Generated STL units are millimetres. Generated 3MF files contain assembly geometry only, with no printer or support settings.
 
-Source: `src/stacknest/`. Outputs: `output/model/` and `models/ams2pro+ht/`.
+Source: `src/overstack/`. Outputs: `output/model/` and `models/ams2pro+ht/`.
 
 ## Assembly guides
 
@@ -220,7 +220,7 @@ uv run --group docs python tools/manual.py
 uv run --group docs python tools/layer_manuals.py
 ```
 
-`render.py` creates the exploded scenes and camera metadata using the optional text-to-cad `cad` CLI. `render_blender.py` renders the final images with flat face normals and large area lights. The PDF scripts require CJK TrueType fonts; set `STACKNEST_FONT_REGULAR` and `STACKNEST_FONT_BOLD` when not using the default macOS fonts. Fonts are not redistributed.
+`render.py` creates the exploded scenes and camera metadata using the optional text-to-cad `cad` CLI. `render_blender.py` renders the final images with flat face normals and large area lights. The PDF scripts require CJK TrueType fonts; set `OVERSTACK_FONT_REGULAR` and `OVERSTACK_FONT_BOLD` when not using the default macOS fonts. Fonts are not redistributed.
 
 ## Validation and limits
 
@@ -236,6 +236,6 @@ The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair check
 
 ## License
 
-Copyright © 2026 [overtrue](https://github.com/overtrue). StackNest models, parametric source, tooling and documentation in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+Copyright © 2026 [overtrue](https://github.com/overtrue). Overstack models, parametric source, tooling and documentation in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
 
 You may 3D-print, modify, and share the models for **personal use**, with attribution. **Commercial sale and other commercial use are not allowed.** Third-party device CAD used only for rendering is not covered; see [render asset credits](docs/render-assets.md). Full legal text: [LICENSE](LICENSE).

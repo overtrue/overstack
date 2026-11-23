@@ -1,7 +1,7 @@
 """Build AMS-only layers and shared plain/straight-grid ends from analytic source."""
 from pathlib import Path
 import sys,json,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from base import build_module
 from fabrication import segment,orient
@@ -114,8 +114,8 @@ def build():
                 a={**lower,'ends':[common[f'end_{s}_{lower["height"]}_{style}'] for s in ['left','right']]}
                 b={**upper,'ends':[common[f'end_{s}_{upper["height"]}_{style}'] for s in ['left','right']]}
                 check_layer_locks(a,b)
-    scene(assembly).export(OUT/'stacknest-no-ht.glb')
-    scene(peg_assembly).export(OUT/'stacknest-no-ht-pegboard.glb')
+    scene(assembly).export(OUT/'overstack-no-ht.glb')
+    scene(peg_assembly).export(OUT/'overstack-no-ht-pegboard.glb')
     for name,m in common.items():
         if name.startswith('end_') and name.endswith('_pegboard'):
             normal=common[name.replace('_pegboard','_plain')]

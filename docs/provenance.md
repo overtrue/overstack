@@ -4,6 +4,6 @@
 
 The design is based on practical experience with existing community models.
 
-StackNest is built from parametric geometry. The build does not require external model meshes. It uses 2 mm solid drawer floors and uses a reinforced left/right joint for the wide single drawer while retaining the slide interfaces.
+Overstack is built from parametric geometry. The build does not require external model meshes. It uses 2 mm solid drawer floors and uses a reinforced left/right joint for the wide single drawer while retaining the slide interfaces.
 
 All illustrations are CAD renders. Physical fit and load capacity remain unverified.

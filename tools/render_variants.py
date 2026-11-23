@@ -61,6 +61,6 @@ for r in rows:
         m=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')
     wide[name]=move(m,[0,0,heights[r['layer']]])
 save('wide-pegboard',wide)
-scene(wide).export(ROOT/'models/ams2pro+ht/stacknest-pegboard.glb')
+scene(wide).export(ROOT/'models/ams2pro+ht/overstack-pegboard.glb')
 (OUT/'render-jobs.json').write_text(json.dumps(jobs,indent=2))
 print('Prepared',len(jobs),'real-geometry scenes')

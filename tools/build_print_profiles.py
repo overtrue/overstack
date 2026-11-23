@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,subprocess,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src/stacknest'))
+sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import trimesh,np
 from print_layout import orient_for_area,pack
 from print_profile_targets import TARGETS
@@ -53,7 +53,7 @@ def build(key,rows,slice_project):
             'end_style':'plain' if key.startswith('ams2pro') else None,'studio_version':'02.09.01.70','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'physical_fit':'not_verified','load_test':'not_verified','makerworld_ready':False,'parts':[],'status':'preparing'}
     report.update(printer_key=PRINTER_KEY,bed_group=TARGET['group'],printable_area_mm=TARGET['area'],build_height_mm=TARGET['height'],project_file=project_name,preset_directory=str((OUT/'presets').relative_to(ROOT)))
-    sources=[*sorted((ROOT/'src/stacknest').glob('*.py')),ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
+    sources=[*sorted((ROOT/'src/overstack').glob('*.py')),ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
     report['model_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in sources}
     report['layout_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'tools/print_layout.py',ROOT/'tools/build_print_profiles.py']}
     inputs=[];blockers=[]

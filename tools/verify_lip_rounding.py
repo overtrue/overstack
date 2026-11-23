@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src/stacknest'))
+sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 
 for width,paths in [

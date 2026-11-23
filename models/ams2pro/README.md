@@ -10,7 +10,7 @@
 
 ![Pegboard version](preview.png)
 
-[Plain assembly GLB](stacknest-no-ht.glb) · [Pegboard assembly GLB](stacknest-no-ht-pegboard.glb) · [Common ends](../common/)
+[Plain assembly GLB](overstack-no-ht.glb) · [Pegboard assembly GLB](overstack-no-ht-pegboard.glb) · [Common ends](../common/)
 
 | Layer | Height increment | Assembly parts |
 | --- | ---: | ---: |

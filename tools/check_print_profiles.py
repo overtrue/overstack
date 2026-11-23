@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src/stacknest'))
+sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import np,trimesh
 from scipy.spatial import cKDTree
 from build_print_profiles import recipes

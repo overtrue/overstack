@@ -1,4 +1,4 @@
-"""Render current StackNest exports with Engineered Reality device STEP models.
+"""Render current Overstack exports with Engineered Reality device STEP models.
 
 See docs/render-assets.md for sources and conversion commands. Device files stay local.
 """

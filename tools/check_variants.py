@@ -1,7 +1,7 @@
 """Check the exact exported new parts in candidate PETG print orientations."""
 from pathlib import Path
 import sys,json,subprocess,concurrent.futures,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from fabrication import orient
 from multi_drawers import orient_candidate

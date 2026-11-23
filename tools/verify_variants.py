@@ -1,7 +1,7 @@
 """Independent exported-geometry checks, all layer pairings and common interfaces."""
 from pathlib import Path
 import sys,json,hashlib
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/stacknest'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from layer_locks import layer_lock
 from pegboard import slot_centers,yz_extrude

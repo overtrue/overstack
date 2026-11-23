@@ -51,7 +51,7 @@ def bundle(name,selected,index=None):
  archive=ROOT/'dist'/name;archive.parent.mkdir(exist_ok=True)
  contents={str(p.relative_to(ROOT)):p.read_bytes() for p in selected}
  if index is not None:contents['print-profiles/INDEX.md']=index.encode()
- if name=='stacknest-print-profiles-h-series.zip':
+ if name=='overstack-print-profiles-h-series.zip':
   guide='models/fit-check/README.md'
   contents[guide]=contents[guide].replace(b'../../print-profiles/x2d/fit-check/',b'../../print-profiles/h2s/fit-check/')
  hashes={n:hashlib.sha256(data).hexdigest() for n,data in contents.items()}
@@ -69,7 +69,7 @@ def bundle(name,selected,index=None):
     assert target in z.namelist() or any(p.startswith(target.rstrip('/')+'/') for p in z.namelist()),(n,link)
  print(archive,hashlib.sha256(archive.read_bytes()).hexdigest())
 
-bundle('stacknest-print-profiles-preview.zip',files)
+bundle('overstack-print-profiles-preview.zip',files)
 intro,standard,large=('\n'.join(lines)+'\n').split('## ')
 for group,section in [('256',standard),('h-series',large)]:
  selected=[]
@@ -79,4 +79,4 @@ for group,section in [('256',standard),('h-series',large)]:
    selected.append(p)
   elif TARGETS[rel[1]]['group']==group:
    selected.append(p)
- bundle('stacknest-print-profiles-'+group+'.zip',selected,intro+'## '+section)
+ bundle('overstack-print-profiles-'+group+'.zip',selected,intro+'## '+section)
