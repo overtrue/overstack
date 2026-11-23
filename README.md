@@ -233,3 +233,9 @@ Rear beams and seam keys are removable and are not captive. Remove devices and t
 The design is based on practical experience with existing community models. The current model builds from parametric geometry without external model meshes. See [design basis](docs/provenance.md).
 
 The AMS-only export passes 1,081 complete-assembly pairs, 1,739 layer-pair checks and generic PETG/FDM checks for 36 new exported parts. Overhang, bridge and knife-edge warnings remain. Its X2D/PETG layer projects have been sliced, but have not been physically tested. The HT set has also been updated with the 40 mm five-slot layer and R3 top lip rounds.
+
+## License
+
+Copyright © 2026 [overtrue](https://github.com/overtrue). StackNest models, parametric source, tooling and documentation in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may 3D-print, modify, and share the models for **personal use**, with attribution. **Commercial sale and other commercial use are not allowed.** Third-party device CAD used only for rendering is not covered; see [render asset credits](docs/render-assets.md). Full legal text: [LICENSE](LICENSE).

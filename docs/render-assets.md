@@ -9,9 +9,9 @@ The equipment in `showcase-compact.png`, `showcase-full.png` and `showcase-no-ht
 | AMS 2 Pro Assembly.stp | [Engineered Reality · AMS 2 Pro](https://makerworld.com/en/models/1283144-bambu-ams-2-pro-cad-model-stp-file) | CC BY-NC-SA |
 | AMS HT.stp | [Engineered Reality · AMS HT](https://makerworld.com/en/models/1551756-bambu-ams-ht-cad-model-stp-file) | MakerWorld Standard Digital File License |
 
-The original device files and converted meshes are local rendering inputs only, and are not included in the repository or model download packages. The repository's MIT license does not grant rights to these third-party device assets. Refer to the linked source pages for their terms.
+The original device files and converted meshes are local rendering inputs only, and are not included in the repository or model download packages. The repository's [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license does not grant rights to these third-party device assets. Refer to the linked source pages for their terms.
 
-设备源文件和转换网格仅作为本地渲染输入，不放入仓库或模型下载包。仓库的 MIT 许可不覆盖这些第三方设备素材，使用条件以来源页面为准。
+设备源文件和转换网格仅作为本地渲染输入，不放入仓库或模型下载包。仓库的 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可不覆盖这些第三方设备素材，使用条件以来源页面为准。
 
 ## Rebuild / 重建
 
