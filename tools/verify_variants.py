@@ -14,6 +14,15 @@ for layer in report['layers']:
     parts={r['name']:move(trimesh.load_mesh(ROOT/r['file']),r['offset_mm'])
            for r in json.loads((ROOT/'models/ams2pro'/layer['name']/'parts.json').read_text())}
     layers[layer['name']]=(layer['height_mm'],parts)
+# The 399 mm single drawer uses a vertical seam between the front and rear halves.
+single=layers['1-drawer-layer'][1]
+front,rear=single['drawer_half_1'],single['drawer_half_2']
+assert np.isclose(front.extents[0],261) and np.isclose(rear.extents[0],261)
+for lift in [0,.5,2,10,30,60]:
+    assert overlap(move(front,[0,0,lift]),rear)<.02,('single drawer vertical assembly',lift)
+for offset in [[0,-1,0],[-1,0,0],[1,0,0]]:
+    assert overlap(move(front,offset),rear)>.1,('single drawer seam retention',offset)
+print('PASS: AMS-only single drawer, both 261 mm halves and their vertical dovetails')
 pairs=0
 for lower,(H,lp) in layers.items():
     if lower=='device-top':continue

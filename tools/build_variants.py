@@ -4,10 +4,10 @@ import sys,json,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from base import build_module
-from fabrication import segment,orient
+from fabrication import orient
 from surfaces import top_parts
 from layer_locks import layer_lock,check_layer_locks
-from multi_drawers import variant
+from multi_drawers import drawer_template,variant
 import compact,pegboard
 from trimesh.exchange.threemf import export_3MF
 
@@ -62,8 +62,7 @@ def build():
         p=COMMON/(name+'.stl');m.export(p)
         report['parts'].append({'name':name,'file':str(p.relative_to(ROOT)), 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
     scene({n:m for n,m in common.items() if n=='end_left_60_pegboard'}).export(COMMON/'pegboard-end.glb')
-    template={'end_left_1':modules[60]['ends'][0],'end_right_1':modules[60]['ends'][1]}
-    template.update({f'cassette_drawer_{i}':m for i,m in enumerate(segment('cassette_drawer',modules[60]['parts']['cassette_drawer']),1)})
+    template=drawer_template(modules[60])
     layers=[]
     for H,count in [(40,5),(60,8)]:
         layers.append((f'{count}-slot-plate-layer',H,compact.plate_layer(modules[H])))

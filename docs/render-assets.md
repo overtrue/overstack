@@ -22,16 +22,16 @@ Download the original STEP files using **Download STL/CAD Files**, not the scale
 ```sh
 cad step export output/device-reference/ams-2-pro.stp output/device-reference/ams-2-pro.glb --tolerance 0.05 --angle 8
 cad step export output/device-reference/ams-ht.stp output/device-reference/ams-ht.glb --tolerance 0.05 --angle 8
-cad run tools/showcase_scene.py
-cad run tools/render_showcase.py --compact --final
-cad run tools/render_showcase.py --final
-cad run tools/showcase_scene.py --no-ht
-cad run tools/render_showcase.py --no-ht --final
+uv run python tools/showcase_scene.py
+cad run --no-project tools/render_showcase.py --compact --final
+cad run --no-project tools/render_showcase.py --final
+uv run python tools/showcase_scene.py --no-ht
+cad run --no-project tools/render_showcase.py --no-ht --final
 ```
 
-The compact base uses the 40 mm five-slot layer, 60 mm double-drawer layer and device top (129 mm overall). The full base uses all five storage layers and the top (309 mm overall). Device STEP envelopes are 371 × 281 × 226.5 mm and 114.1 × 282.5 × 245.8 mm; they are not rescaled to the nominal product specifications.
+The compact base uses the 40 mm five-slot layer, 60 mm double-drawer layer and device top (129 mm overall). The full base uses all four storage layers and the top (249 mm overall). Device STEP envelopes are 371 × 281 × 226.5 mm and 114.1 × 282.5 × 245.8 mm; they are not rescaled to the nominal product specifications.
 
-紧凑组合为五槽板层、双抽屉层和顶件，总高 129 mm；完整组合包含五个收纳层和顶件，总高 309 mm。设备 STEP 外廓分别为 371 × 281 × 226.5 mm、114.1 × 282.5 × 245.8 mm，保留原模型尺寸，不强行缩放到产品标称值。
+紧凑组合为五槽板层、双抽屉层和顶件，总高 129 mm；完整组合包含四个收纳层和顶件，总高 249 mm。设备 STEP 外廓分别为 371 × 281 × 226.5 mm、114.1 × 282.5 × 245.8 mm，保留原模型尺寸，不强行缩放到产品标称值。
 
 ## Source checksums / 源文件校验
 

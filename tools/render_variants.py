@@ -3,9 +3,10 @@ from pathlib import Path
 import sys,json
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
 from build_variants import scene
+from ht_layers import LAYERS
 from geometry import *
 
-OUT=ROOT/'output/variants';IMAGES=ROOT/'docs/images';jobs=[]
+OUT=ROOT/'output/variants';OUT.mkdir(parents=True,exist_ok=True);IMAGES=ROOT/'docs/images';jobs=[]
 
 
 def save(key,parts,angle=(-55,25),size=(1600,1200)):
@@ -53,13 +54,12 @@ for i,H in enumerate([40,60,40]):
 save('common-grid-alignment',aligned,angle=(180,0),size=(1600,900))
 scene(aligned).export(ROOT/'models/common/straight-grid-stack.glb')
 rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text());wide={}
-heights=[0,40,100,160,220,280]
 for r in rows:
     name=r['name'];m=trimesh.load_mesh(ROOT/'models/ams2pro+ht'/r['packaged_file'])
     if 'end_left' in name or 'end_right' in name:
         side='left' if 'end_left' in name else 'right';H=40 if r['layer']==0 else 60
         m=trimesh.load_mesh(ROOT/'models/common'/f'end_{side}_{H}_pegboard.stl')
-    wide[name]=move(m,[0,0,heights[r['layer']]])
+    wide[name]=move(m,[0,0,LAYERS[r['layer']][2]])
 save('wide-pegboard',wide)
 scene(wide).export(ROOT/'models/ams2pro+ht/overstack-pegboard.glb')
 (OUT/'render-jobs.json').write_text(json.dumps(jobs,indent=2))

@@ -26,24 +26,6 @@ def sliding_profile(z,head,neck,plane=247.5,length=4):
                     (plane+length,z+head/2),(plane,z+neck/2)])
 
 
-def drawer_left_right_split(mesh):
-    # Longitudinal XZ dovetails. Slide the left half forward from the rear.
-    plane=247.5;gap=.3
-    profile=sliding_profile(8.5,2,1,plane=plane,length=2)
-    left=box(-10,-10,-20,plane+10,320,120)
-    tongues=[xz_extrude(profile,y-15,30) for y in [60,135.5,211]]
-    mask=union([left,*tongues])
-    clearance=union([box(-10,-10,-20,plane+10+gap,320,120),
-                     xz_extrude(profile.buffer(gap,join_style=2),44.7,260)])
-    parts=[intersection(mesh,mask),cut(mesh,clearance)]
-    assert all(m.is_watertight and len(m.split())==1 for m in parts)
-    for travel in [0,.5,1,3,8,20,40,80,160,320]:
-        assert overlap(move(parts[0],[0,travel,0]),parts[1])<.01,('drawer longitudinal assembly',travel)
-    for delta in [[-1.5,0,0],[0,0,1],[0,0,-1],[0,-1,0]]:
-        assert overlap(move(parts[0],delta),parts[1])>.1,('drawer capture',delta)
-    return parts
-
-
 def drawer_print_pose(mesh):
     # Side-down, 40 degrees on the bed: flat contact and a 3 mm brim on 256 mm beds.
     t=(trimesh.transformations.rotation_matrix(np.radians(40),[0,0,1]) @
@@ -62,7 +44,7 @@ def drawer_print_pose(mesh):
 
 
 def sliding_split(name,mesh):
-    if name=='drawer':return drawer_left_right_split(mesh)
+    if name=='drawer':raise ValueError('Single drawers use the 399 mm front/rear joint')
     # XZ dovetails slide along Y: centered in solid section, not on a thin outer lip.
     gap=.3
     plane=247.5 if name=='device_adapter' else 202.5
@@ -83,12 +65,10 @@ def sliding_split(name,mesh):
     parts=[intersection(mesh,mask),cut(mesh,female_clearance)]
     assert all(p.is_watertight and p.volume>0 and len(p.split())==1 for p in parts)
     assert overlap(*parts)<.01
-    for travel in ([0,1,3,8,20,40,300] if name=='drawer' else [0,1,3,8,20,40]):
+    for travel in [0,1,3,8,20,40]:
         assert overlap(move(parts[0],[0,travel,0]),parts[1])<.01,(name,'longitudinal assembly blocked',travel)
     for delta in [[-1.5,0,0],[0,0,1],[0,0,-1]]:
         assert overlap(move(parts[0],delta),parts[1])>.1,(name,'dovetail does not capture',delta)
-    if name=='drawer':
-        assert overlap(move(parts[0],[0,-1,0]),parts[1])>.1,'drawer front stop missing'
     return parts
 
 
@@ -107,20 +87,17 @@ def segment(name,mesh):
     # All source coordinates stay in assembly space; orientations are recorded separately.
     if mesh.extents[0]>225:
         planes=[165,330] if mesh.extents[0]>450 else [247.5]
-        yfront=2.5 if name=='device_adapter' else 4
-        yback=284.5 if name=='device_adapter' else (268 if name=='drawer' else 285)
         for plane in planes:
             next_parts=[]
             for m in parts:
                 if m.bounds[0,0]<plane<m.bounds[1,0]:
-                    next_parts.extend(split_at(m,0,plane,([(yfront,2.5)] if name=='device_adapter' else [(yfront,5),(yback,3 if name=='drawer' else 1.5)])))
+                    next_parts.extend(split_at(m,0,plane,[(4,5),(285,1.5)]))
                 else:next_parts.append(m)
             parts=next_parts
     if mesh.extents[1]>245:
-        plane=139.5 if name=='drawer' else 143.5
+        plane=143.5
         if name.startswith('end'):
             xs=[(4,6),(56,6)] if mesh.bounds[0,0]<100 else [(439,6),(491,6)]
-        elif name=='drawer':xs=[(95.5,3),(399.5,3)]
         elif name.startswith('cassette'):
             xs=[(75,8),(113.5 if name=='cassette_plates' else 112.5,2.5 if name=='cassette_plates' else 4),(381.5 if name=='cassette_plates' else 382.5,2.5 if name=='cassette_plates' else 4),(420,8)]
         else:xs=[(4,5),(366.5,12),(491,5)]
@@ -162,7 +139,7 @@ def orient(mesh):
             score=overhang-2*bed
             candidates.append((score,m,t,overhang,bed))
     if not candidates:
-        # Front/back drawer halves need a compound tilt to retain the 3mm brim.
+        # Try a compound tilt while retaining the 3 mm brim.
         for roll in [0,90]:
             for pitch in np.arange(46.6,46.81,.05):
                 for yaw in [0,90]:

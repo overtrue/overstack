@@ -1,3 +1,15 @@
+# AMS 2 Pro + HT 抽屉选型 / Drawer options
+
+495 mm 的 AMS 2 Pro + HT 版提供双抽屉和三抽屉。单抽屉只在 399 mm 无 HT 版提供。HT 完整组合有 48 件，高 249 mm，可放 13 张打印板，配五只主抽屉和两只侧抽屉。其余零件沿用原编号。
+
+The 495 mm HT set offers double and triple drawers. The single drawer is available in the 399 mm AMS-only set. The complete HT stack is 249 mm high and contains 48 parts, with room for 13 plates, five main drawers and two side bins. Existing part IDs are retained.
+
+五种机型各少一个 HT 工程。其余 60 个工程沿用原切片，本次重新核对了模型、摆盘与 G-code。实物试装和承重仍待验证。
+
+Each of the five printers drops one HT project. The 60 retained projects use their existing slices, checked against the models, layouts and G-code. Physical fit and load capacity remain untested.
+
+## 历史版本 / Previous revisions
+
 按同一套摆盘规则重新检查五种机型的全部 65 个工程：薄连接片平放，长条件避免高立，按轮廓和支撑间距合盘，并比较实际切片时间、耗材和支撑。工程、逐盘预览、对比数据和下载包同步更新；尚未实物验证。 / Rechecked all 65 projects across five printers: flat connecting plates, lower rail orientations and shared plates with support clearance. Compared sliced time, material and support use, and updated projects, plate previews, comparisons and downloads. Physical validation is still pending.
 
 修复 HT 单抽屉拼接槽薄壁：改为左右两半，槽周围加厚，内侧加强筋凸起 0.8 mm；旧前后两半需成对替换。三抽屉模型不变，侧放40°后通过制造检查。41种不同几何均通过 PETG/FDM 检查，装配和运动检查通过；两层按五种机型重新切片，教程和下载包同步更新，尚未实物验证。 / Fixed the HT single-drawer joint with reinforced left/right halves and a local 0.8 mm interior ridge; replace both old front/rear halves. Triple-drawer geometry is unchanged and passes manufacturing checks side-down at 40 degrees. All 41 distinct geometries pass PETG/FDM checks, with assembly and motion checks passed. Both layers are resliced for all five printers, with updated guides and downloads. Physical validation is pending.

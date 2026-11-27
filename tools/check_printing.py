@@ -14,7 +14,7 @@ for r in data['parts']:
     if sha in unique:
         placements.append({'name':r['name'],'same_geometry_as':unique[sha]['name']});continue
     m=trimesh.load_mesh(f)
-    if r['name'].startswith(('standard_2_drawer_','3drawers_drawer_')):
+    if r['name'].startswith('3drawers_drawer_'):
         printed,placement=drawer_print_pose(m)
     else:
         try:printed,placement=orient(m)

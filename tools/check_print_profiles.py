@@ -5,13 +5,19 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import np,trimesh
 from scipy.spatial import cKDTree
-from build_print_profiles import recipes
+from build_print_profiles import recipes,model_source_hashes,model_source_digest
 from print_profile_targets import TARGETS
 parser=argparse.ArgumentParser();parser.add_argument('--printer',choices=TARGETS);args=parser.parse_args()
 expected=dict(recipes());found={k:set() for k in TARGETS if not args.printer or k==args.printer}
 
+assert {key for key in expected if 'drawer' in key}=={
+    'ams2pro/1-drawer-layer','ams2pro/2-drawer-layer',
+    'ams2pro-ht/04-double-drawer-layer','ams2pro-ht/05-triple-drawer-layer',
+},'drawer options must match the device width'
+
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
+current_model_digest=model_source_digest()
 for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
     report=json.loads(path.read_text());folder=path.parent
     printer_key=report.get('printer_key','x2d')
@@ -22,10 +28,18 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
     assert report['printer']==target['printer'],(path,'wrong printer')
     found[printer_key].add(report['profile'])
     assert {(r['id'],r['source']) for r in report['parts']}=={(r['id'],r['file']) for r in expected[report['profile']]},(path,'incomplete recipe')
-    for name,digest in report['model_source_hashes'].items():assert sha(ROOT/name)==digest,(path,'model source changed')
-    assert report.get('layout_source_hashes'),(path,'missing layout provenance')
+    proof_path=folder/'layout-rule-validation.json'
+    proof=json.loads(proof_path.read_text()) if proof_path.is_file() else {}
+    assert report.get('model_source_hashes') and report.get('layout_source_hashes'),(path,'missing generation provenance')
+    if proof:
+        assert proof['project_sha256']==report['project_sha256'],(path,'stale revalidation')
+    if 'model_sources_sha256' in proof:
+        assert proof['model_sources_sha256']==current_model_digest,(path,'model sources changed since revalidation')
+    else:
+        assert report['model_source_hashes']==model_source_hashes(),(path,'model sources changed since generation')
     if 'validation_source' in report:
-        v=report['validation_source'];assert sha(ROOT/v['file'])==v['sha256'],(path,'validation changed')
+        v=report['validation_source']
+        assert sha(ROOT/v['file'])==proof.get('validation_sha256',v['sha256']),(path,'validation changed')
     for name,digest in report.get('preset_hashes',{}).items():assert sha(base/'presets'/name)==digest,(path,'preset changed')
     for part in report['parts']:assert sha(ROOT/part['source'])==part['sha256'],(path,part['id'],'stale source')
     assert not report['makerworld_ready'] and report['physical_fit']=='not_verified'
@@ -72,8 +86,7 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
         assigned=[next(m.get('value') for m in i.findall('metadata') if m.get('key')=='object_id') for i in config.findall('./plate/model_instance')]
         assert sorted(assigned)==sorted(o.get('id') for o in objects),(path,'plate coverage')
     if report['status']=='sliced_not_printed':
-        proof=json.loads((folder/'layout-rule-validation.json').read_text())
-        assert proof['project_sha256']==report['project_sha256'],(path,'stale layout rule check')
+        assert proof,(path,'missing layout rule check')
         for name,digest in proof['rule_source_hashes'].items():assert sha(ROOT/name)==digest,(path,'layout rules changed')
         layout=folder/'layout-validation.json'
         if layout.exists():

@@ -12,6 +12,14 @@ OUT=ROOT/'print-profiles';WORK=ROOT/'output/print-profiles'
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
+def model_source_hashes():
+    sources=[*sorted((ROOT/'src/overstack').glob('*.py')),ROOT/'tools/ht_layers.py',ROOT/'tools/package.py',
+             ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
+    return {str(p.relative_to(ROOT)):digest(p) for p in sources}
+
+def model_source_digest():
+    return hashlib.sha256(json.dumps(model_source_hashes(),sort_keys=True).encode()).hexdigest()
+
 def recipes():
     yield 'fit-check/pegboard',[{'id':'FIT01','file':'models/common/pegboard_fit_coupon.stl'}]
     fit=ROOT/'models/fit-check/parts.json'
@@ -36,7 +44,7 @@ def run(args,folder,log):
 def orient_for_target(mesh,source):
     # These thin drawer edges were manufacturing-checked at a 40-degree bed yaw.
     small_bed=TARGET['area'][2]-TARGET['area'][0]<=256 and TARGET['area'][3]-TARGET['area'][1]<=256
-    yaw=40 if small_bed and any(n in source.stem for n in ['standard_2_drawer_','3drawers_drawer_']) else None
+    yaw=40 if small_bed and '3drawers_drawer_' in source.stem else None
     # Divider candidates were sliced separately: this stable 58 mm pose is
     # faster and uses less support than broad-face printing; it avoids the
     # support collision found with the tall end pose.
@@ -53,8 +61,7 @@ def build(key,rows,slice_project):
             'end_style':'plain' if key.startswith('ams2pro') else None,'studio_version':'02.09.01.70','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'physical_fit':'not_verified','load_test':'not_verified','makerworld_ready':False,'parts':[],'status':'preparing'}
     report.update(printer_key=PRINTER_KEY,bed_group=TARGET['group'],printable_area_mm=TARGET['area'],build_height_mm=TARGET['height'],project_file=project_name,preset_directory=str((OUT/'presets').relative_to(ROOT)))
-    sources=[*sorted((ROOT/'src/overstack').glob('*.py')),ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
-    report['model_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in sources}
+    report['model_source_hashes']=model_source_hashes()
     report['layout_source_hashes']={str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'tools/print_layout.py',ROOT/'tools/build_print_profiles.py']}
     inputs=[];blockers=[]
     for r in rows:

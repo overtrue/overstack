@@ -14,16 +14,17 @@
 | --- | ---: |
 | [01-five-slot-plate-layer](01-five-slot-plate-layer/) | 6 |
 | [02-eight-slot-plate-layer](02-eight-slot-plate-layer/) | 10 |
-| [03-single-drawer-layer](03-single-drawer-layer/) | 10 |
 | [04-double-drawer-layer](04-double-drawer-layer/) | 13 |
 | [05-triple-drawer-layer](05-triple-drawer-layer/) | 15 |
 | [06-device-top](06-device-top/) | 4 |
 
-58 STL parts, six layer GLBs, six geometry-only 3MF assemblies and one complete GLB. Filenames match the assembly-guide part IDs.
+48 STL parts, five layer GLBs, five geometry-only 3MF assemblies and two full-stack GLBs (plain and pegboard ends). The A, B, D, E and F prefixes match the assembly guides. Use `packaged_sha256` in the manifest to check a downloaded STL.
 
 This is an unprinted digital prototype. Models are in assembly positions; orient and support parts before slicing. See [validation](validation.json) for known limits.
 
-All eight drawers have 2 mm solid floors; joining and slide interfaces are retained.
+双抽屉层与三抽屉层合计五只主抽屉，八槽板层另有两只侧抽屉。完整组合高 249 mm。
+
+The full stack is 249 mm high. Its five main drawers and two side bins have 2 mm solid floors.
 
 ## H2D / H2S large-plate option / 大板版
 

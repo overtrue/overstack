@@ -3,6 +3,7 @@ from pathlib import Path
 import sys,json,shutil
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
 from build_variants import scene
+from ht_layers import LAYERS
 from geometry import *
 
 OUT=ROOT/'output/previews';OUT.mkdir(exist_ok=True)
@@ -22,10 +23,11 @@ def prepare(folder,parts):
 
 
 rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text())
-for index,folder in enumerate(sorted((ROOT/'models/ams2pro+ht').glob('0*'))):
+for index,(_,slug,z) in enumerate(LAYERS):
+    folder=ROOT/'models/ams2pro+ht'/slug
     parts={r['name']:trimesh.load_mesh(ROOT/'models/ams2pro+ht'/r['packaged_file']) for r in rows if r['layer']==index}
     prepare(folder,parts)
-    wide.update({n:move(m,[0,0,[0,40,100,160,220,280][index]]) for n,m in parts.items()})
+    wide.update({n:move(m,[0,0,z]) for n,m in parts.items()})
 prepare(ROOT/'models/ams2pro+ht',wide)
 for manifest in sorted((ROOT/'models/ams2pro').glob('*/parts.json')):
     parts={r['name']:move(trimesh.load_mesh(ROOT/r['file']),r['offset_mm']) for r in json.loads(manifest.read_text())}

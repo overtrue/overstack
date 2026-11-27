@@ -10,7 +10,6 @@
 | --- | --- | --- | ---: | ---: | ---: |
 | P2S | [ams2pro-ht/01-five-slot-plate-layer](p2s/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 5 | 32.9 | 832.5 |
 | P2S | [ams2pro-ht/02-eight-slot-plate-layer](p2s/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 6 | 48.1 | 1255.8 |
-| P2S | [ams2pro-ht/03-single-drawer-layer](p2s/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 7 | 36.3 | 1310.4 |
 | P2S | [ams2pro-ht/04-double-drawer-layer](p2s/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 8 | 53.9 | 1565.4 |
 | P2S | [ams2pro-ht/05-triple-drawer-layer](p2s/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 10 | 63.6 | 1737.4 |
 | P2S | [ams2pro-ht/06-device-top](p2s/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 2 | 15.2 | 332.7 |
@@ -23,7 +22,6 @@
 | P2S | [fit-check/pegboard](p2s/fit-check/pegboard/README.md) | sliced_not_printed | 1 | 0.6 | 19.9 |
 | X2D | [ams2pro-ht/01-five-slot-plate-layer](x2d/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 5 | 33.3 | 832.5 |
 | X2D | [ams2pro-ht/02-eight-slot-plate-layer](x2d/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 6 | 48.6 | 1255.8 |
-| X2D | [ams2pro-ht/03-single-drawer-layer](x2d/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 7 | 36.4 | 1310.4 |
 | X2D | [ams2pro-ht/04-double-drawer-layer](x2d/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 8 | 53.8 | 1565.4 |
 | X2D | [ams2pro-ht/05-triple-drawer-layer](x2d/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 10 | 63.4 | 1737.4 |
 | X2D | [ams2pro-ht/06-device-top](x2d/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 2 | 15.2 | 332.7 |
@@ -40,7 +38,6 @@
 | --- | --- | --- | ---: | ---: | ---: |
 | H2C | [ams2pro-ht/01-five-slot-plate-layer](h2c/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 3 | 28.2 | 806.6 |
 | H2C | [ams2pro-ht/02-eight-slot-plate-layer](h2c/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 3 | 41.0 | 1248.7 |
-| H2C | [ams2pro-ht/03-single-drawer-layer](h2c/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 4 | 35.1 | 1327.4 |
 | H2C | [ams2pro-ht/04-double-drawer-layer](h2c/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 4 | 47.8 | 1505.8 |
 | H2C | [ams2pro-ht/05-triple-drawer-layer](h2c/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 4 | 55.2 | 1747.3 |
 | H2C | [ams2pro-ht/06-device-top](h2c/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 2 | 13.8 | 315.7 |
@@ -53,7 +50,6 @@
 | H2C | [fit-check/pegboard](h2c/fit-check/pegboard/README.md) | sliced_not_printed | 1 | 0.6 | 20.4 |
 | H2S | [ams2pro-ht/01-five-slot-plate-layer](h2s/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 3 | 27.5 | 790.0 |
 | H2S | [ams2pro-ht/02-eight-slot-plate-layer](h2s/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 3 | 39.9 | 1223.0 |
-| H2S | [ams2pro-ht/03-single-drawer-layer](h2s/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 3 | 34.1 | 1299.9 |
 | H2S | [ams2pro-ht/04-double-drawer-layer](h2s/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 4 | 46.8 | 1474.8 |
 | H2S | [ams2pro-ht/05-triple-drawer-layer](h2s/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 4 | 54.0 | 1711.3 |
 | H2S | [ams2pro-ht/06-device-top](h2s/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 2 | 13.4 | 309.2 |
@@ -66,7 +62,6 @@
 | H2S | [fit-check/pegboard](h2s/fit-check/pegboard/README.md) | sliced_not_printed | 1 | 0.6 | 19.9 |
 | H3C | [ams2pro-ht/01-five-slot-plate-layer](h3c/ams2pro-ht/01-five-slot-plate-layer/README.md) | sliced_not_printed | 3 | 23.1 | 789.0 |
 | H3C | [ams2pro-ht/02-eight-slot-plate-layer](h3c/ams2pro-ht/02-eight-slot-plate-layer/README.md) | sliced_not_printed | 3 | 33.6 | 1220.9 |
-| H3C | [ams2pro-ht/03-single-drawer-layer](h3c/ams2pro-ht/03-single-drawer-layer/README.md) | sliced_not_printed | 3 | 29.8 | 1299.9 |
 | H3C | [ams2pro-ht/04-double-drawer-layer](h3c/ams2pro-ht/04-double-drawer-layer/README.md) | sliced_not_printed | 4 | 40.6 | 1474.8 |
 | H3C | [ams2pro-ht/05-triple-drawer-layer](h3c/ams2pro-ht/05-triple-drawer-layer/README.md) | sliced_not_printed | 4 | 46.5 | 1711.3 |
 | H3C | [ams2pro-ht/06-device-top](h3c/ams2pro-ht/06-device-top/README.md) | sliced_not_printed | 2 | 11.9 | 309.2 |

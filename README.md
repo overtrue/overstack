@@ -7,7 +7,7 @@ A modular, stackable storage system for AMS 2 Pro, with or without AMS HT. Start
 | AMS 2 Pro + HT | AMS 2 Pro only |
 | --- | --- |
 | [![AMS 2 Pro and AMS HT on Overstack](docs/images/showcase-compact.png)](models/ams2pro+ht/) | [![AMS 2 Pro on the AMS-only Overstack](docs/images/showcase-no-ht.png)](models/ams2pro/) |
-| 495 × 287 mm · Single / double / triple drawers | 399 × 287 mm · Single / double drawers |
+| 495 × 287 mm · Double / triple drawers | 399 × 287 mm · Single / double drawers |
 
 Both sets support plain or pegboard ends. Click a preview to browse its models.
 
@@ -17,11 +17,11 @@ Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 Images show the actual base geometry. Equipment scenes use the measured STEP models supplied by Engineered Reality; see [render asset credits](docs/render-assets.md).
 
-**This is an unprinted digital prototype.** Geometry checks have passed; all 41 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
+**This is an unprinted digital prototype.** Geometry checks have passed; all 35 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
 [Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. Each profile includes a before/after slice comparison; see the index for status. Not physically tested.
 
-[Drawer repair and verification](docs/drawer-repair.md)
+[HT triple-drawer print checks](docs/drawer-repair.md)
 
 ## AMS 2 Pro only
 
@@ -36,7 +36,7 @@ Five-slot plate layer + double-drawer layer + AMS-only top: 399 × 287 × 129 mm
 Five-slot plate layer + double-drawer layer + top; base height 129 mm.
 
 <details>
-<summary>Full stack · 309 mm base height</summary>
+<summary>Full stack · 249 mm base height</summary>
 
 ![Full stack with AMS 2 Pro and AMS HT](docs/images/showcase-full.png)
 
@@ -46,7 +46,7 @@ Device CAD: **Engineered Reality** ([AMS 2 Pro](https://makerworld.com/en/models
 
 ## Model files
 
-The [HT set](models/ams2pro+ht/) has 58 assembly parts. The [AMS-only set](models/ams2pro/) has 47. Both share the [common ends and keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
+The [HT set](models/ams2pro+ht/) has 48 assembly parts. The [AMS-only set](models/ams2pro/) has 47. Both share the [common ends and keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
 
 ## Two widths, shared ends
 
@@ -54,8 +54,8 @@ The [HT set](models/ams2pro+ht/) has 58 assembly parts. The [AMS-only set](model
 | --- | --- | --- |
 | Footprint | 495 × 287 mm | 399 × 287 mm |
 | Plate layers | Five / eight slots; eight-slot layer includes two side bins | Five / eight slots, no side bins |
-| Drawer middle | One, two or three drawers | **One or two drawers; no three-drawer option** |
-| Complete example | 13 plates, six main drawers, two bins; 309 mm high | 13 plates, three main drawers; 249 mm high |
+| Drawer middle | Two or three drawers | [One drawer](models/ams2pro/1-drawer-layer/) or two drawers |
+| Complete example | 13 plates, five main drawers, two bins; 249 mm high | 13 plates, three main drawers; 249 mm high |
 | Ends and keys | Shared by layer height | Same parts, right side moved inward |
 
 The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1 mm play on each side and the original 60 mm end frames. That makes its base slightly wider than the [372 mm AMS 2 Pro](https://store.bblcdn.com/s3/default/02bc9c24b207476a9608a314b8039509/AMS_2_Pro-EN.pdf). Its top has a single device opening, without an HT cutout.
@@ -89,9 +89,9 @@ Bottom to top: 40 + 60 + 40 mm, with the same row spacing across both seams.
 Each storage function lives in its own layer. The end frames connect the layers above and below; the centre holds plate ledges or drawers; one device top finishes the stack. Start with one layer and add storage as needed.
 
 - **Stackable:** all layers share curved locating feet and matching sockets. Lower a layer vertically, then insert two rear keys at each seam to resist vertical separation. The keys can slide out rearward; they are not captive latches.
-- **Mix and match:** choose, reorder or repeat complete five-slot, eight-slot, single-, double- and triple-drawer layers. Keep every front opening facing forward and the device top uppermost.
+- **Mix and match:** choose, reorder or repeat complete five-slot, eight-slot, double- and triple-drawer layers. Keep every front opening facing forward and the device top uppermost.
 - **Expand incrementally:** add plate layers for more plates or drawer layers for more categories. Retain the existing layers and print the new layer plus two keys for each added seam. The five-slot layer package does not include seam keys; add a pair of common keys when using it above another layer. Omit the lower seam keys on whichever layer is used as the base.
-- **Replace individual parts:** frames, carriers, beams, drawers and the top are separate parts. Unload the devices and remove upper layers before changing a module. Change drawer layouts as complete layers: a wide drawer does not fit the double-drawer guides.
+- **Replace individual parts:** frames, carriers, beams, drawers and the top are separate parts. Unload the devices and remove upper layers before changing a module. Swap the complete drawer layer so its guides and dividers match the drawers.
 
 The 40 mm and 60 mm figures are layer increments. With the top fitted, overall base height is **the sum of layer heights + 29 mm** (26 mm top and 3 mm feet), excluding devices. Width and depth remain 495 × 287 mm.
 
@@ -100,13 +100,13 @@ The 40 mm and 60 mm figures are layer increments. With the top fitted, overall b
 | Five-slot layer → top | 5 plates | 69 mm |
 | Five-slot layer → double-drawer layer → top | 5 plates, 2 main drawers | 129 mm |
 | Eight-slot layer × 2 → triple-drawer layer → top | 16 plates, 3 main drawers, 4 side bins | 209 mm |
-| Single → double → triple-drawer layer → top | 6 main drawers | 209 mm |
-| Full arrangement A → B → C → D → E → F | 13 plates, 6 main drawers, 2 side bins | 309 mm |
+| Double-drawer layer → triple-drawer layer → top | 5 main drawers | 149 mm |
+| Full arrangement A → B → D → E → F | 13 plates, 5 main drawers, 2 side bins | 249 mm |
 
 
 The full HT stack separated into layers:
 
-<img src="docs/images/stack-exploded-en.png" alt="Labeled layers: device top, triple drawer, double drawer, single drawer, eight-slot rack, five-slot rack" width="960">
+<img src="docs/images/stack-exploded-en.png" alt="Labeled layers: device top, triple drawer, double drawer, eight-slot rack, five-slot rack" width="960">
 
 From top to bottom in the image (click a layer name for its models):
 
@@ -115,7 +115,6 @@ From top to bottom in the image (click a layer name for its models):
 | F | [Device top](models/ams2pro+ht/06-device-top/) | Supports AMS 2 Pro + AMS HT |
 | E | [Triple-drawer layer](models/ams2pro+ht/05-triple-drawer-layer/) | Three separate drawers for small parts |
 | D | [Double-drawer layer](models/ams2pro+ht/04-double-drawer-layer/) | Two separate drawers for tools and spares |
-| C | [Single-drawer layer](models/ams2pro+ht/03-single-drawer-layer/) | One wide drawer for longer tools |
 | B | [Eight-slot plate layer](models/ams2pro+ht/02-eight-slot-plate-layer/) | Stores 8 plates, with one small bin on each side |
 | A | [Five-slot plate layer](models/ams2pro+ht/01-five-slot-plate-layer/) | Stores 5 frequently used plates |
 
@@ -143,14 +142,6 @@ Eight plate positions in the same footprint, plus two small side bins for tools 
 
 [Models and parts](models/ams2pro+ht/02-eight-slot-plate-layer/) · [Assembly guide](docs/pdf/02-eight-slot-plate-layer-assembly-en.pdf)
 
-### C · 60 mm single-drawer layer
-
-One wide drawer for longer tools or items that do not fit narrow compartments. Its left and right halves join with a longitudinal sliding dovetail: start the left half behind the right and slide it forward. The floor is 2 mm solid, with a locally reinforced seam rising 0.8 mm into the drawer. Replace both old front/rear halves together; they are not compatible with the new halves. Join the drawer first, assemble the frame, then insert it along the guides. Travel is about 180 mm; lift 7 mm at the stop for removal. Ten parts, including two seam keys.
-
-![C: single-drawer layer, exploded](docs/images/layer-c-exploded.png)
-
-[Models and parts](models/ams2pro+ht/03-single-drawer-layer/) · [Assembly guide](docs/pdf/03-single-drawer-layer-assembly-en.pdf)
-
 ### D · 60 mm double-drawer layer
 
 Two independent drawers and one divider separate tools from spare parts. Each front/rear beam has two joined halves; the divider drops into locating slots in both beams. Each drawer is one piece with a 2 mm solid floor, its own guides and a stop at about 180 mm travel. Thirteen parts, including two seam keys.
@@ -161,7 +152,7 @@ Two independent drawers and one divider separate tools from spare parts. Each fr
 
 ### E · 60 mm triple-drawer layer
 
-Three narrow drawers and two dividers provide separate homes for nozzles, small hardware or filament accessories. All drawers move independently and have 2 mm solid floors. Seat both ends of each divider before testing the drawers one at a time. Fifteen parts, including two seam keys. The single-, double- and triple-drawer layers share the same height and stacking interfaces.
+Three narrow drawers and two dividers provide separate homes for nozzles, small hardware or filament accessories. All drawers move independently and have 2 mm solid floors. Seat both ends of each divider before testing the drawers one at a time. Fifteen parts, including two seam keys. Both HT drawer layers share the same height and stacking interfaces.
 
 ![E: triple-drawer layer, exploded](docs/images/layer-e-exploded.png)
 
@@ -186,9 +177,9 @@ uv sync --frozen
 uv run python tools/build.py
 uv run python tools/verify.py
 uv run python tools/verify_drawer_repair.py
-cad run tools/check_printing.py
+uv run python tools/check_printing.py
 uv run python tools/package.py
-cad run tools/build_variants.py
+uv run python tools/build_variants.py
 uv run python tools/verify_variants.py
 uv run python tools/check_variants.py
 uv run python tools/bundle.py
@@ -201,30 +192,30 @@ Source: `src/overstack/`. Outputs: `output/model/` and `models/ams2pro+ht/`.
 
 ## Assembly guides
 
-Each HT layer has its own Chinese and English PDF in [docs/pdf](docs/pdf). Match the part ID printed in the guide to the filename prefix in the package. The top is a separate sixth booklet. The combined manuals are supplementary.
+Each HT layer has its own Chinese and English PDF in [docs/pdf](docs/pdf). Match the part ID printed in the guide to the filename prefix in the package. The top has its own booklet under F / 06. The combined manuals are supplementary.
 
 ## Rendering and documentation
 
 ```sh
 uv sync --frozen --group docs
-uv run python tools/render.py
-cad run tools/render_blender.py
-cad run tools/label_stack.py
+uv run python tools/render.py --prepare-only
+cad run --no-project tools/render_blender.py
+uv run python tools/label_stack.py
 uv run python tools/render_variants.py
 uv run python tools/model_previews.py
 uv run python tools/number_compact_parts.py
-cad run tools/render_blender.py --jobs output/numbered/jobs.json
-cad run tools/render_blender.py --jobs output/previews/jobs.json
-cad run tools/render_blender.py --jobs output/variants/render-jobs.json
+cad run --no-project tools/render_blender.py --jobs output/numbered/jobs.json
+cad run --no-project tools/render_blender.py --jobs output/previews/jobs.json
+cad run --no-project tools/render_blender.py --jobs output/variants/render-jobs.json
 uv run --group docs python tools/manual.py
 uv run --group docs python tools/layer_manuals.py
 ```
 
-`render.py` creates the exploded scenes and camera metadata using the optional text-to-cad `cad` CLI. `render_blender.py` renders the final images with flat face normals and large area lights. The PDF scripts require CJK TrueType fonts; set `OVERSTACK_FONT_REGULAR` and `OVERSTACK_FONT_BOLD` when not using the default macOS fonts. Fonts are not redistributed.
+`render.py` creates the exploded scenes and camera metadata for rendering with the text-to-cad `cad` CLI. `render_blender.py` renders the final images with flat face normals and large area lights. The PDF scripts require CJK TrueType fonts; set `OVERSTACK_FONT_REGULAR` and `OVERSTACK_FONT_BOLD` when not using the default macOS fonts. Fonts are not redistributed.
 
 ## Validation and limits
 
-The build checks all 1,653 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 41 distinct HT geometries pass. The single-drawer joint now has a reinforced channel; use the printer-specific projects for drawer orientation and supports. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks joint stock, sliding capture, solid floors and planar bed contact. These checks are not a tested print profile or load rating.
+The build checks all 1,128 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 35 distinct HT geometries pass. Use the printer-specific projects for drawer orientation and supports. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks the triple drawers’ floors, sidewalls and planar bed contact. These checks are not a tested print profile or load rating.
 
 Rear beams and seam keys are removable and are not captive. Remove devices and the upper layer before servicing drawers. Verify actual device feet, underside clearance, ventilation, cables and stability before placing equipment on the stack.
 

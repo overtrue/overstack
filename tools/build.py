@@ -8,7 +8,8 @@ from base import build_module
 from fabrication import segment
 from structure import crossbar_profile
 from layer_locks import layer_lock,check_layer_locks
-from multi_drawers import variant
+from multi_drawers import drawer_template,variant
+from ht_layers import LAYERS
 from surfaces import top_parts,illustrative_plate
 from shapely.affinity import translate
 
@@ -44,30 +45,31 @@ def build(output):
     print('Building base modules',flush=True)
     modules={name:build_module(H,N) for name,H,N in [('low',40,5),('standard',60,8)]}
     instances={};groups={};local_parts={}
-    def add(name,m,group,z):
+    def add(name,m,group):
         assert m.is_volume and m.is_watertight and len(m.split())==1,('solid',name)
-        local_parts[name]=m;instances[name]=move(m,[0,0,z]);groups[name]=group
-    for preset,kind,layer,z in [('low','plates',0,0),('standard','plates',1,40),('standard','drawer',2,100)]:
+        local_parts[name]=m;instances[name]=move(m,[0,0,LAYERS[group][2]]);groups[name]=group
+    for layer,preset in enumerate(['low','standard']):
         module=modules[preset];p=module['parts']
-        names=['end_left','end_right','cassette_'+kind]
-        names+=['drawer'] if kind=='drawer' else ([] if preset=='low' else ['side_bin_left','side_bin_right'])
+        names=['end_left','end_right','cassette_plates']
+        if layer: names+=['side_bin_left','side_bin_right']
         for name in names:
-            pieces=segment(name,p[name]) if name.startswith('cassette') or name=='drawer' else [p[name]]
-            if name=='cassette_plates':pieces=extend_plate_sides(pieces,module['height'],module['plate_count'],module['plate_pitch_mm'])
-            for i,m in enumerate(pieces,1):add(f'{preset}_{layer}_{name}_{i}',m,layer,z)
-        if layer>0:
-            for right in [False,True]:add(f'seam_{layer}_{right}_layer_lock',mirror_x(layer_lock()) if right else layer_lock(),layer,z)
-    template={n.removeprefix('standard_2_'):m for n,m in local_parts.items() if n.startswith('standard_2_') and not n.startswith('standard_2_drawer_')}
+            pieces=[p[name]]
+            if name=='cassette_plates':
+                pieces=extend_plate_sides(segment(name,p[name]),module['height'],module['plate_count'],module['plate_pitch_mm'])
+            for i,m in enumerate(pieces,1):add(f'{preset}_{layer}_{name}_{i}',m,layer)
+        if layer:
+            for right in [False,True]:add(f'seam_{layer}_{right}_layer_lock',mirror_x(layer_lock()) if right else layer_lock(),layer)
+    template=drawer_template(modules['standard'])
     multi=[]
-    for count,layer,z in [(2,3,160),(3,4,220)]:
+    for layer,count in enumerate([2,3],start=2):
         print('Building',count,'drawer module',flush=True)
         parts,tests=variant(count,template);multi+=tests
-        for name,m in parts.items():add(f'{count}drawers_{name}',m,layer,z)
-        for right in [False,True]:add(f'{count}drawers_seam_2_{right}_layer_lock',mirror_x(layer_lock()) if right else layer_lock(),layer,z)
+        for name,m in parts.items():add(f'{count}drawers_{name}',m,layer)
+        for right in [False,True]:add(f'{count}drawers_seam_2_{right}_layer_lock',mirror_x(layer_lock()) if right else layer_lock(),layer)
     print('Building independent top frame',flush=True)
-    tops=top_parts()
-    for i,m in enumerate(tops,1):add(f'device_adapter_{i}',m,5,280)
-    for i,right in enumerate([False,True],1):add(f'top_rear_lock_{i}',mirror_x(layer_lock()) if right else layer_lock(),5,280)
+    tops=top_parts();top_layer=len(LAYERS)-1
+    for i,m in enumerate(tops,1):add(f'device_adapter_{i}',m,top_layer)
+    for i,right in enumerate([False,True],1):add(f'top_rear_lock_{i}',mirror_x(layer_lock()) if right else layer_lock(),top_layer)
     # Complete assembly pair test, including every seam and locked drawer.
     pairs=0
     for i,(an,a) in enumerate(instances.items()):
@@ -80,7 +82,7 @@ def build(output):
     end_names=['3drawers_end_left_1','3drawers_end_right_1']
     for dz in [0,.2,1,3,10,30]:
         for m in tops:
-            for name in end_names:assert overlap(move(m,[0,0,280+dz]),instances[name])<.01,('top lowering',name,dz)
+            for name in end_names:assert overlap(move(m,[0,0,LAYERS[top_layer][2]+dz]),instances[name])<.01,('top lowering',name,dz)
     for i,right in enumerate([False,True],1):
         key=instances[f'top_rear_lock_{i}']
         for travel in [0,.3,1,3,10,20]:

@@ -2,37 +2,6 @@
 from geometry import *
 
 
-def drawer_and_stops(carrier, H):
-    from surfaces import solid_floor
-    floor=solid_floor(92.5,310)
-    walls=[box(92.5,0,8.5,310,8,H-9),box(92.5,0,8.5,6,271,H-9),
-           box(396.5,0,8.5,6,271,H-9),box(92.5,265,8.5,310,6,H-9),box(92.5,0,8.5,310,8,3)]
-    # A continuous spine backs the longitudinal joint above and below its channel.
-    # The local 0.8 mm interior ridge leaves at least 1.4 mm above the female slot.
-    pads=[box(241.5,42.5,6.3,14,228.5,5)]
-    drawer=union([floor]+walls+pads+[box(92.5,0,6.5,310,2,9)])
-    drawer=cut(drawer,rounded_xz(212.5,H-22,70,14,4,-1,10))
-    # Continuous front-open grooves stop at Y204: tongue backY24 => travel180mm.
-    groove=box(92.4,2,10,2.2,202,5)
-    drawer=cut(drawer,union([groove,mirror_x(groove)]))
-    # Integral toe: the drawer can be lifted off only at its open service position.
-    toe=box(91.5,20,10.35,2.65,4,4.3)
-    boss=box(83.5,14,3,9,16,H-3)
-    stop=union([boss,toe])
-    carrier=union([carrier,stop,mirror_x(stop)])
-    entry=box(92.4,195.65,8.4,2.2,8.35,1.7)
-    drawer=cut(drawer,union([entry,mirror_x(entry)]))
-    for travel in [0,30,90,150,180]:
-        assert overlap(move(drawer,[0,-travel,0]),carrier)<.01,('drawer travel',travel)
-    assert overlap(move(drawer,[0,-181,0]),carrier)>1,'integral drawer stop fails'
-    # Service: remove the upper module/top, pull to the stop, lift7mm, then pull free.
-    for lift in np.linspace(0,7,29):
-        assert overlap(move(drawer,[0,-180,lift]),carrier)<.01,('drawer lift',lift)
-    for travel in np.linspace(180,300,25):
-        assert overlap(move(drawer,[0,-travel,7]),carrier)<.01,('drawer removal',travel)
-    return drawer,carrier
-
-
 def side_bays(carrier,H):
     # 8 mm outer wall and floor; plate-bearing inner wall already measures 8 mm.
     floor=box(60.5,0,2.9,49,287,5.1)

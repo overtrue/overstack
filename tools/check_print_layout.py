@@ -1,6 +1,6 @@
-"""Check packing against actual footprints and regress the reported drawer layout."""
+"""Check packing against actual footprints and verify the AMS-only single-drawer layout."""
 from pathlib import Path
-import argparse,hashlib,json,sys,tempfile
+import argparse,hashlib,json,shutil,subprocess,sys,tempfile
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import np,trimesh
@@ -22,6 +22,28 @@ def validate(groups,parts,target):
             assert all(not shape.intersects(other) for other in shapes),('overlapping brims',obj['path'])
             shapes.append(shape);seen.append(obj['path'])
     assert sorted(seen)==sorted(parts),'missing or duplicate objects'
+
+
+def verify_recipe_sources(recipes):
+    """Rebuild before certifying that an existing slice still matches revised CAD sources."""
+    wide=ROOT/'models/ams2pro+ht'
+    manifest=json.loads((wide/'parts.json').read_text())
+    raw={wide/r['packaged_file']:Path('output/model')/r['file'] for r in manifest}
+    sources={ROOT/r['file'] for rows in recipes.values() for r in rows}
+    with tempfile.TemporaryDirectory() as tmp:
+        rebuilt=Path(tmp)
+        for folder in ['src','tools']:
+            shutil.copytree(ROOT/folder,rebuilt/folder,ignore=shutil.ignore_patterns('__pycache__'))
+        for script in ['build.py','build_variants.py','build_fit_checks.py']:
+            subprocess.run([sys.executable,str(rebuilt/'tools'/script)],cwd=rebuilt,check=True)
+        for source in sources:
+            if source in raw:
+                # The HT packager serializes the mesh loaded from the raw build STL.
+                data=trimesh.load_mesh(rebuilt/raw[source]).export(file_type='stl')
+            else:
+                data=(rebuilt/source.relative_to(ROOT)).read_bytes()
+            assert data==source.read_bytes(),('rebuild differs from published STL',source)
+    print('PASS:',len(sources),'recipe STLs match regenerated geometry',flush=True)
 
 
 def validate_profile(manifest,recipes,pose_cache):
@@ -70,6 +92,13 @@ def validate_profile(manifest,recipes,pose_cache):
         'rule_source_hashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
             for p in [ROOT/'tools/print_layout.py',ROOT/'tools/build_print_profiles.py',ROOT/'tools/print_profile_targets.py',Path(__file__).resolve()]},
         'checks':['source geometry','orientation transforms','support flags','brim clearance','plate groups','XY placement']}
+    validation=ROOT/report['validation_source']['file']
+    findings=json.loads(validation.read_text())
+    if report['profile'].startswith('ams2pro-ht/'):
+        assert findings['printing_failures']==[] and findings['printing_statuses']==['ok'],validation
+    else:
+        assert all(p['status']=='ok' for p in findings['parts']),validation
+    proof.update(model_sources_sha256=builder.model_source_digest(),validation_sha256=builder.digest(validation))
     (manifest.parent/'layout-rule-validation.json').write_text(json.dumps(proof,indent=2)+'\n')
 
 
@@ -78,26 +107,27 @@ if __name__=='__main__':
     if args.all:
         from build_print_profiles import recipes
         recipe_map=dict(recipes());pose_cache={}
+        verify_recipe_sources(recipe_map)
         for key in TARGETS:
             for manifest in sorted((ROOT/'print-profiles'/key).glob('*/*/manifest.json')):
                 validate_profile(manifest,recipe_map,pose_cache)
                 print('PASS layout:',key,str(manifest.parent.relative_to(ROOT/'print-profiles'/key)),flush=True)
-    folder=ROOT/'output/print-profiles/x2d/ams2pro-ht/03-single-drawer-layer'
-    groups=json.loads((folder/'assembly.json').read_text())['plates']
-    groups=[g['objects'] for g in groups]
-    paths=[str(p) for p in sorted(folder.glob('C*.stl'))]
+    folder=ROOT/'output/print-profiles/x2d/ams2pro/1-drawer-layer'
+    groups=[g['objects'] for g in json.loads((folder/'assembly.json').read_text())['plates']]
+    paths=[str(p) for p in sorted(folder.glob('NC*.stl'))]
     validate(groups,paths,TARGETS['x2d'])
-    assert any(any('C05-' in o['path'] for o in g) and any('C06-' in o['path'] for o in g) for g in groups),'rails must share a plate'
-    assert len(groups)<=7,'drawer layout regressed'
-    for name in ['C05-standard_2_cassette_drawer_3.stl','C06-standard_2_cassette_drawer_4.stl']:
-        m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/03-single-drawer-layer/parts'/name)
+    assert any(any('NC05-' in o['path'] for o in g) and any('NC06-' in o['path'] for o in g) for g in groups),'rails must share a plate'
+    assert len(groups)<=6,'AMS-only single drawer layout regressed'
+    drawer_layer=ROOT/'models/ams2pro/1-drawer-layer'
+    for name in ['front_beam_1','front_beam_2']:
+        m=trimesh.load_mesh(drawer_layer/(name+'.stl'))
         _,pose=orient_for_area(m,TARGETS['x2d']['area'],260)
-        assert pose['bounds_mm'][2]<=6.001 and pose['bed_contact_area_mm2']>5800,pose
-    # A mirrored half must rest on its outside face, not its open inside face.
-    for name in ['C07-standard_2_drawer_1.stl','C08-standard_2_drawer_2.stl']:
-        m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/03-single-drawer-layer/parts'/name)
-        _,pose=orient_for_area(m,TARGETS['x2d']['area'],260)
-        assert pose['downward_area_mm2']<1800 and pose['bed_contact_area_mm2']>12000,pose
+        assert pose['bounds_mm'][2]<=6.001 and pose['bed_contact_area_mm2']>3000,pose
+    for name in ['drawer_half_1','drawer_half_2']:
+        m=trimesh.load_mesh(drawer_layer/(name+'.stl'))
+        for key in ['x2d','h2s']:
+            _,pose=orient_for_area(m,TARGETS[key]['area'],TARGETS[key]['height'])
+            assert pose['downward_area_mm2']<10 and pose['bed_contact_area_mm2']>12000,pose
     for source,height in [('models/common/end_left_60_plain.stl',63),
                           ('models/ams2pro/2-drawer-layer/drawer_1.stl',53),
                           ('models/ams2pro/8-slot-plate-layer/plate_carrier_left.stl',60)]:
@@ -108,9 +138,6 @@ if __name__=='__main__':
         m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/05-triple-drawer-layer/parts'/name)
         _,pose=orient_for_area(m,TARGETS['h2s']['area'],340,rotation=([1,0,0],180))
         assert pose['bounds_mm'][2]<=58.001 and pose['bed_contact_area_mm2']>2000,pose
-    m=trimesh.load_mesh(ROOT/'models/ams2pro+ht/03-single-drawer-layer/parts/C07-standard_2_drawer_1.stl')
-    _,pose=orient_for_area(m,TARGETS['h2s']['area'],340)
-    assert pose['downward_area_mm2']<1800,('avoid supporting the entire drawer floor',pose)
     # Two flat drawer bodies fit side by side on the larger bed. Starting in the
     # center used to waste both remaining strips of space and force two plates.
     with tempfile.TemporaryDirectory() as temporary:
@@ -126,4 +153,4 @@ if __name__=='__main__':
     try:validate(bad,[bad[0][0]['path']]*2,TARGETS['x2d'])
     except AssertionError:pass
     else:raise AssertionError('overlap check did not reject duplicate placement')
-    print('PASS footprints, brims, rail grouping, mirrored drawer orientation and overlap rejection')
+    print('PASS footprints, brims, rail grouping, front and rear drawer-half orientations and overlap rejection')

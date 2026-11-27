@@ -1,11 +1,10 @@
 """One self-contained Chinese and English assembly guide per layer."""
 from manual import *
 from reportlab.pdfgen import canvas
-SLUGS=['five-slot-plate-layer','eight-slot-plate-layer','single-drawer-layer','double-drawer-layer','triple-drawer-layer','device-top']
 for lang in ['zh','en']:
- for i,slug in enumerate(SLUGS):
-  b=Book(lang);z=b.zh;prefix=chr(65+i);title=(TITLES_ZH if z else TITLES_EN)[i]
-  b.path=PDF/f'{i+1:02d}-{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('Overstack / '+title);b.c.setAuthor('overtrue')
+ for i,(prefix,slug,_) in enumerate(LAYERS):
+  b=Book(lang);z=b.zh;title=(TITLES_ZH if z else TITLES_EN)[i]
+  b.path=PDF/f'{slug}-assembly-{lang}.pdf';b.c=canvas.Canvas(str(b.path),pagesize=(W,H),pageCompression=1);b.c.setTitle('Overstack / '+title);b.c.setAuthor('overtrue')
   b.start(prefix+' / '+title,'LAYER ASSEMBLY')
   b.image('layer-'+prefix.lower()+'-assembled',35,185,520,310)
   b.text('Overstack' if z else 'Overstack',585,470,18,True)
@@ -20,13 +19,11 @@ for lang in ['zh','en']:
   b.steps((STEPS_ZH if z else STEPS_EN)[i],top=484)
   b.note('按编号匹配零件。爆炸位置用于辨认，不代表实际装入方向；按右侧步骤操作。' if z else 'Match part IDs to filenames. Exploded positions identify parts, not insertion paths; follow the steps on the right.');b.end()
   b.start('连接、使用与检查' if z else 'Connections, use and checks')
-  key='rail-detail' if i<2 else ('drawer-joint' if i==2 else ('layer-f-assembled' if i==5 else 'layer-lock-detail'))
+  key='rail-detail' if i<2 else ('layer-f-assembled' if prefix=='F' else 'layer-lock-detail')
   b.image(key,35,150,480,345)
   use=(STEPS_ZH if z else STEPS_EN)[i][-1]
   steps=[use,('连接相邻层','弧形底脚对准槽后竖直落座。每条层缝装左右两枚锁片，从后向前推入；锁片可向后退出。') if z else ('Connect neighbouring layers','Align the curved feet and lower vertically. Insert the two seam keys from behind. Keys can slide out rearward.'),('验收本层','确认四角落座、连接到位、抽拉无卡滞。后横梁与锁片没有防丢锁止；实物配合、设备净空和承重仍需验证。') if z else ('Check this layer','Check seating, joints and free movement. Rear beams and keys are not captive. Physical fit, device clearance and load capacity still need testing.')]
   b.steps(steps,x=550,top=481,width=250)
-  if i in [1,2,3,4]:
-   b.para('抽屉底板为2 mm实心板，单抽屉接缝另有局部加厚筋。' if z else 'Drawers use 2 mm solid floors; the single-drawer seam has local reinforcement.',42,118,755,10)
-  if i==2:
-   b.para('使用新版左右两半，不能混用旧前后两半；方向和支撑以对应机型的摆盘工程为准。' if z else 'Use the new left/right halves, not the old front/rear halves. Follow the printer-specific project for orientation and supports.',42,145,755,10,color=ORANGE)
+  if prefix in ['B','D','E']:
+   b.para('抽屉底板为2 mm实心板。' if z else 'Drawers use 2 mm solid floors.',42,118,755,10)
   b.note('PETG/FDM检查通过；仍有悬垂、桥接等提示。尚无实物验证。' if z else 'PETG/FDM checks pass; overhang and bridge warnings remain. Physical fit is untested.');b.end();b.save();print(b.path.name)

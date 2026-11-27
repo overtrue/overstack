@@ -2,9 +2,9 @@
   "project_sha256": "caec41a72c1b065e019b1b1e696b054f499acade5904fccfc322a0fba0996e4d",
   "rule_source_hashes": {
     "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
-    "tools/build_print_profiles.py": "2b10f096970ded63237f903e7568f20ef65e99b9a9b8c198427a0355c093e423",
+    "tools/build_print_profiles.py": "61508f63ba4060b93fd42f089132dc96de4fb066e5d1ef9ee72de57a1e204aeb",
     "tools/print_profile_targets.py": "bdd592bd10885cf9baf0f9f19fb9db969a3492c9318095539d36bf2474510bbe",
-    "tools/check_print_layout.py": "33aec389311dbc7bdd9da101e5e0110dbc9652108eccb20e31e5a30aabb44027"
+    "tools/check_print_layout.py": "73a906215e02a82f0f1a3fa29acfd0b3ba48b62f36761834d46301c7a2775637"
   },
   "checks": [
     "source geometry",
@@ -13,5 +13,7 @@
     "brim clearance",
     "plate groups",
     "XY placement"
-  ]
+  ],
+  "model_sources_sha256": "3d762250954c8217e593e587b77369d2d977e1f2e5a1d344139cadec1a502db4",
+  "validation_sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
 }

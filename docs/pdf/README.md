@@ -4,13 +4,12 @@
 
 **Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.
 
-每层独立一册，中英文各一份。每册包含零件清单、装配步骤和使用检查。
+HT 版五组零件各有一册，中英文各一份。每册包含零件清单、装配步骤和使用检查。
 
 | Layer | 中文 | English |
 | --- | --- | --- |
 | 01 five-slot-plate-layer | [PDF](01-five-slot-plate-layer-assembly-zh.pdf) | [PDF](01-five-slot-plate-layer-assembly-en.pdf) |
 | 02 eight-slot-plate-layer | [PDF](02-eight-slot-plate-layer-assembly-zh.pdf) | [PDF](02-eight-slot-plate-layer-assembly-en.pdf) |
-| 03 single-drawer-layer | [PDF](03-single-drawer-layer-assembly-zh.pdf) | [PDF](03-single-drawer-layer-assembly-en.pdf) |
 | 04 double-drawer-layer | [PDF](04-double-drawer-layer-assembly-zh.pdf) | [PDF](04-double-drawer-layer-assembly-en.pdf) |
 | 05 triple-drawer-layer | [PDF](05-triple-drawer-layer-assembly-zh.pdf) | [PDF](05-triple-drawer-layer-assembly-en.pdf) |
 | 06 device-top | [PDF](06-device-top-assembly-zh.pdf) | [PDF](06-device-top-assembly-en.pdf) |

@@ -8,9 +8,11 @@ import bpy
 from mathutils import Vector, Matrix
 from cad.blender import load
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
+from ht_layers import LAYERS
 no_ht='--no-ht' in sys.argv
 final='--final' in sys.argv;compact='--compact' in sys.argv or no_ht
-key='no-ht' if no_ht else 'compact' if compact else 'full';top=.100 if compact else .280
+key='no-ht' if no_ht else 'compact' if compact else 'full';top=.100 if compact else LAYERS[-1][2]/1000
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene=bpy.context.scene
 

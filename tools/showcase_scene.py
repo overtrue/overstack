@@ -5,9 +5,10 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from surfaces import illustrative_plate
+from ht_layers import LAYERS
 D=ROOT/'models/ams2pro+ht';OUT=ROOT/'output/showcase';OUT.mkdir(parents=True,exist_ok=True)
 rows=json.loads((D/'parts.json').read_text())
-layouts=[('full',[(0,0),(1,40),(2,100),(3,160),(4,220),(5,280)]),('compact',[(0,0),(3,40),(5,100)]),('no-ht',[])]
+layouts=[('full',[(i,z) for i,(_,_,z) in enumerate(LAYERS)]),('compact',[(0,0),(2,40),(4,100)]),('no-ht',[])]
 for key,layout in layouts:
  if ('--no-ht' in sys.argv) != (key=='no-ht'):continue
  scene=trimesh.Scene();world=[]

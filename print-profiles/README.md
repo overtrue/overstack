@@ -12,7 +12,7 @@ All printers use the same layout priorities: stable bed contact, strength and pr
 
 Side panels with rails and protrusions are compared separately. An H2S single-panel comparison estimated 3.0 h and 3.3 g of support in the low side pose, versus 5.7 h and 28.2 g when laid flat, so the low side pose is retained. Both use the same process settings; neither is physically validated.
 
-[配置索引 / Profile index](INDEX.md) · [抽屉修复说明 / Drawer repair](../docs/drawer-repair.md)
+[配置索引 / Profile index](INDEX.md) · [HT 三抽屉检查 / HT triple-drawer checks](../docs/drawer-repair.md)
 
 两版下载包 / Two download packages:
 
@@ -40,9 +40,9 @@ H2C 保留官方 330 × 320 mm 板配置，但摆盘限制在两喷嘴范围交�
 
 H2C retains its official 330 × 320 mm bed preset, while layouts stay in the intersection of both nozzle regions (300 × 320 mm, starting at X=25) and the smaller 320 mm height limit. H2S uses its own 340 × 320 mm preset. Limits come from Studio's official machine presets.
 
-小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。单抽屉采用新版左右拼接，三抽屉按机型可用范围分别选择方向；旧阻塞状态已由重新检查和切片替代。
+小于 X2D 的 256 × 256 mm 打印板明确不支持，包含 A1 mini；不提供试件或整层的小板切片配置，也不为其缩放、拆分零件。单抽屉工程在各机型的 ams2pro 目录中，前后两半分别摆放。ams2pro-ht 提供双抽屉和三抽屉工程。
 
-Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. The single drawer uses revised left/right halves; triple-drawer orientations are selected for each printer’s usable area. Fresh checks and slicing replace the former blocked status.
+Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsupported. No specimen or layer profiles are provided for them, and parts are not rescaled or segmented for them. Each printer’s ams2pro directory contains the single-drawer project with its front and rear halves. The ams2pro-ht directory contains the double- and triple-drawer projects.
 
 ## 组织 / Organization
 
@@ -76,7 +76,7 @@ All profiles remain `makerworld_ready=false` until print, support-removal, assem
 - `<printer>-04-petg.3mf`（`x2d`、`p2s`、`h2s`、`h2c`、`h3c`）：带设备、材料和工艺设置的 Bambu Studio 项目。与 `models/` 中的装配几何 3MF 分开。
 - `manifest.json`：来源文件及 SHA-256、数量、摆放变换、打印条件和验证状态。
 - `slice-validation.json`：各机型的实际 G-code 机型、温度、材料及板内范围检查记录。 / Actual G-code metadata and bed-bound checks for every printer.
-- `layout-rule-validation.json`：确认已有工程的方向、分盘与位置符合当前规则，保留原始生成来源记录。 / Confirms that orientations, grouping and positions match current rules while preserving generation provenance.
+- `layout-rule-validation.json`：记录核对过的模型源码和制造检查摘要，同时验证方向、分盘和位置。原始生成记录保存在 manifest.json。 / Records the model-source and manufacturing-report hashes used to verify the existing project, alongside its orientation, plate groups and positions. The manifest retains the original generation hashes.
 - `layout-validation.json`、`layout-printing-checks.json`：切片对比和当前方向的通用打印检查；不代表实物验证。 / Slice comparisons and manufacturing checks for the current orientations; not physical validation.
 - `plate_*.png`、`slice-info.xml`：实际切片产生的预览与耗材/时间估算；不是实拍或实测。
 
@@ -87,16 +87,16 @@ The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in
 以下命令在[源码仓库](https://github.com/overtrue/overstack)根目录运行；ZIP 仅含工程、说明和试件。 / Run these commands from the source checkout; the ZIP contains projects, guides and specimens.
 
 ```sh
-cad run tools/build_fit_checks.py
-cad run tools/build_print_profiles.py --printer x2d --slice
-cad run tools/build_print_profiles.py --printer p2s --slice
-cad run tools/build_print_profiles.py --printer h2s --slice
-cad run tools/build_print_profiles.py --printer h2c --slice
-cad run tools/build_print_profiles.py --printer h3c --slice
+uv run python tools/build_fit_checks.py
+uv run python tools/build_print_profiles.py --printer x2d --slice
+uv run python tools/build_print_profiles.py --printer p2s --slice
+uv run python tools/build_print_profiles.py --printer h2s --slice
+uv run python tools/build_print_profiles.py --printer h2c --slice
+uv run python tools/build_print_profiles.py --printer h3c --slice
 python3 tools/check_sliced_targets.py
-cad run tools/check_print_layout.py --all
-cad run tools/check_profile_printing.py
-cad run tools/check_print_profiles.py
+uv run python tools/check_print_layout.py --all
+uv run python tools/check_profile_printing.py
+uv run python tools/check_print_profiles.py
 ```
 
 可用 `--only ams2pro/5-slot` 限定范围。生成器从已导出的零件清单读取模型，只旋转和平移，不修改零件几何。使用各机型目录 `presets/` 内固定配置；来源是本机该版本 Studio 的官方机器、PETG 和工艺配置及继承值。升级 Studio 或修改模型后必须重建并重验。
@@ -109,6 +109,6 @@ Use `--only ams2pro/5-slot` to limit rebuilding. Parts are only rotated and tran
 
 Organize functional modules by width. Each module has one complete multi-plate baseline profile, with part IDs in plate/object names. Add alternatives only for meaningful geometry or process differences. Publish tested modules first, then tested combinations.
 
-生成下载包：`cad run tools/bundle_print_profiles.py`。只有全盘切片成功的工程会进入预览 ZIP，失败/阻塞项仅保留状态清单。 / Only fully sliced projects enter the preview ZIP; blocked entries retain manifests only.
+生成下载包：`uv run python tools/bundle_print_profiles.py`。只有全盘切片成功的工程会进入预览 ZIP，失败/阻塞项仅保留状态清单。 / Only fully sliced projects enter the preview ZIP; blocked entries retain manifests only.
 
 Studio CLI 空喷嘴列表兼容处理参考 [BambuStudio #12956](https://github.com/bambulab/BambuStudio/issues/12956)。分盘使用 Studio 原生 `--load-assemble-list`，不手工拼接 3MF 网格。

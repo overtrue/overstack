@@ -1,5 +1,5 @@
 from geometry import *
-from fabrication import split_at
+from fabrication import segment,split_at
 
 def orient_candidate(mesh):
     # Full-width drawers fit without seams by tilting the long axis.
@@ -54,6 +54,12 @@ def divider(x):
     m=union([wall,*shelves,*toes,*tabs])
     assert m.is_watertight and len(m.split())==1
     return m
+
+
+def drawer_template(module):
+    left, right = module['ends']
+    carrier = segment('cassette_drawer', module['parts']['cassette_drawer'])[0]
+    return {'end_left_1': left, 'end_right_1': right, 'cassette_drawer_1': carrier}
 
 
 def middle_side(right,width=495):

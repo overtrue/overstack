@@ -1,7 +1,7 @@
 {
-  "parts": 58,
-  "assembly_pairs": 1653,
-  "distinct_geometries": 41,
+  "parts": 48,
+  "assembly_pairs": 1128,
+  "distinct_geometries": 35,
   "printing_statuses": [
     "ok"
   ],
@@ -11,7 +11,7 @@
     "printing.knife_edge",
     "printing.overhang_angle"
   ],
-  "printing_passed": 41,
+  "printing_passed": 35,
   "printing_failures": [],
   "physical_fit": "not_verified",
   "load_rating": null,

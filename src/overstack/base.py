@@ -9,7 +9,7 @@ def build_module(H, N, fit=.35):
  from shapely.affinity import translate
  from geometry import lead_in, mirror_x, overlap
  from layer_locks import lock_pockets
- from storage import drawer_and_stops, side_bays
+ from storage import side_bays
  from structure import install_structure,BAR_DEPTH
  outline=rectangle(15,15,480,272).buffer(15,quad_segs=32)
  if not isinstance(N,int) or isinstance(N,bool) or N<1:raise ValueError('Plate count must be positive')
@@ -96,11 +96,11 @@ def build_module(H, N, fit=.35):
  plate_car=U(plate_parts)
  plate_car,side_parts=side_bays(plate_car,H)
  top=[]
- drawer,drawer_car=drawer_and_stops(drawer_car,H)
+ # Preserve the carrier used as the dovetail template for both drawer widths.
+ stop=U([box(83.5,14,3,9,16,H-3),box(91.5,20,10.35,2.65,4,4.3)])
+ drawer_car=U([drawer_car,stop,mirror_x(stop)])
  drawer_car=U([drawer_car,box(92.5,0,2.9,17,2,3.1),box(385.5,0,2.9,17,2,3.1)])
- assert np.allclose(drawer.bounds[:,2],[6.3,H-.5])
- assert len(drawer.split())==1
- parts={'end_left':ends[0],'end_right':ends[1],'cassette_drawer':drawer_car,'cassette_plates':plate_car,'drawer':drawer}
+ parts={'end_left':ends[0],'end_right':ends[1],'cassette_drawer':drawer_car,'cassette_plates':plate_car}
  parts.update({'device_top_'+n:k for n,k in top})
  parts.update(side_parts)
  checks=[]
@@ -119,14 +119,6 @@ def build_module(H, N, fit=.35):
     overlap=sum(abs(inter(move(m,[0,0,travel]),e).volume) for m in ms)
     assert overlap<.01,(finishname,travel,side,overlap)
     finish_checks.append({'finish':finishname,'travel':travel,'side':side,'overlap_mm3':float(overlap)})
- for travel in [0,30,90,150,180]:
-  moving=move(drawer,[0,-travel,0])
-  for obstruction in ends+[plate_car,drawer_car]:
-   assert abs(inter(moving,move(obstruction,[0,0,H])).volume)<.01,('upper layer drawer clash',travel)
-  for _,adapter in top:
-   assert abs(inter(moving,adapter).volume)<.01,('top adapter drawer clash',travel)
- for travel in [0,30,90,150,180]:
-  v=abs(inter(move(drawer,[0,-travel,0]),drawer_car).volume);assert v<.01,('drawer',travel,v)
  for i in range(N):
   for dx in [-1,0,1]:
    v=abs(inter(box(118.5+dx,4,7.5+pitch*i,258,276,1.5),plate_car).volume);assert v<.01,('plate',i,dx,v)
