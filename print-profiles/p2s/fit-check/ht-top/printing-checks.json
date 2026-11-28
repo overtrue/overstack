@@ -1,0 +1,239 @@
+[
+  {
+    "id": "HT01",
+    "source_sha256": "49a2f3ee50e43e7c493c0000ba296e30b25236ee353276c8251896b4b1308a48",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  },
+  {
+    "id": "HT02",
+    "source_sha256": "677c39deff7978b99c152d9d126b0653989480e41198e4fb5c48a743edfc5215",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "printing.bridge_length",
+        "message": "bridge span 12.47 mm is over the 5 mm recommended maximum",
+        "location": "121.25, 136.5, 13.95",
+        "hint": "add a support or a pillar so no span exceeds 5 mm",
+        "items": [],
+        "rule": "printing.bridge_length",
+        "value": 12.466155526,
+        "limit": 5.0,
+        "unit": "mm",
+        "op": "max",
+        "source": "Protolabs Network (Hubs), How to design parts for FDM 3D printing",
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  },
+  {
+    "id": "HT03",
+    "source_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  },
+  {
+    "id": "HT04",
+    "source_sha256": "d9def5a449cd2c5e8c8119b09e5eee51f515395827142297ceed8afda40e8dca",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  },
+  {
+    "id": "HT05",
+    "source_sha256": "45ca6b9bb697b29be57a25c625efce08fc0205c018bf5e908ebf964828014d0b",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  },
+  {
+    "id": "HT06",
+    "source_sha256": "33d90e0fd3cfce7af88b1913265c6f3e0354f9f0d65b6acb6d20c2a047f2f940",
+    "status": "ok",
+    "findings": [
+      {
+        "severity": "info",
+        "code": "families_not_measured",
+        "message": "pins, details are not measured on this source (a mesh holds no axis or face to read them by): printing.pin_diameter, printing.emboss_height judge nothing here, which is no pass",
+        "location": "rules",
+        "hint": "check the part's exact geometry (its STEP or its model) for them",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      },
+      {
+        "severity": "info",
+        "code": "rules_general",
+        "message": "the verdicts are cad general rules (version 2026-11-10): general practice drawn from published design guides, and cad's own floors where no guide states a limit (each labelled by its source), no shop's limits",
+        "location": "rules",
+        "hint": "for a named shop, compare the measurements with its own published limits",
+        "items": [],
+        "rule": null,
+        "value": null,
+        "limit": null,
+        "unit": null,
+        "op": null,
+        "source": null,
+        "refs": []
+      }
+    ]
+  }
+]

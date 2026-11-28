@@ -24,7 +24,12 @@ for j in selected:
    if j.get('component_colors'):
     if 'end_' in obj.name or 'top_' in obj.name or 'device_adapter' in obj.name:color=(.65,.71,.72,1)
     if ('drawer_' in obj.name and 'cassette' not in obj.name) or 'side_bin' in obj.name:color=(.60,.44,.26,1)
-    if 'lock' in obj.name:color=(.65,.24,.08,1)
+    if 'lock' in obj.name or 'ht_foot_' in obj.name:color=(.65,.24,.08,1)
+   if j.get('split_colors'):
+    if '__front' in obj.name:color=(.19,.42,.42,1)
+    elif '__rear' in obj.name:color=(.64,.71,.70,1)
+    elif '__pin' in obj.name:color=(.73,.32,.10,1)
+    else:color=(.40,.46,.46,1)
    p=mat.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=color;p.inputs['Roughness'].default_value=.76
    obj.data.materials.clear();obj.data.materials.append(mat)
  camera=bpy.data.cameras.new('Camera');cam=bpy.data.objects.new('Camera',camera);scene.collection.objects.link(cam);scene.camera=cam

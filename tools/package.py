@@ -1,14 +1,17 @@
 """Arrange the generated assembly into named layers and numbered parts."""
 from pathlib import Path
-import sys,json,argparse,hashlib
+import sys,json,argparse,hashlib,os
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
+from layer_locks import REAR_LOCK_FILE
 from trimesh.exchange.threemf import export_3MF
-from ht_layers import LAYERS
+from ht_layers import LAYERS,TOP_NAMES
 
 def label(n):
     if 'layer_lock' in n or n.startswith('top_rear_lock'):return '层间锁片'
-    if n.startswith('device_adapter_'):return '顶部左片' if n.endswith('_1') else '顶部右片'
+    if n in TOP_NAMES:
+        return {'device_adapter_1':'顶部左片','device_adapter_2':'HT 前段','ht_top_rear':'HT 后段',
+                'ht_foot_front':'HT 前定位脚','ht_foot_rear':'HT 后定位脚'}[n]
     for key,zh in [('end_left','左端框'),('end_right','右端框'),('side_bin_left','左小抽屉'),('side_bin_right','右小抽屉'),('side_cover_left','左封板'),('side_cover_right','右封板'),('side_left','左侧承架'),('side_right','右侧承架'),('rear_beam','后横梁'),('front_beam','前横梁'),('divider','隔墙')]:
         if key in n:return zh
     if 'cassette_' in n:return {'1':'左侧承架','2':'右侧承架','3':'前横梁','4':'后横梁'}[n.rsplit('_',1)[1]]
@@ -25,12 +28,17 @@ def write_layer_readme(path,records):
     if slug in ('01-five-slot-plate-layer','02-eight-slot-plate-layer'):
         text+='**打印板适配：当前所有五槽／八槽板架仅针对 256 × 256 mm 打印面积规格的拓竹板设计，适用机型为 A1、P1P、P1S、P2S、X1、X1 Carbon（X1C）、X1E 和 X2D。** 不支持 A1 mini 或 H 系列板。256 × 256 mm 是打印面积，不是钢板完整外形；第三方板需另核外形与厚度，当前模型尚未实物试装。\n\n**Build plate compatibility: all current five- and eight-slot racks are designed only for Bambu plates in the 256 × 256 mm printable-area class: A1, P1P, P1S, P2S, X1, X1 Carbon (X1C), X1E and X2D.** A1 mini and H-series plates are not supported. 256 × 256 mm describes the printable area, not the full steel-sheet outline. Check third-party plate outlines and thickness separately; physical fit has not been tested.\n\n'
     if slug=='06-device-top':
+        text+='[HT 侧试印与切片对照 / HT-side test print and slice comparison](../../../docs/ht-top-printing.md)\n\n'
+        text+='HT 侧替换套含 F02、F04、F05、F06、F07。前后段底面贴板，两只相同的 Ø6 圆销端面贴板，通用蝴蝶形锁片大面贴板。把 F02 与 F05 的两处燕尾竖直合拢，再把两只圆销放入下层右侧前后孔。顶件落座后，从后面水平推入锁片。左右位置 F03、F04 使用同一种锁片，上下可翻转。\n\nThe HT-side replacement includes F02, F04, F05, F06 and F07. Print both sections flat, the identical round dowels on end and the common bowtie key on its broad face. Join the staggered dovetails vertically and place the dowels in the lower frame. Seat the top and slide one bowtie into each rear slot. F03 and F04 are interchangeable, either end up.\n\n'
         text+='两端挡边的四个外露上角已做 R3 mm 圆角，承托面和连接接口不变；打印后仍需检查毛刺。 / The four exposed upper lip ends have R3 mm rounds; bearing faces and joints are unchanged. Check printed parts for burrs.\n\n![R3 挡边端头 / Rounded lip tip](../../../docs/images/lip-r3-detail.png)\n\n'
     text+='## 零件编号 / Part IDs\n\n编号对应下方爆炸图和 STL 文件名；点击编号下载对应零件。左右以面对抽屉／打印板入口为准。\n\n'
     text+='Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.\n\n'
+    text+='每道层缝从后方插入两片相同的蝴蝶锁片，左右通用。 / Print two identical bowties per seam. Either fits either side. [通用锁片 STL / Rear key STL](../../common/rear-lock.stl)\n\n'
     text+=f'![带零件编号的爆炸图 / Numbered exploded view]({image})\n\n'
     text+='| 编号 / ID | 零件 |\n| --- | --- |\n'
-    for r in records:text+=f'| [{r["id"]}](parts/{Path(r["packaged_file"]).name}) | {r["label"]} |\n'
+    for r in records:
+        link=os.path.relpath(ROOT/r['print_file'],ROOT/'models/ams2pro+ht'/slug) if 'print_file' in r else 'parts/'+Path(r['packaged_file']).name
+        text+=f'| [{r["id"]}]({link}) | {r["label"]} |\n'
     text+=f'\n[中文组装教程](../../../docs/pdf/{slug}-assembly-zh.pdf) · [English assembly guide](../../../docs/pdf/{slug}-assembly-en.pdf)\n\n'
     text+='STL单位毫米。3MF为装配几何，不含打印机配置，不是可直接发送的切片文件。零件未摆盘，切片前需调整方向与支撑。\n'
     (path/'README.md').write_text(text)
@@ -42,6 +50,7 @@ def package(source,dest):
         path=dest/folder;(path/'parts').mkdir(parents=True,exist_ok=True);layer=trimesh.Scene();glb=trimesh.Scene()
         whole.graph.update(frame_to=folder,frame_from=whole.graph.base_frame,matrix=np.eye(4))
         rows=sorted([r for r in data['parts'] if r['layer']==group],key=lambda r:r['name'])
+        if prefix=='F':rows.sort(key=lambda r:TOP_NAMES.index(r['name']))
         for i,r in enumerate(rows,1):
             ident=f'{prefix}{i:02d}';name=r['name'];m=trimesh.load_mesh(source/r['file'])
             assert m.is_volume and m.is_watertight and len(m.split())==1,name
@@ -54,13 +63,15 @@ def package(source,dest):
             shown=m.copy();shown.unmerge_vertices();shown.vertex_normals=np.repeat(m.face_normals,3,axis=0);shown.apply_scale(.001);shown.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]));glb.add_geometry(shown,node_name=ident)
             world=move(m,[0,0,z]);world.unmerge_vertices();world.vertex_normals=np.repeat(m.face_normals,3,axis=0);world.apply_scale(.001);world.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]));whole.add_geometry(world,node_name=ident,geom_name=ident,parent_node_name=folder)
             record={**r,'id':ident,'label':title,'packaged_file':str(part_path.relative_to(dest)),
-                    'packaged_sha256':hashlib.sha256(part_path.read_bytes()).hexdigest()};records.append(record)
+                    'packaged_sha256':hashlib.sha256(part_path.read_bytes()).hexdigest()}
+            if title=='层间锁片':record['print_file']=REAR_LOCK_FILE
+            records.append(record)
         glb.export(path/'layer-assembly.glb');(path/'layer-assembly-geometry.3mf').write_bytes(export_3MF(layer))
         write_layer_readme(path,[r for r in records if r['layer']==group])
     whole.export(dest/'overstack-assembly.glb')
     (dest/'parts.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
     check=trimesh.load(dest/'overstack-assembly.glb');assert set(check.graph.nodes_geometry)=={r['id'] for r in records}
-    assert len(records)==len(data['parts'])==48
+    assert len(records)==len(data['parts'])==51
     for prefix,folder,z in LAYERS:
         loaded=trimesh.load(dest/folder/'layer-assembly-geometry.3mf')
         assert len(loaded.graph.nodes_geometry)==sum(r['packaged_file'].startswith(folder+'/') for r in records)
@@ -85,7 +96,7 @@ def package(source,dest):
     for name,pose in repair['poses'].items():
         assert pose['source_sha256']==source_hashes[name],('stale drawer check',name)
     (dest/'drawer-repair-checks.json').write_text(json.dumps(repair,indent=2)+'\n')
-    print('PASS: five layers, 48 numbered STL parts, five geometry-only 3MF assemblies')
+    print('PASS: five layers, 51 numbered STL parts, five geometry-only 3MF assemblies')
     return records
 
 if __name__=='__main__':

@@ -1,7 +1,7 @@
 [
   {
     "id": "FIT02",
-    "source_sha256": "c76d54b22c4553b0de602deb79cf27895812be22f7e08aa44417af39285b826e",
+    "source_sha256": "c512d79729bd32b8ff8e0c4c8272244c8c2d27de8256c7d08bcbded3c52c1355",
     "status": "ok",
     "findings": [
       {
@@ -433,24 +433,9 @@
   },
   {
     "id": "FIT08",
-    "source_sha256": "7f84a888c4d77129f466efd5916f4181378ed3682c2f4495ee1ba13c635ad426",
+    "source_sha256": "fa939d98425931d416155d03b74fe8b897e3c4e446aa7804a829fce3f7292b49",
     "status": "ok",
     "findings": [
-      {
-        "severity": "warning",
-        "code": "printing.overhang_angle",
-        "message": "down-facing surface angle from horizontal 6 deg is under the 45 deg recommended minimum",
-        "location": "172.717, 157.097, 10.8744",
-        "hint": "support it, chamfer it to at least 45 deg from horizontal, or turn the part",
-        "items": [],
-        "rule": "printing.overhang_angle",
-        "value": 5.999977532,
-        "limit": 45.0,
-        "unit": "deg",
-        "op": "min",
-        "source": "Protolabs Network (Hubs), How to design parts for FDM 3D printing",
-        "refs": []
-      },
       {
         "severity": "warning",
         "code": "printing.bridge_length",
@@ -469,31 +454,16 @@
       {
         "severity": "warning",
         "code": "printing.bridge_length",
-        "message": "bridge span 5.127 mm is over the 5 mm recommended maximum",
-        "location": "177.634, 152.181, 17.6946",
+        "message": "bridge span 5.128 mm is over the 5 mm recommended maximum",
+        "location": "176.406, 153.597, 13.0359",
         "hint": "add a support or a pillar so no span exceeds 5 mm",
         "items": [],
         "rule": "printing.bridge_length",
-        "value": 5.126919706,
+        "value": 5.127966202,
         "limit": 5.0,
         "unit": "mm",
         "op": "max",
         "source": "Protolabs Network (Hubs), How to design parts for FDM 3D printing",
-        "refs": []
-      },
-      {
-        "severity": "info",
-        "code": "overhangs",
-        "message": "18.09 mm2 (0.7% of the surface) faces down at under 45 deg from horizontal, off the plate, 62 triangles: printing.overhang_angle judges each",
-        "location": "172.51, 157.3, 10.83",
-        "hint": "support it, chamfer the undersides to the angle or steeper, or turn the part (--candidates ranks the orientations; turn it in the model)",
-        "items": [],
-        "rule": null,
-        "value": null,
-        "limit": null,
-        "unit": null,
-        "op": null,
-        "source": null,
         "refs": []
       },
       {
@@ -530,18 +500,33 @@
   },
   {
     "id": "FIT09",
-    "source_sha256": "c2a7745fdce77beeed139c628fd76a7689bf8e84d439ecf4a5bf86f77c92b095",
+    "source_sha256": "87c0ccb1419e773d1752fa0e6758b01cde65e37190bc6d2860516c69603d8e84",
     "status": "ok",
     "findings": [
       {
         "severity": "warning",
         "code": "printing.overhang_angle",
-        "message": "down-facing surface angle from horizontal 2.25 deg is under the 45 deg recommended minimum",
-        "location": "181.156, 165.158, 4.5347",
+        "message": "down-facing surface angle from horizontal 2.813 deg is under the 45 deg recommended minimum",
+        "location": "184.357, 161.58, 6.7063",
         "hint": "support it, chamfer it to at least 45 deg from horizontal, or turn the part",
         "items": [],
         "rule": "printing.overhang_angle",
-        "value": 2.249981887,
+        "value": 2.812517742,
+        "limit": 45.0,
+        "unit": "deg",
+        "op": "min",
+        "source": "Protolabs Network (Hubs), How to design parts for FDM 3D printing",
+        "refs": []
+      },
+      {
+        "severity": "warning",
+        "code": "printing.overhang_angle",
+        "message": "down-facing surface angle from horizontal 7.031 deg is under the 45 deg recommended minimum",
+        "location": "174.97, 157.202, 0.1323",
+        "hint": "support it, chamfer it to at least 45 deg from horizontal, or turn the part",
+        "items": [],
+        "rule": "printing.overhang_angle",
+        "value": 7.03121565,
         "limit": 45.0,
         "unit": "deg",
         "op": "min",
@@ -551,8 +536,8 @@
       {
         "severity": "info",
         "code": "overhangs",
-        "message": "153.6 mm2 (4.8% of the surface) faces down at under 45 deg from horizontal, off the plate, 120 triangles: printing.overhang_angle judges each",
-        "location": "182.87, 154.96, 3.1",
+        "message": "135.94 mm2 (4.4% of the surface) faces down at under 45 deg from horizontal, off the plate, 60 triangles: printing.overhang_angle judges each",
+        "location": "180.18, 151.99, 3.25",
         "hint": "support it, chamfer the undersides to the angle or steeper, or turn the part (--candidates ranks the orientations; turn it in the model)",
         "items": [],
         "rule": null,

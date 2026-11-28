@@ -1,0 +1,142 @@
+[
+  {
+    "id": "NE01a",
+    "file": "models/256/ams2pro/device-top/NE01a.stl",
+    "parent_ids": [
+      "NE01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NE01b",
+    "file": "models/256/ams2pro/device-top/NE01b.stl",
+    "parent_ids": [
+      "NE01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NE02a",
+    "file": "models/256/ams2pro/device-top/NE02a.stl",
+    "parent_ids": [
+      "NE02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NE02b",
+    "file": "models/256/ams2pro/device-top/NE02b.stl",
+    "parent_ids": [
+      "NE02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NE03",
+    "name": "lock_left",
+    "file": "models/common/lock_left.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "NE04",
+    "name": "lock_right",
+    "file": "models/common/lock_right.stl",
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  }
+]

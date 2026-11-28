@@ -1,5 +1,6 @@
 [
   {
+    "id": "NC01",
     "name": "end_left_1",
     "file": "models/common/end_left_60_plain.stl",
     "offset_mm": [
@@ -7,10 +8,10 @@
       0,
       0
     ],
-    "id": "NC01",
     "label": "左端框"
   },
   {
+    "id": "NC02",
     "name": "end_right_1",
     "file": "models/common/end_right_60_plain.stl",
     "offset_mm": [
@@ -18,10 +19,10 @@
       0,
       0
     ],
-    "id": "NC02",
     "label": "右端框"
   },
   {
+    "id": "NC03",
     "name": "side_left",
     "file": "models/ams2pro/1-drawer-layer/side_left.stl",
     "offset_mm": [
@@ -29,10 +30,10 @@
       0,
       0
     ],
-    "id": "NC03",
     "label": "左抽屉承架"
   },
   {
+    "id": "NC04",
     "name": "side_right",
     "file": "models/ams2pro/1-drawer-layer/side_right.stl",
     "offset_mm": [
@@ -40,10 +41,10 @@
       0,
       0
     ],
-    "id": "NC04",
     "label": "右抽屉承架"
   },
   {
+    "id": "NC05",
     "name": "front_beam_1",
     "file": "models/ams2pro/1-drawer-layer/front_beam_1.stl",
     "offset_mm": [
@@ -51,10 +52,10 @@
       0,
       0
     ],
-    "id": "NC05",
     "label": "前横梁左半"
   },
   {
+    "id": "NC06",
     "name": "front_beam_2",
     "file": "models/ams2pro/1-drawer-layer/front_beam_2.stl",
     "offset_mm": [
@@ -62,10 +63,10 @@
       0,
       0
     ],
-    "id": "NC06",
     "label": "前横梁右半"
   },
   {
+    "id": "NC07",
     "name": "rear_beam_1",
     "file": "models/ams2pro/1-drawer-layer/rear_beam_1.stl",
     "offset_mm": [
@@ -73,10 +74,10 @@
       0,
       0
     ],
-    "id": "NC07",
     "label": "后横梁左半"
   },
   {
+    "id": "NC08",
     "name": "rear_beam_2",
     "file": "models/ams2pro/1-drawer-layer/rear_beam_2.stl",
     "offset_mm": [
@@ -84,10 +85,10 @@
       0,
       0
     ],
-    "id": "NC08",
     "label": "后横梁右半"
   },
   {
+    "id": "NC09",
     "name": "drawer_half_1",
     "file": "models/ams2pro/1-drawer-layer/drawer_half_1.stl",
     "offset_mm": [
@@ -95,10 +96,10 @@
       0,
       0
     ],
-    "id": "NC09",
     "label": "抽屉前半"
   },
   {
+    "id": "NC10",
     "name": "drawer_half_2",
     "file": "models/ams2pro/1-drawer-layer/drawer_half_2.stl",
     "offset_mm": [
@@ -106,10 +107,10 @@
       0,
       0
     ],
-    "id": "NC10",
     "label": "抽屉后半"
   },
   {
+    "id": "NC11",
     "name": "lock_left",
     "file": "models/common/lock_left.stl",
     "offset_mm": [
@@ -117,10 +118,11 @@
       0,
       0
     ],
-    "id": "NC11",
-    "label": "左后锁片"
+    "label": "通用蝴蝶锁片",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
+    "id": "NC12",
     "name": "lock_right",
     "file": "models/common/lock_right.stl",
     "offset_mm": [
@@ -128,7 +130,7 @@
       0,
       0
     ],
-    "id": "NC12",
-    "label": "右后锁片"
+    "label": "通用蝴蝶锁片",
+    "print_file": "models/common/rear-lock.stl"
   }
 ]

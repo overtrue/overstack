@@ -1,7 +1,7 @@
 {
   "printer": "Bambu Lab P2S",
-  "project_sha256": "fdce4515296221622fd2d026bfdc7d76daa14f53311105e4ce15c9a2fde06051",
-  "sliced_archive_sha256": "1cb42e158865fd16dbed41d391005f7a63975041bd3f5c468220698572c538ea",
+  "project_sha256": "209960b42218916d2bfabc1a3e19e52d17ed26465ed868945f747757b3f9fcb2",
+  "sliced_archive_sha256": "e5312e979bba6cef5a58e2fafda0022317a7b58b7eb57f2f28597d0a94f7951d",
   "plates": [
     {
       "file": "Metadata/plate_1.gcode",

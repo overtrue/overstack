@@ -1,0 +1,44 @@
+{
+  "printer": "p2s",
+  "profile": "replacement/ht-top-right",
+  "before": {
+    "plates": [
+      {
+        "plate": 2,
+        "total_g": 202.44,
+        "seconds": 32376.0,
+        "support_g": 34.524
+      }
+    ],
+    "plate_count": 1,
+    "total_g": 202.44,
+    "hours": 8.993,
+    "support_g": 34.524
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 81.54,
+        "seconds": 9138.0,
+        "support_g": 0.305
+      },
+      {
+        "plate": 2,
+        "total_g": 80.72,
+        "seconds": 8976.0,
+        "support_g": 0.268
+      }
+    ],
+    "plate_count": 2,
+    "total_g": 162.26,
+    "hours": 5.032,
+    "support_g": 0.573
+  },
+  "before_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
+  "before_scope": "F02-only plate in the original complete device-top project.",
+  "before_project_sha256": "e412425c91e44fb0a25633d34ca8af1b57cfed8fc331948cff48942b7f5340c6",
+  "before_plate_gcode_sha256": "df4e4e8d42856f9e78c855e21cf02406d26294407ffce03c4fc0a723fe689ae4",
+  "after_project_sha256": "4b6a7d74a6122e25988d431a34d918ee9e766ae32aab36e83c93b3bc20f5ccdb",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

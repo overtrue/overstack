@@ -1,0 +1,86 @@
+[
+  {
+    "id": "F01a",
+    "file": "models/256/ams2pro-ht/06-device-top/F01a.stl",
+    "parent_ids": [
+      "F01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        0.7071067811865476,
+        -4.329780281177466e-17,
+        0.7071067811865475
+      ],
+      [
+        0.7071067811865475,
+        4.329780281177467e-17,
+        -0.7071067811865476
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "F01b",
+    "file": "models/256/ams2pro-ht/06-device-top/F01b.stl",
+    "parent_ids": [
+      "F01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        0.7071067811865476,
+        -4.329780281177466e-17,
+        -0.7071067811865475
+      ],
+      [
+        0.7071067811865475,
+        4.329780281177467e-17,
+        0.7071067811865476
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "F02",
+    "file": "models/ams2pro+ht/06-device-top/parts/F02-device_adapter_2.stl"
+  },
+  {
+    "id": "F03",
+    "file": "models/ams2pro+ht/06-device-top/parts/F03-top_rear_lock_1.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "F04",
+    "file": "models/ams2pro+ht/06-device-top/parts/F04-top_rear_lock_2.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "F05",
+    "file": "models/ams2pro+ht/06-device-top/parts/F05-ht_top_rear.stl"
+  },
+  {
+    "id": "F06",
+    "file": "models/ams2pro+ht/06-device-top/parts/F06-ht_foot_front.stl"
+  },
+  {
+    "id": "F07",
+    "file": "models/ams2pro+ht/06-device-top/parts/F07-ht_foot_rear.stl"
+  }
+]

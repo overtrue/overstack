@@ -6,19 +6,21 @@ sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import np,trimesh
 from shapely.geometry import MultiPoint,box
 from shapely.affinity import translate
-from print_layout import orient_for_area,pack
+from print_layout import orient_for_area,pack,top_footprints,top_bed_bounds
 from print_profile_targets import TARGETS
 
 
-def validate(groups,parts,target):
+def validate(groups,parts,target,*,top=False):
     area=box(*target['area']);seen=[]
     for group in groups:
         shapes=[]
         for obj in group:
             m=trimesh.load_mesh(obj['path'])
             dx=obj.get('pos_x',[0])[0];dy=obj.get('pos_y',[0])[0]
-            shape=translate(MultiPoint(m.vertices[:,:2]).convex_hull.buffer(3),xoff=dx,yoff=dy)
-            assert area.buffer(.001).covers(shape),('brim outside bed',obj['path'])
+            bed,space=top_footprints(m,3) if top else (MultiPoint(m.vertices[:,:2]).convex_hull.buffer(3),)*2
+            shape=translate(space,xoff=dx,yoff=dy)
+            envelope=box(*top_bed_bounds(bed,space,target)) if top else bed
+            assert area.buffer(.001).covers(translate(envelope,xoff=dx,yoff=dy)),('brim or support outside bed',obj['path'])
             assert all(not shape.intersects(other) for other in shapes),('overlapping brims',obj['path'])
             shapes.append(shape);seen.append(obj['path'])
     assert sorted(seen)==sorted(parts),'missing or duplicate objects'
@@ -29,13 +31,24 @@ def verify_recipe_sources(recipes):
     wide=ROOT/'models/ams2pro+ht'
     manifest=json.loads((wide/'parts.json').read_text())
     raw={wide/r['packaged_file']:Path('output/model')/r['file'] for r in manifest}
-    sources={ROOT/r['file'] for rows in recipes.values() for r in rows}
+    sources={ROOT/r[k] for rows in recipes.values() for r in rows for k in ('file','print_file') if k in r}
     with tempfile.TemporaryDirectory() as tmp:
         rebuilt=Path(tmp)
         for folder in ['src','tools']:
             shutil.copytree(ROOT/folder,rebuilt/folder,ignore=shutil.ignore_patterns('__pycache__'))
         for script in ['build.py','build_variants.py','build_fit_checks.py']:
             subprocess.run([sys.executable,str(rebuilt/'tools'/script)],cwd=rebuilt,check=True)
+        # Materialize canonical wide STLs exactly as the packager does; the
+        # 256 mm splitter consumes those, the compact BOM and the fit coupons.
+        (rebuilt/'models/ams2pro+ht').mkdir(parents=True,exist_ok=True)
+        shutil.copy2(wide/'parts.json',rebuilt/'models/ams2pro+ht/parts.json')
+        for source,relative in raw.items():
+            dest=rebuilt/source.relative_to(ROOT)
+            dest.parent.mkdir(parents=True,exist_ok=True)
+            trimesh.load_mesh(rebuilt/relative).export(dest)
+        subprocess.run([sys.executable,str(rebuilt/'tools/build_small_bed.py')],cwd=rebuilt,check=True)
+        for bom in (ROOT/'models/256').glob('*/*/parts.json'):
+            assert json.loads(bom.read_text())==json.loads((rebuilt/bom.relative_to(ROOT)).read_text()),bom
         for source in sources:
             if source in raw:
                 # The HT packager serializes the mesh loaded from the raw build STL.
@@ -63,12 +76,12 @@ def validate_profile(manifest,recipes,pose_cache):
         cache_key=(key,row['file'],json.dumps(row.get('print_rotation')))
         if cache_key not in pose_cache:
             mesh=trimesh.load_mesh(source)
-            printed,pose=builder.orient_for_target(mesh,source)
             if 'print_rotation' in row:
                 t=np.eye(4);t[:3,:3]=row['print_rotation'];printed=mesh.copy();printed.apply_transform(t)
                 shift=-printed.bounds[0];printed.apply_translation(shift);t[:3,3]=shift
                 down=(printed.face_normals[:,2]<-.707)&(printed.triangles_center[:,2]>.25)
                 pose={'assembly_to_print':t,'bounds_mm':printed.extents,'supports_required':float(printed.area_faces[down].sum())>1,'brim_mm':3}
+            else:_,pose=builder.orient_for_target(mesh,source)
             pose_cache[cache_key]=pose
         pose=pose_cache[cache_key]
         for field in ['assembly_to_print','bounds_mm']:
@@ -78,8 +91,9 @@ def validate_profile(manifest,recipes,pose_cache):
     folder=ROOT/'output/print-profiles'/key/report['profile']
     groups=[g['objects'] for g in json.loads((folder/'assembly.json').read_text())['plates']]
     paths=[str(folder/(p['id']+'-'+Path(p['source']).stem+'.stl')) for p in report['parts']]
-    validate(groups,paths,target)
-    expected=pack(paths,report['parts'],target)
+    top=builder.nested_layout(key,report['profile'])
+    validate(groups,paths,target,top=top)
+    expected=pack(paths,report['parts'],target,top=top,tall_first=report['profile']=='ams2pro-ht/06-device-top')
     assert len(expected)==len(groups),(manifest,'layout no longer matches packing rules')
     for actual,wanted in zip(groups,expected):
         assert [o['path'] for o in actual]==[o['path'] for o in wanted],(manifest,'different grouping')
@@ -94,7 +108,7 @@ def validate_profile(manifest,recipes,pose_cache):
         'checks':['source geometry','orientation transforms','support flags','brim clearance','plate groups','XY placement']}
     validation=ROOT/report['validation_source']['file']
     findings=json.loads(validation.read_text())
-    if report['profile'].startswith('ams2pro-ht/'):
+    if report['validation_source']['file']=='models/ams2pro+ht/validation.json':
         assert findings['printing_failures']==[] and findings['printing_statuses']==['ok'],validation
     else:
         assert all(p['status']=='ok' for p in findings['parts']),validation
@@ -106,17 +120,17 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--all',action='store_true');args=parser.parse_args()
     if args.all:
         from build_print_profiles import recipes
-        recipe_map=dict(recipes());pose_cache={}
-        verify_recipe_sources(recipe_map)
+        large=dict(recipes('h2s'));small=dict(recipes('x2d'));pose_cache={}
+        verify_recipe_sources({**{'large/'+k:v for k,v in large.items()},**small})
         for key in TARGETS:
             for manifest in sorted((ROOT/'print-profiles'/key).glob('*/*/manifest.json')):
-                validate_profile(manifest,recipe_map,pose_cache)
+                validate_profile(manifest,small if TARGETS[key]['group']=='256' else large,pose_cache)
                 print('PASS layout:',key,str(manifest.parent.relative_to(ROOT/'print-profiles'/key)),flush=True)
     folder=ROOT/'output/print-profiles/x2d/ams2pro/1-drawer-layer'
     groups=[g['objects'] for g in json.loads((folder/'assembly.json').read_text())['plates']]
-    paths=[str(p) for p in sorted(folder.glob('NC*.stl'))]
-    validate(groups,paths,TARGETS['x2d'])
-    assert any(any('NC05-' in o['path'] for o in g) and any('NC06-' in o['path'] for o in g) for g in groups),'rails must share a plate'
+    paths=[obj['path'] for group in groups for obj in group]
+    validate(groups,paths,TARGETS['x2d'],top=True)
+    assert any('NC05J-' in path for path in paths) and any('NC07J-' in path for path in paths),'compact beams missing'
     assert len(groups)<=6,'AMS-only single drawer layout regressed'
     drawer_layer=ROOT/'models/ams2pro/1-drawer-layer'
     for name in ['front_beam_1','front_beam_2']:

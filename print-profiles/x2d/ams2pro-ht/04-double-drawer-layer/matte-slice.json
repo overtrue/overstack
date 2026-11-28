@@ -1,0 +1,68 @@
+{
+  "base_project_sha256": "7b4a8812a8ce0ddd87a600d8f2b3e5772cc51af59b01cd99df5f22d83d735f86",
+  "filament_preset_sha256": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
+  "filament": "Bambu PETG Matte @BBL X2D 0.4 nozzle",
+  "filament_id": "GFG03",
+  "density_g_cm3": 1.37,
+  "project_file": "x2d-04-petg-matte.3mf",
+  "project_sha256": "74091ea565fc010978357918b53c471b708d1a61753b2ba551d2dbc7262b52a5",
+  "gcode": [
+    {
+      "plate": 1,
+      "gcode_sha256": "514598ad5f7e624e1ab50346723cea8519f776bfb672a7cb58c45e16277f8fcf",
+      "bounds_mm": [
+        0.7207,
+        0.36869,
+        255.97853000000003,
+        242.39242000000002
+      ]
+    },
+    {
+      "plate": 2,
+      "gcode_sha256": "f738affcde4bdc2a669f7104cf01ea82c4eda97e65aa5bab570cf002fe3b5261",
+      "bounds_mm": [
+        0.7075800000000001,
+        0.7075800000000001,
+        195.39242000000002,
+        226.39242000000002
+      ]
+    },
+    {
+      "plate": 3,
+      "gcode_sha256": "3c94e277cd6ba3a579a6d578e8c3e0038c46a58841ef137fc7b31ff5c49a4961",
+      "bounds_mm": [
+        0.02145,
+        0.7075800000000001,
+        247.20208000000002,
+        215.47997
+      ]
+    }
+  ],
+  "metrics": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 585.08,
+        "seconds": 61075.0,
+        "support_g": 13.056
+      },
+      {
+        "plate": 2,
+        "total_g": 494.38,
+        "seconds": 43965.0,
+        "support_g": 0.081
+      },
+      {
+        "plate": 3,
+        "total_g": 416.2,
+        "seconds": 41563.0,
+        "support_g": 4.513
+      }
+    ],
+    "plate_count": 3,
+    "total_g": 1495.66,
+    "hours": 40.723,
+    "support_g": 17.65
+  },
+  "physical_print": "not_verified"
+}

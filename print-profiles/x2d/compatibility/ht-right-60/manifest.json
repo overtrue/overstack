@@ -1,0 +1,179 @@
+{
+  "profile": "compatibility/ht-right-60",
+  "printer": "Bambu Lab X2D",
+  "nozzle_mm": 0.4,
+  "material": "Bambu PETG Basic",
+  "bed": "Textured PEI Plate",
+  "layer_mm": 0.2,
+  "end_style": null,
+  "studio_version": "02.09.01.70",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
+  "physical_fit": "not_verified",
+  "load_test": "not_verified",
+  "makerworld_ready": false,
+  "parts": [
+    {
+      "id": "L60Ra",
+      "source": "models/256/compatibility/ht-right-60/L60Ra.stl",
+      "sha256": "d35a7f3128225c87813f62843ee01dec1a445ea7bcc9b0c27d6caa6dce0f9c03",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        149.5
+      ],
+      "downward_area_mm2": 959.7250100003938,
+      "bed_contact_area_mm2": 2876.6972132729366,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "L60Rb",
+      "source": "models/256/compatibility/ht-right-60/L60Rb.stl",
+      "sha256": "88ab13e4418eea6dae5b3a02f65835ebebcaf9ed2a77cc7a2623806b304b4890",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 1141.423640099232,
+      "bed_contact_area_mm2": 2693.454827983132,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    }
+  ],
+  "status": "sliced_not_printed",
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
+  "model_source_hashes": {
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
+    "src/overstack/corner_pins.py": "f1ce304becf6a22439f576b09c0557ba2d29846874b1721c2f4c4f08934a1720",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
+    "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/overstack/ht_top.py": "eb432d45e3aa4942b3caa66d5e8ea4ef5f9726ade973f18404a47bd814713bec",
+    "src/overstack/layer_locks.py": "f3e255d3c2ea9b981825fff143001108a5fd028b0554685a9b9f532e82b066ac",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
+    "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/overstack/small_bed.py": "2bc75ffc7bf5cb44700ad590cfe854846756e5d38f2fbadf5b911f44a3430bb9",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
+    "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/overstack/surfaces.py": "8b2b758526feaa4120ad0b48027d77f96437f6a10f89d482ba8024bd2acb3043",
+    "tools/ht_layers.py": "f22e75a522a9b9bd5eca01227319a80055a7b57b1fc31f4e7f9d61b08bdb58e0",
+    "tools/package.py": "0f1d25f5fe01ba1946b19b1941614d488d5125a2a59ba8acbf3f1c0d26b33134",
+    "tools/build.py": "8e2f95d46a30c76ccb44e945bc6de0483564938aaa9a5078f7844dd001044d54",
+    "tools/build_variants.py": "17094b0a74db0550d199b34837d7aea3bc6dd8aa1c3595fdcec92a13bcab29bf",
+    "tools/build_fit_checks.py": "08b5ac391e3675884a862413702c73b2fad7607a6ad34aedd593c63b065fc8ac",
+    "tools/build_small_bed.py": "46ea397f64622d667f0dbe698539d6e35a82c3323c138103c33ccd0626103c97"
+  },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "a28e1684b6d607628f2ddc2b387a3a201e2b1baa54c7bfb9229d6fa916b89d1f"
+  },
+  "validation_source": {
+    "file": "models/ams2pro/printing.json",
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
+  },
+  "preset_hashes": {
+    "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
+    "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
+    "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
+  },
+  "process_overrides": {
+    "curr_bed_type": "Textured PEI Plate",
+    "wall_loops": "4",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "1",
+    "support_type": "tree(auto)",
+    "brim_type": "outer_only",
+    "brim_width": "3"
+  },
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 L60Ra, L60Rb",
+      "objects": [
+        "L60Ra-L60Ra",
+        "L60Rb-L60Rb"
+      ]
+    }
+  ],
+  "project_sha256": "0ec3485fde26b002a90bc89d480fbaf5c4b7efeba1671838513d9cb853e84344",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_1.gcode"
+  ]
+}

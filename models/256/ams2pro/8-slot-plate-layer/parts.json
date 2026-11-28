@@ -1,0 +1,274 @@
+[
+  {
+    "id": "NB01a",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB01a.stl",
+    "parent_ids": [
+      "NB01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB01b",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB01b.stl",
+    "parent_ids": [
+      "NB01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB02a",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB02a.stl",
+    "parent_ids": [
+      "NB02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB02b",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB02b.stl",
+    "parent_ids": [
+      "NB02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB03a",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB03a.stl",
+    "parent_ids": [
+      "NB03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB03b",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB03b.stl",
+    "parent_ids": [
+      "NB03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB04a",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB04a.stl",
+    "parent_ids": [
+      "NB04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB04b",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB04b.stl",
+    "parent_ids": [
+      "NB04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NB05J",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB05J.stl",
+    "parent_ids": [
+      "NB05",
+      "NB06"
+    ]
+  },
+  {
+    "id": "NB07J",
+    "file": "models/256/ams2pro/8-slot-plate-layer/NB07J.stl",
+    "parent_ids": [
+      "NB07",
+      "NB08"
+    ]
+  },
+  {
+    "id": "NB09",
+    "name": "lock_left",
+    "file": "models/common/lock_left.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "NB10",
+    "name": "lock_right",
+    "file": "models/common/lock_right.stl",
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  }
+]

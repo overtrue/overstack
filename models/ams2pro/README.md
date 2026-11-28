@@ -10,6 +10,8 @@
 
 ![Pegboard version](preview.png)
 
+每道层缝用两片相同的蝴蝶锁片，上下、左右均可互换。 / Print two identical bowties per seam. Either fits either side, either end up. [通用尾锁 STL / Rear key STL](../common/rear-lock.stl)
+
 [Plain assembly GLB](overstack-no-ht.glb) · [Pegboard assembly GLB](overstack-no-ht-pegboard.glb) · [Common ends](../common/)
 
 | Layer | Height increment | Assembly parts |
@@ -24,9 +26,9 @@ Complete example: 47 assembly parts, 13 plates, three main drawers, 249 mm total
 
 完整示例共 47 件：13 个板位、3 只主抽屉，含脚总高 249 mm。收纳层可增减、换序、重复；每道接缝需两枚通用锁片，顶件下方也需要。底层不装下接缝锁片。中段和顶件必须保持同一宽度。
 
-通用件 STL 保留原 HT 版坐标；右件在无 HT 装配中 X 偏移 −96 mm。各层 `parts.json` 记录文件及偏移，GLB/3MF 已放好。两侧普通端框可分别换为同高度、同侧洞洞板端框。
+端框 STL 保留 HT 版坐标，右端框在无 HT 装配中沿 X 偏移 −96 mm。各层 `parts.json` 记录文件及偏移，GLB/3MF 已放好。两侧普通端框可分别换为同高度、同侧洞洞板端框。
 
-Common STLs keep wide-set coordinates; right parts move −96 mm on X in the compact assembly. Layer manifests record these placements; GLB/3MF files already apply them. Replace either plain end with the matching height/side pegboard end.
+The end-frame STLs keep the wide-set coordinates. The compact assembly shifts the right end frame −96 mm on X. Layer manifests record these placements; GLB/3MF files already apply them. Replace either plain end with the matching height/side pegboard end.
 
 各层提供带编号爆炸图，NA–NE 编号与零件表和 `parts.json` 一一对应；点击编号下载零件。
 

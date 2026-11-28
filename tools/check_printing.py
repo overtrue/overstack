@@ -4,6 +4,8 @@ import sys,json,subprocess,concurrent.futures,shutil,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from fabrication import orient,drawer_print_pose
+from ht_top import print_rotation
+from print_layout import orient_for_area
 from multi_drawers import orient_candidate
 D=ROOT/'output/model';OUT=ROOT/'output/printing';OUT.mkdir(parents=True,exist_ok=True)
 data=json.loads((D/'checks.json').read_text());cad=shutil.which('cad')
@@ -14,7 +16,10 @@ for r in data['parts']:
     if sha in unique:
         placements.append({'name':r['name'],'same_geometry_as':unique[sha]['name']});continue
     m=trimesh.load_mesh(f)
-    if r['name'].startswith('3drawers_drawer_'):
+    rotation=print_rotation(r['name'])
+    if rotation:
+        printed,placement=orient_for_area(m,[0,0,256,256],260,rotation=rotation)
+    elif r['name'].startswith('3drawers_drawer_'):
         printed,placement=drawer_print_pose(m)
     else:
         try:printed,placement=orient(m)

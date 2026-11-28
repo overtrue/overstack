@@ -7,34 +7,34 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
   "parts": [
     {
-      "id": "ND01",
-      "source": "models/common/end_left_60_plain.stl",
-      "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+      "id": "ND01a",
+      "source": "models/256/ams2pro/2-drawer-layer/ND01a.stl",
+      "sha256": "b17e5182927402ec4ffa481f037d78f7034cc5a374adbe848004a417b8302d8f",
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
+          1.0,
           0.0,
-          196.7264400637114
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
           0.0,
-          -6.2132034394294005
+          -0.0
         ],
         [
           0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
           0.0,
           1.0,
-          3.0
+          6.123233995736766e-17,
+          -0.0
         ],
         [
           0.0,
@@ -44,13 +44,12 @@
         ]
       ],
       "bounds_mm": [
-        239.15284693490426,
-        239.1528496323026,
-        63.0
+        60.0,
+        63.0,
+        149.5
       ],
-      "downward_area_mm2": 9444.4515840187,
-      "bed_contact_area_mm2": 182.04088149353018,
-      "support_column_estimate_mm3": 28969.62472378919,
+      "downward_area_mm2": 936.0218506969888,
+      "bed_contact_area_mm2": 2876.696820415288,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -59,28 +58,28 @@
       ]
     },
     {
-      "id": "ND02",
-      "source": "models/common/end_right_60_plain.stl",
-      "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+      "id": "ND01b",
+      "source": "models/256/ams2pro/2-drawer-layer/ND01b.stl",
+      "sha256": "016b775b4109747812af55ecea7732bd9c908a1466c2ebba85edcf0592a93d1e",
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
-          0.0,
-          -104.6518036156091
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
-          0.0,
-          -307.59144981614816
-        ],
-        [
-          0.0,
-          0.0,
           1.0,
-          3.0
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
         ],
         [
           0.0,
@@ -90,13 +89,102 @@
         ]
       ],
       "bounds_mm": [
-        239.15284693490423,
-        239.15284423750597,
-        63.0
+        60.0,
+        63.0,
+        143.1999969482422
       ],
-      "downward_area_mm2": 9444.451694124024,
-      "bed_contact_area_mm2": 182.0408285467346,
-      "support_column_estimate_mm3": 28969.625723012352,
+      "downward_area_mm2": 1120.9680335600353,
+      "bed_contact_area_mm2": 2693.4546674437597,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "ND02a",
+      "source": "models/256/ams2pro/2-drawer-layer/ND02a.stl",
+      "sha256": "443cec486949079296727c25dfc23410f64bef27be512cd42e4eae45ac15912a",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        149.5
+      ],
+      "downward_area_mm2": 938.4544817411945,
+      "bed_contact_area_mm2": 2876.6972132729366,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "ND02b",
+      "source": "models/256/ams2pro/2-drawer-layer/ND02b.stl",
+      "sha256": "655bab5f9e2959b6e61e7bc3e015d722e83f0dc2c58386dbfafe9e6110ea7251",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 1120.9667786687382,
+      "bed_contact_area_mm2": 2693.454827983132,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -197,28 +285,28 @@
       ]
     },
     {
-      "id": "ND05",
-      "source": "models/ams2pro/2-drawer-layer/divider_1.stl",
-      "sha256": "6218488d0e4f2607ac97ae1558866f2e4d0ca10de579647f53048ab2376e587d",
+      "id": "ND05a",
+      "source": "models/256/ams2pro/2-drawer-layer/ND05a.stl",
+      "sha256": "8b00e715d066c7c39102040005bb2f4585ca806669f2fee14dc5cdb3d7266183",
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
+          1.0,
           0.0,
-          64.70027047856908
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
           0.0,
-          -138.23937572197002
+          -191.5
         ],
         [
           0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
           0.0,
           1.0,
-          -2.0
+          6.123233995736766e-17,
+          -3.6739403974420594e-16
         ],
         [
           0.0,
@@ -228,13 +316,12 @@
         ]
       ],
       "bounds_mm": [
-        208.5965004500315,
-        208.59650045003156,
-        58.0
+        16.0,
+        58.0,
+        149.5
       ],
-      "downward_area_mm2": 4223.60009765625,
-      "bed_contact_area_mm2": 129.59985351562494,
-      "support_column_estimate_mm3": 16969.220184783917,
+      "downward_area_mm2": 60.08991981507279,
+      "bed_contact_area_mm2": 432.0,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -243,22 +330,67 @@
       ]
     },
     {
-      "id": "ND06",
-      "source": "models/ams2pro/2-drawer-layer/front_beam_1.stl",
-      "sha256": "688000a8ac32c6c4cbf1797027afb709c050e62e4cd5830c4082f4ad1ee93631",
+      "id": "ND05b",
+      "source": "models/256/ams2pro/2-drawer-layer/ND05b.stl",
+      "sha256": "9db570dba3d9950c55943fe08d7addeb9bef1e187631d03068c798484f8c9b8e",
       "quantity": 1,
       "assembly_to_print": [
         [
           1.0,
           0.0,
           0.0,
-          -63.5
+          -191.5
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -2.0000000000000164
         ],
         [
           0.0,
           -1.0,
-          -1.2246467991473532e-16,
-          24.0
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        16.0,
+        58.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 41.5999755859375,
+      "bed_contact_area_mm2": 432.0,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "ND06J",
+      "source": "models/256/ams2pro/2-drawer-layer/ND06J.stl",
+      "sha256": "3d0135ad561751fe643ce766938c0dd72cbeaa4ecf63b7dc93a5d535140427b4",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -44.90128060534577
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          -30.75914498161481
         ],
         [
           0.0,
@@ -274,13 +406,13 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.4751801064719,
+        206.47518010647187,
         6.000000000000003
       ],
-      "downward_area_mm2": 64.22012337981141,
-      "bed_contact_area_mm2": 3228.285744273322,
-      "support_column_estimate_mm3": 256.8804935192457,
+      "downward_area_mm2": 75.59999656677257,
+      "bed_contact_area_mm2": 6410.00004005432,
+      "support_column_estimate_mm3": 302.3999862670904,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -289,68 +421,22 @@
       ]
     },
     {
-      "id": "ND07",
-      "source": "models/ams2pro/2-drawer-layer/front_beam_2.stl",
-      "sha256": "00af2d3c1dad795b761e4ba9cc04df6272b63f7dd96f42418bf3df1a55110126",
+      "id": "ND08J",
+      "source": "models/256/ams2pro/2-drawer-layer/ND08J.stl",
+      "sha256": "026ccab66ab432893ec01365a5287594ad5cb47f76ebee36e1138c4c84a64e30",
       "quantity": 1,
       "assembly_to_print": [
         [
-          1.0,
-          0.0,
-          0.0,
-          -199.8000030517578
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -233.69879118215394
         ],
         [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          24.0
-        ],
-        [
-          0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          6.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.000000000000003
-      ],
-      "downward_area_mm2": 9.058419002612936,
-      "bed_contact_area_mm2": 3172.3560040872544,
-      "support_column_estimate_mm3": 36.23367601045177,
-      "supports_required": true,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "ND08",
-      "source": "models/ams2pro/2-drawer-layer/rear_beam_1.stl",
-      "sha256": "7292a3c43137cce6ec3590145fbca69784385aa537d9e657c68d7e26e26c4753",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          -63.5
-        ],
-        [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          287.0
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          158.0383655951934
         ],
         [
           0.0,
@@ -366,13 +452,13 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.47518010647187,
+        206.47518010647187,
         6.0000000000000036
       ],
-      "downward_area_mm2": 64.2199666230008,
-      "bed_contact_area_mm2": 3228.285799429752,
-      "support_column_estimate_mm3": 256.87986649200326,
+      "downward_area_mm2": 75.59985351562482,
+      "bed_contact_area_mm2": 6410.000183105471,
+      "support_column_estimate_mm3": 302.3994140624993,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -381,28 +467,28 @@
       ]
     },
     {
-      "id": "ND09",
-      "source": "models/ams2pro/2-drawer-layer/rear_beam_2.stl",
-      "sha256": "d79070810a46642dcaf778d7ef2deb6dde0c819becf4836b66e230fee69e6893",
+      "id": "ND10a",
+      "source": "models/256/ams2pro/2-drawer-layer/ND10a.stl",
+      "sha256": "449d7ca652caa1bf854bb022596c72dc936f9af5f24eab775ae38b569134d4ff",
       "quantity": 1,
       "assembly_to_print": [
         [
           1.0,
           0.0,
           0.0,
-          -199.8000030517578
+          -69.0
         ],
         [
           0.0,
+          6.123233995736766e-17,
           -1.0,
-          -1.2246467991473532e-16,
-          287.0
+          59.5
         ],
         [
           0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          5.999999999999968
+          1.0,
+          6.123233995736766e-17,
+          -3.9801020972288977e-16
         ],
         [
           0.0,
@@ -412,13 +498,57 @@
         ]
       ],
       "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.0000000000000036
+        126.0,
+        53.0,
+        145.5
       ],
-      "downward_area_mm2": 9.058395828353241,
-      "bed_contact_area_mm2": 3172.3560572068673,
-      "support_column_estimate_mm3": 36.23358331341297,
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 5712.056871703069,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "ND10b",
+      "source": "models/256/ams2pro/2-drawer-layer/ND10b.stl",
+      "sha256": "4c3f4f5cb6fec48468593d94f3a7f2faf5feb731afc473b125fce6a852d42eab",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -69.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.500000000000009
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          271.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        126.0,
+        51.00000000000001,
+        135.1999969482422
+      ],
+      "downward_area_mm2": 6.300006866455078,
+      "bed_contact_area_mm2": 6426.0,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -427,28 +557,28 @@
       ]
     },
     {
-      "id": "ND10",
-      "source": "models/ams2pro/2-drawer-layer/drawer_1.stl",
-      "sha256": "e59ccce935457c45042c0e2c0c3f9b462990ad9ddd50fc01c0f1864a7440b575",
+      "id": "ND11a",
+      "source": "models/256/ams2pro/2-drawer-layer/ND11a.stl",
+      "sha256": "e5b04d512f91504839feb06fafd88d12d4ab95ce4699dfb8d73e9cc39b635840",
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          185.61553006146872
+          1.0,
+          0.0,
+          0.0,
+          -204.0
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -4.596194077712561
-        ],
-        [
-          -1.0,
           0.0,
           6.123233995736766e-17,
-          195.0
+          -1.0,
+          59.5
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -3.9801020972288977e-16
         ],
         [
           0.0,
@@ -458,14 +588,13 @@
         ]
       ],
       "bounds_mm": [
-        227.68838354206832,
-        229.1025971044414,
-        126.0
+        126.0,
+        53.0,
+        145.5
       ],
-      "downward_area_mm2": 13713.709759945503,
-      "bed_contact_area_mm2": 12802.474990844727,
-      "support_column_estimate_mm3": 1522908.82301248,
-      "supports_required": true,
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 5712.0568972450565,
+      "supports_required": false,
       "brim_mm": 3,
       "required_extruder_area_mm": [
         256,
@@ -473,28 +602,28 @@
       ]
     },
     {
-      "id": "ND11",
-      "source": "models/ams2pro/2-drawer-layer/drawer_2.stl",
-      "sha256": "669105c754bf9a6d4c57dba97d6d4ff1621aa9bdc0e00a76deef62e43671307b",
+      "id": "ND11b",
+      "source": "models/256/ams2pro/2-drawer-layer/ND11b.stl",
+      "sha256": "01196c11c65798fe00588928eb8d95cc151653816f4331346d08d4eca5c3bd07",
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          185.6155300614687
+          1.0,
+          0.0,
+          0.0,
+          -204.0
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -4.596194077712568
-        ],
-        [
-          -1.0,
           0.0,
           6.123233995736766e-17,
-          330.0
+          1.0,
+          -8.500000000000009
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          271.0
         ],
         [
           0.0,
@@ -504,13 +633,12 @@
         ]
       ],
       "bounds_mm": [
-        227.6883835420683,
-        229.1025971044414,
-        126.0
+        126.0,
+        51.00000000000001,
+        135.1999969482422
       ],
-      "downward_area_mm2": 13713.709737838433,
-      "bed_contact_area_mm2": 12802.47499084473,
-      "support_column_estimate_mm3": 1522908.8207716665,
+      "downward_area_mm2": 6.300018310546875,
+      "bed_contact_area_mm2": 6426.0,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -562,7 +690,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     },
     {
       "id": "ND13",
@@ -608,7 +738,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     }
   ],
   "status": "sliced_not_printed",
@@ -624,32 +756,39 @@
   "project_file": "x2d-04-petg.3mf",
   "preset_directory": "print-profiles/x2d/presets",
   "model_source_hashes": {
-    "src/overstack/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
-    "src/overstack/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
-    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/overstack/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "6fedac49ae13c5fc8d4668edc016aaaf0a909318c75f3cd63e06e36d6971adf3",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
     "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
-    "src/overstack/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
-    "src/overstack/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/overstack/ht_top.py": "f308ca8ce39127dde008f3e1088c69728918a4b7a3b7046636ea274199eaf75e",
+    "src/overstack/layer_locks.py": "13eb942bd275356ebff3285bcef1c8a9956d3a2ae91609236ccc06143f848498",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
     "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/overstack/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
     "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
-    "src/overstack/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
-    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
-    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
-    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+    "src/overstack/surfaces.py": "86fadb7d9574017b2568303bc9d46de54a1955130eb09195942274b050eb7a7d",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "dc7e14966cf505bfea330df5f3b6dcfbbe216c0739364199e79e918f8ddaaa69",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "d732c069336e4e66188722d89cbc689ea097f37b5c1f2eb543ca5f01485e34d1",
+    "tools/build_fit_checks.py": "a01b4a9587a6cb6333d0756f00b299f184c52cfe945e46fcfb02759b7669271f",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
   },
   "layout_source_hashes": {
-    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
-    "tools/build_print_profiles.py": "3960eda52f86d37208c9be608faf210bd3533a86cc6ad509e56b76f808b7c982"
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae"
   },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
-    "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
   },
   "preset_hashes": {
     "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
     "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
     "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
   },
   "process_overrides": {
@@ -665,69 +804,44 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 ND01",
-      "objects": [
-        "ND01-end_left_60_plain"
-      ]
-    },
-    {
-      "number": 2,
-      "name": "02 ND02",
-      "objects": [
-        "ND02-end_right_60_plain"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 ND03, ND06, ND07, ND08, ND09, ND12, ND13",
+      "name": "01 ND03, ND04, ND10a, ND11a, ND05a, ND05b, ND12, ND13",
       "objects": [
         "ND03-side_left",
-        "ND06-front_beam_1",
-        "ND07-front_beam_2",
-        "ND08-rear_beam_1",
-        "ND09-rear_beam_2",
+        "ND04-side_right",
+        "ND10a-ND10a",
+        "ND11a-ND11a",
+        "ND05a-ND05a",
+        "ND05b-ND05b",
         "ND12-lock_left",
         "ND13-lock_right"
       ]
     },
     {
-      "number": 4,
-      "name": "04 ND04",
+      "number": 2,
+      "name": "02 ND06J, ND08J, ND10b, ND01a, ND01b",
       "objects": [
-        "ND04-side_right"
+        "ND06J-ND06J",
+        "ND08J-ND08J",
+        "ND10b-ND10b",
+        "ND01a-ND01a",
+        "ND01b-ND01b"
       ]
     },
     {
-      "number": 5,
-      "name": "05 ND05",
+      "number": 3,
+      "name": "03 ND11b, ND02a, ND02b",
       "objects": [
-        "ND05-divider_1"
-      ]
-    },
-    {
-      "number": 6,
-      "name": "06 ND10",
-      "objects": [
-        "ND10-drawer_1"
-      ]
-    },
-    {
-      "number": 7,
-      "name": "07 ND11",
-      "objects": [
-        "ND11-drawer_2"
+        "ND11b-ND11b",
+        "ND02a-ND02a",
+        "ND02b-ND02b"
       ]
     }
   ],
-  "project_sha256": "5b900be1d6dafe102bd08ca6c10a5108d934a9c614ae535be69446e58b8b63b6",
+  "project_sha256": "8201394a4360d1febe5586028369d8a6b613083fdb5d5a469d99a57908ea38e7",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_4.gcode",
-    "Metadata/plate_5.gcode",
     "Metadata/plate_3.gcode",
     "Metadata/plate_2.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_7.gcode",
-    "Metadata/plate_6.gcode"
+    "Metadata/plate_1.gcode"
   ]
 }

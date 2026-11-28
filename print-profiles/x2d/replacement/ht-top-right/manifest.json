@@ -1,0 +1,331 @@
+{
+  "profile": "replacement/ht-top-right",
+  "printer": "Bambu Lab X2D",
+  "nozzle_mm": 0.4,
+  "material": "Bambu PETG Basic",
+  "bed": "Textured PEI Plate",
+  "layer_mm": 0.2,
+  "end_style": null,
+  "studio_version": "02.09.01.70",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
+  "physical_fit": "not_verified",
+  "load_test": "not_verified",
+  "makerworld_ready": false,
+  "parts": [
+    {
+      "id": "F02",
+      "source": "models/ams2pro+ht/06-device-top/parts/F02-device_adapter_2.stl",
+      "sha256": "570a17c14f6e20edb378432c00cfff532e45740307d612405d3b294fa7f8fd7f",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -247.8000030517578
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        247.1999969482422,
+        173.0,
+        26.0
+      ],
+      "downward_area_mm2": 92.136809967974,
+      "bed_contact_area_mm2": 9169.47220273228,
+      "support_column_estimate_mm3": 1069.5311201579332,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "F04",
+      "source": "models/ams2pro+ht/06-device-top/parts/F04-top_rear_lock_2.stl",
+      "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -451.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          7.999999999999983
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -281.3500061035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        12.0,
+        16.0,
+        5.29998779296875
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 162.0,
+      "support_column_estimate_mm3": 0.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
+    },
+    {
+      "id": "F05",
+      "source": "models/ams2pro+ht/06-device-top/parts/F05-ht_top_rear.stl",
+      "sha256": "f17ceeab8d2687ea73a80a9e050803763878d2ce7e56bba76467d7557f688b7c",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -247.8000030517578
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -115.30000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        247.1999969482422,
+        171.6999969482422,
+        26.0
+      ],
+      "downward_area_mm2": 185.73170314254693,
+      "bed_contact_area_mm2": 9273.961589410668,
+      "support_column_estimate_mm3": 2133.060522336278,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "F06",
+      "source": "models/ams2pro+ht/06-device-top/parts/F06-ht_foot_front.stl",
+      "sha256": "905578edd65f1d5d9da965c5dde1124914f9f16a14bbf73a9fd9c7fb335a4266",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -482.3033142089844
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -6.696699142456055
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        6.0,
+        6.0,
+        6.400000095367432
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 21.20305710055254,
+      "support_column_estimate_mm3": 0.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "F07",
+      "source": "models/ams2pro+ht/06-device-top/parts/F07-ht_foot_rear.stl",
+      "sha256": "83bc6b108e03fbf937b58e5dbed680640095c09e305535f62af1e59631c9e1dc",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -482.3033142089844
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -274.3033142089844
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        6.0,
+        6.0,
+        6.400000095367432
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 21.203044320456684,
+      "support_column_estimate_mm3": 0.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    }
+  ],
+  "status": "sliced_not_printed",
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
+  "model_source_hashes": {
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "6fedac49ae13c5fc8d4668edc016aaaf0a909318c75f3cd63e06e36d6971adf3",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
+    "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/overstack/ht_top.py": "f308ca8ce39127dde008f3e1088c69728918a4b7a3b7046636ea274199eaf75e",
+    "src/overstack/layer_locks.py": "13eb942bd275356ebff3285bcef1c8a9956d3a2ae91609236ccc06143f848498",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
+    "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
+    "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/overstack/surfaces.py": "86fadb7d9574017b2568303bc9d46de54a1955130eb09195942274b050eb7a7d",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "dc7e14966cf505bfea330df5f3b6dcfbbe216c0739364199e79e918f8ddaaa69",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "d732c069336e4e66188722d89cbc689ea097f37b5c1f2eb543ca5f01485e34d1",
+    "tools/build_fit_checks.py": "a01b4a9587a6cb6333d0756f00b299f184c52cfe945e46fcfb02759b7669271f",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
+  },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae"
+  },
+  "validation_source": {
+    "file": "models/ams2pro+ht/validation.json",
+    "sha256": "cdc674728150ac03f7bcd06cee836178f2a81a527e2ac53070f8bcb1b89e45ec"
+  },
+  "preset_hashes": {
+    "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
+    "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
+    "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
+  },
+  "process_overrides": {
+    "curr_bed_type": "Textured PEI Plate",
+    "wall_loops": "4",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "1",
+    "support_type": "tree(auto)",
+    "brim_type": "outer_only",
+    "brim_width": "3"
+  },
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 F02, F04, F06, F07",
+      "objects": [
+        "F02-F02-device_adapter_2",
+        "F04-F04-top_rear_lock_2",
+        "F06-F06-ht_foot_front",
+        "F07-F07-ht_foot_rear"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "02 F05",
+      "objects": [
+        "F05-F05-ht_top_rear"
+      ]
+    }
+  ],
+  "project_sha256": "539692c02d3ff186a1c7d9e86c5c34f4526263117f2ff06339ee51f18b15c761",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_2.gcode",
+    "Metadata/plate_1.gcode"
+  ]
+}

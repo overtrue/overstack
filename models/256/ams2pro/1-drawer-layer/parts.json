@@ -1,0 +1,202 @@
+[
+  {
+    "id": "NC01a",
+    "file": "models/256/ams2pro/1-drawer-layer/NC01a.stl",
+    "parent_ids": [
+      "NC01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NC01b",
+    "file": "models/256/ams2pro/1-drawer-layer/NC01b.stl",
+    "parent_ids": [
+      "NC01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NC02a",
+    "file": "models/256/ams2pro/1-drawer-layer/NC02a.stl",
+    "parent_ids": [
+      "NC02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NC02b",
+    "file": "models/256/ams2pro/1-drawer-layer/NC02b.stl",
+    "parent_ids": [
+      "NC02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NC03",
+    "name": "side_left",
+    "file": "models/ams2pro/1-drawer-layer/side_left.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u5de6\u62bd\u5c49\u627f\u67b6"
+  },
+  {
+    "id": "NC04",
+    "name": "side_right",
+    "file": "models/ams2pro/1-drawer-layer/side_right.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u53f3\u62bd\u5c49\u627f\u67b6"
+  },
+  {
+    "id": "NC05J",
+    "file": "models/256/ams2pro/1-drawer-layer/NC05J.stl",
+    "parent_ids": [
+      "NC05",
+      "NC06"
+    ]
+  },
+  {
+    "id": "NC07J",
+    "file": "models/256/ams2pro/1-drawer-layer/NC07J.stl",
+    "parent_ids": [
+      "NC07",
+      "NC08"
+    ]
+  },
+  {
+    "id": "NC09",
+    "name": "drawer_half_1",
+    "file": "models/ams2pro/1-drawer-layer/drawer_half_1.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u62bd\u5c49\u524d\u534a"
+  },
+  {
+    "id": "NC10",
+    "name": "drawer_half_2",
+    "file": "models/ams2pro/1-drawer-layer/drawer_half_2.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u62bd\u5c49\u540e\u534a"
+  },
+  {
+    "id": "NC11",
+    "name": "lock_left",
+    "file": "models/common/lock_left.stl",
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "NC12",
+    "name": "lock_right",
+    "file": "models/common/lock_right.stl",
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "label": "\u901a\u7528\u8774\u8776\u9501\u7247",
+    "print_file": "models/common/rear-lock.stl"
+  }
+]

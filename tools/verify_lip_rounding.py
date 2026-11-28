@@ -6,10 +6,10 @@ sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 
 for width,paths in [
-    (495,sorted((ROOT/'models/ams2pro+ht/06-device-top/parts').glob('*device_adapter*.stl'))),
+    (495,sorted(p for p in (ROOT/'models/ams2pro+ht/06-device-top/parts').glob('*.stl') if p.name[:3] in ('F01','F02','F05'))),
     (399,sorted((ROOT/'models/ams2pro/device-top').glob('top_*.stl'))),
 ]:
-    assert len(paths)==2
+    assert len(paths)==(3 if width==495 else 2)
     top=union([trimesh.load_mesh(p) for p in paths])
     for right in [False,True]:
         for y in [1.5,285.5]:

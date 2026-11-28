@@ -72,7 +72,10 @@ for index,slug in enumerate(LAYERS):
     manifest.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
     p=folder/'README.md';text=p.read_text();start=text.index('| 编号 / ID |') if '| 编号 / ID |' in text else text.index('| Part |');end=text.index('\n\n',start)
     table='| 编号 / ID | 零件 | STL | X offset |\n| --- | --- | --- | ---: |\n'
-    for r in rows:table+=f'| [{r["id"]}]({os.path.relpath(ROOT/r["file"],folder)}) | {r["label"]} | `{Path(r["file"]).name}` | {r["offset_mm"][0]} mm |\n'
+    for r in rows:
+        download=r.get('print_file',r['file'])
+        offset='见装配清单 / see BOM' if 'print_file' in r else f'{r["offset_mm"][0]} mm'
+        table+=f'| [{r["id"]}]({os.path.relpath(ROOT/download,folder)}) | {r["label"]} | `{Path(download).name}` | {offset} |\n'
     text=text[:start]+table.rstrip()+text[end:]
     text=re.sub(r'!\[Exploded view\]\([^\n]+\)',
         '![带编号的爆炸图 / Numbered exploded view](parts-numbered.png)\n\n编号与下表一一对应；左右以面对入口为准。爆炸图只用于辨认零件，不代表装入方向。\n\nMatch each callout to its table row. Left/right are viewed from the front. Exploded positions identify parts, not insertion directions.',text)

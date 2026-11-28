@@ -14,6 +14,8 @@
 
 Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.
 
+每道层缝从后方插入两片相同的蝴蝶锁片，左右通用。 / Print two identical bowties per seam. Either fits either side. [通用锁片 STL / Rear key STL](../../common/rear-lock.stl)
+
 ![带零件编号的爆炸图 / Numbered exploded view](../../../docs/images/01-five-slot-plate-layer-assembly-zh.png)
 
 | 编号 / ID | 零件 |

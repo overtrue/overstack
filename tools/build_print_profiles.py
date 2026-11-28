@@ -4,37 +4,63 @@ import argparse,hashlib,json,subprocess,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import trimesh,np
+from ht_top import print_rotation
+from layer_locks import REAR_LOCK_FILE
 from print_layout import orient_for_area,pack
 from print_profile_targets import TARGETS
 TARGET=TARGETS['x2d'];PRINTER_KEY='x2d'
 STUDIO='/Applications/BambuStudio.app/Contents/MacOS/BambuStudio'
 OUT=ROOT/'print-profiles';WORK=ROOT/'output/print-profiles'
+TOP_PROFILES=('ams2pro-ht/06-device-top','replacement/ht-top-right')
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def model_source_hashes():
     sources=[*sorted((ROOT/'src/overstack').glob('*.py')),ROOT/'tools/ht_layers.py',ROOT/'tools/package.py',
-             ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py']
+             ROOT/'tools/build.py',ROOT/'tools/build_variants.py',ROOT/'tools/build_fit_checks.py',ROOT/'tools/build_small_bed.py']
     return {str(p.relative_to(ROOT)):digest(p) for p in sources}
 
 def model_source_digest():
     return hashlib.sha256(json.dumps(model_source_hashes(),sort_keys=True).encode()).hexdigest()
 
-def recipes():
+def canonical_recipes():
+    spare_pair=[{'id':'KEY-'+side,'file':f'models/common/lock_{side}.stl','print_file':REAR_LOCK_FILE}
+                for side in ('left','right')]
     yield 'fit-check/pegboard',[{'id':'FIT01','file':'models/common/pegboard_fit_coupon.stl'}]
     fit=ROOT/'models/fit-check/parts.json'
     if fit.exists():yield 'fit-check/interfaces',json.loads(fit.read_text())
+    top_fit=ROOT/'models/fit-check/ht-top-parts.json'
+    if top_fit.exists():yield 'fit-check/ht-top',json.loads(top_fit.read_text())
     for p in sorted((ROOT/'models/ams2pro').glob('*/parts.json')):
         rows=json.loads(p.read_text())
         if not any(r['name'].startswith('lock_') for r in rows):
-            rows += [{'id':'KEY-'+s,'file':f'models/common/lock_{s}.stl'} for s in ['left','right']]
+            rows += [spare_pair[0],{**spare_pair[1],'offset_mm':[-96,0,0]}]
         yield 'ams2pro/'+p.parent.name,rows
     rows=json.loads((ROOT/'models/ams2pro+ht/parts.json').read_text())
     for layer in sorted({r['layer'] for r in rows}):
-        group=[{'id':r['id'],'file':'models/ams2pro+ht/'+r['packaged_file']} for r in rows if r['layer']==layer]
+        group=[{'id':r['id'],'file':'models/ams2pro+ht/'+r['packaged_file'],
+                **({'print_file':r['print_file']} if 'print_file' in r else {})} for r in rows if r['layer']==layer]
         slug=Path(next(r['packaged_file'] for r in rows if r['layer']==layer)).parts[0]
-        if layer==0:group += [{'id':'KEY-'+s,'file':f'models/common/lock_{s}.stl'} for s in ['left','right']]
+        if layer==0:group += spare_pair
         yield 'ams2pro-ht/'+slug,group
+        if slug=='06-device-top':
+            yield 'replacement/ht-top-right',[r for r in group if r['id'] in ('F02','F04','F05','F06','F07')]
+
+def recipes(printer=None):
+    small=printer is not None and TARGETS[printer]['group']=='256'
+    for key,rows in canonical_recipes():
+        if small and key.startswith(('ams2pro/','ams2pro-ht/')):
+            rows=json.loads((ROOT/'models/256'/key/'parts.json').read_text())
+        yield key,rows
+    if small:
+        for key in ['fit-check/front-pin','fit-check/256-joints','common/pegboard-40','common/pegboard-60','compatibility/ht-right-40','compatibility/ht-right-60']:
+            yield key,json.loads((ROOT/'models/256'/key/'parts.json').read_text())
+
+
+def nested_layout(printer,key):
+    return key in TOP_PROFILES or TARGETS[printer]['group']=='256' and (
+        key.startswith(('ams2pro/','ams2pro-ht/','common/','compatibility/')) or key in ('fit-check/256-joints','fit-check/front-pin'))
+
 
 def run(args,folder,log):
     result=subprocess.run([STUDIO,*args,'--outputdir',str(folder)],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
@@ -49,6 +75,8 @@ def orient_for_target(mesh,source):
     # faster and uses less support than broad-face printing; it avoids the
     # support collision found with the tall end pose.
     rotation=([1,0,0],180) if '3drawers_divider_' in source.stem else None
+    if source.parent.parent.name=='06-device-top':
+        rotation=print_rotation(source.stem.partition('-')[2])
     return orient_for_area(mesh,TARGET['area'],TARGET['height'],preferred_yaw=yaw,rotation=rotation)
 
 
@@ -66,11 +94,6 @@ def build(key,rows,slice_project):
     inputs=[];blockers=[]
     for r in rows:
         source=ROOT/r['file'];mesh=trimesh.load_mesh(source)
-        try:
-            printed,pose=orient_for_target(mesh,source)
-        except AssertionError:
-            blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
-            report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
         if 'print_rotation' in r:
             t=np.eye(4);t[:3,:3]=r['print_rotation'];printed=mesh.copy();printed.apply_transform(t)
             shift=-printed.bounds[0];printed.apply_translation(shift);t[:3,3]=shift
@@ -78,16 +101,29 @@ def build(key,rows,slice_project):
             overhang=float(printed.area_faces[down&elevated].sum());bed=float(printed.area_faces[down&~elevated].sum())
             pose={'assembly_to_print':t.tolist(),'bounds_mm':printed.extents.tolist(),'downward_area_mm2':overhang,
                   'bed_contact_area_mm2':bed,'supports_required':overhang>1,'brim_mm':3,'required_extruder_area_mm':[x1-x0,y1-y0]}
+        else:
+            try:printed,pose=orient_for_target(mesh,source)
+            except AssertionError:
+                blockers.append(r['id']+': no fitting planar orientation for '+PRINTER_KEY)
+                report['parts'].append({'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1});continue
         record={'id':r['id'],'source':r['file'],'sha256':digest(source),'quantity':1,**pose};report['parts'].append(record)
+        if 'print_file' in r:
+            # The BOM keeps the installed coordinates. Put the shared spare on
+            # the plate for every rear-key position, including the fit coupons.
+            print_source=ROOT/r['print_file']
+            printed=trimesh.load_mesh(print_source)
+            record.update(print_file=r['print_file'],print_sha256=digest(print_source))
+            assert np.allclose(printed.extents,pose['bounds_mm'],atol=.0001) and abs(printed.bounds[0,2])<.0001,(key,r['id'],'print pose')
         if pose['bed_contact_area_mm2']<1 or np.any(printed.extents>np.array([x1-x0-6,y1-y0-6,TARGET['height']])):blockers.append(r['id']+': no planar bed contact or exceeds build height')
         printed.apply_translation([cx-printed.bounds.mean(axis=0)[0],cy-printed.bounds.mean(axis=0)[1],0]);path=work/(r['id']+'-'+source.stem+'.stl');printed.export(path);inputs.append(str(path))
     # Consume the published manufacturing findings instead of guessing by layer name.
-    validation=ROOT/('models/ams2pro+ht/validation.json' if key.startswith('ams2pro-ht/') else 'models/ams2pro/printing.json')
+    ht=key.startswith('ams2pro-ht/') or key in ('fit-check/ht-top','replacement/ht-top-right')
+    validation=ROOT/('models/ams2pro+ht/validation.json' if ht else 'models/ams2pro/printing.json')
     report['validation_source']={'file':str(validation.relative_to(ROOT)),'sha256':digest(validation)}
     for failure in json.loads(validation.read_text()).get('printing_failures',[]):
         if any(Path(r['file']).stem.endswith(failure['part']) for r in rows):
             blockers.append(failure['part']+': '+', '.join(sorted({e['code'] for e in failure['errors']})))
-    if key=='fit-check/interfaces' and not blockers:
+    if key in ('fit-check/interfaces','fit-check/ht-top') and not blockers:
         checks=[]
         for path,r in zip(inputs,report['parts']):
             result=subprocess.run(['cad','stl','dfm',path,'--process','printing','--technology','fdm','--material','petg',
@@ -105,9 +141,10 @@ def build(key,rows,slice_project):
     (work/'process.json').write_text(json.dumps(process,indent=2))
     report['preset_hashes']={p.name:digest(p) for p in preset.glob('*.json')}
     report['process_overrides']={k:process[k] for k in ['curr_bed_type','wall_loops','sparse_infill_density','sparse_infill_pattern','enable_support','support_type','brim_type','brim_width']}
-    groups=pack(inputs,report['parts'],TARGET)
+    top=nested_layout(PRINTER_KEY,key)
+    groups=pack(inputs,report['parts'],TARGET,top=top,tall_first=key=='ams2pro-ht/06-device-top')
     from check_print_layout import validate
-    validate(groups,inputs,TARGET)
+    validate(groups,inputs,TARGET,top=top)
     identifiers={path:r['id'] for path,r in zip(inputs,report['parts'])}
     assembly={'plates':[{'plate_name':f'{i+1:02d} '+', '.join(identifiers[o['path']] for o in group),
         'need_arrange':False,'objects':group} for i,group in enumerate(groups)]}
@@ -170,6 +207,9 @@ if __name__=='__main__':
     WORK.mkdir(parents=True,exist_ok=True)
     version=subprocess.run([STUDIO,'--help'],cwd=WORK,capture_output=True,text=True).stdout
     if not version.startswith('BambuStudio-02.09.01.70:'):raise SystemExit('Studio version changed; refresh presets and revalidate before rebuilding.')
-    for key,rows in recipes():
+    for key,rows in recipes(PRINTER_KEY):
         if a.only and a.only not in key:continue
         build(key,rows,a.slice)
+        if a.slice and TARGET['group']=='256' and json.loads((OUT/key/'manifest.json').read_text())['status']=='sliced_not_printed':
+            from build_matte_profiles import build as build_matte
+            build_matte(PRINTER_KEY,OUT/key)

@@ -1,0 +1,265 @@
+[
+  {
+    "id": "NA01a",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA01a.stl",
+    "parent_ids": [
+      "NA01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA01b",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA01b.stl",
+    "parent_ids": [
+      "NA01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA02a",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA02a.stl",
+    "parent_ids": [
+      "NA02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA02b",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA02b.stl",
+    "parent_ids": [
+      "NA02"
+    ],
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA03a",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA03a.stl",
+    "parent_ids": [
+      "NA03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA03b",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA03b.stl",
+    "parent_ids": [
+      "NA03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA04a",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA04a.stl",
+    "parent_ids": [
+      "NA04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA04b",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA04b.stl",
+    "parent_ids": [
+      "NA04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "NA05J",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA05J.stl",
+    "parent_ids": [
+      "NA05",
+      "NA06"
+    ]
+  },
+  {
+    "id": "NA07J",
+    "file": "models/256/ams2pro/5-slot-plate-layer/NA07J.stl",
+    "parent_ids": [
+      "NA07",
+      "NA08"
+    ]
+  },
+  {
+    "id": "KEY-left",
+    "file": "models/common/lock_left.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "KEY-right",
+    "file": "models/common/lock_right.stl",
+    "print_file": "models/common/rear-lock.stl",
+    "offset_mm": [
+      -96,
+      0,
+      0
+    ]
+  }
+]

@@ -7,142 +7,229 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
   "parts": [
     {
-      "id": "NB01",
-      "source": "models/common/end_left_60_plain.stl",
-      "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+      "id": "NB01a",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB01a.stl",
+      "sha256": "b17e5182927402ec4ffa481f037d78f7034cc5a374adbe848004a417b8302d8f",
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
-          0.0,
-          196.7264400637114
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
-          0.0,
-          -6.2132034394294005
-        ],
-        [
-          0.0,
-          0.0,
           1.0,
-          3.0
+          0.0,
+          0.0,
+          -0.0
         ],
         [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        239.15284693490426,
-        239.1528496323026,
-        63.0
-      ],
-      "downward_area_mm2": 9444.4515840187,
-      "bed_contact_area_mm2": 182.04088149353018,
-      "support_column_estimate_mm3": 28969.62472378919,
-      "supports_required": true,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NB02",
-      "source": "models/common/end_right_60_plain.stl",
-      "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          0.7071067811865476,
-          -0.7071067811865475,
-          0.0,
-          -104.6518036156091
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
-          0.0,
-          -307.59144981614816
-        ],
-        [
-          0.0,
-          0.0,
-          1.0,
-          3.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        239.15284693490423,
-        239.15284423750597,
-        63.0
-      ],
-      "downward_area_mm2": 9444.451694124024,
-      "bed_contact_area_mm2": 182.0408285467346,
-      "support_column_estimate_mm3": 28969.625723012352,
-      "supports_required": true,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NB03",
-      "source": "models/ams2pro/8-slot-plate-layer/plate_carrier_left.stl",
-      "sha256": "50f6129d97a2532b7dadd09c6f4312086fc37a92eabb16348794be93c97125c7",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          245.36605307173198
-        ],
-        [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          42.426406871192846
-        ],
-        [
-          1.0,
           0.0,
           6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        149.5
+      ],
+      "downward_area_mm2": 936.0218506969888,
+      "bed_contact_area_mm2": 2876.696820415288,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB01b",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB01b.stl",
+      "sha256": "016b775b4109747812af55ecea7732bd9c908a1466c2ebba85edcf0592a93d1e",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 1120.9680335600353,
+      "bed_contact_area_mm2": 2693.4546674437597,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB02a",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB02a.stl",
+      "sha256": "443cec486949079296727c25dfc23410f64bef27be512cd42e4eae45ac15912a",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        149.5
+      ],
+      "downward_area_mm2": 938.4544817411945,
+      "bed_contact_area_mm2": 2876.6972132729366,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB02b",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB02b.stl",
+      "sha256": "655bab5f9e2959b6e61e7bc3e015d722e83f0dc2c58386dbfafe9e6110ea7251",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        63.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 1120.9667786687382,
+      "bed_contact_area_mm2": 2693.454827983132,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB03a",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB03a.stl",
+      "sha256": "386a73524668a6df5760c1a6a42297cc3587ad0f0a0dc4bf688d84e9a6bef48c",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
           -54.29999923706055
         ],
         [
           0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
           0.0,
           0.0,
           1.0
         ]
       ],
       "bounds_mm": [
-        245.36605307173198,
-        245.366053071732,
-        29.700000762939453
+        23.200000762939453,
+        60.00000000000001,
+        149.5
       ],
-      "downward_area_mm2": 16554.79099836791,
-      "bed_contact_area_mm2": 1344.0000000000011,
-      "support_column_estimate_mm3": 102694.15092749309,
+      "downward_area_mm2": 408.6072073504567,
+      "bed_contact_area_mm2": 561.1343423249082,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -151,28 +238,28 @@
       ]
     },
     {
-      "id": "NB04",
-      "source": "models/ams2pro/8-slot-plate-layer/plate_carrier_right.stl",
-      "sha256": "5a7a21eafdee36e393c55a52a1e41b7dadff52d83d283a978d68f819e88a6b2a",
+      "id": "NB03b",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB03b.stl",
+      "sha256": "25997a8158cb46ba6734868d4aa48a94f9e4cd87e20d37c7da27edf0ef661ba1",
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          202.9396462005391
+          1.0,
+          0.0,
+          0.0,
+          -54.29999923706055
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -1.4309923829291525e-14
-        ],
-        [
-          -1.0,
           0.0,
           6.123233995736766e-17,
-          344.70001220703125
+          1.0,
+          -8.805210672735741e-15
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
         ],
         [
           0.0,
@@ -182,13 +269,12 @@
         ]
       ],
       "bounds_mm": [
-        245.36605307173198,
-        245.36605307173198,
-        29.70001220703125
+        29.700000762939453,
+        60.00000000000001,
+        143.1999969482422
       ],
-      "downward_area_mm2": 16554.79106929979,
-      "bed_contact_area_mm2": 1343.9999999999986,
-      "support_column_estimate_mm3": 102694.34138191091,
+      "downward_area_mm2": 1189.1581085918522,
+      "bed_contact_area_mm2": 458.2700036334991,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -197,22 +283,112 @@
       ]
     },
     {
-      "id": "NB05",
-      "source": "models/ams2pro/8-slot-plate-layer/front_beam_1.stl",
-      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
+      "id": "NB04a",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB04a.stl",
+      "sha256": "80874287d92114896371206922aa67975ada74f181425e371c86e335fa345b8d",
       "quantity": 1,
       "assembly_to_print": [
         [
           1.0,
           0.0,
           0.0,
-          -63.5
+          -321.5
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          60.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        23.20001220703125,
+        60.00000000000001,
+        149.5
+      ],
+      "downward_area_mm2": 408.60766872211855,
+      "bed_contact_area_mm2": 561.134271910084,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB04b",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB04b.stl",
+      "sha256": "8ffc0ae813a2274b12ee52117a1299b76fb7a833e03f2f06a35ef3d46dae5c51",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -315.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.805210672735741e-15
         ],
         [
           0.0,
           -1.0,
-          -1.2246467991473532e-16,
-          24.0
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        29.70001220703125,
+        60.00000000000001,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 1189.1587888376805,
+      "bed_contact_area_mm2": 458.27005055427435,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NB05J",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB05J.stl",
+      "sha256": "6972a3cc97060364d21328c02e0f8877bbb3769e576da43425eb67e930da02d7",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -44.90128060534577
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          -30.75914498161481
         ],
         [
           0.0,
@@ -228,12 +404,12 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.4751801064719,
+        206.47518010647187,
         6.000000000000003
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3292.5058698654175,
+      "bed_contact_area_mm2": 6485.600036621094,
       "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
@@ -243,68 +419,22 @@
       ]
     },
     {
-      "id": "NB06",
-      "source": "models/ams2pro/8-slot-plate-layer/front_beam_2.stl",
-      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
+      "id": "NB07J",
+      "source": "models/256/ams2pro/8-slot-plate-layer/NB07J.stl",
+      "sha256": "d4da9926bf144741cdb699ae6455fa79717655de8f286afa730d9375dfea9ffe",
       "quantity": 1,
       "assembly_to_print": [
         [
-          1.0,
-          0.0,
-          0.0,
-          -199.8000030517578
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -233.69879118215394
         ],
         [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          24.0
-        ],
-        [
-          0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          6.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.000000000000003
-      ],
-      "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.4144253730774,
-      "support_column_estimate_mm3": 0.0,
-      "supports_required": false,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NB07",
-      "source": "models/ams2pro/8-slot-plate-layer/rear_beam_1.stl",
-      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          -63.5
-        ],
-        [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          287.0
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          158.0383655951934
         ],
         [
           0.0,
@@ -320,58 +450,12 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.47518010647187,
+        206.47518010647187,
         6.0000000000000036
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3292.5057983398438,
-      "support_column_estimate_mm3": 0.0,
-      "supports_required": false,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NB08",
-      "source": "models/ams2pro/8-slot-plate-layer/rear_beam_2.stl",
-      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          -199.8000030517578
-        ],
-        [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          287.0
-        ],
-        [
-          0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          5.999999999999968
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.0000000000000036
-      ],
-      "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.4144897460938,
+      "bed_contact_area_mm2": 6485.600036621096,
       "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
@@ -424,7 +508,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     },
     {
       "id": "NB10",
@@ -470,7 +556,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     }
   ],
   "status": "sliced_not_printed",
@@ -486,32 +574,39 @@
   "project_file": "x2d-04-petg.3mf",
   "preset_directory": "print-profiles/x2d/presets",
   "model_source_hashes": {
-    "src/overstack/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
-    "src/overstack/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
-    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/overstack/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "6fedac49ae13c5fc8d4668edc016aaaf0a909318c75f3cd63e06e36d6971adf3",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
     "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
-    "src/overstack/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
-    "src/overstack/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/overstack/ht_top.py": "f308ca8ce39127dde008f3e1088c69728918a4b7a3b7046636ea274199eaf75e",
+    "src/overstack/layer_locks.py": "13eb942bd275356ebff3285bcef1c8a9956d3a2ae91609236ccc06143f848498",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
     "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/overstack/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
     "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
-    "src/overstack/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
-    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
-    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
-    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+    "src/overstack/surfaces.py": "86fadb7d9574017b2568303bc9d46de54a1955130eb09195942274b050eb7a7d",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "dc7e14966cf505bfea330df5f3b6dcfbbe216c0739364199e79e918f8ddaaa69",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "d732c069336e4e66188722d89cbc689ea097f37b5c1f2eb543ca5f01485e34d1",
+    "tools/build_fit_checks.py": "a01b4a9587a6cb6333d0756f00b299f184c52cfe945e46fcfb02759b7669271f",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
   },
   "layout_source_hashes": {
-    "tools/print_layout.py": "5f56aeb346e2a65d947f3efde3b251cf4c02c0364bd651673105ef1071dde0fd",
-    "tools/build_print_profiles.py": "acb35d16c933d180b5499d3e368dcf1aff6ea1b36eff4fcc990d081149aedff2"
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae"
   },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
-    "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
   },
   "preset_hashes": {
     "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
     "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
     "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
   },
   "process_overrides": {
@@ -527,52 +622,33 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 NB01",
+      "name": "01 NB05J, NB07J, NB01a, NB01b, NB02a, NB04b, NB04a, NB03a, NB09, NB10",
       "objects": [
-        "NB01-end_left_60_plain"
+        "NB05J-NB05J",
+        "NB07J-NB07J",
+        "NB01a-NB01a",
+        "NB01b-NB01b",
+        "NB02a-NB02a",
+        "NB04b-NB04b",
+        "NB04a-NB04a",
+        "NB03a-NB03a",
+        "NB09-lock_left",
+        "NB10-lock_right"
       ]
     },
     {
       "number": 2,
-      "name": "02 NB02",
+      "name": "02 NB02b, NB03b",
       "objects": [
-        "NB02-end_right_60_plain"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 NB03",
-      "objects": [
-        "NB03-plate_carrier_left"
-      ]
-    },
-    {
-      "number": 4,
-      "name": "04 NB04",
-      "objects": [
-        "NB04-plate_carrier_right"
-      ]
-    },
-    {
-      "number": 5,
-      "name": "05 NB05, NB06, NB07, NB08, NB09, NB10",
-      "objects": [
-        "NB05-front_beam_1",
-        "NB06-front_beam_2",
-        "NB07-rear_beam_1",
-        "NB08-rear_beam_2",
-        "NB09-lock_left",
-        "NB10-lock_right"
+        "NB02b-NB02b",
+        "NB03b-NB03b"
       ]
     }
   ],
-  "project_sha256": "79bfd612a35c9856e65bccc8d7956bb9ca508dbb0acab2b90d4b6e932987c5ec",
+  "project_sha256": "c64d2a13bcf3e31428235788ce931d631cf1a79a61cd276c5e15a62e4a7df7a0",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_5.gcode",
     "Metadata/plate_2.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_3.gcode",
-    "Metadata/plate_4.gcode"
+    "Metadata/plate_1.gcode"
   ]
 }

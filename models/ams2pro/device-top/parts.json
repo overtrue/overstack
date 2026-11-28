@@ -1,5 +1,6 @@
 [
   {
+    "id": "NE01",
     "name": "top_1",
     "file": "models/ams2pro/device-top/top_1.stl",
     "offset_mm": [
@@ -7,10 +8,10 @@
       0,
       0
     ],
-    "id": "NE01",
     "label": "左顶件"
   },
   {
+    "id": "NE02",
     "name": "top_2",
     "file": "models/ams2pro/device-top/top_2.stl",
     "offset_mm": [
@@ -18,10 +19,10 @@
       0,
       0
     ],
-    "id": "NE02",
     "label": "右顶件"
   },
   {
+    "id": "NE03",
     "name": "lock_left",
     "file": "models/common/lock_left.stl",
     "offset_mm": [
@@ -29,10 +30,11 @@
       0,
       0
     ],
-    "id": "NE03",
-    "label": "左后锁片"
+    "label": "通用蝴蝶锁片",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
+    "id": "NE04",
     "name": "lock_right",
     "file": "models/common/lock_right.stl",
     "offset_mm": [
@@ -40,7 +42,7 @@
       0,
       0
     ],
-    "id": "NE04",
-    "label": "右后锁片"
+    "label": "通用蝴蝶锁片",
+    "print_file": "models/common/rear-lock.stl"
   }
 ]

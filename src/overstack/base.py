@@ -1,5 +1,5 @@
-"""Parametric modules. Dimensions in mm; H is body height, excluding3mm feet.
-Fixed interface: XY axes, short arc feet/sockets, vertical dovetail cross-sections.
+"""Parametric modules. Dimensions in mm; H is body height, excluding 3 mm locating pins.
+Fixed interface: XY axes, round corner pins/sockets, vertical dovetail cross-sections.
 Plate slots use6mm pitch. Require7mm overhead. Physical fit/load unverified.
 """
 
@@ -9,6 +9,7 @@ def build_module(H, N, fit=.35):
  from shapely.affinity import translate
  from geometry import lead_in, mirror_x, overlap
  from layer_locks import lock_pockets
+ from corner_pins import circle,clearance,fixed_pin,receiver
  from storage import side_bays
  from structure import install_structure,BAR_DEPTH
  outline=rectangle(15,15,480,272).buffer(15,quad_segs=32)
@@ -40,18 +41,9 @@ def build_module(H, N, fit=.35):
   m.apply_translation([0,0,4])
   if female:m=U([m,lead_in(profile,H-.8,.9,.5)])
   return m
- # Short arcs follow the15mm outer corner radius, inset to retain socket wall stock.
- arc_angles=np.radians(np.linspace(185,265,41))
- front_left=[(15+7.5*np.cos(a),15+7.5*np.sin(a)) for a in arc_angles]
- arc_profiles=[]
- for right,back in [(False,False),(True,False),(False,True),(True,True)]:
-  line=LineString([(495-x if right else x,287-y if back else y) for x,y in front_left])
-  male=line.buffer(3,quad_segs=12)
-  socket=male.buffer(.7 if back else .35,quad_segs=12)
-  if right and not back:socket=translate(socket,xoff=-.5).union(translate(socket,xoff=.5))
-  boss=socket.buffer(3,quad_segs=12)
-  assert outline.covers(boss), 'Arc socket wall extends outside silhouette'
-  arc_profiles.append((right,male,socket,boss))
+ corners=[(right,back) for right in (False,True) for back in (False,True)]
+ def boss_profile(right,back):
+  return circle(right,back,3+clearance(right,back)+.4+3)
  def extrude_at(profile,z,height):
   return move(trimesh.creation.extrude_polygon(profile,height,engine='earcut'),[0,0,z])
  ends=[]
@@ -66,17 +58,19 @@ def build_module(H, N, fit=.35):
    opening=Polygon([(495-xx,yy) for xx,yy in opening.exterior.coords])
   m=cut(m,extrude_at(cavity,4,H-3))
   m=cut(m,extrude_at(opening,-.1,H+.2))
-  for right,male,socket,boss in arc_profiles:
-   if right==(side=='right'):m=U([m,extrude_at(boss,0,H)])
+  for right,back in corners:
+   if right==(side=='right'):
+    boss=boss_profile(right,back)
+    assert outline.covers(boss),'corner socket extends outside the frame'
+    m=U([m,extrude_at(boss,0,H)])
   # Wider dovetails get solid backing into the hollow, approximately6mm behind slot head and at both flanks.
   for yy in [40,247]:
    m=U([m,box(48 if side=='left' else 435,yy-12.35,0,12,24.7,H)])
   # Vertical insertion channels open only above; front and rear stay closed.
   for z in [0,22]:m=cut(m,center_rail(side=='left',z,True))
-  for right,male,socket,boss in arc_profiles:
+  for right,back in corners:
    if right==(side=='right'):
-    m=U([m,extrude_at(male,-3,3)])
-    m=cut(m,extrude_at(socket,H-3.5,3.6))
+    m=cut(U([m,fixed_pin(right,back)]),receiver(right,back,H))
   m=lock_pockets(m,H,side=='right')
   ends.append(m)
  car=U([box(60.5,0,0,56,287,3),box(378.5,0,0,56,287,3),box(116.5,283,0,262,4,3),box(60.5,0,3,4,287,H-3),box(430.5,0,3,4,287,H-3),box(60.5,283,3,374,4,H-3)])
@@ -151,11 +145,11 @@ def build_module(H, N, fit=.35):
   assert np.allclose(e.bounds[:,2],[-3,H])
   assert len(e.split())==1, [(q.volume,q.bounds.tolist()) for q in e.split()]
  for right,e in zip([False,True],ends):
-  for r,male,socket,boss in arc_profiles:
+  for r,back in corners:
    if r==right:
-    wall=extrude_at(boss.difference(socket),H-3.5,3.5)
-    assert abs(cut(wall,e).volume)<.01,('arc socket wall incomplete',right)
-    assert abs(inter(extrude_at(socket,H-3.5,3.5),e).volume)<.01
+    wall=extrude_at(boss_profile(r,back).difference(circle(r,back,3+clearance(r,back)+.4)),H-3.5,3.5)
+    assert abs(cut(wall,e).volume)<.01,('corner socket wall incomplete',right)
+    assert abs(inter(receiver(r,back,H),e).volume)<.01
  for left,e in zip([True,False],ends):
   for yy in [40,247]:
    backing=box(48 if left else 441.5,yy-6,4,5.5,12,H-5)
@@ -164,4 +158,4 @@ def build_module(H, N, fit=.35):
   former_entry=inter(box(1 if left else 488,30,H-3,6,10,3),prism)
   assert former_entry.volume>0
   assert abs(cut(former_entry,e).volume)<.01,('legacy front slot remains',left)
- return {'height':H,'plate_count':N,'plate_pitch_mm':pitch,'parts':parts,'ends':ends,'top':top,'insert_checks':checks,'finish_checks':finish_checks,'arc_profiles':arc_profiles,'fit':fit,'side_parts':side_parts}
+ return {'height':H,'plate_count':N,'plate_pitch_mm':pitch,'parts':parts,'ends':ends,'top':top,'insert_checks':checks,'finish_checks':finish_checks,'fit':fit,'side_parts':side_parts}

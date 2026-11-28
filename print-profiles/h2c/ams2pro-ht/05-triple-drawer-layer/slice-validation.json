@@ -1,7 +1,7 @@
 {
   "printer": "Bambu Lab H2C",
-  "project_sha256": "ac9b224eaea9f49f1cdfea28ff274159a81ebee66faf4097e4e1b512be6c1306",
-  "sliced_archive_sha256": "353d76ced08e78d204984ef75ec2a20e9d7112ba0feed616e3f1d64054aa6953",
+  "project_sha256": "efd0a4818ad2373171fa092e5b330d0092216cef61bc128ddbf184ef73d679b0",
+  "sliced_archive_sha256": "689eb147f983df0bbb4e394467d20d53e30d59b56ecefdc13c47635fac4bb3c8",
   "plates": [
     {
       "file": "Metadata/plate_4.gcode",
@@ -11,23 +11,6 @@
         0.65758,
         220.34241000000003,
         126.34243000000001
-      ],
-      "first_extruder": 0,
-      "printer_model": "Bambu Lab H2C",
-      "filament_type": "PETG",
-      "nozzle_diameter": "0.4,0.4",
-      "nozzle_temperature": "250",
-      "bed_temperature": "70",
-      "filament_map": "1"
-    },
-    {
-      "file": "Metadata/plate_1.gcode",
-      "sha256": "a6038126215d04368acd2ac4a64fb20dd2a3f5dee088e8397f2a100e9c8e52e7",
-      "bbox_xy_mm": [
-        31.103720000000003,
-        0.65758,
-        305.34241000000003,
-        305.34241000000003
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab H2C",
@@ -55,11 +38,28 @@
       "filament_map": "1"
     },
     {
-      "file": "Metadata/plate_3.gcode",
-      "sha256": "9735b438c0daae7175ef7f992c5961b57671f75acbaecb44114597627bac152f",
+      "file": "Metadata/plate_1.gcode",
+      "sha256": "7b384173e2ab88962d956646abe8d42b9d20322b9c5f3d76d8fa2a7be286bf99",
       "bbox_xy_mm": [
-        37.50694,
-        12.514520000000001,
+        31.103720000000003,
+        0.65758,
+        305.34241000000003,
+        305.34241000000003
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_3.gcode",
+      "sha256": "d3b6e8c200c097df281dac23290139e14dfd476ae86d0cd62421155241047aa5",
+      "bbox_xy_mm": [
+        37.499520000000004,
+        12.61194,
         299.71986000000004,
         309.00743
       ],

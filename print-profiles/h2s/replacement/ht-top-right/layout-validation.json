@@ -1,0 +1,38 @@
+{
+  "printer": "h2s",
+  "profile": "replacement/ht-top-right",
+  "before": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 178.94,
+        "seconds": 26511.0,
+        "support_g": 22.981
+      }
+    ],
+    "plate_count": 1,
+    "total_g": 178.94,
+    "hours": 7.364,
+    "support_g": 22.981
+  },
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 162.18,
+        "seconds": 17275.0,
+        "support_g": 0.584
+      }
+    ],
+    "plate_count": 1,
+    "total_g": 162.18,
+    "hours": 4.799,
+    "support_g": 0.584
+  },
+  "before_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
+  "before_scope": "F02 isolated with the original H2S pose and unchanged process; the original project shared this plate with F01.",
+  "before_project_sha256": "d44b2ae557f44ac6de6a138d13d13720cfb689b22ed2e1271a4fe1d44d49a1bb",
+  "before_plate_gcode_sha256": "11ef38a2bda1758ae802fbf27013fb7037d7059f0699feb01763b5a57ee64538",
+  "after_project_sha256": "6877e3d703bf82600379b0ef381e5ffac26c970c4d0d316e4218e57bb6dbd50f",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+}

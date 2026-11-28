@@ -1,0 +1,277 @@
+[
+  {
+    "id": "B01",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B01-seam_1_False_layer_lock.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "B02",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B02-seam_1_True_layer_lock.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "B03a",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B03a.stl",
+    "parent_ids": [
+      "B03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B03b",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B03b.stl",
+    "parent_ids": [
+      "B03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B04a",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B04a.stl",
+    "parent_ids": [
+      "B04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B04b",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B04b.stl",
+    "parent_ids": [
+      "B04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B05",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B05-standard_1_cassette_plates_3.stl",
+    "print_rotation": [
+      [
+        0.7071067811865476,
+        0.7071067811865475,
+        8.659560562354932e-17
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865476,
+        -8.659560562354934e-17
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0
+      ]
+    ]
+  },
+  {
+    "id": "B06",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B06-standard_1_cassette_plates_4.stl"
+  },
+  {
+    "id": "B07a",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B07a.stl",
+    "parent_ids": [
+      "B07"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B07b",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B07b.stl",
+    "parent_ids": [
+      "B07"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B08a",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B08a.stl",
+    "parent_ids": [
+      "B08"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B08b",
+    "file": "models/256/ams2pro-ht/02-eight-slot-plate-layer/B08b.stl",
+    "parent_ids": [
+      "B08"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "B09",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B09-standard_1_side_bin_left_1.stl"
+  },
+  {
+    "id": "B10",
+    "file": "models/ams2pro+ht/02-eight-slot-plate-layer/parts/B10-standard_1_side_bin_right_1.stl"
+  }
+]

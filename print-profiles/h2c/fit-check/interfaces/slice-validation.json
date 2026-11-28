@@ -1,16 +1,16 @@
 {
   "printer": "Bambu Lab H2C",
-  "project_sha256": "a92ff8a09158e9df17f3070e060c1e250e97c0cac0fc302ccf2d74f23905f4d0",
-  "sliced_archive_sha256": "4bcc6dcda0a24e587259b22ac1003c207495a5a9208384dec4e1b2fdabb462de",
+  "project_sha256": "6acb224c84ab1936461e0f2cc6a0e03dffd5e3b3f0079bd3ffddb38afa3aec88",
+  "sliced_archive_sha256": "c47f2747862ff24f2e68459da45d3f7098f4d42615f7297c6a4a731a663241af",
   "plates": [
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "6701de83c5ea520cd8825e34eba62da5afacf23a427fda5f5bbe425d30383c9a",
+      "sha256": "5c56cba01042a1c2a43248b37acad0f1190c826e715eac2fa277b9e2e72158bb",
       "bbox_xy_mm": [
         30.923800000000004,
         0.65758,
         305.34241000000003,
-        77.52751
+        77.52752000000001
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab H2C",

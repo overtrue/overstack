@@ -1,0 +1,501 @@
+{
+  "profile": "fit-check/256-joints",
+  "printer": "Bambu Lab X2D",
+  "nozzle_mm": 0.4,
+  "material": "Bambu PETG Basic",
+  "bed": "Textured PEI Plate",
+  "layer_mm": 0.2,
+  "end_style": null,
+  "studio_version": "02.09.01.70",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
+  "physical_fit": "not_verified",
+  "load_test": "not_verified",
+  "makerworld_ready": false,
+  "parts": [
+    {
+      "id": "Wa",
+      "source": "models/256/fit-check/256-joints/Wa.stl",
+      "sha256": "1ce7401bc2a41a37ab0e27e9b24b96126bc90a7d40db09a6733e1f5c961942e8",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -69.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          59.49999999999999
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -122.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        44.0,
+        51.0,
+        23.5
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 371.50000762939453,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "Wb",
+      "source": "models/256/fit-check/256-joints/Wb.stl",
+      "sha256": "be8aec536bbc8af69bb89074bbe1d2da568fec940e3810588b1f77e690202b7b",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -69.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.500000000000009
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          150.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        44.0,
+        51.0,
+        14.199996948242188
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 371.50000762939453,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "Ra",
+      "source": "models/256/fit-check/256-joints/Ra.stl",
+      "sha256": "640c2d90e9a95855c20491898ed0c9a31a634f27ca45eac75ba35df26708bc5c",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -60.5
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          18.999999999999993
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -130.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        17.0,
+        19.000000000000004,
+        19.5
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 188.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "Rb",
+      "source": "models/256/fit-check/256-joints/Rb.stl",
+      "sha256": "8303ae6f2a95ebf2875e7dcd5cbadc23e6608fe6e256569b2a88886a7697bfc5",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -60.5
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.805210672735741e-15
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          163.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        17.0,
+        19.000000000000004,
+        19.199996948242188
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 188.00000000000003,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "Sa",
+      "source": "models/256/fit-check/256-joints/Sa.stl",
+      "sha256": "3cf31b3c3fa62776aa552f94f7b6f4eabcebe8088514415250bbfde31c2a2595",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          17.999999999999993
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -133.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        12.0,
+        18.000000000000004,
+        16.5
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 216.0,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "Sb",
+      "source": "models/256/fit-check/256-joints/Sb.stl",
+      "sha256": "092f52e90db8a3cd2948d7e3a1e65ce9e0946d04c3b4e6a6b98ea5907b265ba8",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.805210672735741e-15
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          158.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        12.0,
+        18.000000000000004,
+        14.199996948242188
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 216.00000000000006,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "HT01",
+      "source": "models/fit-check/HT01-lower-corner.stl",
+      "sha256": "49a2f3ee50e43e7c493c0000ba296e30b25236ee353276c8251896b4b1308a48",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -262.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        25.0,
+        12.0
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 1203.5468734689057,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "HT02",
+      "source": "models/fit-check/HT02-upper-corner.stl",
+      "sha256": "677c39deff7978b99c152d9d126b0653989480e41198e4fb5c48a743edfc5215",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -432.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -262.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        63.0,
+        25.0,
+        26.0
+      ],
+      "downward_area_mm2": 104.81933619361048,
+      "bed_contact_area_mm2": 1003.9902968024835,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "HT04",
+      "source": "models/fit-check/HT04-rear-foot.stl",
+      "sha256": "d9def5a449cd2c5e8c8119b09e5eee51f515395827142297ceed8afda40e8dca",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -482.3033142089844
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -274.3033142089844
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        6.0,
+        6.0,
+        6.400000095367432
+      ],
+      "downward_area_mm2": 0.0,
+      "bed_contact_area_mm2": 21.203044320456684,
+      "supports_required": false,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    }
+  ],
+  "status": "sliced_not_printed",
+  "printer_key": "x2d",
+  "bed_group": "256",
+  "printable_area_mm": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "build_height_mm": 260,
+  "project_file": "x2d-04-petg.3mf",
+  "preset_directory": "print-profiles/x2d/presets",
+  "model_source_hashes": {
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
+    "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
+    "src/overstack/ht_top.py": "c116d7527e88be34d1b5776633c2ed8257aa0e89fdd234de93e1bfc697739339",
+    "src/overstack/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
+    "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
+    "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
+    "src/overstack/surfaces.py": "e9432bdf38f119f490d97e5fc882ecdab5c627c04313381ce42fceb57ed5c7ff",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "cd9677601e508716d09059c09e1227da55d375374aed8727cfedd73e69157703",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "17094b0a74db0550d199b34837d7aea3bc6dd8aa1c3595fdcec92a13bcab29bf",
+    "tools/build_fit_checks.py": "3cd99a0a53b08e514702efce74731865f6d740ee95701c851594d948cbe9d423",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
+  },
+  "layout_source_hashes": {
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "c5fbdad48403511afeb6a858385320ee9ff289e47cdebd101f46c3e009d5f9d4"
+  },
+  "validation_source": {
+    "file": "models/ams2pro/printing.json",
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
+  },
+  "preset_hashes": {
+    "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
+    "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
+    "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
+  },
+  "process_overrides": {
+    "curr_bed_type": "Textured PEI Plate",
+    "wall_loops": "4",
+    "sparse_infill_density": "20%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "1",
+    "support_type": "tree(auto)",
+    "brim_type": "outer_only",
+    "brim_width": "3"
+  },
+  "plates": [
+    {
+      "number": 1,
+      "name": "01 Wa, Wb, HT02, HT01, Ra, Rb, Sa, Sb, HT04",
+      "objects": [
+        "Wa-Wa",
+        "Wb-Wb",
+        "HT02-HT02-upper-corner",
+        "HT01-HT01-lower-corner",
+        "Ra-Ra",
+        "Rb-Rb",
+        "Sa-Sa",
+        "Sb-Sb",
+        "HT04-HT04-rear-foot"
+      ]
+    }
+  ],
+  "project_sha256": "28c401a44e1d684e4ee2d21e6a7fd91aa05c3a161d439bbdba8a31768c225e94",
+  "slice_exit_code": 0,
+  "gcode_files": [
+    "Metadata/plate_1.gcode"
+  ]
+}

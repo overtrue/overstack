@@ -1,0 +1,135 @@
+[
+  {
+    "id": "HT01",
+    "file": "models/fit-check/HT01-lower-corner.stl",
+    "sha256": "49a2f3ee50e43e7c493c0000ba296e30b25236ee353276c8251896b4b1308a48",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT02",
+    "file": "models/fit-check/HT02-upper-corner.stl",
+    "sha256": "677c39deff7978b99c152d9d126b0653989480e41198e4fb5c48a743edfc5215",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT03",
+    "file": "models/fit-check/HT03-rear-key.stl",
+    "sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ],
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "HT04",
+    "file": "models/fit-check/HT04-rear-foot.stl",
+    "sha256": "d9def5a449cd2c5e8c8119b09e5eee51f515395827142297ceed8afda40e8dca",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT05",
+    "file": "models/fit-check/HT05-front-joint.stl",
+    "sha256": "45ca6b9bb697b29be57a25c625efce08fc0205c018bf5e908ebf964828014d0b",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT06",
+    "file": "models/fit-check/HT06-rear-joint.stl",
+    "sha256": "33d90e0fd3cfce7af88b1913265c6f3e0354f9f0d65b6acb6d20c2a047f2f940",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+]

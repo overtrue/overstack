@@ -11,9 +11,9 @@ meshes={r['id']:trimesh.load_mesh(D/r['packaged_file']) for r in rows}
 
 def colored(r,m):
     m=m.copy();name=r['name'];color=[157,182,184,255]
-    if 'end_' in name or 'device_adapter' in name:color=[205,211,215,255]
+    if 'end_' in name or 'device_adapter' in name or name=='ht_top_rear':color=[205,211,215,255]
     if ('_drawer_' in name and 'cassette' not in name) or 'side_bin' in name:color=[204,181,145,255]
-    if 'lock' in name:color=[213,128,66,255]
+    if 'lock' in name or name.startswith('ht_foot_'):color=[213,128,66,255]
     m.visual.vertex_colors=color;return m
 
 def save_scene(key,selected,offset,angle=(-55,26),width=1800,height=1250):
@@ -48,6 +48,9 @@ def exploding(r):
     elif 'lock' in n:y=100;z=10
     elif 'drawer' in n or 'side_bin' in n:y=-110;z=38
     if n=='device_adapter_1':x=-40;y=20
+    if n=='device_adapter_2':y=-32
+    if n=='ht_top_rear':y=36
+    if n.startswith('ht_foot_'):y=-32 if n.endswith('front') else 36;z=-42
     return [x,y,z]
 
 jobs=[save_scene('hero',rows,lambda r:[0,0,LAYERS[r['layer']][2]],width=1800,height=1250),

@@ -7,7 +7,7 @@
   "layer_mm": 0.2,
   "end_style": null,
   "studio_version": "02.09.01.70",
-  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
@@ -15,7 +15,7 @@
     {
       "id": "FIT02",
       "source": "models/fit-check/FIT02-dovetail-socket.stl",
-      "sha256": "c76d54b22c4553b0de602deb79cf27895812be22f7e08aa44417af39285b826e",
+      "sha256": "c512d79729bd32b8ff8e0c4c8272244c8c2d27de8256c7d08bcbded3c52c1355",
       "quantity": 1,
       "assembly_to_print": [
         [
@@ -280,12 +280,14 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     },
     {
       "id": "FIT08",
       "source": "models/fit-check/FIT08-foot-lower.stl",
-      "sha256": "7f84a888c4d77129f466efd5916f4181378ed3682c2f4495ee1ba13c635ad426",
+      "sha256": "fa939d98425931d416155d03b74fe8b897e3c4e446aa7804a829fce3f7292b49",
       "quantity": 1,
       "assembly_to_print": [
         [
@@ -318,7 +320,7 @@
         29.698484809834994,
         30.0
       ],
-      "downward_area_mm2": 142.5144951520689,
+      "downward_area_mm2": 122.32427388589772,
       "bed_contact_area_mm2": 215.33936408305755,
       "supports_required": true,
       "brim_mm": 3,
@@ -330,7 +332,7 @@
     {
       "id": "FIT09",
       "source": "models/fit-check/FIT09-foot-upper.stl",
-      "sha256": "c2a7745fdce77beeed139c628fd76a7689bf8e84d439ecf4a5bf86f77c92b095",
+      "sha256": "87c0ccb1419e773d1752fa0e6758b01cde65e37190bc6d2860516c69603d8e84",
       "quantity": 1,
       "assembly_to_print": [
         [
@@ -360,10 +362,10 @@
       ],
       "bounds_mm": [
         29.698484809834994,
-        29.698484809835,
+        29.698484809834994,
         30.0
       ],
-      "downward_area_mm2": 136.2489390552896,
+      "downward_area_mm2": 118.26540381453364,
       "bed_contact_area_mm2": 215.33936408305755,
       "supports_required": true,
       "brim_mm": 3,
@@ -386,32 +388,39 @@
   "project_file": "x2d-04-petg.3mf",
   "preset_directory": "print-profiles/x2d/presets",
   "model_source_hashes": {
-    "src/overstack/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
-    "src/overstack/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
-    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/overstack/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "6fedac49ae13c5fc8d4668edc016aaaf0a909318c75f3cd63e06e36d6971adf3",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
     "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
-    "src/overstack/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
-    "src/overstack/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/overstack/ht_top.py": "f308ca8ce39127dde008f3e1088c69728918a4b7a3b7046636ea274199eaf75e",
+    "src/overstack/layer_locks.py": "13eb942bd275356ebff3285bcef1c8a9956d3a2ae91609236ccc06143f848498",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
     "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/overstack/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
     "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
-    "src/overstack/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
-    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
-    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
-    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+    "src/overstack/surfaces.py": "86fadb7d9574017b2568303bc9d46de54a1955130eb09195942274b050eb7a7d",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "dc7e14966cf505bfea330df5f3b6dcfbbe216c0739364199e79e918f8ddaaa69",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "d732c069336e4e66188722d89cbc689ea097f37b5c1f2eb543ca5f01485e34d1",
+    "tools/build_fit_checks.py": "a01b4a9587a6cb6333d0756f00b299f184c52cfe945e46fcfb02759b7669271f",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
   },
   "layout_source_hashes": {
-    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
-    "tools/build_print_profiles.py": "2b10f096970ded63237f903e7568f20ef65e99b9a9b8c198427a0355c093e423"
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae"
   },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
-    "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
   },
   "preset_hashes": {
     "printer.json": "89f2c1aff1e56fdde096ee7e98eb50462d8b42b8975c0840184990092f8b1205",
     "filament-1.json": "9b932682e6ea8cf170f59f9f0a01bd288a533080d07b8603158a3da1cf967527",
+    "filament-matte.json": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
     "process.json": "e3df48ca787ec2ee88dbcb5d7169f484f171fbe4f8ef579fcef1a0567d70201e"
   },
   "process_overrides": {
@@ -440,7 +449,7 @@
       ]
     }
   ],
-  "project_sha256": "78f7701781f4bb64ddf92722e8a6d171052803effc6a27e30d13805a70f65719",
+  "project_sha256": "e2e5bcbb90e9948e40192d8ce0d82a9bc4d2e5ab7f44ed974a2bc20e2231e455",
   "slice_exit_code": 0,
   "gcode_files": [
     "Metadata/plate_1.gcode"

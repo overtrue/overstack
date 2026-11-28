@@ -1,17 +1,33 @@
 """Plain rear inter-layer bowtie inserts, without pins or tail keepers."""
 from geometry import *
 
+REAR_LOCK_FILE = 'models/common/rear-lock.stl'
+KEY_THICKNESS = 5.3
+
 
 def locking_profile(cx=38):
     return Polygon([(cx-6,-8),(cx+6,-8),(cx+6,-5),(cx+3,0),(cx+6,5),(cx+6,8),(cx-6,8),(cx-6,5),(cx-3,0),(cx-6,-5)])
 
 
 def layer_lock():
-    return xz_extrude(locking_profile(),281.35,5.3)
+    return xz_extrude(locking_profile(),281.35,KEY_THICKNESS)
+
+
+def flat_layer_lock():
+    """The common spare in print coordinates, with its broad face at Z=0."""
+    return extrude(locking_profile(cx=0),0,KEY_THICKNESS)
+
+
+def pocket_profile():
+    return locking_profile().buffer(.35,join_style=2)
+
+
+def lock_pocket():
+    return xz_extrude(pocket_profile(),281,7)
 
 
 def lock_pockets(end,H,right=False):
-    pocket=xz_extrude(locking_profile().buffer(.35,join_style=2),281,7)
+    pocket=lock_pocket()
     cuts=union([move(pocket,[0,0,H]),pocket])
     return cut(end,mirror_x(cuts) if right else cuts)
 

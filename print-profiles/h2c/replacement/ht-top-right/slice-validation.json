@@ -1,0 +1,24 @@
+{
+  "printer": "Bambu Lab H2C",
+  "project_sha256": "646ec6619584f9db20c9d8184c1c50859e5f1bf4a27a753b4f3e644b323038e3",
+  "sliced_archive_sha256": "e553089ccabdd6b2981382579bb7a207e8c3904fd4b385edb26423929366b7ee",
+  "plates": [
+    {
+      "file": "Metadata/plate_1.gcode",
+      "sha256": "a6f51dae48227fd48b9e47560e5fe736929a324f7b40b933de93782ca63a142c",
+      "bbox_xy_mm": [
+        28.32083,
+        0.02145,
+        320.18618000000004,
+        208.59501000000003
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    }
+  ]
+}

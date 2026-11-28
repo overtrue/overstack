@@ -11,8 +11,8 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4,0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="14720"/>
-    <metadata key="weight" value="120.90"/>
+    <metadata key="prediction" value="66849"/>
+    <metadata key="weight" value="661.08"/>
     <metadata key="pause_count" value="0"/>
     <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
@@ -24,14 +24,21 @@
     <metadata key="multi_nozzle_diameter_mode" value="0"/>
     <metadata key="filament_maps" value="1"/>
     <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="305" name="E01-E01-3drawers_divider_1_1" skipped="false" />
-    <object identify_id="306" name="E08-E08-3drawers_front_beam_1_1" skipped="false" />
-    <object identify_id="307" name="E12-E12-3drawers_seam_2_False_layer_lock_1" skipped="false" />
-    <object identify_id="308" name="E13-E13-3drawers_seam_2_True_layer_lock_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="40.21" used_g="120.90" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <object identify_id="445" name="E14-E14-3drawers_side_left_1" skipped="false" />
+    <object identify_id="446" name="E15-E15-3drawers_side_right_1" skipped="false" />
+    <object identify_id="447" name="E03a-E03a_1" skipped="false" />
+    <object identify_id="448" name="E04a-E04a_1" skipped="false" />
+    <object identify_id="449" name="E08-E08-3drawers_front_beam_1_1" skipped="false" />
+    <object identify_id="450" name="E01a-E01a_1" skipped="false" />
+    <object identify_id="451" name="E01b-E01b_1" skipped="false" />
+    <object identify_id="452" name="E02a-E02a_1" skipped="false" />
+    <object identify_id="453" name="E02b-E02b_1" skipped="false" />
+    <object identify_id="454" name="E12-E12-3drawers_seam_2_False_layer_lock_1" skipped="false" />
+    <object identify_id="455" name="E13-E13-3drawers_seam_2_True_layer_lock_1" skipped="false" />
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="219.88" used_g="661.08" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 289" />
+      <layer_filament_list filament_list="0" layer_ranges="0 746" />
     </layer_filament_lists>
   </plate>
   <plate>
@@ -41,8 +48,8 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4,0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="14436"/>
-    <metadata key="weight" value="118.93"/>
+    <metadata key="prediction" value="44292"/>
+    <metadata key="weight" value="478.31"/>
     <metadata key="pause_count" value="0"/>
     <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
@@ -54,12 +61,15 @@
     <metadata key="multi_nozzle_diameter_mode" value="0"/>
     <metadata key="filament_maps" value="1"/>
     <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="309" name="E02-E02-3drawers_divider_2_1" skipped="false" />
-    <object identify_id="310" name="E09-E09-3drawers_front_beam_2_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="39.56" used_g="118.93" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <object identify_id="456" name="E05a-E05a_1" skipped="false" />
+    <object identify_id="457" name="E03b-E03b_1" skipped="false" />
+    <object identify_id="458" name="E04b-E04b_1" skipped="false" />
+    <object identify_id="459" name="E05b-E05b_1" skipped="false" />
+    <object identify_id="460" name="E10-E10-3drawers_rear_beam_1_1" skipped="false" />
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="159.09" used_g="478.31" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 289" />
+      <layer_filament_list filament_list="0" layer_ranges="0 726" />
     </layer_filament_lists>
   </plate>
   <plate>
@@ -69,143 +79,8 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4,0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="40792"/>
-    <metadata key="weight" value="279.44"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="311" name="E03-E03-3drawers_drawer_1_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="92.94" used_g="279.44" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 564" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="4"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="40218"/>
-    <metadata key="weight" value="275.51"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="312" name="E04-E04-3drawers_drawer_2_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="91.64" used_g="275.51" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 564" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="5"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="40191"/>
-    <metadata key="weight" value="275.51"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="313" name="E05-E05-3drawers_drawer_3_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="91.63" used_g="275.51" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 564" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="6"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="26089"/>
-    <metadata key="weight" value="211.28"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="314" name="E06-E06-3drawers_end_left_1_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="70.27" used_g="211.28" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 314" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="7"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="25934"/>
-    <metadata key="weight" value="210.81"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="315" name="E07-E07-3drawers_end_right_1_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="70.12" used_g="210.81" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 314" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="8"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="3713"/>
-    <metadata key="weight" value="33.58"/>
+    <metadata key="prediction" value="50286"/>
+    <metadata key="weight" value="452.29"/>
     <metadata key="pause_count" value="0"/>
     <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
@@ -217,66 +92,16 @@
     <metadata key="multi_nozzle_diameter_mode" value="0"/>
     <metadata key="filament_maps" value="1"/>
     <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="316" name="E10-E10-3drawers_rear_beam_1_1" skipped="false" />
-    <object identify_id="317" name="E11-E11-3drawers_rear_beam_2_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="11.17" used_g="33.58" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <object identify_id="461" name="E09-E09-3drawers_front_beam_2_1" skipped="false" />
+    <object identify_id="462" name="E11-E11-3drawers_rear_beam_2_1" skipped="false" />
+    <object identify_id="463" name="E06a-E06a_1" skipped="false" />
+    <object identify_id="464" name="E06b-E06b_1" skipped="false" />
+    <object identify_id="465" name="E07a-E07a_1" skipped="false" />
+    <object identify_id="466" name="E07b-E07b_1" skipped="false" />
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="150.43" used_g="452.29" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 29" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="9"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="11159"/>
-    <metadata key="weight" value="105.79"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="318" name="E14-E14-3drawers_side_left_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="35.18" used_g="105.79" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 299" />
-    </layer_filament_lists>
-  </plate>
-  <plate>
-    <metadata key="index" value="10"/>
-    <metadata key="extruder_type" value="0 1"/>
-    <metadata key="nozzle_volume_type" value="0 0"/>
-    <metadata key="printer_model_id" value=""/>
-    <metadata key="nozzle_diameters" value="0.4,0.4"/>
-    <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="11140"/>
-    <metadata key="weight" value="105.61"/>
-    <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
-    <metadata key="outside" value="false"/>
-    <metadata key="support_used" value="true"/>
-    <metadata key="label_object_enabled" value="false"/>
-    <metadata key="support_material_on_wipe_tower" value="false"/>
-    <metadata key="enable_filament_dynamic_map" value="false"/>
-    <metadata key="has_filament_switcher" value="false"/>
-    <metadata key="multi_nozzle_diameter_mode" value="0"/>
-    <metadata key="filament_maps" value="1"/>
-    <metadata key="limit_filament_maps" value="2"/>
-    <object identify_id="319" name="E15-E15-3drawers_side_right_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="35.13" used_g="105.61" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
-    <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
-    <layer_filament_lists>
-      <layer_filament_list filament_list="0" layer_ranges="0 299" />
+      <layer_filament_list filament_list="0" layer_ranges="0 746" />
     </layer_filament_lists>
   </plate>
 </config>

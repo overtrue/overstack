@@ -1,16 +1,24 @@
 # 摆盘工程 / Print profiles
 
+所有机型的板架、抽屉和顶件共用同一款尾锁，一道接缝打印两片。 / Every printer uses the same rear bowtie for racks, drawers and tops. Print two per seam. [平放 STL / Rear key STL](../models/common/rear-lock.stl)
+
+256 mm 的 X2D 与 P2S 每层提供两份工程。使用 Bambu PETG Matte 时选择文件名含 `petg-matte` 的一份。先试 F06 圆销可用 `fit-check/front-pin`。a/b 是前后段，J 是一体横梁。 / Each 256 mm layer includes separate Basic and Matte projects. Use the file ending in `petg-matte.3mf` for Bambu PETG Matte. The three-part front-pin project tests the marked F06 corner.
+
 按打印板尺寸区分：小于 256 × 256 mm 不支持；提供 256 mm 与 H 系列大板方案。各机型分别使用 Bambu Studio 02.09.01.70 的官方配置，统一 0.4 mm 喷嘴、Bambu PETG Basic、纹理 PEI、0.20 mm 层高。4 道墙、20% gyroid；有悬垂的零件启用自动树状支撑，外裙边 3 mm。这些是待实测的起始工艺，不代表承重已经验证。
 
 Beds smaller than 256 × 256 mm are unsupported. Profiles cover 256 mm and H-series beds. Each printer uses its own official Bambu Studio 02.09.01.70 preset, a 0.4 mm nozzle, Bambu PETG Basic, Textured PEI, 0.20 mm layers, four walls, 20% gyroid, automatic tree supports where required, and a 3 mm outer brim. These are provisional settings, not a tested load rating.
 
-所有机型统一按稳定着床、强度和打印效率选择方向：薄连接片优先大面平放，镜像件分别检查；比较悬垂高度与接触面积，避免为了减少局部支撑把长件竖高。按零件投影、裙边和支撑间距合盘。各工程的 `layout-validation.json` 记录优化前后的实际切片盘数、时间、总耗材和支撑挤出量；方向搜索与合盘是启发式，不保证全局最优。
+所有机型统一按稳定着床、强度和打印效率选择方向：薄连接片优先大面平放，镜像件分别检查；比较悬垂高度与接触面积，避免为了减少局部支撑把长件竖高。按零件投影、裙边和支撑间距合盘。已有旧版可对照的工程在 `layout-validation.json` 记录优化前后的实际切片盘数、时间、总耗材和支撑挤出量；方向搜索与合盘是启发式，不保证全局最优。
 
-All printers use the same layout priorities: stable bed contact, strength and printing efficiency. Thin connectors lie on broad faces, mirrored parts are checked separately, and overhang height and contact area are considered before standing a long part upright. Packing reserves brim and support clearance around projected outlines. Each profile's `layout-validation.json` compares sliced plate count, time, total material and support extrusion before and after the change. Orientation and packing are heuristics, not a proof of a global optimum.
+All printers use the same layout priorities: stable bed contact, strength and printing efficiency. Thin connectors lie on broad faces, mirrored parts are checked separately, and overhang height and contact area are considered before standing a long part upright. Packing reserves brim and support clearance around projected outlines. For profiles with a previous revision, `layout-validation.json` compares sliced plate count, time, total material and support extrusion before and after the change. Orientation and packing are heuristics, not a proof of a global optimum.
 
 带凸台和导轨的侧板单独比较方向。H2S 单件侧板对比中，低侧放约 3.0 h、3.3 g 支撑；平放约 5.7 h、28.2 g 支撑，因此保留低侧放。以上均为相同工艺的切片估算，未实物验证。
 
 Side panels with rails and protrusions are compared separately. An H2S single-panel comparison estimated 3.0 h and 3.3 g of support in the low side pose, versus 5.7 h and 28.2 g when laid flat, so the low side pose is retained. Both use the same process settings; neither is physically validated.
+
+X2D、P2S 用 `fit-check/front-pin` 试 HT 顶件的 F06 前定位销和圆角。五种机型的 `fit-check/ht-top` 可以试后锁槽与接缝。只换右侧选 `replacement/ht-top-right`，整层用 `ams2pro-ht/06-device-top`。
+
+The X2D and P2S front-pin projects reproduce the F06 front corner. Each printer also has a rear joint sample, a right-side replacement and the complete top. [HT 侧切片对照 / HT-side slice comparison](../docs/ht-top-printing.md)
 
 [配置索引 / Profile index](INDEX.md) · [HT 三抽屉检查 / HT triple-drawer checks](../docs/drawer-repair.md)
 
@@ -20,6 +28,8 @@ Side panels with rails and protrusions are compared separately. An H2S single-pa
 - `overstack-print-profiles-h-series.zip`：H 系列大板版，内含独立 H2S、H2C、H3C 工程 / Large-bed edition with separate H2S, H2C and H3C projects.
 
 `overstack-print-profiles-preview.zip` 保留为两版合集。 / The preview ZIP contains both editions.
+
+`overstack-ht-top-front-pin.zip` 只含 X2D、P2S 的 F06 前角试件、两种材料的工程和装配剖面。 / This smaller download contains the three front-corner parts, both filament projects for X2D and P2S, and the dowel section.
 
 ## 打印板尺寸分组 / Build-plate groups
 
@@ -52,9 +62,9 @@ Beds smaller than the X2D’s 256 × 256 mm bed, including A1 mini, are unsuppor
 - `ams2pro/`：399 mm 宽完整功能层。
 - `ams2pro-ht/`：495 mm 宽完整功能层。
 - 每个层包包含该层全部零件；五槽层附一对扩展锁片，作为底层时不用。其他层的锁片对应其下方接缝。
-- 普通端框为第一轮基线。孔板替换配置、补件包与推荐组合，待基线试装后再发布，不把未验证组合堆进默认工程。
+- 主层工程使用普通端框。256 mm 的 common 目录有 40/60 mm 洞洞板端框，compatibility 目录有旧 HT 顶件的右过渡框。
 
-Fit specimens cover the pegboard, dovetail, plate ledges, rear key and stacking foot; see [specimen instructions](../models/fit-check/README.md). Each layer profile is self-contained. Five-slot layers include two optional seam keys; omit them when used as the bottom layer. Other layer keys connect to the layer below. Widths must not be mixed. Plain ends are the initial baseline; pegboard alternatives, spare kits and recommended stacks follow physical validation.
+Each layer project includes its plain ends and keys. The two keys in a five-slot project are optional when it sits at the bottom. Match layers of the same width. The 256 mm common folder adds 40 and 60 mm pegboard ends, and the compatibility folder has replacement right ends for an older HT top. The front-pin project tests the vertical dowel. [Other fit specimens](../models/fit-check/README.md)
 
 ## 状态 / Status
 
@@ -88,6 +98,7 @@ The 3MF is a Bambu Studio project, distinct from the geometry-only assemblies in
 
 ```sh
 uv run python tools/build_fit_checks.py
+uv run python tools/build_small_bed.py
 uv run python tools/build_print_profiles.py --printer x2d --slice
 uv run python tools/build_print_profiles.py --printer p2s --slice
 uv run python tools/build_print_profiles.py --printer h2s --slice
@@ -97,6 +108,8 @@ python3 tools/check_sliced_targets.py
 uv run python tools/check_print_layout.py --all
 uv run python tools/check_profile_printing.py
 uv run python tools/check_print_profiles.py
+uv run python tools/verify_front_pin_slices.py
+uv run python tools/verify_plate_bar_slices.py
 ```
 
 可用 `--only ams2pro/5-slot` 限定范围。生成器从已导出的零件清单读取模型，只旋转和平移，不修改零件几何。使用各机型目录 `presets/` 内固定配置；来源是本机该版本 Studio 的官方机器、PETG 和工艺配置及继承值。升级 Studio 或修改模型后必须重建并重验。
@@ -110,5 +123,7 @@ Use `--only ams2pro/5-slot` to limit rebuilding. Parts are only rotated and tran
 Organize functional modules by width. Each module has one complete multi-plate baseline profile, with part IDs in plate/object names. Add alternatives only for meaningful geometry or process differences. Publish tested modules first, then tested combinations.
 
 生成下载包：`uv run python tools/bundle_print_profiles.py`。只有全盘切片成功的工程会进入预览 ZIP，失败/阻塞项仅保留状态清单。 / Only fully sliced projects enter the preview ZIP; blocked entries retain manifests only.
+
+`uv run python tools/bundle_print_profiles.py --group 256` 单独重建小板下载包。 / Use this command to rebuild the 256 mm downloads independently.
 
 Studio CLI 空喷嘴列表兼容处理参考 [BambuStudio #12956](https://github.com/bambulab/BambuStudio/issues/12956)。分盘使用 Studio 原生 `--load-assemble-list`，不手工拼接 3MF 网格。

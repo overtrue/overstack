@@ -1,0 +1,212 @@
+[
+  {
+    "id": "Wa",
+    "file": "models/256/fit-check/256-joints/Wa.stl",
+    "parent_ids": [
+      "ND10a"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "Wb",
+    "file": "models/256/fit-check/256-joints/Wb.stl",
+    "parent_ids": [
+      "ND10b"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "Ra",
+    "file": "models/256/fit-check/256-joints/Ra.stl",
+    "parent_ids": [
+      "NB03a"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "Rb",
+    "file": "models/256/fit-check/256-joints/Rb.stl",
+    "parent_ids": [
+      "NB03b"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "Sa",
+    "file": "models/256/fit-check/256-joints/Sa.stl",
+    "parent_ids": [
+      "NB01a"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "Sb",
+    "file": "models/256/fit-check/256-joints/Sb.stl",
+    "parent_ids": [
+      "NB01b"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "HT01",
+    "file": "models/fit-check/HT01-lower-corner.stl",
+    "sha256": "49a2f3ee50e43e7c493c0000ba296e30b25236ee353276c8251896b4b1308a48",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT02",
+    "file": "models/fit-check/HT02-upper-corner.stl",
+    "sha256": "677c39deff7978b99c152d9d126b0653989480e41198e4fb5c48a743edfc5215",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "id": "HT04",
+    "file": "models/fit-check/HT04-rear-foot.stl",
+    "sha256": "d9def5a449cd2c5e8c8119b09e5eee51f515395827142297ceed8afda40e8dca",
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+]

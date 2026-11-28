@@ -8,6 +8,8 @@
 
 Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.
 
+每道层缝从后方插入两片相同的蝴蝶锁片，左右通用。 / Print two identical bowties per seam. Either fits either side. [通用锁片 STL / Rear key STL](../../common/rear-lock.stl)
+
 ![带零件编号的爆炸图 / Numbered exploded view](../../../docs/images/05-triple-drawer-layer-assembly-zh.png)
 
 | 编号 / ID | 零件 |
@@ -23,8 +25,8 @@ Match the IDs in the exploded view to the STL filenames. Click an ID to download
 | [E09](parts/E09-3drawers_front_beam_2.stl) | 前横梁 |
 | [E10](parts/E10-3drawers_rear_beam_1.stl) | 后横梁 |
 | [E11](parts/E11-3drawers_rear_beam_2.stl) | 后横梁 |
-| [E12](parts/E12-3drawers_seam_2_False_layer_lock.stl) | 层间锁片 |
-| [E13](parts/E13-3drawers_seam_2_True_layer_lock.stl) | 层间锁片 |
+| [E12](../../common/rear-lock.stl) | 层间锁片 |
+| [E13](../../common/rear-lock.stl) | 层间锁片 |
 | [E14](parts/E14-3drawers_side_left.stl) | 左侧承架 |
 | [E15](parts/E15-3drawers_side_right.stl) | 右侧承架 |
 

@@ -7,142 +7,229 @@
   "layer_mm": 0.2,
   "end_style": "plain",
   "studio_version": "02.09.01.70",
-  "source_commit": "10784a5c2cd29e133bdd516ff5cd60835df2abdf",
+  "source_commit": "2b1f38496f7efa00bf7df5307c426501663ee0a0",
   "physical_fit": "not_verified",
   "load_test": "not_verified",
   "makerworld_ready": false,
   "parts": [
     {
-      "id": "NA01",
-      "source": "models/common/end_left_40_plain.stl",
-      "sha256": "d17513987e7763e81810d3c9e1ca91347da738917cff395995eb96d1eea4c601",
+      "id": "NA01a",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA01a.stl",
+      "sha256": "cc9028bcb93eb2726862928977b5742d05b9032b4b93bc4c7c1138acbf80bbbc",
       "quantity": 1,
       "assembly_to_print": [
         [
-          0.7071067811865476,
-          -0.7071067811865475,
-          0.0,
-          196.7264400637114
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
-          0.0,
-          -6.2132034394294005
-        ],
-        [
-          0.0,
-          0.0,
           1.0,
-          3.0
+          0.0,
+          0.0,
+          -0.0
         ],
         [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        239.15284693490426,
-        239.1528496323026,
-        43.0
-      ],
-      "downward_area_mm2": 9444.4515840187,
-      "bed_contact_area_mm2": 182.04088149353018,
-      "support_column_estimate_mm3": 28969.62472378919,
-      "supports_required": true,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NA02",
-      "source": "models/common/end_right_40_plain.stl",
-      "sha256": "653d6cfb967a0a60e41b6dff3019f1d1db6d20384820a987f9d8b3eb476eb78f",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          0.7071067811865476,
-          -0.7071067811865475,
-          0.0,
-          -104.6518036156091
-        ],
-        [
-          0.7071067811865475,
-          0.7071067811865476,
-          0.0,
-          -307.59144981614816
-        ],
-        [
-          0.0,
-          0.0,
-          1.0,
-          3.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        239.15284693490423,
-        239.15284423750597,
-        43.0
-      ],
-      "downward_area_mm2": 9444.451694124025,
-      "bed_contact_area_mm2": 182.0408285467346,
-      "support_column_estimate_mm3": 28969.625723012356,
-      "supports_required": true,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NA03",
-      "source": "models/ams2pro/5-slot-plate-layer/plate_carrier_left.stl",
-      "sha256": "a61e2536fe5d8f6feaf92ac6e2838369c6051235a01e0c4162daf5ac6f7338b1",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          -0.7071067811865476,
-          231.22391744800103
-        ],
-        [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          -0.7071067811865475,
-          28.284271247461895
-        ],
-        [
-          1.0,
           0.0,
           6.123233995736766e-17,
+          -1.0,
+          40.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        43.0,
+        149.5
+      ],
+      "downward_area_mm2": 624.9043324673905,
+      "bed_contact_area_mm2": 1917.7978802768587,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA01b",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA01b.stl",
+      "sha256": "905b91b29e0203f310b4c0151663bc274d8057bb91aaaac03c4d13950c9f548f",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        43.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 809.8503511197164,
+      "bed_contact_area_mm2": 1734.5557520724278,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA02a",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA02a.stl",
+      "sha256": "d126ba035a7627a90506474f28adb33bae59209634a92f53651231c65319f382",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          40.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        43.0,
+        149.5
+      ],
+      "downward_area_mm2": 627.3373659144293,
+      "bed_contact_area_mm2": 1917.7981421819582,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA02b",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA02b.stl",
+      "sha256": "d7caa10246e17813234e984f15457838a9aed4b71abfa6d96801a00432af0685",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -435.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          2.999999999999983
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        60.0,
+        43.0,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 809.8495983319409,
+      "bed_contact_area_mm2": 1734.5557816583575,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA03a",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA03a.stl",
+      "sha256": "95cb185fb68c7c52f9d234c57c7022f2a5fc93022c2d3cb0f44ea5d6ca08ea53",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
           -54.29999923706055
         ],
         [
           0.0,
+          6.123233995736766e-17,
+          -1.0,
+          40.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
           0.0,
           0.0,
           1.0
         ]
       ],
       "bounds_mm": [
-        231.22391744800103,
-        231.22391744800106,
-        29.700000762939453
+        23.200000762939453,
+        40.00000000000001,
+        149.5
       ],
-      "downward_area_mm2": 11053.275878902876,
-      "bed_contact_area_mm2": 864.0000000000006,
-      "support_column_estimate_mm3": 68572.49738601292,
+      "downward_area_mm2": 270.4121741221261,
+      "bed_contact_area_mm2": 362.5602153156298,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -151,28 +238,28 @@
       ]
     },
     {
-      "id": "NA04",
-      "source": "models/ams2pro/5-slot-plate-layer/plate_carrier_right.stl",
-      "sha256": "b76ddc6198fae642a38cbcc3dd1926e20de0cfbb22d606da8f7d8a1c1fbdb1ca",
+      "id": "NA03b",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA03b.stl",
+      "sha256": "9b1d89d95e05a62ffc80b54d39fc0a4b760089e96502a2fa11da462609c355cc",
       "quantity": 1,
       "assembly_to_print": [
         [
-          4.329780281177467e-17,
-          -0.7071067811865475,
-          0.7071067811865476,
-          202.9396462005391
+          1.0,
+          0.0,
+          0.0,
+          -54.29999923706055
         ],
         [
-          4.329780281177466e-17,
-          0.7071067811865476,
-          0.7071067811865475,
-          -1.4309923829291525e-14
-        ],
-        [
-          -1.0,
           0.0,
           6.123233995736766e-17,
-          344.70001220703125
+          1.0,
+          -8.805210672735741e-15
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          287.0
         ],
         [
           0.0,
@@ -182,13 +269,12 @@
         ]
       ],
       "bounds_mm": [
-        231.22391744800103,
-        231.22391744800103,
-        29.70001220703125
+        29.700000762939453,
+        40.00000000000001,
+        143.1999969482422
       ],
-      "downward_area_mm2": 11053.27592380961,
-      "bed_contact_area_mm2": 863.9999999999991,
-      "support_column_estimate_mm3": 68572.62450662597,
+      "downward_area_mm2": 750.0014072638284,
+      "bed_contact_area_mm2": 298.2700036334991,
       "supports_required": true,
       "brim_mm": 3,
       "required_extruder_area_mm": [
@@ -197,22 +283,112 @@
       ]
     },
     {
-      "id": "NA05",
-      "source": "models/ams2pro/5-slot-plate-layer/front_beam_1.stl",
-      "sha256": "b6972413cbbbeb14893fa4347cbe34efcfe003131206c9ddf5529f31d6d6dff1",
+      "id": "NA04a",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA04a.stl",
+      "sha256": "157ec2e66923c917b5e65c966488b5054dac7c6232c3c0c9d209fa0b9b6cd1b3",
       "quantity": 1,
       "assembly_to_print": [
         [
           1.0,
           0.0,
           0.0,
-          -63.5
+          -321.5
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          40.0
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        23.20001220703125,
+        40.00000000000001,
+        149.5
+      ],
+      "downward_area_mm2": 270.4124548995291,
+      "bed_contact_area_mm2": 362.5601889016553,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA04b",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA04b.stl",
+      "sha256": "e335f2224cfd8f56ce9d5b10756714a1fe30869fb39f573a1d6b3c424ea3e45a",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -315.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -8.805210672735741e-15
         ],
         [
           0.0,
           -1.0,
-          -1.2246467991473532e-16,
-          24.0
+          6.123233995736766e-17,
+          287.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_mm": [
+        29.70001220703125,
+        40.00000000000001,
+        143.1999969482422
+      ],
+      "downward_area_mm2": 750.0018212573891,
+      "bed_contact_area_mm2": 298.27005055427435,
+      "supports_required": true,
+      "brim_mm": 3,
+      "required_extruder_area_mm": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "NA05J",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA05J.stl",
+      "sha256": "6972a3cc97060364d21328c02e0f8877bbb3769e576da43425eb67e930da02d7",
+      "quantity": 1,
+      "assembly_to_print": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -44.90128060534577
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          -30.75914498161481
         ],
         [
           0.0,
@@ -228,12 +404,12 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.4751801064719,
+        206.47518010647187,
         6.000000000000003
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3292.5058698654175,
+      "bed_contact_area_mm2": 6485.600036621094,
       "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
@@ -243,68 +419,22 @@
       ]
     },
     {
-      "id": "NA06",
-      "source": "models/ams2pro/5-slot-plate-layer/front_beam_2.stl",
-      "sha256": "aec073b8183a372e7a3010eb85e61b8a9285eed08c5a1cc3b5e96b3b3d519269",
+      "id": "NA07J",
+      "source": "models/256/ams2pro/5-slot-plate-layer/NA07J.stl",
+      "sha256": "d4da9926bf144741cdb699ae6455fa79717655de8f286afa730d9375dfea9ffe",
       "quantity": 1,
       "assembly_to_print": [
         [
-          1.0,
-          0.0,
-          0.0,
-          -199.8000030517578
+          0.7071067811865476,
+          0.7071067811865475,
+          8.659560562354932e-17,
+          -233.69879118215394
         ],
         [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          24.0
-        ],
-        [
-          0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          6.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.000000000000003
-      ],
-      "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.4144253730774,
-      "support_column_estimate_mm3": 0.0,
-      "supports_required": false,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NA07",
-      "source": "models/ams2pro/5-slot-plate-layer/rear_beam_1.stl",
-      "sha256": "3797f8a25e099f9953c82e8a40f149e4d2475b2fa0f24e7e31ec3c74367c2eba",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          -63.5
-        ],
-        [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          287.0
+          0.7071067811865475,
+          -0.7071067811865476,
+          -8.659560562354934e-17,
+          158.0383655951934
         ],
         [
           0.0,
@@ -320,58 +450,12 @@
         ]
       ],
       "bounds_mm": [
-        141.0,
-        24.0,
+        206.47518010647187,
+        206.47518010647187,
         6.0000000000000036
       ],
       "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3292.5057983398438,
-      "support_column_estimate_mm3": 0.0,
-      "supports_required": false,
-      "brim_mm": 3,
-      "required_extruder_area_mm": [
-        256,
-        256
-      ]
-    },
-    {
-      "id": "NA08",
-      "source": "models/ams2pro/5-slot-plate-layer/rear_beam_2.stl",
-      "sha256": "a54499b1d94352a0f353d25398f08c48395267798725d2d57a8bda7b7e6ba9be",
-      "quantity": 1,
-      "assembly_to_print": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          -199.8000030517578
-        ],
-        [
-          0.0,
-          -1.0,
-          -1.2246467991473532e-16,
-          287.0
-        ],
-        [
-          0.0,
-          1.2246467991473532e-16,
-          -1.0,
-          5.999999999999968
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "bounds_mm": [
-        135.6999969482422,
-        24.0,
-        6.0000000000000036
-      ],
-      "downward_area_mm2": 0.0,
-      "bed_contact_area_mm2": 3181.4144897460938,
+      "bed_contact_area_mm2": 6485.600036621096,
       "support_column_estimate_mm3": 0.0,
       "supports_required": false,
       "brim_mm": 3,
@@ -424,7 +508,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     },
     {
       "id": "KEY-right",
@@ -470,7 +556,9 @@
       "required_extruder_area_mm": [
         256,
         256
-      ]
+      ],
+      "print_file": "models/common/rear-lock.stl",
+      "print_sha256": "17a7f3af3579dfe67713ff7fd339ddf46dd7a1c631e8a24552892ced1a78fa02"
     }
   ],
   "status": "sliced_not_printed",
@@ -486,32 +574,39 @@
   "project_file": "p2s-04-petg.3mf",
   "preset_directory": "print-profiles/p2s/presets",
   "model_source_hashes": {
-    "src/overstack/__init__.py": "e723c700eabfdc39ac2d2af7785cff8fbeb52e8a93ceadb697fca99f8e73f15f",
-    "src/overstack/base.py": "bf56cc4204bce34a8a2689d0146ae9950e3f21a8bd240d47ab12ab0073f2b235",
-    "src/overstack/compact.py": "4b2a9260d02627c1e5f0bcdbbcac9cc6c18da3b799ed9e807284c9f13a996d64",
-    "src/overstack/fabrication.py": "889a549917781663b74e74e8edb151ce70532f8db4d4354ec2e0084ced2c7aa9",
+    "src/overstack/__init__.py": "3082997d1be57229174d22c627cde0d5fb6b69f512c22c71591e746cd7cf9a90",
+    "src/overstack/base.py": "0e8d8120fdb43e5a110e0bcbca987c38573b5c8d22d001e409e01f5158625dd5",
+    "src/overstack/compact.py": "6fedac49ae13c5fc8d4668edc016aaaf0a909318c75f3cd63e06e36d6971adf3",
+    "src/overstack/corner_pins.py": "9a618cbda61a1c3f8e8fa3caf43f9e2441968d5238549b0fc1dcb6edd441bc7c",
+    "src/overstack/fabrication.py": "d47e771c8c7bd5d05597b02a5ecb07702d2a37269836ce7a5a826de22b137682",
     "src/overstack/geometry.py": "aa7508b5521f4d59c292d30eac10420ce5ab49c1b316ebe2e471092ecf032acb",
-    "src/overstack/layer_locks.py": "2c77aaf834d1f2c6679298d82210540749be8b6da8a464cb37296d9499b229c6",
-    "src/overstack/multi_drawers.py": "0279e411cefa16bcd0e6cb0463188e72678e7c1b08681d66ebddc9eabe0d437e",
+    "src/overstack/ht_top.py": "f308ca8ce39127dde008f3e1088c69728918a4b7a3b7046636ea274199eaf75e",
+    "src/overstack/layer_locks.py": "13eb942bd275356ebff3285bcef1c8a9956d3a2ae91609236ccc06143f848498",
+    "src/overstack/multi_drawers.py": "96eea12275cdd7a593ee986a3566875c33c3f63a8538cf7dd11896324df1c1c0",
     "src/overstack/pegboard.py": "555afad1eb28b6ee9641e4c10caabd3fb8625c2b0c1e66449f5d8a4ddb4b4df7",
-    "src/overstack/storage.py": "2f857fb1b42e0416723de1d339a2bbdf87ec0acc5412e293ff0cd9e6f1ee0fe6",
+    "src/overstack/small_bed.py": "308754fdd61c884bb587c8589ee6dfacdf0b1b3e508c4601f091744a5064914c",
+    "src/overstack/storage.py": "7277cfd2cf872006b84bf56fbc19ff00fb9e087838dac00b9bb10515857eee30",
     "src/overstack/structure.py": "f337da75356151d47c9314a39ce1b58edc2f8488d90b1166c11b89595c2557df",
-    "src/overstack/surfaces.py": "63e435994230d6e92cad218b7a4a7a82d62448dfe8c94c2b42afa9c46a4a2d82",
-    "tools/build.py": "6fd66ce0d34e5f897bd76bd55167661effcb1644b4548913e539b6b68cdaf8ea",
-    "tools/build_variants.py": "442f516da50be7fa03f8bd2529eb6cf267c11ac4d7ab0524696956d6ab31841c",
-    "tools/build_fit_checks.py": "c34dd685a1476d235f3abbf6a1f994ccbaf4bfa1372a0979eb3695617e4988f8"
+    "src/overstack/surfaces.py": "86fadb7d9574017b2568303bc9d46de54a1955130eb09195942274b050eb7a7d",
+    "tools/ht_layers.py": "d0f1097aad34b8b8889326360a412c3832687ef9e7e2c640bd20c055053ddc86",
+    "tools/package.py": "dc7e14966cf505bfea330df5f3b6dcfbbe216c0739364199e79e918f8ddaaa69",
+    "tools/build.py": "a00957e0f0be25ffb586e02d9e3aa3d0fe6b339d16f3ace6dd047a49813f4d33",
+    "tools/build_variants.py": "d732c069336e4e66188722d89cbc689ea097f37b5c1f2eb543ca5f01485e34d1",
+    "tools/build_fit_checks.py": "a01b4a9587a6cb6333d0756f00b299f184c52cfe945e46fcfb02759b7669271f",
+    "tools/build_small_bed.py": "5834e254c4aadeab1aa33e6e360e74348063c96ba6b061ed72a9fe80363bba48"
   },
   "layout_source_hashes": {
-    "tools/print_layout.py": "5f56aeb346e2a65d947f3efde3b251cf4c02c0364bd651673105ef1071dde0fd",
-    "tools/build_print_profiles.py": "acb35d16c933d180b5499d3e368dcf1aff6ea1b36eff4fcc990d081149aedff2"
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae"
   },
   "validation_source": {
     "file": "models/ams2pro/printing.json",
-    "sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+    "sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
   },
   "preset_hashes": {
     "printer.json": "7e153a231548bcbaacc0754241d02a72450162456432532aa77153971ed81651",
     "filament-1.json": "45d195a8194ff343d5d03d144cd5c864b0a52d00b5eb95dc7cd59fc9825a5b0a",
+    "filament-matte.json": "cfb9fe146043a10b36a20ad472de6c2c32ba9caa62dda321faff4ae14048495c",
     "process.json": "2844ef7da4b7f3490eeae768e86ece0064c654f6aa3a4fbf8ea49388db598aa0"
   },
   "process_overrides": {
@@ -527,45 +622,26 @@
   "plates": [
     {
       "number": 1,
-      "name": "01 NA01",
+      "name": "01 NA05J, NA07J, NA01a, NA01b, NA02a, NA02b, NA04b, NA03b, NA04a, NA03a, KEY-left, KEY-right",
       "objects": [
-        "NA01-end_left_40_plain"
-      ]
-    },
-    {
-      "number": 2,
-      "name": "02 NA02",
-      "objects": [
-        "NA02-end_right_40_plain"
-      ]
-    },
-    {
-      "number": 3,
-      "name": "03 NA03, NA05, NA06, NA07, NA08, KEY-left, KEY-right",
-      "objects": [
-        "NA03-plate_carrier_left",
-        "NA05-front_beam_1",
-        "NA06-front_beam_2",
-        "NA07-rear_beam_1",
-        "NA08-rear_beam_2",
+        "NA05J-NA05J",
+        "NA07J-NA07J",
+        "NA01a-NA01a",
+        "NA01b-NA01b",
+        "NA02a-NA02a",
+        "NA02b-NA02b",
+        "NA04b-NA04b",
+        "NA03b-NA03b",
+        "NA04a-NA04a",
+        "NA03a-NA03a",
         "KEY-left-lock_left",
         "KEY-right-lock_right"
       ]
-    },
-    {
-      "number": 4,
-      "name": "04 NA04",
-      "objects": [
-        "NA04-plate_carrier_right"
-      ]
     }
   ],
-  "project_sha256": "2a480edb6104f4e564d4c58ede06483ab081cf0c9fb6f525b55120e5b7c61697",
+  "project_sha256": "d942d00a0d1d6dc5ca03bef6c726394198c87cd6ce38f2394eb5f0fe8f9d761f",
   "slice_exit_code": 0,
   "gcode_files": [
-    "Metadata/plate_4.gcode",
-    "Metadata/plate_2.gcode",
-    "Metadata/plate_1.gcode",
-    "Metadata/plate_3.gcode"
+    "Metadata/plate_1.gcode"
   ]
 }

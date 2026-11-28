@@ -91,7 +91,7 @@
     "name": "low_0_end_left_1",
     "layer": 0,
     "file": "parts/low_0_end_left_1.stl",
-    "sha256": "d17513987e7763e81810d3c9e1ca91347da738917cff395995eb96d1eea4c601",
+    "sha256": "43dba602caaf0be3ea9d66e9a6462360c6ecfc9bf2f0f9836e816d469e9361d4",
     "bounds_mm": [
       [
         0.0,
@@ -107,13 +107,13 @@
     "id": "A05",
     "label": "左端框",
     "packaged_file": "01-five-slot-plate-layer/parts/A05-low_0_end_left_1.stl",
-    "packaged_sha256": "d17513987e7763e81810d3c9e1ca91347da738917cff395995eb96d1eea4c601"
+    "packaged_sha256": "43dba602caaf0be3ea9d66e9a6462360c6ecfc9bf2f0f9836e816d469e9361d4"
   },
   {
     "name": "low_0_end_right_1",
     "layer": 0,
     "file": "parts/low_0_end_right_1.stl",
-    "sha256": "653d6cfb967a0a60e41b6dff3019f1d1db6d20384820a987f9d8b3eb476eb78f",
+    "sha256": "b2c6ad40fc2bb2e57df84331c296cd1f169ac0ca8ffdbcdc79dc6a1484577085",
     "bounds_mm": [
       [
         435.0,
@@ -129,7 +129,7 @@
     "id": "A06",
     "label": "右端框",
     "packaged_file": "01-five-slot-plate-layer/parts/A06-low_0_end_right_1.stl",
-    "packaged_sha256": "653d6cfb967a0a60e41b6dff3019f1d1db6d20384820a987f9d8b3eb476eb78f"
+    "packaged_sha256": "b2c6ad40fc2bb2e57df84331c296cd1f169ac0ca8ffdbcdc79dc6a1484577085"
   },
   {
     "name": "seam_1_False_layer_lock",
@@ -151,7 +151,8 @@
     "id": "B01",
     "label": "层间锁片",
     "packaged_file": "02-eight-slot-plate-layer/parts/B01-seam_1_False_layer_lock.stl",
-    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4"
+    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "seam_1_True_layer_lock",
@@ -173,7 +174,8 @@
     "id": "B02",
     "label": "层间锁片",
     "packaged_file": "02-eight-slot-plate-layer/parts/B02-seam_1_True_layer_lock.stl",
-    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11"
+    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "standard_1_cassette_plates_1",
@@ -267,7 +269,7 @@
     "name": "standard_1_end_left_1",
     "layer": 1,
     "file": "parts/standard_1_end_left_1.stl",
-    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463",
     "bounds_mm": [
       [
         0.0,
@@ -283,13 +285,13 @@
     "id": "B07",
     "label": "左端框",
     "packaged_file": "02-eight-slot-plate-layer/parts/B07-standard_1_end_left_1.stl",
-    "packaged_sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73"
+    "packaged_sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463"
   },
   {
     "name": "standard_1_end_right_1",
     "layer": 1,
     "file": "parts/standard_1_end_right_1.stl",
-    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb",
     "bounds_mm": [
       [
         435.0,
@@ -305,7 +307,7 @@
     "id": "B08",
     "label": "右端框",
     "packaged_file": "02-eight-slot-plate-layer/parts/B08-standard_1_end_right_1.stl",
-    "packaged_sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149"
+    "packaged_sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb"
   },
   {
     "name": "standard_1_side_bin_left_1",
@@ -421,7 +423,7 @@
     "name": "2drawers_end_left_1",
     "layer": 2,
     "file": "parts/2drawers_end_left_1.stl",
-    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463",
     "bounds_mm": [
       [
         0.0,
@@ -437,13 +439,13 @@
     "id": "D04",
     "label": "左端框",
     "packaged_file": "04-double-drawer-layer/parts/D04-2drawers_end_left_1.stl",
-    "packaged_sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73"
+    "packaged_sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463"
   },
   {
     "name": "2drawers_end_right_1",
     "layer": 2,
     "file": "parts/2drawers_end_right_1.stl",
-    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb",
     "bounds_mm": [
       [
         435.0,
@@ -459,7 +461,7 @@
     "id": "D05",
     "label": "右端框",
     "packaged_file": "04-double-drawer-layer/parts/D05-2drawers_end_right_1.stl",
-    "packaged_sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149"
+    "packaged_sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb"
   },
   {
     "name": "2drawers_front_beam_1",
@@ -569,7 +571,8 @@
     "id": "D10",
     "label": "层间锁片",
     "packaged_file": "04-double-drawer-layer/parts/D10-2drawers_seam_2_False_layer_lock.stl",
-    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4"
+    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "2drawers_seam_2_True_layer_lock",
@@ -591,7 +594,8 @@
     "id": "D11",
     "label": "层间锁片",
     "packaged_file": "04-double-drawer-layer/parts/D11-2drawers_seam_2_True_layer_lock.stl",
-    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11"
+    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "2drawers_side_left",
@@ -751,7 +755,7 @@
     "name": "3drawers_end_left_1",
     "layer": 3,
     "file": "parts/3drawers_end_left_1.stl",
-    "sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73",
+    "sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463",
     "bounds_mm": [
       [
         0.0,
@@ -767,13 +771,13 @@
     "id": "E06",
     "label": "左端框",
     "packaged_file": "05-triple-drawer-layer/parts/E06-3drawers_end_left_1.stl",
-    "packaged_sha256": "8d94d459c973fee4127b9b5eb520bf054550e2e4cd6754b7c2df07bb70fd4f73"
+    "packaged_sha256": "7c3a0afa30926512d544b8a00d85fcc7a339902437e2cfa1a0699fd4bc08a463"
   },
   {
     "name": "3drawers_end_right_1",
     "layer": 3,
     "file": "parts/3drawers_end_right_1.stl",
-    "sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149",
+    "sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb",
     "bounds_mm": [
       [
         435.0,
@@ -789,7 +793,7 @@
     "id": "E07",
     "label": "右端框",
     "packaged_file": "05-triple-drawer-layer/parts/E07-3drawers_end_right_1.stl",
-    "packaged_sha256": "400c86aaa0e8330a6f9610aae9fccc033cf6231aed07345859a609660f856149"
+    "packaged_sha256": "7925939d4e24fe6dbe31086fcbf0b8506d124a4cde0f6d14464acedbdd9ca7cb"
   },
   {
     "name": "3drawers_front_beam_1",
@@ -899,7 +903,8 @@
     "id": "E12",
     "label": "层间锁片",
     "packaged_file": "05-triple-drawer-layer/parts/E12-3drawers_seam_2_False_layer_lock.stl",
-    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4"
+    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "3drawers_seam_2_True_layer_lock",
@@ -921,7 +926,8 @@
     "id": "E13",
     "label": "层间锁片",
     "packaged_file": "05-triple-drawer-layer/parts/E13-3drawers_seam_2_True_layer_lock.stl",
-    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11"
+    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "3drawers_side_left",
@@ -971,7 +977,7 @@
     "name": "device_adapter_1",
     "layer": 4,
     "file": "parts/device_adapter_1.stl",
-    "sha256": "ceba29bc1f65315825bbc9a8ebf01776043b468824c45dcf79302405dc3c765c",
+    "sha256": "b306073de637d399838a5405c864dcb8616689f1b652208696b160ed77734b68",
     "bounds_mm": [
       [
         0.0,
@@ -987,29 +993,29 @@
     "id": "F01",
     "label": "顶部左片",
     "packaged_file": "06-device-top/parts/F01-device_adapter_1.stl",
-    "packaged_sha256": "ceba29bc1f65315825bbc9a8ebf01776043b468824c45dcf79302405dc3c765c"
+    "packaged_sha256": "b306073de637d399838a5405c864dcb8616689f1b652208696b160ed77734b68"
   },
   {
     "name": "device_adapter_2",
     "layer": 4,
     "file": "parts/device_adapter_2.stl",
-    "sha256": "a4e050a90dd612844b6d3d210b6b2ec6231e34279ee7a3c8ddd7c1959137e15f",
+    "sha256": "570a17c14f6e20edb378432c00cfff532e45740307d612405d3b294fa7f8fd7f",
     "bounds_mm": [
       [
         247.8000030517578,
         0.0,
-        -3.0
+        0.0
       ],
       [
         495.0,
-        287.0,
+        173.0,
         26.0
       ]
     ],
     "id": "F02",
-    "label": "顶部右片",
+    "label": "HT 前段",
     "packaged_file": "06-device-top/parts/F02-device_adapter_2.stl",
-    "packaged_sha256": "a4e050a90dd612844b6d3d210b6b2ec6231e34279ee7a3c8ddd7c1959137e15f"
+    "packaged_sha256": "570a17c14f6e20edb378432c00cfff532e45740307d612405d3b294fa7f8fd7f"
   },
   {
     "name": "top_rear_lock_1",
@@ -1031,7 +1037,8 @@
     "id": "F03",
     "label": "层间锁片",
     "packaged_file": "06-device-top/parts/F03-top_rear_lock_1.stl",
-    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4"
+    "packaged_sha256": "8685f1e50b5333a1f5c947f4fc32f3590c8304bed949a934bdfbb4caa3ccfcd4",
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "name": "top_rear_lock_2",
@@ -1053,6 +1060,73 @@
     "id": "F04",
     "label": "层间锁片",
     "packaged_file": "06-device-top/parts/F04-top_rear_lock_2.stl",
-    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11"
+    "packaged_sha256": "b4b091c61f0acdeb8ae3dd00cc135b3cf3a8460de72c3febbc3170fcafc16e11",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "name": "ht_top_rear",
+    "layer": 4,
+    "file": "parts/ht_top_rear.stl",
+    "sha256": "f17ceeab8d2687ea73a80a9e050803763878d2ce7e56bba76467d7557f688b7c",
+    "bounds_mm": [
+      [
+        247.8000030517578,
+        115.30000305175781,
+        0.0
+      ],
+      [
+        495.0,
+        287.0,
+        26.0
+      ]
+    ],
+    "id": "F05",
+    "label": "HT 后段",
+    "packaged_file": "06-device-top/parts/F05-ht_top_rear.stl",
+    "packaged_sha256": "f17ceeab8d2687ea73a80a9e050803763878d2ce7e56bba76467d7557f688b7c"
+  },
+  {
+    "name": "ht_foot_front",
+    "layer": 4,
+    "file": "parts/ht_foot_front.stl",
+    "sha256": "edf23ab98ad05b32039897d613311f2ad658cbf559a591bb5637b93f9321e8e6",
+    "bounds_mm": [
+      [
+        482.3033008588991,
+        6.696699141100893,
+        -3.0
+      ],
+      [
+        488.3033008588991,
+        12.696699141100893,
+        3.4000000000000004
+      ]
+    ],
+    "id": "F06",
+    "label": "HT 前定位脚",
+    "packaged_file": "06-device-top/parts/F06-ht_foot_front.stl",
+    "packaged_sha256": "905578edd65f1d5d9da965c5dde1124914f9f16a14bbf73a9fd9c7fb335a4266"
+  },
+  {
+    "name": "ht_foot_rear",
+    "layer": 4,
+    "file": "parts/ht_foot_rear.stl",
+    "sha256": "d9def5a449cd2c5e8c8119b09e5eee51f515395827142297ceed8afda40e8dca",
+    "bounds_mm": [
+      [
+        482.3033008588991,
+        274.3033008588991,
+        -3.0
+      ],
+      [
+        488.3033008588991,
+        280.3033008588991,
+        3.4000000000000004
+      ]
+    ],
+    "id": "F07",
+    "label": "HT 后定位脚",
+    "packaged_file": "06-device-top/parts/F07-ht_foot_rear.stl",
+    "packaged_sha256": "83bc6b108e03fbf937b58e5dbed680640095c09e305535f62af1e59631c9e1dc"
   }
 ]

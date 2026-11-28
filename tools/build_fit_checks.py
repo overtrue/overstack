@@ -4,7 +4,9 @@ import sys,json,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/overstack'))
 from geometry import *
 from base import build_module
-from layer_locks import layer_lock
+from layer_locks import REAR_LOCK_FILE,layer_lock
+from ht_top import right_top_parts
+from surfaces import top_parts
 from fabrication import orient
 import compact
 def inter(a,b):return trimesh.boolean.intersection([a,b],engine="manifold")
@@ -28,5 +30,26 @@ parents={'FIT02':ends,'FIT03':carrier,'FIT04':carrier,'FIT05':ends,'FIT06':ends,
 out=ROOT/'models/fit-check';out.mkdir(exist_ok=True);rows=[]
 for n,p in parts.items():
  f=out/(n+'.stl');p.export(f);rows.append({'id':n.split('-')[0],'file':str(f.relative_to(ROOT)),'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'print_rotation':np.array(orient(parents[n.split('-')[0]])[1]['assembly_to_print'])[:3,:3].tolist()})
+next(r for r in rows if r['id']=='FIT07')['print_file']=REAR_LOCK_FILE
 (out/'parts.json').write_text(json.dumps(rows,indent=2)+'\n')
 print('PASS:',len(rows),'connected specimens; dovetail, rear-key and corner mating checks')
+
+# Clip the production rear corner and the narrower of the two new rail joints.
+# The crop includes the actual F04 key, the exposed R3 lip end and the R15 rim.
+front,rear,_,rear_foot=right_top_parts(top_parts()[1])
+corner=box(432,262,-12,64,26,39)
+seam=box(478,153,-.1,18,32,27)
+right_key=mirror_x(layer_lock())
+coupons=[('HT01-lower-corner',intersection(move(m['ends'][1],[0,0,-40]),corner),0),
+         ('HT02-upper-corner',intersection(rear,corner),0),('HT03-rear-key',right_key,90),
+         ('HT04-rear-foot',rear_foot,0),('HT05-front-joint',intersection(front,seam),0),
+         ('HT06-rear-joint',intersection(rear,seam),0)]
+rows=[]
+for name,part,angle in coupons:
+    assert part.is_volume and len(part.split())==1,name
+    path=out/(name+'.stl');part.export(path)
+    rotation=trimesh.transformations.rotation_matrix(np.radians(angle),[1,0,0])[:3,:3]
+    rows.append({'id':name.split('-')[0],'file':str(path.relative_to(ROOT)),
+                 'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'print_rotation':rotation.tolist()})
+next(r for r in rows if r['id']=='HT03')['print_file']=REAR_LOCK_FILE
+(out/'ht-top-parts.json').write_text(json.dumps(rows,indent=2)+'\n')

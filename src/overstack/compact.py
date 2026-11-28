@@ -6,7 +6,7 @@ The plate envelope is 258 mm plus 2 mm lateral play and two 9.5 mm carriers.
 from geometry import *
 from fabrication import split_at, sliding_profile
 from surfaces import rounded_rectangle, illustrative_plate, round_lip_tips
-from layer_locks import locking_profile
+from layer_locks import lock_pocket
 from shapely.affinity import translate
 
 WIDTH=399
@@ -68,7 +68,7 @@ def top_parts(common_top):
     original=union(common_top)
     foot=intersection(original,box(-1,-1,-3.1,61,289,3.1))
     body=union([body,foot,mirror_x(foot,WIDTH)])
-    pocket=xz_extrude(locking_profile().buffer(.35,join_style=2),281,7)
+    pocket=lock_pocket()
     body=cut(body,union([pocket,mirror_x(pocket,WIDTH)]))
     male=sliding_profile(8,8,5,plane=WIDTH/2,length=5)
     female=male.buffer(.3,join_style=2)

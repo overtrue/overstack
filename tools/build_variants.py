@@ -6,7 +6,7 @@ from geometry import *
 from base import build_module
 from fabrication import orient
 from surfaces import top_parts
-from layer_locks import layer_lock,check_layer_locks
+from layer_locks import REAR_LOCK_FILE,flat_layer_lock,layer_lock,check_layer_locks
 from multi_drawers import drawer_template,variant
 import compact,pegboard
 from trimesh.exchange.threemf import export_3MF
@@ -17,7 +17,7 @@ LABELS={'end_left':'左端框','end_right':'右端框','end_left_1':'左端框',
         'plate_carrier_left':'左板托架','plate_carrier_right':'右板托架','side_left':'左抽屉承架','side_right':'右抽屉承架',
         'front_beam_1':'前横梁左半','front_beam_2':'前横梁右半','rear_beam_1':'后横梁左半','rear_beam_2':'后横梁右半',
         'drawer_half_1':'抽屉前半','drawer_half_2':'抽屉后半','drawer_1':'左抽屉','drawer_2':'右抽屉',
-        'divider_1':'中间隔墙','lock_left':'左后锁片','lock_right':'右后锁片','top_1':'左顶件','top_2':'右顶件'}
+        'divider_1':'中间隔墙','lock_left':'通用蝴蝶锁片','lock_right':'通用蝴蝶锁片','top_1':'左顶件','top_2':'右顶件'}
 
 
 def scene(parts):
@@ -27,7 +27,7 @@ def scene(parts):
         color=[157,182,184,255]
         if 'end_' in name or 'top_' in name:color=[205,211,215,255]
         if 'drawer_' in name:color=[204,181,145,255]
-        if 'lock' in name:color=[213,128,66,255]
+        if 'lock' in name or name.startswith('ht_foot_'):color=[213,128,66,255]
         m.visual.vertex_colors=color;m.apply_scale(.001)
         m.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]))
         result.add_geometry(m,node_name=name)
@@ -57,6 +57,7 @@ def build():
                 key=f'end_{side}_{H}_{style}'
                 common[key]=module['ends'][right].copy() if style=='plain' else pegboard.end(module,right)
     for side,right in [('left',False),('right',True)]:common['lock_'+side]=mirror_x(layer_lock()) if right else layer_lock()
+    flat_layer_lock().export(ROOT/REAR_LOCK_FILE)
     common['pegboard_fit_coupon']=pegboard.coupon()
     for name,m in common.items():
         p=COMMON/(name+'.stl');m.export(p)
@@ -95,6 +96,7 @@ def build():
             records.append({'id':f'N{chr(65+layer_index)}{len(records)+1:02d}','name':name,'file':str(file.relative_to(ROOT)),
                             'offset_mm':[-96 if right and (name.startswith('end_') or name.startswith('lock_')) else 0,0,0]})
             records[-1]['label']=LABELS[name]
+            if name.startswith('lock_'):records[-1]['print_file']=REAR_LOCK_FILE
             assembly[slug+'__'+name]=move(m,[0,0,z]);peg_assembly[slug+'__'+name]=move(peg,[0,0,z]);peg_parts[name]=peg
         pairs=verify(parts,slug);verify(peg_parts,slug+' pegboard')
         scene(parts).export(folder/'layer-assembly.glb')

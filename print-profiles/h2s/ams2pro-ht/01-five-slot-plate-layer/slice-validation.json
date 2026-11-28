@@ -1,7 +1,7 @@
 {
   "printer": "Bambu Lab H2S",
-  "project_sha256": "9eec1e600b3870d35fb9430b4bc39c636784c5963dd423b7f0506435a22cf7f7",
-  "sliced_archive_sha256": "d9193cf0d23ba89bdd4e6955d844c7cbb44fc0c298eb97314b622ad0fa571cc4",
+  "project_sha256": "33879ad97c99404326c81f1c4bd1340a14994c7faf3e5a440823a6dd515a92fd",
+  "sliced_archive_sha256": "f9dc4abc28cec6c403cc9f04e656c53b9599befd94c0171ff76ce94863b6442e",
   "plates": [
     {
       "file": "Metadata/plate_2.gcode",
@@ -22,12 +22,12 @@
     },
     {
       "file": "Metadata/plate_3.gcode",
-      "sha256": "7683d3bf562ede4183a981ed6f31eb956505e9f74fbdbce475990a26d968a903",
+      "sha256": "f3c787f2e45a43a705491661c2a57bb2649f434346e89fbc0cdfe163332fb022",
       "bbox_xy_mm": [
-        11.25284,
-        11.264520000000001,
-        77.4364,
-        304.26093000000003
+        11.22869,
+        11.36194,
+        77.26342000000001,
+        304.16559
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab H2S",
@@ -39,7 +39,7 @@
     },
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "1cb9ffc3a80315d619af5117b14943ba8a925025a4de2ad7dc9bd91e67a17aca",
+      "sha256": "af75a12f302b37bf04e19bb943179f8de6432a3400057077599da3f5748a97b2",
       "bbox_xy_mm": [
         10.40196,
         0.65758,

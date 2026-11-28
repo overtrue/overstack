@@ -4,24 +4,26 @@ Status: **sliced_not_printed**
 
 H3C · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
-端框：普通 / Ends: plain
+普通端框 / Plain ends
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
+
+每道接缝左右各用一片，所有层通用。 / Use two identical bowties per seam, one on each side. [通用尾锁 / Rear key STL](../../../../models/common/rear-lock.stl)
 
 摆盘切片对比 / Sliced layout comparison:
 
 | Metric | Before | After |
 | --- | ---: | ---: |
 | Plates | 7 | 3 |
-| Estimated hours | 23.371 | 23.073 |
-| PETG g | 779.48 | 788.95 |
-| Support extrusion g | 62.392 | 56.8 |
+| Estimated hours | 23.371 | 23.103 |
+| PETG g | 779.48 | 788.65 |
+| Support extrusion g | 62.392 | 57.265 |
 
 支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
 
 [打开摆盘工程 / Open project](h3c-04-petg.3mf)
 
-预计 / Estimate: 23.1 h · 789.0 g PETG
+预计 / Estimate: 23.1 h · 788.6 g PETG
 
 | Plate | Parts | Preview |
 | --- | --- | --- |

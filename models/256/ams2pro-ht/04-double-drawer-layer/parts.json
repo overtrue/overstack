@@ -1,0 +1,326 @@
+[
+  {
+    "id": "D01a",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D01a.stl",
+    "parent_ids": [
+      "D01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D01b",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D01b.stl",
+    "parent_ids": [
+      "D01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D02a",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D02a.stl",
+    "parent_ids": [
+      "D02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D02b",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D02b.stl",
+    "parent_ids": [
+      "D02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D03a",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D03a.stl",
+    "parent_ids": [
+      "D03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D03b",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D03b.stl",
+    "parent_ids": [
+      "D03"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D04a",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D04a.stl",
+    "parent_ids": [
+      "D04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D04b",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D04b.stl",
+    "parent_ids": [
+      "D04"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D05a",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D05a.stl",
+    "parent_ids": [
+      "D05"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D05b",
+    "file": "models/256/ams2pro-ht/04-double-drawer-layer/D05b.stl",
+    "parent_ids": [
+      "D05"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "D06",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D06-2drawers_front_beam_1.stl"
+  },
+  {
+    "id": "D07",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D07-2drawers_front_beam_2.stl"
+  },
+  {
+    "id": "D08",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D08-2drawers_rear_beam_1.stl"
+  },
+  {
+    "id": "D09",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D09-2drawers_rear_beam_2.stl"
+  },
+  {
+    "id": "D10",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D10-2drawers_seam_2_False_layer_lock.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "D11",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D11-2drawers_seam_2_True_layer_lock.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "D12",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D12-2drawers_side_left.stl"
+  },
+  {
+    "id": "D13",
+    "file": "models/ams2pro+ht/04-double-drawer-layer/parts/D13-2drawers_side_right.stl"
+  }
+]

@@ -1,16 +1,16 @@
 {
   "printer": "Bambu Lab X2D",
-  "project_sha256": "664bc3147063ba058e06e4ef9ed8581b14a027ab04ee491715cfcc721f1ebd1f",
-  "sliced_archive_sha256": "7f7477ba8d04f80adb73ed0370b12fb24f1e1bae91575674d3f4bcf086a851df",
+  "project_sha256": "d58aeb17f15b805e501e9029471921c779d95e643f21744a13c2731e3b425766",
+  "sliced_archive_sha256": "c5347f4194f0f21ae3402d04918d29515fc59876da81b7e00547518ad12c9f58",
   "plates": [
     {
-      "file": "Metadata/plate_1.gcode",
-      "sha256": "ee7c58e821a35536af55d7d140488b23d10bb228ed22f0d86a248924d3779966",
+      "file": "Metadata/plate_2.gcode",
+      "sha256": "7ce946e70d247c70d9ee471024cb05a0216306fd0901b33a651b9f33fa24928b",
       "bbox_xy_mm": [
-        0.6575700000000001,
-        0.65758,
-        234.95250000000001,
-        247.78463000000002
+        0.021460000000000003,
+        0.02145,
+        253.59244,
+        179.39241
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab X2D",
@@ -21,13 +21,30 @@
       "filament_map": "1"
     },
     {
-      "file": "Metadata/plate_2.gcode",
-      "sha256": "a8c049569bc115aad07dde2e8d7d75092fcd1717ac6821b6b93f73f88c99ec4a",
+      "file": "Metadata/plate_3.gcode",
+      "sha256": "68af6e252930d9d4688e37f667706a91ede4c57fa13b7ea3ba8db984b8723ae1",
       "bbox_xy_mm": [
-        4.31433,
-        18.28572,
-        233.71331,
-        234.00433
+        0.02145,
+        0.70757,
+        253.59243,
+        182.59501
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab X2D",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_1.gcode",
+      "sha256": "e0c28da7f458e6af807bae22941f090ea5a44c7e02ce54ac7361ebc735e9943c",
+      "bbox_xy_mm": [
+        6.08248,
+        0.7075800000000001,
+        250.49258000000003,
+        200.47943
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab X2D",

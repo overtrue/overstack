@@ -17,11 +17,13 @@ Both sets support plain or pegboard ends. Click a preview to browse its models.
 
 Images show the actual base geometry. Equipment scenes use the measured STEP models supplied by Engineered Reality; see [render asset credits](docs/render-assets.md).
 
-**This is an unprinted digital prototype.** Geometry checks have passed; all 35 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
+**The revised HT top is awaiting a physical print.** Geometry checks have passed; all 38 distinct HT geometries and the AMS-only exports pass generic FDM checks; device fit, load capacity and physical assembly remain untested. Slicing status is tracked in the print-profile index. The drawings show the model, not a finished print.
 
-[Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. Each profile includes a before/after slice comparison; see the index for status. Not physically tested.
+[Arranged Bambu Studio projects](print-profiles/) — 256 mm and H-series beds, with separate X2D / P2S / H2S / H2C / H3C PETG presets. Beds smaller than 256 × 256 mm are unsupported. Existing designs include a before/after slice comparison; see the index for status. Not physically tested.
 
-[HT triple-drawer print checks](docs/drawer-repair.md)
+[HT-side print comparison](docs/ht-top-printing.md) · [HT triple-drawer print checks](docs/drawer-repair.md)
+
+The 256 mm X2D and P2S projects use printer-specific cutting lists. Each layer has PETG Basic and PETG Matte projects. [256 mm assembly and slice results](docs/256-printing.md)
 
 ## AMS 2 Pro only
 
@@ -46,7 +48,7 @@ Device CAD: **Engineered Reality** ([AMS 2 Pro](https://makerworld.com/en/models
 
 ## Model files
 
-The [HT set](models/ams2pro+ht/) has 48 assembly parts. The [AMS-only set](models/ams2pro/) has 47. Both share the [common ends and keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
+The [HT set](models/ams2pro+ht/) has 51 assembly parts. The [AMS-only set](models/ams2pro/) has 47. Both use the [common end frames and layer keys](models/common/). STL, geometry-only 3MF and GLB files are stored directly in the repository.
 
 ## Two widths, shared ends
 
@@ -56,7 +58,7 @@ The [HT set](models/ams2pro+ht/) has 48 assembly parts. The [AMS-only set](model
 | Plate layers | Five / eight slots; eight-slot layer includes two side bins | Five / eight slots, no side bins |
 | Drawer middle | Two or three drawers | [One drawer](models/ams2pro/1-drawer-layer/) or two drawers |
 | Complete example | 13 plates, five main drawers, two bins; 249 mm high | 13 plates, three main drawers; 249 mm high |
-| Ends and keys | Shared by layer height | Same parts, right side moved inward |
+| Ends and keys | Shared end frames and bowtie keys, including both rear positions on the top | Common parts, right side moved inward |
 
 The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1 mm play on each side and the original 60 mm end frames. That makes its base slightly wider than the [372 mm AMS 2 Pro](https://store.bblcdn.com/s3/default/02bc9c24b207476a9608a314b8039509/AMS_2_Pro-EN.pdf). Its top has a single device opening, without an HT cutout.
 
@@ -66,7 +68,9 @@ The AMS-only set is 96 mm narrower. It retains the nominal 258 mm plate width, 1
 
 ### Common ends: plain or pegboard
 
-**Choose the ends, then the middle.** Use 40 mm ends for the low plate layer and 60 mm ends for tall plate or drawer layers. The same-height end frames and rear keys work in both widths. Middle sections and tops are width-specific; do not stack a 399 mm layer on a 495 mm layer. Left and right ends remain distinct because the right-front socket has extra lateral clearance.
+**Choose the ends, then the middle.** Use 40 mm ends for the low plate layer and 60 mm ends for tall plate or drawer layers. End frames of the same height and the standard layer keys work in both widths. All drawer layers, plate racks and device tops take two copies of one rear bowtie per seam, including with pegboard or transition ends. Either copy fits either side, either end up. Middle sections and tops are width-specific; do not stack a 399 mm layer on a 495 mm layer. Left and right ends remain distinct because the right-front socket has extra lateral clearance.
+
+[Print the common rear key flat (STL)](models/common/rear-lock.stl)
 
 ![Plain and pegboard common ends](docs/images/common-ends.png)
 
@@ -88,7 +92,7 @@ Bottom to top: 40 + 60 + 40 mm, with the same row spacing across both seams.
 
 Each storage function lives in its own layer. The end frames connect the layers above and below; the centre holds plate ledges or drawers; one device top finishes the stack. Start with one layer and add storage as needed.
 
-- **Stackable:** all layers share curved locating feet and matching sockets. Lower a layer vertically, then insert two rear keys at each seam to resist vertical separation. The keys can slide out rearward; they are not captive latches.
+- **Stackable:** all layers use 6 mm round locating pins and matching sockets. Lower a layer vertically, then insert two rear keys at each seam to resist vertical separation. The keys can slide out rearward; they are not captive latches.
 - **Mix and match:** choose, reorder or repeat complete five-slot, eight-slot, double- and triple-drawer layers. Keep every front opening facing forward and the device top uppermost.
 - **Expand incrementally:** add plate layers for more plates or drawer layers for more categories. Retain the existing layers and print the new layer plus two keys for each added seam. The five-slot layer package does not include seam keys; add a pair of common keys when using it above another layer. Omit the lower seam keys on whichever layer is used as the base.
 - **Replace individual parts:** frames, carriers, beams, drawers and the top are separate parts. Unload the devices and remove upper layers before changing a module. Swap the complete drawer layer so its guides and dividers match the drawers.
@@ -144,7 +148,7 @@ Eight plate positions in the same footprint, plus two small side bins for tools 
 
 ### D · 60 mm double-drawer layer
 
-Two independent drawers and one divider separate tools from spare parts. Each front/rear beam has two joined halves; the divider drops into locating slots in both beams. Each drawer is one piece with a 2 mm solid floor, its own guides and a stop at about 180 mm travel. Thirteen parts, including two seam keys.
+Two independent drawers and one divider separate tools from spare parts. Each front/rear beam has two joined halves; the divider drops into locating slots in both beams. Each drawer has a 2 mm floor, its own guides and about 180 mm travel. The large-bed body is one piece. The 256 mm version has a front and a rear half with an overlapping floor. Thirteen parts, including two seam keys.
 
 ![D: double-drawer layer, exploded](docs/images/layer-d-exploded.png)
 
@@ -160,7 +164,9 @@ Three narrow drawers and two dividers provide separate homes for nozzles, small 
 
 ### F · AMS 2 Pro + AMS HT device top
 
-Four parts: two top halves and two rear locking keys. Slide the front and rear dovetails together with both halves level, then lower the four curved feet into the uppermost layer. The left area is intended for AMS 2 Pro; the right stepped opening is for AMS HT. Short perimeter lips provide location. Move this same top to the new uppermost layer when expanding the stack.
+The HT side now prints flat. Join front section F02 and rear section F05 vertically at both dovetails. Place the identical F06 and F07 dowels in the two right-side holes of the layer below. Either end can go in first. Slide the original F01 left half forward from a 20 mm rear offset, then seat the top. Slide one common bowtie into each rear slot. F03 and F04 fit either side and can be flipped. The complete device top has seven pieces.
+
+The original PETG Matte print had hard-to-remove supports and gaps around the vertical locating foot and the rounded corners. On X2D or P2S, use `fit-check/front-pin` to try the revised front corner in three small pieces. Choose `replacement/ht-top-right` for the complete right side. [Print projects](print-profiles/)
 
 ![F: device top, exploded](docs/images/layer-f-exploded.png)
 
@@ -180,13 +186,16 @@ uv run python tools/verify_drawer_repair.py
 uv run python tools/check_printing.py
 uv run python tools/package.py
 uv run python tools/build_variants.py
+uv run python tools/build_fit_checks.py
+uv run python tools/build_small_bed.py
+uv run python tools/verify_small_bed.py
 uv run python tools/verify_variants.py
 uv run python tools/check_variants.py
 uv run python tools/bundle.py
 uv run python tools/check_bundles.py
 ```
 
-The model is constructed from analytic primitives. Building it does not read STL, GLB, PLY, 3MF, vendor meshes or earlier project revisions. Generated STL units are millimetres. Generated 3MF files contain assembly geometry only, with no printer or support settings.
+The base models are built from analytic primitives. The 256 mm cutting lists use the project's own freshly exported parts. STL units are millimetres. The 3MF files in `models/` contain assembly geometry. The Bambu Studio projects in `print-profiles/` include printer, orientation and support settings.
 
 Source: `src/overstack/`. Outputs: `output/model/` and `models/ams2pro+ht/`.
 
@@ -204,6 +213,8 @@ uv run python tools/label_stack.py
 uv run python tools/render_variants.py
 uv run python tools/model_previews.py
 uv run python tools/number_compact_parts.py
+uv run python tools/small_bed_guides.py
+cad run --no-project tools/render_blender.py --jobs output/small-illustrations/jobs.json
 cad run --no-project tools/render_blender.py --jobs output/numbered/jobs.json
 cad run --no-project tools/render_blender.py --jobs output/previews/jobs.json
 cad run --no-project tools/render_blender.py --jobs output/variants/render-jobs.json
@@ -215,7 +226,7 @@ uv run --group docs python tools/layer_manuals.py
 
 ## Validation and limits
 
-The build checks all 1,128 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 35 distinct HT geometries pass. Use the printer-specific projects for drawer orientation and supports. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks the triple drawers’ floors, sidewalls and planar bed contact. These checks are not a tested print profile or load rating.
+The build checks all 1,275 pairs of assembled parts, drawer travel, plate support and selected joint paths. `verify.py` checks closed solids, counts, dimensions and absence of external geometry inputs. `tools/check_printing.py` uses text-to-cad before packaging for generic PETG/FDM checks: 0.4 mm nozzle, 0.2 mm layers, 256 × 256 × 260 mm build volume. All 38 distinct HT geometries pass. Use the printer-specific projects for drawer orientation and supports. Overhang, bridge and thin-edge warnings remain. `verify_drawer_repair.py` checks the triple drawers’ floors, sidewalls and planar bed contact. These checks are not a tested print profile or load rating.
 
 Rear beams and seam keys are removable and are not captive. Remove devices and the upper layer before servicing drawers. Verify actual device feet, underside clearance, ventilation, cables and stability before placing equipment on the stack.
 

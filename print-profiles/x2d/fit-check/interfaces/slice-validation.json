@@ -1,11 +1,11 @@
 {
   "printer": "Bambu Lab X2D",
-  "project_sha256": "78f7701781f4bb64ddf92722e8a6d171052803effc6a27e30d13805a70f65719",
-  "sliced_archive_sha256": "e5bca5677b6d40ffc10eaa8dffd4ba3dcdff94ee6bd78c190799e845cf516c67",
+  "project_sha256": "e2e5bcbb90e9948e40192d8ce0d82a9bc4d2e5ab7f44ed974a2bc20e2231e455",
+  "sliced_archive_sha256": "ca70b59a7ec9e4dba7478421c0af8bf4b8b173d209e4336f7fe24832bfced1cd",
   "plates": [
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "e5611b84b61b292fd0b340d9506d923c369d1b9a9ed6a21715eb7d947521670d",
+      "sha256": "3c87f94c8d4d419604baffc06fb2cc12ca7407534cb21ce544fa7384c2672c90",
       "bbox_xy_mm": [
         6.14029,
         6.075880000000001,

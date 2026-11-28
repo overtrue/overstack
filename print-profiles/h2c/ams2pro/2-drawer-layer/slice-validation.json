@@ -1,33 +1,16 @@
 {
   "printer": "Bambu Lab H2C",
-  "project_sha256": "a4b193bae4467dd4510ebdb263bd9f79ebc2e3433b094ea752c59c41296bfb23",
-  "sliced_archive_sha256": "87fbd49f1153bdd0b8efbc9f91d2e8ee028ad58a51238ae6d6f6d16c46010d46",
+  "project_sha256": "b9dd602865a359e1ae528736085196b6a9c6f835e78599570d18546face6c0d1",
+  "sliced_archive_sha256": "ae2b2eeef8672a2fd1d591b22064bc57c32bba7b110556dfeaafa142f786007a",
   "plates": [
     {
       "file": "Metadata/plate_2.gcode",
-      "sha256": "1e743355350e29eeb987069f80f3c7a8acd811c7dbd95524488df6190560a8b5",
+      "sha256": "95f34b6376288d7a294936d60ac586498acbdc477e25a90202330c03ed73b057",
       "bbox_xy_mm": [
         37.29142,
         0.6575700000000001,
         261.34241000000003,
         304.84433
-      ],
-      "first_extruder": 0,
-      "printer_model": "Bambu Lab H2C",
-      "filament_type": "PETG",
-      "nozzle_diameter": "0.4,0.4",
-      "nozzle_temperature": "250",
-      "bed_temperature": "70",
-      "filament_map": "1"
-    },
-    {
-      "file": "Metadata/plate_4.gcode",
-      "sha256": "8861315b5819972612bfc4a03e4cf18037e182f777c0023ed2c8394cf403b70c",
-      "bbox_xy_mm": [
-        37.65757,
-        2.63736,
-        169.34241,
-        289.27197
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab H2C",
@@ -55,11 +38,28 @@
       "filament_map": "1"
     },
     {
-      "file": "Metadata/plate_1.gcode",
-      "sha256": "e1117b29e6562f66d0a8da46155ed5cf3aa3365eecffdf240f1fdf15bb2b8fa7",
+      "file": "Metadata/plate_4.gcode",
+      "sha256": "dad0a049b7ce0ad5ec8ea0af4ad768d5cf988b58b5503de75be7bb4ee6b8367a",
       "bbox_xy_mm": [
-        37.50694,
-        12.514510000000001,
+        37.65757,
+        2.63736,
+        169.34241,
+        289.27197
+      ],
+      "first_extruder": 0,
+      "printer_model": "Bambu Lab H2C",
+      "filament_type": "PETG",
+      "nozzle_diameter": "0.4,0.4",
+      "nozzle_temperature": "250",
+      "bed_temperature": "70",
+      "filament_map": "1"
+    },
+    {
+      "file": "Metadata/plate_1.gcode",
+      "sha256": "6b0f1fd82b1fe30bc8772123924d3fe25d4bfd2014b7e3c72f2de71c0f48f4b4",
+      "bbox_xy_mm": [
+        37.499520000000004,
+        12.611930000000001,
         299.71986000000004,
         309.00742
       ],

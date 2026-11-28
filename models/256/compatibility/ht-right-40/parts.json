@@ -1,0 +1,50 @@
+[
+  {
+    "id": "L40Ra",
+    "file": "models/256/compatibility/ht-right-40/L40Ra.stl",
+    "parent_ids": [
+      "end_right_40_plain"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "L40Rb",
+    "file": "models/256/compatibility/ht-right-40/L40Rb.stl",
+    "parent_ids": [
+      "end_right_40_plain"
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  }
+]

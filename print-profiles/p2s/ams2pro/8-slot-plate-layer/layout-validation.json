@@ -5,50 +5,6 @@
     "plates": [
       {
         "plate": 1,
-        "total_g": 194.65,
-        "seconds": 26473.0,
-        "support_g": 16.761
-      },
-      {
-        "plate": 2,
-        "total_g": 194.78,
-        "seconds": 26592.0,
-        "support_g": 17.001
-      },
-      {
-        "plate": 3,
-        "total_g": 141.26,
-        "seconds": 22579.0,
-        "support_g": 28.148
-      },
-      {
-        "plate": 4,
-        "total_g": 141.14,
-        "seconds": 22825.0,
-        "support_g": 28.092
-      },
-      {
-        "plate": 5,
-        "total_g": 24.62,
-        "seconds": 2681.0,
-        "support_g": 0.0
-      },
-      {
-        "plate": 6,
-        "total_g": 26.31,
-        "seconds": 2949.0,
-        "support_g": 0.0
-      }
-    ],
-    "plate_count": 6,
-    "total_g": 722.76,
-    "hours": 28.916,
-    "support_g": 90.002
-  },
-  "after": {
-    "plates": [
-      {
-        "plate": 1,
         "total_g": 211.28,
         "seconds": 26110.0,
         "support_g": 11.727
@@ -83,7 +39,28 @@
     "hours": 28.566,
     "support_g": 79.524
   },
-  "before_project_sha256": "50c614986bd543d3d7e490f61d3faa0668a48c89e40432697abed76c9c494ad0",
-  "after_project_sha256": "caec41a72c1b065e019b1b1e696b054f499acade5904fccfc322a0fba0996e4d",
-  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 578.44,
+        "seconds": 63431.0,
+        "support_g": 12.051
+      },
+      {
+        "plate": 2,
+        "total_g": 175.45,
+        "seconds": 20306.0,
+        "support_g": 5.096
+      }
+    ],
+    "plate_count": 2,
+    "total_g": 753.89,
+    "hours": 23.26,
+    "support_g": 17.147
+  },
+  "before_project_sha256": "caec41a72c1b065e019b1b1e696b054f499acade5904fccfc322a0fba0996e4d",
+  "after_project_sha256": "bec0c1458f4dafe4d725eae8889fb508e520130a174d043fc96f619f5f590a07",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge.",
+  "baseline": "Immediately preceding 256 mm layout, PETG Basic"
 }

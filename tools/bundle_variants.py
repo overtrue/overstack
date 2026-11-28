@@ -17,6 +17,7 @@ for device in ['ams2pro+ht','ams2pro','common']:
     if device!='common':files.append(ROOT/'docs/render-assets.md')
     if device=='ams2pro+ht':
         files.append(ROOT/'docs/drawer-repair.md')
+        files.append(ROOT/'docs/ht-top-printing.md')
         files.extend(p for p in (ROOT/'docs/pdf').iterdir() if p.is_file())
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     archive=DIST/(name+'.zip')

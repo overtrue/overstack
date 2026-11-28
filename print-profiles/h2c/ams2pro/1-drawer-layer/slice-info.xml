@@ -11,10 +11,10 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4,0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="74403"/>
-    <metadata key="weight" value="650.25"/>
+    <metadata key="prediction" value="74582"/>
+    <metadata key="weight" value="649.86"/>
     <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="0.000000"/>
+    <metadata key="first_layer_time" value="68.833336"/>
     <metadata key="outside" value="false"/>
     <metadata key="support_used" value="true"/>
     <metadata key="label_object_enabled" value="true"/>
@@ -28,7 +28,7 @@
     <object identify_id="246" name="NC02-end_right_60_plain_1" skipped="false" />
     <object identify_id="247" name="NC03-side_left_1" skipped="false" />
     <object identify_id="248" name="NC04-side_right_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="216.28" used_g="650.25" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="216.14" used_g="649.86" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
       <layer_filament_list filament_list="0" layer_ranges="0 314" />
@@ -41,10 +41,10 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4,0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="37644"/>
-    <metadata key="weight" value="436.53"/>
+    <metadata key="prediction" value="37651"/>
+    <metadata key="weight" value="436.59"/>
     <metadata key="pause_count" value="0"/>
-    <metadata key="first_layer_time" value="68.833336"/>
+    <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
     <metadata key="support_used" value="true"/>
     <metadata key="label_object_enabled" value="true"/>
@@ -62,7 +62,7 @@
     <object identify_id="254" name="NC10-drawer_half_2_1" skipped="false" />
     <object identify_id="255" name="NC11-lock_left_1" skipped="false" />
     <object identify_id="256" name="NC12-lock_right_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="145.19" used_g="436.53" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="false" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="145.21" used_g="436.59" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="false" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
       <layer_filament_list filament_list="0" layer_ranges="0 686" />

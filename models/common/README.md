@@ -2,9 +2,9 @@
 
 ![Plain and pegboard ends](preview.png)
 
-40 mm / 60 mm 两种高度；相同高度用于 495 mm HT 版和 399 mm 无 HT 版。左右件不可互换。普通版与洞洞板版使用相同定位和连接接口，可以单侧替换。
+端框有 40 mm 和 60 mm 两种高度，两个宽度共用。端框按左右侧选择，普通版与洞洞板版可以单侧替换。
 
-Two heights, shared by both widths. Left and right parts differ; choose the matching side. Plain and pegboard variants preserve their connection geometry and can be replaced independently.
+Both widths use the same 40 mm and 60 mm end frames. Choose the frame for the matching side. Either side can use a plain or pegboard frame.
 
 | Height | Side | Plain | Pegboard |
 | --- | --- | --- | --- |
@@ -13,7 +13,13 @@ Two heights, shared by both widths. Left and right parts differ; choose the matc
 | 60 mm | left | [STL](end_left_60_plain.stl) | [STL](end_left_60_pegboard.stl) |
 | 60 mm | right | [STL](end_right_60_plain.stl) | [STL](end_right_60_pegboard.stl) |
 
-[Left rear key](lock_left.stl) · [Right rear key](lock_right.stl) · [Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb) · [Mixed-height stack GLB](straight-grid-stack.glb)
+两种宽度的抽屉层、板架层和顶件都用同款尾部蝴蝶锁片，普通端框、洞洞板和过渡端框也通用。每道接缝打印两片，左右各插一片，上下可翻转。STL 已大面朝下，尺寸为 12 × 16 × 5.3 mm。
+
+All drawer layers, plate racks and device tops share one rear bowtie across both widths and end styles. Print two per seam and slide one into each side, either end up. The 12 × 16 × 5.3 mm spare is already flat on its broad face. [通用尾部锁片 STL / Rear key STL](rear-lock.stl)
+
+清单中的左右编号标记装配位置，锁片的 `print_file` 都指向这个 STL。 / Left and right IDs identify assembly positions. Every rear key's `print_file` points to this STL.
+
+[Fit coupon](pegboard_fit_coupon.stl) · [Pegboard end GLB](pegboard-end.glb) · [Mixed-height stack GLB](straight-grid-stack.glb)
 
 ## 直列孔阵 / Straight-grid hole layout
 
@@ -45,6 +51,6 @@ This is a custom straight grid with 5 × 15 mm obround holes, not a claim of ful
 3. Replace the selected end with the matching height and side; plain and pegboard can be mixed. / 换上同高度、同侧洞洞板端框，可左右混用普通版。
 4. Lower the middle and upper layers back into place; reinstall rear keys. / 依次放回中段及上层，插回锁片。
 
-Rear keys are removable, not captive. Keep rear access clear. STL coordinates match the wide set; compact assemblies translate right-hand files by −96 mm on X. Reorient each part before slicing; exported geometry is not a sliced print job.
+Leave room to withdraw the rear keys. The end-frame STLs use the wide assembly coordinates. Compact assemblies move the right frame by −96 mm on X.
 
 端框是结构件。新洞洞板件已通过 PETG/FDM 通用规则检查（0.4 mm 喷嘴、0.2 mm 层高），但仍需支撑／桥接处理。实物强度、挂钩及设备适配尚未验收。

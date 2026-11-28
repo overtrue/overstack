@@ -1,8 +1,8 @@
 """Analytic surfaces. No mesh, section tracing or vendor model is an input."""
 from geometry import *
-from shapely.geometry import LineString
+from corner_pins import fixed_pin
 from fabrication import sliding_profile
-from layer_locks import locking_profile
+from layer_locks import lock_pocket
 
 
 def rounded_rectangle(x,y,w,d,r):
@@ -36,13 +36,10 @@ def top_parts():
     lips=round_lip_tips(union([extrude(p,16,10) for p in rim.intersection(ends).geoms]),495)
     separator=extrude(rounded_rectangle(371.5,126,4.65,42,1),16,5.5)
     feet=[]
-    angles=np.radians(np.linspace(185,265,41))
-    points=[(15+7.5*np.cos(a),15+7.5*np.sin(a)) for a in angles]
     for right,back in [(False,False),(True,False),(False,True),(True,True)]:
-        path=LineString([(495-x if right else x,287-y if back else y) for x,y in points])
-        feet.append(extrude(path.buffer(3,quad_segs=12),-3,3.1))
+        feet.append(fixed_pin(right,back))
     body=union([body,lips,separator,*feet])
-    pocket=xz_extrude(locking_profile().buffer(.35,join_style=2),281,7)
+    pocket=lock_pocket()
     body=cut(body,union([pocket,mirror_x(pocket)]))
     male=sliding_profile(8,8,5,length=5)
     female=male.buffer(.3,join_style=2)

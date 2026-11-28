@@ -2,6 +2,7 @@
 from geometry import np,trimesh
 from shapely.geometry import MultiPoint
 from shapely.affinity import translate
+from shapely import polygons,union_all
 
 
 def orient_for_area(mesh,area,height,preferred_yaw=None,rotation=None):
@@ -51,24 +52,54 @@ def orient_for_area(mesh,area,height,preferred_yaw=None,rotation=None):
               'required_extruder_area_mm':[x1-x0,y1-y0]}
 
 
-def pack(inputs,parts,target):
-    """First-fit convex footprints, expanded for brim and tree-support clearance."""
+def top_footprints(mesh,brim):
+    """The open frame can share its plate with keys and feet in its cutouts."""
+    faces=mesh.triangles[:,:,:2]
+    outline=union_all(polygons(faces[mesh.face_normals[:,2]>.001]),grid_size=.001)
+    bed=outline.simplify(.04).buffer(brim+.55)
+    low=(mesh.face_normals[:,2]<-.7071)&(mesh.triangles_center[:,2]>.25)
+    if not low.any():return bed,bed
+    roof=union_all(polygons(faces[low]),grid_size=.001)
+    clearance=min(12,mesh.triangles_center[low,2].max()*.25)
+    return bed,bed.union(roof.buffer(brim+.55+clearance))
+
+
+def top_bed_bounds(bed,space,target):
+    # Studio clips trees against the physical plate. A smaller common nozzle
+    # area (H2C) needs its own margin on each restricted side of that plate.
+    x0,y0,x1,y1=target['area'];width,depth=target['bed']
+    restricted=(x0>0,y0>0,x1<width,y1<depth)
+    # Leave an extra brim width for Studio's rounded tree bases at a nozzle boundary.
+    extra=(-3.,-3.,3.,3.)
+    return tuple(s+margin if limit else b for b,s,limit,margin in zip(bed.bounds,space.bounds,restricted,extra))
+
+
+def pack(inputs,parts,target,*,top=False,tall_first=False):
+    """First-fit footprints, allowing clearance for brims and support branches."""
     x0,y0,x1,y1=target['area']
     plates=[];footprints=[]
-    for path,part in zip(inputs,parts):
+    entries=list(zip(inputs,parts))
+    if top and target['group']=='256':
+        # Give broad parts a choice of plates; keys and narrow beams can use
+        # their openings. Each placed pair is tested against projected contours.
+        entries.sort(key=lambda item: (-(item[1]['bounds_mm'][2]>120) if tall_first else 0,
+                                      -np.prod(item[1]['bounds_mm'][:2])))
+    for path,part in entries:
         mesh=trimesh.load_mesh(path)
         height=part['bounds_mm'][2]
         clearance=part['brim_mm']+.5
         if part['supports_required'] and height>10:clearance+=min(12,height*.25)
-        hull=MultiPoint(mesh.vertices[:,:2]).convex_hull.buffer(clearance)
-        minx,miny,maxx,maxy=hull.bounds
+        if top:
+            bed,hull=top_footprints(mesh,part['brim_mm'])
+        else:
+            hull=MultiPoint(mesh.vertices[:,:2]).convex_hull.buffer(clearance);bed=hull
+        minx,miny,maxx,maxy=top_bed_bounds(bed,hull,target) if top else bed.bounds
         separate=maxx-minx>x1-x0 or maxy-miny>y1-y0
         obj={'path':path,'count':1,'filaments':[1]}
         placed=False
         if not separate:
             for objects,occupied,exclusive in zip(plates,footprints,[any(o.get('_exclusive') for o in p) for p in plates]):
                 if exclusive:continue
-                minx,miny,maxx,maxy=hull.bounds
                 for y in np.arange(y0-miny,y1-maxy+.001,2):
                     for x in np.arange(x0-minx,x1-maxx+.001,2):
                         candidate=translate(hull,xoff=x,yoff=y)
@@ -87,6 +118,10 @@ def pack(inputs,parts,target):
                 hull=translate(hull,xoff=dx,yoff=dy)
             obj['_exclusive']=separate
             plates.append([obj]);footprints.append([hull])
-    for group in plates:
+    for group,occupied in zip(plates,footprints):
+        if top and (x0>0 or x1<target['bed'][0]):
+            left,_,right,_=union_all(occupied).bounds
+            dx=(x0+x1-left-right)/2
+            for obj in group:obj['pos_x']=[obj.get('pos_x',[0])[0]+dx]
         for obj in group:obj.pop('_exclusive',None)
     return plates

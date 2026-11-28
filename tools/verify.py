@@ -5,11 +5,11 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src/oversta
 from geometry import *
 from ht_layers import LAYERS
 D=ROOT/'output/model';data=json.loads((D/'checks.json').read_text())
-assert len(data['parts'])==48
+assert len(data['parts'])==51
 assert data['source_mesh_inputs']==[]
-assert data['assembly_pairs_checked']==1128
+assert data['assembly_pairs_checked']==1275
 counts=[sum(r['layer']==i for r in data['parts']) for i in range(5)]
-assert counts==[6,10,13,15,4],counts
+assert counts==[6,10,13,15,7],counts
 for r in data['parts']:
     m=trimesh.load_mesh(D/r['file'])
     assert m.is_volume and m.is_watertight and len(m.split())==1,r['name']
@@ -34,7 +34,7 @@ assert not any('side_cover' in r['name'] for r in data['parts'])
 for name,x in [('low_0_cassette_plates_1',68.5),('low_0_cassette_plates_2',385.5)]:
     m=trimesh.load_mesh(D/'parts'/(name+'.stl'))
     assert abs(cut(box(x,.01,8.01,41,7.98,31.98),m).volume)<.02,('front closure',name)
-print('PASS: 48 closed solids; five complete layers; 495 x 287 x 249 mm; no external model inputs; two integral front closures')
+print('PASS: 51 closed solids; five complete layers; 495 x 287 x 249 mm; no external model inputs; two integral front closures')
 
 # Five usable ledges in the new low layer; the former height and a sixth slot
 # must be refused rather than silently reducing the required top clearance.

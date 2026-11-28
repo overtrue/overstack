@@ -10,6 +10,7 @@ from structure import crossbar_profile
 from layer_locks import layer_lock,check_layer_locks
 from multi_drawers import drawer_template,variant
 from ht_layers import LAYERS
+from ht_top import right_top_parts
 from surfaces import top_parts,illustrative_plate
 from shapely.affinity import translate
 
@@ -67,9 +68,13 @@ def build(output):
         for name,m in parts.items():add(f'{count}drawers_{name}',m,layer)
         for right in [False,True]:add(f'{count}drawers_seam_2_{right}_layer_lock',mirror_x(layer_lock()) if right else layer_lock(),layer)
     print('Building independent top frame',flush=True)
-    tops=top_parts();top_layer=len(LAYERS)-1
-    for i,m in enumerate(tops,1):add(f'device_adapter_{i}',m,top_layer)
-    for i,right in enumerate([False,True],1):add(f'top_rear_lock_{i}',mirror_x(layer_lock()) if right else layer_lock(),top_layer)
+    left,right=top_parts();top_layer=len(LAYERS)-1
+    front,rear,front_foot,rear_foot=right_top_parts(right)
+    tops={'device_adapter_1':left,'device_adapter_2':front,'ht_top_rear':rear,
+          'ht_foot_front':front_foot,'ht_foot_rear':rear_foot}
+    for name,m in tops.items():add(name,m,top_layer)
+    add('top_rear_lock_1',layer_lock(),top_layer)
+    add('top_rear_lock_2',mirror_x(layer_lock()),top_layer)
     # Complete assembly pair test, including every seam and locked drawer.
     pairs=0
     for i,(an,a) in enumerate(instances.items()):
@@ -81,12 +86,12 @@ def build(output):
     # Final top feet and locking keys enter the uppermost frame.
     end_names=['3drawers_end_left_1','3drawers_end_right_1']
     for dz in [0,.2,1,3,10,30]:
-        for m in tops:
+        for m in tops.values():
             for name in end_names:assert overlap(move(m,[0,0,LAYERS[top_layer][2]+dz]),instances[name])<.01,('top lowering',name,dz)
     for i,right in enumerate([False,True],1):
         key=instances[f'top_rear_lock_{i}']
         for travel in [0,.3,1,3,10,20]:
-            for name in end_names+[f'device_adapter_{i}']:
+            for name in end_names+list(tops):
                 assert overlap(move(key,[0,travel,0]),instances[name])<.01,('top lock insertion',i,travel,name)
     # No imported models: illustrative plates are generated, kept separate from fabrication parts.
     scene=trimesh.Scene();records=[]

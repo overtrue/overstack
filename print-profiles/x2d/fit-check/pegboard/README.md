@@ -8,6 +8,10 @@ X2D · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
 
+[PETG Matte · 打开工程 / Open project](x2d-04-petg-matte.3mf)
+
+Matte · 1 盘 / plates · 0.64 h · 21.84 g · 支撑 / support 0.00 g
+
 摆盘切片对比 / Sliced layout comparison:
 
 | Metric | Before | After |

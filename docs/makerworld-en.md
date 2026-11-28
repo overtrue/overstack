@@ -2,9 +2,9 @@
 
 A layered storage base for build plates, tools, AMS 2 Pro and AMS HT. The complete arrangement includes five-slot and eight-slot plate layers, double- and triple-drawer layers, and a split device top.
 
-Plate ledges run to integrated rear stops. The low layer has integral front closures. Layers assemble separately and connect with locating feet and removable rear keys.
+Plate ledges run to integrated rear stops. The low layer has integral front closures. Seat each layer on its locating feet and slide in two identical rear bowties. The same key fits both widths and every layer.
 
-Overall size: 495 × 287 × 249 mm. The package contains 48 numbered parts, organized by layer, with separate Chinese and English assembly guides. STL units are millimetres. The 3MF files contain assembly geometry only, not sliced printer projects.
+Overall size: 495 × 287 × 249 mm. The package contains 51 numbered parts, organized by layer, with separate Chinese and English assembly guides. STL units are millimetres. The 3MF files contain assembly geometry only, not sliced printer projects.
 
 This is a digital prototype. All images are CAD renders. Assembly interference, drawer travel and generic PETG/FDM checks have been performed, but physical fit, load capacity and a complete print profile remain unverified. Add actual print settings, assembly photos and device-fit results before presenting this as a tested build.
 

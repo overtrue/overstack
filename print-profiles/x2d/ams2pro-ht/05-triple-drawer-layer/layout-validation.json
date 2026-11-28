@@ -5,92 +5,6 @@
     "plates": [
       {
         "plate": 1,
-        "total_g": 102.36,
-        "seconds": 12606.0,
-        "support_g": 13.786
-      },
-      {
-        "plate": 2,
-        "total_g": 102.36,
-        "seconds": 12606.0,
-        "support_g": 13.786
-      },
-      {
-        "plate": 3,
-        "total_g": 272.8,
-        "seconds": 39716.0,
-        "support_g": 69.909
-      },
-      {
-        "plate": 4,
-        "total_g": 275.78,
-        "seconds": 40221.0,
-        "support_g": 72.864
-      },
-      {
-        "plate": 5,
-        "total_g": 278.04,
-        "seconds": 40660.0,
-        "support_g": 75.136
-      },
-      {
-        "plate": 6,
-        "total_g": 194.64,
-        "seconds": 26431.0,
-        "support_g": 16.756
-      },
-      {
-        "plate": 7,
-        "total_g": 194.78,
-        "seconds": 26551.0,
-        "support_g": 17.001
-      },
-      {
-        "plate": 8,
-        "total_g": 16.95,
-        "seconds": 1880.0,
-        "support_g": 0.085
-      },
-      {
-        "plate": 9,
-        "total_g": 16.72,
-        "seconds": 1829.0,
-        "support_g": 0.089
-      },
-      {
-        "plate": 10,
-        "total_g": 17.08,
-        "seconds": 1877.0,
-        "support_g": 0.09
-      },
-      {
-        "plate": 11,
-        "total_g": 18.37,
-        "seconds": 2090.0,
-        "support_g": 0.089
-      },
-      {
-        "plate": 12,
-        "total_g": 112.01,
-        "seconds": 12825.0,
-        "support_g": 9.89
-      },
-      {
-        "plate": 13,
-        "total_g": 111.81,
-        "seconds": 12711.0,
-        "support_g": 9.679
-      }
-    ],
-    "plate_count": 13,
-    "total_g": 1713.7,
-    "hours": 64.445,
-    "support_g": 299.16
-  },
-  "after": {
-    "plates": [
-      {
-        "plate": 1,
         "total_g": 120.9,
         "seconds": 14720.0,
         "support_g": 13.893
@@ -155,7 +69,34 @@
     "hours": 63.442,
     "support_g": 280.11
   },
-  "before_project_sha256": "a2d3bd8247e65ee213806e17ff50fb801bb085a97019c62d574e48da3c42d50f",
-  "after_project_sha256": "52d0f6eaaf504037e4a536bbc4483e933dbc79ca9179d8a3b7cc855106b240fb",
-  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 661.08,
+        "seconds": 66849.0,
+        "support_g": 8.217
+      },
+      {
+        "plate": 2,
+        "total_g": 478.31,
+        "seconds": 44292.0,
+        "support_g": 0.105
+      },
+      {
+        "plate": 3,
+        "total_g": 452.29,
+        "seconds": 50286.0,
+        "support_g": 9.437
+      }
+    ],
+    "plate_count": 3,
+    "total_g": 1591.68,
+    "hours": 44.841,
+    "support_g": 17.759
+  },
+  "before_project_sha256": "52d0f6eaaf504037e4a536bbc4483e933dbc79ca9179d8a3b7cc855106b240fb",
+  "after_project_sha256": "fd23dd5aae21c3cf4e3d5e92fd492c7df87a19ae8fc558d2074142bb07f2efd1",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge.",
+  "baseline": "Immediately preceding 256 mm layout, PETG Basic"
 }

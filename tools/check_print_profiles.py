@@ -3,14 +3,15 @@ from pathlib import Path
 import argparse,hashlib,json,sys,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src/overstack'))
-from geometry import np,trimesh
+from geometry import cut,move,np,trimesh
+from layer_locks import REAR_LOCK_FILE
 from scipy.spatial import cKDTree
 from build_print_profiles import recipes,model_source_hashes,model_source_digest
 from print_profile_targets import TARGETS
 parser=argparse.ArgumentParser();parser.add_argument('--printer',choices=TARGETS);args=parser.parse_args()
-expected=dict(recipes());found={k:set() for k in TARGETS if not args.printer or k==args.printer}
+expected={k:dict(recipes(k)) for k in TARGETS};found={k:set() for k in TARGETS if not args.printer or k==args.printer}
 
-assert {key for key in expected if 'drawer' in key}=={
+assert {key for key in expected['x2d'] if 'drawer' in key}=={
     'ams2pro/1-drawer-layer','ams2pro/2-drawer-layer',
     'ams2pro-ht/04-double-drawer-layer','ams2pro-ht/05-triple-drawer-layer',
 },'drawer options must match the device width'
@@ -18,6 +19,8 @@ assert {key for key in expected if 'drawer' in key}=={
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 current_model_digest=model_source_digest()
+spare=trimesh.load_mesh(ROOT/REAR_LOCK_FILE)
+spare=move(spare,-spare.bounds.mean(axis=0))
 for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
     report=json.loads(path.read_text());folder=path.parent
     printer_key=report.get('printer_key','x2d')
@@ -27,7 +30,12 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
     assert folder==base/report['profile'],(path,'wrong target folder')
     assert report['printer']==target['printer'],(path,'wrong printer')
     found[printer_key].add(report['profile'])
-    assert {(r['id'],r['source']) for r in report['parts']}=={(r['id'],r['file']) for r in expected[report['profile']]},(path,'incomplete recipe')
+    assert {(r['id'],r['source']) for r in report['parts']}=={(r['id'],r['file']) for r in expected[printer_key][report['profile']]},(path,'incomplete recipe')
+    profile=report['profile']
+    keys={r['id'] for r in expected[printer_key][profile] if r.get('print_file')==REAR_LOCK_FILE}
+    key_count=2 if profile.startswith(('ams2pro/','ams2pro-ht/')) else int(profile in ('fit-check/interfaces','fit-check/ht-top','replacement/ht-top-right'))
+    assert len(keys)==key_count,(path,'common rear keys',keys)
+    assert {p['id'] for p in report['parts'] if p.get('print_file')==REAR_LOCK_FILE and p.get('print_sha256')==sha(ROOT/REAR_LOCK_FILE)}==keys,(path,'rear-key print source')
     proof_path=folder/'layout-rule-validation.json'
     proof=json.loads(proof_path.read_text()) if proof_path.is_file() else {}
     assert report.get('model_source_hashes') and report.get('layout_source_hashes'),(path,'missing generation provenance')
@@ -76,6 +84,10 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
             vertices=[[float(v.get(a)) for a in 'xyz'] for v in mesh.findall('./m:vertices/m:vertex',core)]
             faces=[[int(t.get(a)) for a in ['v1','v2','v3']] for t in mesh.findall('./m:triangles/m:triangle',core)]
             embedded=trimesh.Trimesh(vertices=vertices,faces=faces)
+            if matches[0]['id'] in keys:
+                centered=move(embedded,-embedded.bounds.mean(axis=0))
+                assert cut(spare,centered).volume+cut(centered,spare).volume<.005,(path,name,'different rear key')
+                assert np.isclose(matches[0]['bed_contact_area_mm2'],162),(path,name,'rear key not face down')
             source=trimesh.load_mesh(ROOT/matches[0]['source'])
             assert embedded.is_volume and np.isclose(embedded.volume,source.volume,rtol=1e-5),(path,name,'geometry volume')
             assert np.isclose(embedded.area,source.area,rtol=1e-5),(path,name,'geometry area')
@@ -86,6 +98,19 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
         assigned=[next(m.get('value') for m in i.findall('metadata') if m.get('key')=='object_id') for i in config.findall('./plate/model_instance')]
         assert sorted(assigned)==sorted(o.get('id') for o in objects),(path,'plate coverage')
     if report['status']=='sliced_not_printed':
+        if target['group']=='256':
+            matte=json.loads((folder/'matte-slice.json').read_text())
+            assert matte['base_project_sha256']==sha(project) and matte['project_sha256']==sha(folder/matte['project_file'])
+            assert matte['filament_preset_sha256']==sha(base/'presets/filament-matte.json') and matte['filament_id']=='GFG03'
+            assert len(matte['gcode'])==len(report['plates'])==matte['metrics']['plate_count']
+            with zipfile.ZipFile(folder/matte['project_file']) as z,zipfile.ZipFile(project) as basic:
+                config=json.loads(z.read('Metadata/project_settings.config'))
+                assert config['filament_ids']==['GFG03'] and config['printer_model']==target['printer']
+                if keys:
+                    from build_matte_profiles import model_payload
+                    for member in basic.namelist():
+                        if member.startswith('3D/') and member.endswith('.model'):
+                            assert model_payload(basic.read(member))==model_payload(z.read(member)),(path,member,'Matte geometry or placement')
         assert proof,(path,'missing layout rule check')
         for name,digest in proof['rule_source_hashes'].items():assert sha(ROOT/name)==digest,(path,'layout rules changed')
         layout=folder/'layout-validation.json'
@@ -93,13 +118,13 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
             comparison=json.loads(layout.read_text())
             assert comparison['after_project_sha256']==report['project_sha256'],(path,'stale layout comparison')
         printing=folder/'layout-printing-checks.json'
-        if printing.exists():
-            checks=json.loads(printing.read_text())
-            assert {c['id'] for c in checks}=={p['id'] for p in report['parts']},(path,'incomplete pose checks')
-            for part in report['parts']:
-                check=next(c for c in checks if c['id']==part['id'])
-                assert check['status']=='ok' and check['source_sha256']==part['sha256'],(path,part['id'],'manufacturing check')
-                assert np.allclose(check['assembly_to_print'],part['assembly_to_print'],atol=.0001),(path,part['id'],'stale checked pose')
+        assert printing.is_file(),(path,'missing manufacturing checks for the print poses')
+        checks=json.loads(printing.read_text())
+        assert {c['id'] for c in checks}=={p['id'] for p in report['parts']},(path,'incomplete pose checks')
+        for part in report['parts']:
+            check=next(c for c in checks if c['id']==part['id'])
+            assert check['status']=='ok' and check['source_sha256']==part['sha256'],(path,part['id'],'manufacturing check')
+            assert np.allclose(check['assembly_to_print'],part['assembly_to_print'],atol=.0001),(path,part['id'],'stale checked pose')
         assert report['slice_exit_code']==0 and len(report['gcode_files'])==len(report['plates'])
         evidence=json.loads((folder/'slice-validation.json').read_text())
         assert evidence['project_sha256']==report['project_sha256']
@@ -118,4 +143,4 @@ for path in sorted((ROOT/'print-profiles').rglob('manifest.json')):
 
 for printer_key,profiles in found.items():
     if not (ROOT/'print-profiles'/TARGETS[printer_key]['folder']).exists():continue
-    assert profiles==set(expected),(printer_key,'missing/extra profiles',set(expected)-profiles,profiles-set(expected))
+    assert profiles==set(expected[printer_key]),(printer_key,'missing/extra profiles',set(expected[printer_key])-profiles,profiles-set(expected[printer_key]))

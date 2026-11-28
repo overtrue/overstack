@@ -11,8 +11,8 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="56758"/>
-    <metadata key="weight" value="583.28"/>
+    <metadata key="prediction" value="56764"/>
+    <metadata key="weight" value="583.33"/>
     <metadata key="pause_count" value="0"/>
     <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
@@ -30,7 +30,7 @@
     <object identify_id="308" name="E12-E12-3drawers_seam_2_False_layer_lock_1" skipped="false" />
     <object identify_id="309" name="E13-E13-3drawers_seam_2_True_layer_lock_1" skipped="false" />
     <object identify_id="310" name="E14-E14-3drawers_side_left_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="194.00" used_g="583.28" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="194.02" used_g="583.33" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
       <layer_filament_list filament_list="0" layer_ranges="0 299" />
@@ -71,8 +71,8 @@
     <metadata key="printer_model_id" value=""/>
     <metadata key="nozzle_diameters" value="0.4"/>
     <metadata key="timelapse_type" value="0"/>
-    <metadata key="prediction" value="51720"/>
-    <metadata key="weight" value="529.31"/>
+    <metadata key="prediction" value="51836"/>
+    <metadata key="weight" value="528.93"/>
     <metadata key="pause_count" value="0"/>
     <metadata key="first_layer_time" value="0.000000"/>
     <metadata key="outside" value="false"/>
@@ -87,7 +87,7 @@
     <object identify_id="313" name="E06-E06-3drawers_end_left_1_1" skipped="false" />
     <object identify_id="314" name="E07-E07-3drawers_end_right_1_1" skipped="false" />
     <object identify_id="315" name="E15-E15-3drawers_side_right_1" skipped="false" />
-    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="176.05" used_g="529.31" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
+    <filament id="1" tray_info_idx="GFG00" type="PETG" color="#00AE42" used_m="175.92" used_g="528.93" group_id="0" nozzle_diameter="0.40" volume_type="Standard" used_for_object="true" used_for_support="true" directly_used="true" total_load_time="0.00" total_unload_time="0.00"/>
     <nozzle id="0" extruder_id="1" nozzle_diameter="0.4" volume_type="Standard"/>
     <layer_filament_lists>
       <layer_filament_list filament_list="0" layer_ranges="0 314" />

@@ -6,9 +6,9 @@ The three drawer STLs are unchanged. At the old 45-degree side-down pose, the ge
 
 ## Verification / 验证
 
-- The full HT assembly contains 48 closed parts. All 1,128 pairs passed the interference check. / HT 总成有 48 个闭合零件，1128 对装配干涉检查通过。
+- The full HT assembly contains 51 closed parts. All 1,275 pairs passed the interference check. / HT 总成有 51 个闭合零件，1275 对装配干涉检查通过。
 - The exported triple drawers passed the solid-floor, sidewall and planar-contact checks in tools/verify_drawer_repair.py. / 三只抽屉的导出 STL 已检查实心底板、侧壁和平面着床。
-- All 35 distinct HT geometries passed the generic PETG/FDM checks at 0.4 mm nozzle and 0.2 mm layers. Overhang, bridge, gap and knife-edge warnings remain. / 35 种几何通过通用 PETG/FDM 检查，仍有悬垂、桥接、间隙和尖边提示。
+- All 38 distinct HT geometries passed the generic PETG/FDM checks at 0.4 mm nozzle and 0.2 mm layers. Overhang, bridge, gap and knife-edge warnings remain. / 38 种几何通过通用 PETG/FDM 检查，仍有悬垂、桥接、间隙和尖边提示。
 - Printer-specific slicing and archive checks are recorded in [the profile index](https://github.com/overtrue/overstack/blob/main/print-profiles/INDEX.md) / 各机型切片与下载包状态见配置索引。
 
 Physical fit, support removal and load capacity are still unverified. / 实物配合、拆支撑和承重仍未验证。

@@ -5,50 +5,6 @@
     "plates": [
       {
         "plate": 1,
-        "total_g": 140.96,
-        "seconds": 18992.0,
-        "support_g": 11.579
-      },
-      {
-        "plate": 2,
-        "total_g": 140.77,
-        "seconds": 18927.0,
-        "support_g": 11.37
-      },
-      {
-        "plate": 3,
-        "total_g": 114.67,
-        "seconds": 18536.0,
-        "support_g": 23.625
-      },
-      {
-        "plate": 4,
-        "total_g": 111.07,
-        "seconds": 17295.0,
-        "support_g": 20.009
-      },
-      {
-        "plate": 5,
-        "total_g": 24.62,
-        "seconds": 2681.0,
-        "support_g": 0.0
-      },
-      {
-        "plate": 6,
-        "total_g": 26.31,
-        "seconds": 2949.0,
-        "support_g": 0.0
-      }
-    ],
-    "plate_count": 6,
-    "total_g": 558.4,
-    "hours": 22.05,
-    "support_g": 66.583
-  },
-  "after": {
-    "plates": [
-      {
-        "plate": 1,
         "total_g": 150.44,
         "seconds": 19707.0,
         "support_g": 11.683
@@ -77,7 +33,22 @@
     "hours": 21.04,
     "support_g": 60.7
   },
-  "before_project_sha256": "8435c61990847ebff19808bf53eeb29f4b51182dc33955891facba65d607ad43",
-  "after_project_sha256": "2a480edb6104f4e564d4c58ede06483ab081cf0c9fb6f525b55120e5b7c61697",
-  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
+  "after": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 542.28,
+        "seconds": 60998.0,
+        "support_g": 12.969
+      }
+    ],
+    "plate_count": 1,
+    "total_g": 542.28,
+    "hours": 16.944,
+    "support_g": 12.969
+  },
+  "before_project_sha256": "2a480edb6104f4e564d4c58ede06483ab081cf0c9fb6f525b55120e5b7c61697",
+  "after_project_sha256": "d942d00a0d1d6dc5ca03bef6c726394198c87cd6ce38f2394eb5f0fe8f9d761f",
+  "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge.",
+  "baseline": "Immediately preceding 256 mm layout, PETG Basic"
 }

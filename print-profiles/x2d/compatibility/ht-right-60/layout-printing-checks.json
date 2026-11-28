@@ -1,0 +1,74 @@
+[
+  {
+    "id": "L60Ra",
+    "source_sha256": "d35a7f3128225c87813f62843ee01dec1a445ea7bcc9b0c27d6caa6dce0f9c03",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -435.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0,
+        60.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  },
+  {
+    "id": "L60Rb",
+    "source_sha256": "88ab13e4418eea6dae5b3a02f65835ebebcaf9ed2a77cc7a2623806b304b4890",
+    "assembly_to_print": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -435.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0,
+        2.999999999999983
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17,
+        287.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "status": "ok",
+    "errors": [],
+    "warnings": [
+      "printing.bridge_length",
+      "printing.overhang_angle"
+    ]
+  }
+]

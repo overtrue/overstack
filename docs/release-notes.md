@@ -1,4 +1,22 @@
-# AMS 2 Pro + HT 抽屉选型 / Drawer options
+# 全系列通用尾锁 / One rear key for all layers
+
+399 mm 和 495 mm 的板架、抽屉及顶件共用同款蝴蝶锁片。每道层缝打印两片，普通、洞洞板和过渡端框均可互换使用。 / Both widths use the same rear bowtie on every rack, drawer and top. Print two per seam for the plain, pegboard or transition ends. [通用尾锁 STL / Rear key STL](../models/common/rear-lock.stl)
+
+## 256 mm 拆件与四角定位 / 256 mm cuts and corner pins
+
+X2D、P2S 的两种宽度共十种主层各自重拆、摆盘并切片。圆销替代四角弧脚，HT 前后两只活动销可以互换。两种材料的项目、旧顶件过渡框与试件见[小板打印说明](256-printing.md)。
+
+## AMS HT 顶件右侧 / HT-side device top
+
+原 F02 的 PETG Matte 实打遇到支撑难拆，层间定位脚和圆角有缝。右侧前后段 F02、F05 平放打印，F06、F07 两只 Ø6 mm 定位销先放进下层圆孔。F03、F04 共用各层已有的蝴蝶锁片。F05 在锁片上方留出 45° 斜顶与 1.5 mm 短桥。完整 HT 方案共 51 件。
+
+The original matte PETG print had stuck supports and gaps around the vertical locating foot and corners. F02 and F05 print flat. Place either of the two 6 mm dowels in either lower hole. Both rear positions on the top take the same bowtie used by the other layers. The F05 socket has a 45° roof and a 1.5 mm bridge above the common key. The complete HT set contains 51 parts.
+
+五种机型均提供完整顶件、仅右侧替换件和一盘试件。切片对照使用 PETG Basic。新版 PETG Matte 实打、装配和承重仍待验证。 / All five printers have complete-top, right-side replacement and single-plate test projects. The slice comparison uses PETG Basic. Physical matte-finish, fit and load tests of this revision are pending.
+
+## 历史版本 / Previous revisions
+
+### AMS 2 Pro + HT 抽屉选型 / Drawer options
 
 495 mm 的 AMS 2 Pro + HT 版提供双抽屉和三抽屉。单抽屉只在 399 mm 无 HT 版提供。HT 完整组合有 48 件，高 249 mm，可放 13 张打印板，配五只主抽屉和两只侧抽屉。其余零件沿用原编号。
 
@@ -7,8 +25,6 @@ The 495 mm HT set offers double and triple drawers. The single drawer is availab
 五种机型各少一个 HT 工程。其余 60 个工程沿用原切片，本次重新核对了模型、摆盘与 G-code。实物试装和承重仍待验证。
 
 Each of the five printers drops one HT project. The 60 retained projects use their existing slices, checked against the models, layouts and G-code. Physical fit and load capacity remain untested.
-
-## 历史版本 / Previous revisions
 
 按同一套摆盘规则重新检查五种机型的全部 65 个工程：薄连接片平放，长条件避免高立，按轮廓和支撑间距合盘，并比较实际切片时间、耗材和支撑。工程、逐盘预览、对比数据和下载包同步更新；尚未实物验证。 / Rechecked all 65 projects across five printers: flat connecting plates, lower rail orientations and shared plates with support clearance. Compared sliced time, material and support use, and updated projects, plate previews, comparisons and downloads. Physical validation is still pending.
 

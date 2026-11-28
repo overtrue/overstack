@@ -4,26 +4,33 @@ Status: **sliced_not_printed**
 
 X2D · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
-端框：普通 / Ends: plain
+普通端框 / Plain ends
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
+
+[PETG Matte · 打开工程 / Open project](x2d-04-petg-matte.3mf)
+
+Matte · 1 盘 / plates · 8.93 h · 294.67 g · 支撑 / support 0.74 g
+
+同编号的 a 和 b 竖直合拢。J 是整根横梁。 / Lower matching a/b sections together. J denotes a one-piece beam.
+
+每道接缝左右各用一片，所有层通用。 / Use two identical bowties per seam, one on each side. [通用尾锁 / Rear key STL](../../../../models/common/rear-lock.stl)
 
 摆盘切片对比 / Sliced layout comparison:
 
 | Metric | Before | After |
 | --- | ---: | ---: |
-| Plates | 3 | 2 |
-| Estimated hours | 11.512 | 11.463 |
-| PETG g | 269.33 | 269.24 |
-| Support extrusion g | 1.625 | 1.624 |
+| Plates | 2 | 1 |
+| Estimated hours | 11.463 | 8.509 |
+| PETG g | 269.24 | 268.86 |
+| Support extrusion g | 1.624 | 0.672 |
 
 支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
 
 [打开摆盘工程 / Open project](x2d-04-petg.3mf)
 
-预计 / Estimate: 11.5 h · 269.2 g PETG
+预计 / Estimate: 8.5 h · 268.9 g PETG
 
 | Plate | Parts | Preview |
 | --- | --- | --- |
-| 1 | 01 NE01, NE03, NE04 | ![Plate 1](plate_1.png) |
-| 2 | 02 NE02 | ![Plate 2](plate_2.png) |
+| 1 | 01 NE01a, NE01b, NE02a, NE02b, NE03, NE04 | ![Plate 1](plate_1.png) |

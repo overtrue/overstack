@@ -1,10 +1,10 @@
 {
-  "project_sha256": "5a07bf667c2332691358f85c118e9f2df81008d8b31a2a799d9c411615e6459e",
+  "project_sha256": "7351c7c5675a32a0ef8729d95c68b6d10d1b4ef9baab0e5c907e268e7ddb8cd5",
   "rule_source_hashes": {
-    "tools/print_layout.py": "2d7983a201e00c748c9df3f37d29bc15fd993a0fc898915b53476acb45810b0f",
-    "tools/build_print_profiles.py": "61508f63ba4060b93fd42f089132dc96de4fb066e5d1ef9ee72de57a1e204aeb",
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae",
     "tools/print_profile_targets.py": "bdd592bd10885cf9baf0f9f19fb9db969a3492c9318095539d36bf2474510bbe",
-    "tools/check_print_layout.py": "73a906215e02a82f0f1a3fa29acfd0b3ba48b62f36761834d46301c7a2775637"
+    "tools/check_print_layout.py": "6ab5644fbfc9a439a1c8122843bce10fb4d4891fba39a24677ffb69f80d0268f"
   },
   "checks": [
     "source geometry",
@@ -14,6 +14,6 @@
     "plate groups",
     "XY placement"
   ],
-  "model_sources_sha256": "3d762250954c8217e593e587b77369d2d977e1f2e5a1d344139cadec1a502db4",
-  "validation_sha256": "3d5bcaaf59703664a4a656bd9e1ac06d4e37bd593406e2acd359d55ef4110b71"
+  "model_sources_sha256": "8e168a8951e224233293c8dc5635e3b278b28fcc32bb7fba0993db4dc35975a2",
+  "validation_sha256": "a9c9fef3548f22d9c569a2d734d60c065e638fc383270b5997f369eb9deb3c1e"
 }

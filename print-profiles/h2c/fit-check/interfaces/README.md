@@ -8,20 +8,22 @@ H2C · 0.4 mm · PETG Basic · Textured PEI · 0.20 mm
 
 尚未实物试装、测试承重或上传 MakerWorld。 / Not physically validated or published to MakerWorld.
 
+每道接缝左右各用一片，所有层通用。 / Use two identical bowties per seam, one on each side. [通用尾锁 / Rear key STL](../../../../models/common/rear-lock.stl)
+
 摆盘切片对比 / Sliced layout comparison:
 
 | Metric | Before | After |
 | --- | ---: | ---: |
 | Plates | 1 | 1 |
-| Estimated hours | 2.173 | 2.174 |
-| PETG g | 51.05 | 51.05 |
-| Support extrusion g | 5.004 | 5.004 |
+| Estimated hours | 2.173 | 2.142 |
+| PETG g | 51.05 | 50.75 |
+| Support extrusion g | 5.004 | 4.888 |
 
 支撑重量按 G-code 挤出量估算；未实物验证。 / Support mass is estimated from G-code extrusion; not physically validated.
 
 [打开摆盘工程 / Open project](h2c-04-petg.3mf)
 
-预计 / Estimate: 2.2 h · 51.0 g PETG
+预计 / Estimate: 2.1 h · 50.8 g PETG
 
 | Plate | Parts | Preview |
 | --- | --- | --- |

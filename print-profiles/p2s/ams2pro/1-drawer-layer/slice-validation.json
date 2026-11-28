@@ -1,50 +1,16 @@
 {
   "printer": "Bambu Lab P2S",
-  "project_sha256": "849cb78f245c2ae1327a1e1229c73c5c510d84b0370c8b71c07181b465de649d",
-  "sliced_archive_sha256": "e2cbd11987b71db18c90c3850e6e7e448f258ff267e1230c688f9fdbefc76666",
+  "project_sha256": "18792ccf95293003b82c85ccd07107e9c282bd81dcc86660647594c4b3ff5aa6",
+  "sliced_archive_sha256": "d7e0bec2611aa314116179f7dd5ad6b151301794d8af3f071292cb73fe324011",
   "plates": [
     {
-      "file": "Metadata/plate_6.gcode",
-      "sha256": "d580fc8e0387062cc1593869ebdaccc05258b000a9a50fc66fb7e29598dbf7f8",
-      "bbox_xy_mm": [
-        12.67097,
-        12.670960000000001,
-        238.94634000000002,
-        238.94634000000002
-      ],
-      "first_extruder": 0,
-      "printer_model": "Bambu Lab P2S",
-      "filament_type": "PETG",
-      "nozzle_diameter": "0.4",
-      "nozzle_temperature": "250",
-      "bed_temperature": "70",
-      "filament_map": "1"
-    },
-    {
-      "file": "Metadata/plate_5.gcode",
-      "sha256": "521db2168183282b89987966d6e65c7b24611bbcfd74d4834c400db09012b1ba",
-      "bbox_xy_mm": [
-        0.6709700000000001,
-        0.6709700000000001,
-        228.36057000000002,
-        228.36056000000002
-      ],
-      "first_extruder": 0,
-      "printer_model": "Bambu Lab P2S",
-      "filament_type": "PETG",
-      "nozzle_diameter": "0.4",
-      "nozzle_temperature": "250",
-      "bed_temperature": "70",
-      "filament_map": "1"
-    },
-    {
       "file": "Metadata/plate_4.gcode",
-      "sha256": "c1e23c8b8ed1588550d3734d66adfa9ec591107e2cac263922935f523d411943",
+      "sha256": "e79fe7d27ee44e15dd59327b5d4a30749c67169b63f9daeba403c3def0754051",
       "bbox_xy_mm": [
-        12.510980000000002,
-        11.334790000000002,
-        226.92289000000002,
-        226.92539000000002
+        0.72138,
+        0.7213700000000001,
+        212.85464000000002,
+        252.85463000000001
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab P2S",
@@ -56,12 +22,12 @@
     },
     {
       "file": "Metadata/plate_3.gcode",
-      "sha256": "768e943eccfb3b85724d207004f2733c04ce09714d1dc3e9c341cacbeb3bb02e",
+      "sha256": "bbf787688ca15bfa1a82a7413687bd17ad570fdac2de0dfa64e06f00ee9af5a6",
       "bbox_xy_mm": [
-        0.65758,
-        0.6575700000000001,
-        254.34242000000003,
-        229.21484
+        0.7207,
+        0.7207,
+        254.97528000000003,
+        222.97528000000003
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab P2S",
@@ -73,12 +39,12 @@
     },
     {
       "file": "Metadata/plate_2.gcode",
-      "sha256": "52cb5034044499645937cadbc16045a485c6a6629695fc897d5ddf955ea81362",
+      "sha256": "e70081b36093e51bbecc6d33bb31a35aeb393c77f76c7fa51328463a0bc8f1e3",
       "bbox_xy_mm": [
-        7.201460000000001,
-        6.267150000000001,
-        249.52661000000003,
-        249.89912
+        0.021460000000000003,
+        0.02145,
+        226.99668000000003,
+        226.99668000000003
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab P2S",
@@ -90,12 +56,12 @@
     },
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "92ce0f682c94f210928e52d3b02a3078fac889bcd7cfba99a651546b5567f6f3",
+      "sha256": "950b36f6f4b81f3cef3fe41f48b1b0986670dc2a8269f81922ef45c0b4c87630",
       "bbox_xy_mm": [
-        6.382320000000001,
-        5.8866700000000005,
-        249.92089,
-        249.18716000000003
+        0.7211900000000001,
+        0.36869,
+        228.41079000000002,
+        228.41079000000002
       ],
       "first_extruder": 0,
       "printer_model": "Bambu Lab P2S",

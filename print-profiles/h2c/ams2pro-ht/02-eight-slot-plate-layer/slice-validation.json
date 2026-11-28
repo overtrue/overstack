@@ -1,7 +1,7 @@
 {
   "printer": "Bambu Lab H2C",
-  "project_sha256": "ec2fd39f534ad6265b93003bc84ddc7dac71b2dbccb96808e61febe86d2b5150",
-  "sliced_archive_sha256": "239f5fb16d159a807a1491b932603be5f676284f7875773b291b638b9b453498",
+  "project_sha256": "5075e99778e5d8ce8e9b9f728d87605c9cdf5c2fd80472388697e676ce3b99a4",
+  "sliced_archive_sha256": "b87ec1880eb5f1feb61a2f32ccffca5d093e107064f84c60a780d832564dfbc6",
   "plates": [
     {
       "file": "Metadata/plate_2.gcode",
@@ -22,11 +22,11 @@
     },
     {
       "file": "Metadata/plate_3.gcode",
-      "sha256": "69b062ec15740aa51794c1836a3a44b0e791579ea2ecceaa8c00db335239df88",
+      "sha256": "3f985a42707ce24871771afe566a5fc11894047a2bdc412872b2695887dd79db",
       "bbox_xy_mm": [
-        37.50694,
-        12.514520000000001,
-        195.68639000000002,
+        37.499520000000004,
+        12.61194,
+        195.51341000000002,
         305.50767
       ],
       "first_extruder": 0,
@@ -39,7 +39,7 @@
     },
     {
       "file": "Metadata/plate_1.gcode",
-      "sha256": "de9203f79e047261e5b2a5b5cb53013b56adb7b3c4c6949dd80643ef91655cb6",
+      "sha256": "d9e0027c35b845adb367bfe2dddfeca82e943170519cdac229eb9bfc703ace4d",
       "bbox_xy_mm": [
         25.657570000000003,
         0.65758,

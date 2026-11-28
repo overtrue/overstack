@@ -7,7 +7,7 @@
     {
       "name": "end_left_40_pegboard",
       "file": "models/common/end_left_40_pegboard.stl",
-      "sha256": "1cb84e6a005515b38e54212b2055e02ac78f536d093ee7d01bfdf71c7628d896",
+      "sha256": "50857198823232b10bfac09dcbd980c8e123ece8944cfa5f29cc1d669817136c",
       "placement": {
         "assembly_to_print": [
           [
@@ -40,7 +40,7 @@
           231.22391744800106,
           60.0
         ],
-        "downward_area_mm2": 4607.979728463482,
+        "downward_area_mm2": 4531.365568125165,
         "bed_contact_area_mm2": 9680.35490607001,
         "supports_required": true,
         "brim_mm": 3,
@@ -60,7 +60,7 @@
     {
       "name": "end_right_40_pegboard",
       "file": "models/common/end_right_40_pegboard.stl",
-      "sha256": "a804547c71cfd554d85b30fb895f34878ca6630e47b23e831ee2944290e83f7e",
+      "sha256": "7b5466ec163719a589d338a08c6c27a1b584dbfdce7b982d175474e99d5e92d2",
       "placement": {
         "assembly_to_print": [
           [
@@ -93,7 +93,7 @@
           231.22391744800106,
           60.0
         ],
-        "downward_area_mm2": 4607.980818869474,
+        "downward_area_mm2": 4533.800370076082,
         "bed_contact_area_mm2": 9680.354710110052,
         "supports_required": true,
         "brim_mm": 3,
@@ -113,7 +113,7 @@
     {
       "name": "end_left_60_pegboard",
       "file": "models/common/end_left_60_pegboard.stl",
-      "sha256": "d7c59592a8d873982b1b0ec1aecd7b6a8bde685feeb9b4b79743e3ec9d31acbc",
+      "sha256": "5947d7df11049d5f16da3745051965fd745abe7e5121797b7cf5c7e354340553",
       "placement": {
         "assembly_to_print": [
           [
@@ -146,7 +146,7 @@
           245.366053071732,
           60.00000000000001
         ],
-        "downward_area_mm2": 6815.55360660198,
+        "downward_area_mm2": 6738.939446263665,
         "bed_contact_area_mm2": 14520.53236405272,
         "supports_required": true,
         "brim_mm": 3,
@@ -166,7 +166,7 @@
     {
       "name": "end_right_60_pegboard",
       "file": "models/common/end_right_60_pegboard.stl",
-      "sha256": "56efd37e3fe0f16855a3b2591ae1556f252918b263055fa523cffc91f3fc7c4a",
+      "sha256": "7aedc74ba1d7e1a2877de8f1f5fc84c56fb11611f1056ade4e64bb591e0b147b",
       "placement": {
         "assembly_to_print": [
           [
@@ -199,7 +199,7 @@
           245.366053071732,
           60.0
         ],
-        "downward_area_mm2": 6815.555251205209,
+        "downward_area_mm2": 6741.3748024118195,
         "bed_contact_area_mm2": 14520.53207011279,
         "supports_required": true,
         "brim_mm": 3,
@@ -1723,7 +1723,7 @@
     {
       "name": "device-top/top_1",
       "file": "models/ams2pro/device-top/top_1.stl",
-      "sha256": "a7782888c5e7d3b1a86d7a9bc8417586a671582959344d760e43227f0a85204a",
+      "sha256": "a8d89d72db03f59cdae605537e5f0d2c6ce8417ed999c583dd5a469859ee9f56",
       "placement": {
         "assembly_to_print": [
           [
@@ -1756,7 +1756,7 @@
           221.3244225113894,
           204.5
         ],
-        "downward_area_mm2": 574.7239765750822,
+        "downward_area_mm2": 538.7568827294682,
         "bed_contact_area_mm2": 6835.091290855411,
         "supports_required": true,
         "brim_mm": 3,
@@ -1774,7 +1774,7 @@
     {
       "name": "device-top/top_2",
       "file": "models/ams2pro/device-top/top_2.stl",
-      "sha256": "2264fc99d1a86841c631b29f2216cf40700a079a656cdeb1d9687a4fc6ab5875",
+      "sha256": "5e63b5e48ffb68f1b05ce6c46b2431433cbf7649b59e57f7fcd2db73a2ff9de9",
       "placement": {
         "assembly_to_print": [
           [
@@ -1807,7 +1807,7 @@
           221.3244225113894,
           199.1999969482422
         ],
-        "downward_area_mm2": 574.7242092533356,
+        "downward_area_mm2": 538.7571269504878,
         "bed_contact_area_mm2": 6835.091162815184,
         "supports_required": true,
         "brim_mm": 3,

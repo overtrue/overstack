@@ -16,11 +16,13 @@
 | [02-eight-slot-plate-layer](02-eight-slot-plate-layer/) | 10 |
 | [04-double-drawer-layer](04-double-drawer-layer/) | 13 |
 | [05-triple-drawer-layer](05-triple-drawer-layer/) | 15 |
-| [06-device-top](06-device-top/) | 4 |
+| [06-device-top](06-device-top/) | 7 |
 
-48 STL parts, five layer GLBs, five geometry-only 3MF assemblies and two full-stack GLBs (plain and pegboard ends). The A, B, D, E and F prefixes match the assembly guides. Use `packaged_sha256` in the manifest to check a downloaded STL.
+每道层缝用两片相同的蝴蝶锁片，上下、左右均可互换。 / Print two identical bowties per seam. Either fits either side, either end up. [通用尾锁 STL / Rear key STL](../common/rear-lock.stl)
 
-This is an unprinted digital prototype. Models are in assembly positions; orient and support parts before slicing. See [validation](validation.json) for known limits.
+51 STL parts, five layer GLBs, five geometry-only 3MF assemblies and two full-stack GLBs (plain and pegboard ends). The A, B, D, E and F prefixes match the assembly guides. Use `packaged_sha256` in the manifest to check a downloaded STL.
+
+The revised HT top awaits physical testing. The printer projects lay F02 and F05 flat and print the two identical double-chamfered round dowels on end. [Validation](validation.json) · [HT-side print comparison](../../docs/ht-top-printing.md)
 
 双抽屉层与三抽屉层合计五只主抽屉，八槽板层另有两只侧抽屉。完整组合高 249 mm。
 

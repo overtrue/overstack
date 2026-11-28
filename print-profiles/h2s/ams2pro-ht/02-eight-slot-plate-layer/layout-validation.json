@@ -55,8 +55,8 @@
     "plates": [
       {
         "plate": 1,
-        "total_g": 684.91,
-        "seconds": 83415.0,
+        "total_g": 684.97,
+        "seconds": 83422.0,
         "support_g": 57.377
       },
       {
@@ -67,17 +67,17 @@
       },
       {
         "plate": 3,
-        "total_g": 421.79,
-        "seconds": 50274.0,
-        "support_g": 22.742
+        "total_g": 421.4,
+        "seconds": 50487.0,
+        "support_g": 23.188
       }
     ],
     "plate_count": 3,
-    "total_g": 1222.97,
-    "hours": 39.871,
-    "support_g": 81.299
+    "total_g": 1222.64,
+    "hours": 39.932,
+    "support_g": 81.745
   },
   "before_project_sha256": "c643425c5a674f4e21454426558e35b60904f78582156d5bf7fea5e6630f869a",
-  "after_project_sha256": "658a35dfe153a0574af406ae503771eaa5b973e0c1a739332f4a2ddcecc91372",
+  "after_project_sha256": "578fc46dda077f88a64cafe05af306e4c5a967d0b88bfa89361a5de3ac6c9990",
   "method": "Support and support-interface positive XY extrusion; 1.75 mm PETG at 1.25 g/cm3, excluding retraction and purge."
 }

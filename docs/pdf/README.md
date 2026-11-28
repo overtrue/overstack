@@ -16,4 +16,4 @@ HT 版五组零件各有一册，中英文各一份。每册包含零件清单�
 
 Combined reference: [中文](overstack-assembly-zh.pdf) / [English](overstack-assembly-en.pdf).
 
-This is an unprinted digital prototype. /尚未实物试装。
+The revised HT top awaits a physical fit test. / 新版 HT 顶件待实物试装。

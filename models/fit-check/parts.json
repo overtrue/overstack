@@ -2,7 +2,7 @@
   {
     "id": "FIT02",
     "file": "models/fit-check/FIT02-dovetail-socket.stl",
-    "sha256": "c76d54b22c4553b0de602deb79cf27895812be22f7e08aa44417af39285b826e",
+    "sha256": "c512d79729bd32b8ff8e0c4c8272244c8c2d27de8256c7d08bcbded3c52c1355",
     "print_rotation": [
       [
         4.329780281177467e-17,
@@ -129,12 +129,13 @@
         1.0,
         6.123233995736766e-17
       ]
-    ]
+    ],
+    "print_file": "models/common/rear-lock.stl"
   },
   {
     "id": "FIT08",
     "file": "models/fit-check/FIT08-foot-lower.stl",
-    "sha256": "7f84a888c4d77129f466efd5916f4181378ed3682c2f4495ee1ba13c635ad426",
+    "sha256": "fa939d98425931d416155d03b74fe8b897e3c4e446aa7804a829fce3f7292b49",
     "print_rotation": [
       [
         4.329780281177467e-17,
@@ -156,7 +157,7 @@
   {
     "id": "FIT09",
     "file": "models/fit-check/FIT09-foot-upper.stl",
-    "sha256": "c2a7745fdce77beeed139c628fd76a7689bf8e84d439ecf4a5bf86f77c92b095",
+    "sha256": "87c0ccb1419e773d1752fa0e6758b01cde65e37190bc6d2860516c69603d8e84",
     "print_rotation": [
       [
         4.329780281177467e-17,

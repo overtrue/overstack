@@ -1,0 +1,84 @@
+{
+  "base_project_sha256": "e5a4feab5d0eac39df07b16ea7b988dbbaaf78a978f28bdb66b87633cabd3025",
+  "filament_preset_sha256": "d7e570d44970abb098826a2fc0a6f836a31b1f2a7f827655ee8d78bf85f34e15",
+  "filament": "Bambu PETG Matte @BBL X2D 0.4 nozzle",
+  "filament_id": "GFG03",
+  "density_g_cm3": 1.37,
+  "project_file": "x2d-04-petg-matte.3mf",
+  "project_sha256": "090e950ad8f3f0773e567b5bef0b6ea869c7e220f4e7d4d657a47ee95f344d71",
+  "gcode": [
+    {
+      "plate": 1,
+      "gcode_sha256": "827b4a580690ec1a40549f5a6c9ab70fdf3e19e95ee7325be4a364466dba3ceb",
+      "bounds_mm": [
+        0.7211900000000001,
+        0.36869,
+        228.41079000000002,
+        228.41079000000002
+      ]
+    },
+    {
+      "plate": 2,
+      "gcode_sha256": "ce24c3d4af9a4fa4f3774c83b503903c8653cf81de6995cc83600709b7ca3476",
+      "bounds_mm": [
+        0.021460000000000003,
+        0.02145,
+        226.99668000000003,
+        226.99668000000003
+      ]
+    },
+    {
+      "plate": 3,
+      "gcode_sha256": "b69f3ea1655206a51f2c53365c22c43df032f29c0d69dbbd7f3fa6141e7343a0",
+      "bounds_mm": [
+        0.7207,
+        0.7207,
+        254.97528000000003,
+        222.97528000000003
+      ]
+    },
+    {
+      "plate": 4,
+      "gcode_sha256": "59787eaf66104b9cfd6ed8c67005d00bc8a1037260f21c57624a62663aba24b6",
+      "bounds_mm": [
+        0.72138,
+        0.7213700000000001,
+        212.85464000000002,
+        252.85463000000001
+      ]
+    }
+  ],
+  "metrics": {
+    "plates": [
+      {
+        "plate": 1,
+        "total_g": 440.26,
+        "seconds": 43161.0,
+        "support_g": 4.991
+      },
+      {
+        "plate": 2,
+        "total_g": 429.71,
+        "seconds": 41915.0,
+        "support_g": 4.453
+      },
+      {
+        "plate": 3,
+        "total_g": 231.59,
+        "seconds": 23655.0,
+        "support_g": 7.905
+      },
+      {
+        "plate": 4,
+        "total_g": 52.41,
+        "seconds": 5069.0,
+        "support_g": 0.0
+      }
+    ],
+    "plate_count": 4,
+    "total_g": 1153.97,
+    "hours": 31.611,
+    "support_g": 17.349
+  },
+  "physical_print": "not_verified"
+}

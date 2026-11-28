@@ -25,11 +25,11 @@ Match each callout to its table row. Left/right are viewed from the front. Explo
 | [ND09](rear_beam_2.stl) | 后横梁右半 | `rear_beam_2.stl` | 0 mm |
 | [ND10](drawer_1.stl) | 左抽屉 | `drawer_1.stl` | 0 mm |
 | [ND11](drawer_2.stl) | 右抽屉 | `drawer_2.stl` | 0 mm |
-| [ND12](../../common/lock_left.stl) | 左后锁片 | `lock_left.stl` | 0 mm |
-| [ND13](../../common/lock_right.stl) | 右后锁片 | `lock_right.stl` | -96 mm |
+| [ND12](../../common/rear-lock.stl) | 通用蝴蝶锁片 | `rear-lock.stl` | 见装配清单 / see BOM |
+| [ND13](../../common/rear-lock.stl) | 通用蝴蝶锁片 | `rear-lock.stl` | 见装配清单 / see BOM |
 
-两端和锁片直接引用通用件。右件保持 HT 版导出坐标，在此装配中向左移动 96 mm；切片前将每件单独落到平台。3MF 是装配几何，不是打印任务。
+右端框在 399 mm 装配中向左移动 96 mm。每道层缝左右各装一片相同的蝴蝶锁片，可直接平放补打。[通用锁片 STL](../../common/rear-lock.stl)
 
-Common ends and keys are referenced, not duplicated. Right-hand common files retain wide-set coordinates; the assembly moves them left by 96 mm. Reorient and place each part on the bed before slicing. The 3MF is assembly geometry, not a print job.
+The compact assembly moves the right end frame 96 mm to the left. Print two copies of the same flat bowtie for each seam. The 3MF in this folder shows the assembled layer.
 
 抽屉行程 180 mm，到止点抬高 7 mm 后取出；先移走设备与上层。 / Drawer travel: 180 mm; lift 7 mm at the stop for removal, with devices and upper layers removed.

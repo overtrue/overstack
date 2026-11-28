@@ -1,7 +1,7 @@
 [
   {
     "id": "FIT02",
-    "source_sha256": "c76d54b22c4553b0de602deb79cf27895812be22f7e08aa44417af39285b826e",
+    "source_sha256": "c512d79729bd32b8ff8e0c4c8272244c8c2d27de8256c7d08bcbded3c52c1355",
     "assembly_to_print": [
       [
         4.329780281177467e-17,
@@ -209,7 +209,7 @@
   },
   {
     "id": "FIT08",
-    "source_sha256": "7f84a888c4d77129f466efd5916f4181378ed3682c2f4495ee1ba13c635ad426",
+    "source_sha256": "fa939d98425931d416155d03b74fe8b897e3c4e446aa7804a829fce3f7292b49",
     "assembly_to_print": [
       [
         4.329780281177467e-17,
@@ -239,13 +239,12 @@
     "status": "ok",
     "errors": [],
     "warnings": [
-      "printing.bridge_length",
-      "printing.overhang_angle"
+      "printing.bridge_length"
     ]
   },
   {
     "id": "FIT09",
-    "source_sha256": "c2a7745fdce77beeed139c628fd76a7689bf8e84d439ecf4a5bf86f77c92b095",
+    "source_sha256": "87c0ccb1419e773d1752fa0e6758b01cde65e37190bc6d2860516c69603d8e84",
     "assembly_to_print": [
       [
         4.329780281177467e-17,

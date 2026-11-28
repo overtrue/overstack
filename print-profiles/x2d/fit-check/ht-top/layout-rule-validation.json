@@ -1,0 +1,19 @@
+{
+  "project_sha256": "d391a2ff2bba303ffda94c7571864034f51384824dcf72816cb42ca7ce9be41e",
+  "rule_source_hashes": {
+    "tools/print_layout.py": "744706c571752eb94f166588792c13189eeb9e02e505aefe10ef62549af8394c",
+    "tools/build_print_profiles.py": "5bb2cb1c4b5b8f314efb02adcd3d557ce5ee285e70828410c055588fc91c4cae",
+    "tools/print_profile_targets.py": "bdd592bd10885cf9baf0f9f19fb9db969a3492c9318095539d36bf2474510bbe",
+    "tools/check_print_layout.py": "6ab5644fbfc9a439a1c8122843bce10fb4d4891fba39a24677ffb69f80d0268f"
+  },
+  "checks": [
+    "source geometry",
+    "orientation transforms",
+    "support flags",
+    "brim clearance",
+    "plate groups",
+    "XY placement"
+  ],
+  "model_sources_sha256": "8e168a8951e224233293c8dc5635e3b278b28fcc32bb7fba0993db4dc35975a2",
+  "validation_sha256": "cdc674728150ac03f7bcd06cee836178f2a81a527e2ac53070f8bcb1b89e45ec"
+}

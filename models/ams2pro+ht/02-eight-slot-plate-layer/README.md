@@ -12,12 +12,14 @@
 
 Match the IDs in the exploded view to the STL filenames. Click an ID to download that part. Left and right are viewed from the front opening.
 
+每道层缝从后方插入两片相同的蝴蝶锁片，左右通用。 / Print two identical bowties per seam. Either fits either side. [通用锁片 STL / Rear key STL](../../common/rear-lock.stl)
+
 ![带零件编号的爆炸图 / Numbered exploded view](../../../docs/images/02-eight-slot-plate-layer-assembly-zh.png)
 
 | 编号 / ID | 零件 |
 | --- | --- |
-| [B01](parts/B01-seam_1_False_layer_lock.stl) | 层间锁片 |
-| [B02](parts/B02-seam_1_True_layer_lock.stl) | 层间锁片 |
+| [B01](../../common/rear-lock.stl) | 层间锁片 |
+| [B02](../../common/rear-lock.stl) | 层间锁片 |
 | [B03](parts/B03-standard_1_cassette_plates_1.stl) | 左侧承架 |
 | [B04](parts/B04-standard_1_cassette_plates_2.stl) | 右侧承架 |
 | [B05](parts/B05-standard_1_cassette_plates_3.stl) | 前横梁 |

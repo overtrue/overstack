@@ -22,7 +22,7 @@ for lang in ['zh','en']:
   key='rail-detail' if i<2 else ('layer-f-assembled' if prefix=='F' else 'layer-lock-detail')
   b.image(key,35,150,480,345)
   use=(STEPS_ZH if z else STEPS_EN)[i][-1]
-  steps=[use,('连接相邻层','弧形底脚对准槽后竖直落座。每条层缝装左右两枚锁片，从后向前推入；锁片可向后退出。') if z else ('Connect neighbouring layers','Align the curved feet and lower vertically. Insert the two seam keys from behind. Keys can slide out rearward.'),('验收本层','确认四角落座、连接到位、抽拉无卡滞。后横梁与锁片没有防丢锁止；实物配合、设备净空和承重仍需验证。') if z else ('Check this layer','Check seating, joints and free movement. Rear beams and keys are not captive. Physical fit, device clearance and load capacity still need testing.')]
+  steps=[use,('连接相邻层','圆柱定位销对准槽后竖直落座。每条层缝用两片相同的蝴蝶锁片，从后方插入，左右、上下通用。') if z else ('Connect neighbouring layers','Align the round corner pins and lower vertically. Insert two identical bowties from behind. Either fits either side, either end up.'),('验收本层','确认四角落座、连接到位、抽拉无卡滞。后横梁与锁片没有防丢锁止；实物配合、设备净空和承重仍需验证。') if z else ('Check this layer','Check seating, joints and free movement. Rear beams and keys are not captive. Physical fit, device clearance and load capacity still need testing.')]
   b.steps(steps,x=550,top=481,width=250)
   if prefix in ['B','D','E']:
    b.para('抽屉底板为2 mm实心板。' if z else 'Drawers use 2 mm solid floors.',42,118,755,10)

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "A01a",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A01a.stl",
+    "parent_ids": [
+      "A01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A01b",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A01b.stl",
+    "parent_ids": [
+      "A01"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A02a",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A02a.stl",
+    "parent_ids": [
+      "A02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A02b",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A02b.stl",
+    "parent_ids": [
+      "A02"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A03",
+    "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A03-low_0_cassette_plates_3.stl",
+    "print_rotation": [
+      [
+        0.7071067811865476,
+        0.7071067811865475,
+        8.659560562354932e-17
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865476,
+        -8.659560562354934e-17
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0
+      ]
+    ]
+  },
+  {
+    "id": "A04",
+    "file": "models/ams2pro+ht/01-five-slot-plate-layer/parts/A04-low_0_cassette_plates_4.stl"
+  },
+  {
+    "id": "A05a",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A05a.stl",
+    "parent_ids": [
+      "A05"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A05b",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A05b.stl",
+    "parent_ids": [
+      "A05"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A06a",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A06a.stl",
+    "parent_ids": [
+      "A06"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "A06b",
+    "file": "models/256/ams2pro-ht/01-five-slot-plate-layer/A06b.stl",
+    "parent_ids": [
+      "A06"
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "print_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.123233995736766e-17,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        6.123233995736766e-17
+      ]
+    ]
+  },
+  {
+    "id": "KEY-left",
+    "file": "models/common/lock_left.stl",
+    "print_file": "models/common/rear-lock.stl"
+  },
+  {
+    "id": "KEY-right",
+    "file": "models/common/lock_right.stl",
+    "print_file": "models/common/rear-lock.stl"
+  }
+]
